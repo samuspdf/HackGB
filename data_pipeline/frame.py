@@ -15,9 +15,5 @@ def km(lon, lat):
     return round((lon - LON0) * COS0 * KM_PER_DEG, 2), round((lat - LAT0) * KM_PER_DEG, 2)
 
 
-def lonlat(x, y):
-    return x / (COS0 * KM_PER_DEG) + LON0, y / KM_PER_DEG + LAT0
-
-
 FRAME_W = round(km(E_LON, LAT0)[0] * 2, 1)
 FRAME_H = round(km(LON0, N_LAT)[1] * 2, 1)

@@ -36,7 +36,11 @@ export interface SceneData {
   wisconsin: Polygon[];
   counties: County[];
   /** Border lines drawn only over land (never along the coast) */
-  borders: { county: Ring[]; state: Ring[] };
+  borders: { county: Ring[]; state: Ring[]; other: Ring[] };
+  /** Real Wisconsin Lake Michigan lighthouses */
+  lighthouses: { name: string; x: number; y: number }[];
+  /** Flat records: x0, y0, x1, y1 (route ends), kind (0 sailboat, 1 freighter), phase */
+  boats: number[];
   lakes: { name: string; level: number; rings: Polygon[] }[];
   rivers: Ring[];
   places: Place[];

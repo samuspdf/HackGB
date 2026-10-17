@@ -25,8 +25,8 @@ import shapefile
 import shapely
 from PIL import Image, ImageDraw, ImageFilter
 from scipy import ndimage
-from shapely.geometry import LineString, MultiLineString, MultiPolygon, Point, Polygon, box, shape
-from shapely.ops import unary_union
+from shapely.geometry import LineString, MultiPolygon, Point, Polygon, box, shape
+from shapely.ops import linemerge, unary_union
 from shapely.prepared import prep
 
 from frame import COS0, E_LON, FRAME_H, FRAME_W, KM_PER_DEG, LAT0, LON0, N_LAT, S_LAT, W_LON, km
@@ -89,8 +89,11 @@ lake_feats = [(f["properties"].get("name"), shape(f["geometry"])) for f in json.
 great_lakes = to_km_geom(unary_union([g for n, g in lake_feats if n in GREAT_LAKES]).intersection(FRAME))
 # Canada (and anything Census doesn't cover) comes from Natural Earth land minus the Great Lakes
 land = unary_union([us_land, wisconsin, ne_land.difference(us_land.buffer(2)).difference(great_lakes)])
+# Only Wisconsin gets detail: inland lakes, rivers, terrain, towns and scenery. Other states stay plain.
 inland = [(n, to_km_geom(g)) for n, g in lake_feats
-          if n not in GREAT_LAKES and g.intersects(FRAME) and to_km_geom(g).area > 12]
+          if n not in GREAT_LAKES and g.intersects(FRAME) and to_km_geom(g).area > 12
+          and to_km_geom(g).representative_point().within(wisconsin)]
+MIN_TOWN_POP = 60000     # towns below this are left out, except the study cities
 
 # ---------------------------------------------------------------- elevation
 tiles = sorted((RAW / "terrain" / "z7").glob("*.png"))
@@ -150,6 +153,8 @@ is_land = sdf > 0
 is_wi = shapely.contains_xy(wisconsin, X, Y)
 ground_h = np.maximum((elev - LAKE_LEVEL_M) * EXAG / 1000, SHORE_LIFT)
 coast_ramp = sdf * 0.3                                   # 0.3 km of height per km from the shore
+PLAIN_H = 0.5                                            # other states: flat land just above the water
+ground_h = np.where(is_wi, ground_h, PLAIN_H)
 height = np.where(
     is_land,
     coast_ramp + (ground_h - coast_ramp) * np.clip(sdf / 2.5, 0, 1) ** 2,     # blend into real terrain inland
@@ -198,11 +203,11 @@ for a, g in read_shapes("cb_2023_55_place_500k.zip"):
     hit = county_index.query(center, predicate="intersects")
     places.append({"name": a["NAME"], "pop": p, "geom": gk, "x": center.x, "y": center.y,
                    "county": counties[hit[0]][0] if len(hit) else ""})
-places.sort(key=lambda q: -q["pop"])
+places = sorted((p for p in places if p["pop"] >= MIN_TOWN_POP or p["name"] in STUDY_CITIES), key=lambda q: -q["pop"])
 
 # ---------------------------------------------------------------- rivers (also keep buildings off them)
 river_geom = unary_union([to_km_geom(shape(f["geometry"])) for f in json.load(open(GEO / "ne_10m_rivers.geojson"))["features"]
-                          if f["properties"].get("scalerank", 9) <= 9]).intersection(land.buffer(-1.5))
+                          if f["properties"].get("scalerank", 9) <= 9]).intersection(wisconsin.buffer(-1.5))
 rivers = lines_out(river_geom.simplify(0.3))
 no_build = prep(unary_union([river_geom.buffer(0.45)] + [g.buffer(0.2) for _, g in inland]))
 
@@ -277,12 +282,12 @@ def scatter(count, density, min_gap, tries=60):
     return out
 
 
-land_ok = is_land & (region != 3) & (slope < 0.9)
-forest = np.where(is_wi, 0.05 + 0.95 * north ** 1.4, 0.03 + 0.55 * north ** 2.2) * land_ok
+land_ok = is_land & is_wi & (region != 3) & (slope < 0.9)   # scenery only inside Wisconsin
+forest = (0.05 + 0.95 * north ** 1.4) * land_ok
 trees = [[x, y, round(rng.uniform(0.75, 1.3), 2), int(rng.random() < 0.17)]
-         for x, y in scatter(12000, forest, 2.3)]
+         for x, y in scatter(9000, forest, 2.3)]
 
-rocky = np.clip(slope * 1.6 + np.clip((height - 2.6) / 2.5, 0, 1), 0, 1) * is_land
+rocky = np.clip(slope * 1.6 + np.clip((height - 2.6) / 2.5, 0, 1), 0, 1) * is_land * is_wi
 rock_sites = scatter(420, rocky ** 1.5 + 0.004 * land_ok, 4.0)
 rocks = []
 for x, y in rock_sites:
@@ -292,7 +297,7 @@ for x, y in rock_sites:
 woods = forest * (forest > 0.35)
 logs = [[x, y, round(rng.uniform(0, 6.28), 2), round(rng.uniform(0.8, 1.4), 2)] for x, y in scatter(420, woods, 5)]
 stumps = [[x, y, round(rng.uniform(0.7, 1.2), 2)] for x, y in scatter(320, woods, 5)]
-meadow = land_ok * np.where(is_wi, 0.25 + 0.6 * (1 - north), 0.08)
+meadow = land_ok * (0.25 + 0.6 * (1 - north))
 bushes = [[x, y, round(rng.uniform(0.6, 1.3), 2)] for x, y in scatter(2600, meadow, 2.2)]
 flowers = [[x, y, int(rng.integers(0, 4))] for x, y in scatter(900, meadow * is_wi * (1 - north), 2.5)]
 farmland = land_ok * is_wi * np.clip(1 - north * 1.6, 0, 1) * (slope < 0.35)
@@ -309,8 +314,8 @@ def mix(a, b, t):
 
 rgb = lambda h: np.array([int(h[i:i + 2], 16) for i in (1, 3, 5)], dtype=np.float32)
 # Neighbors: muted olive in the north, warm wheat in the south; Wisconsin: forest → farmland
-other = mix(np.broadcast_to(rgb("#d8c48c"), (TH, TW, 3)), np.broadcast_to(rgb("#a9b979"), (TH, TW, 3)), np.broadcast_to(north_px, (TH, TW)))
-wi = mix(np.broadcast_to(rgb("#c3d572"), (TH, TW, 3)), np.broadcast_to(rgb("#4f8d48"), (TH, TW, 3)), np.broadcast_to(north_px ** 0.8, (TH, TW)))
+other = np.broadcast_to(rgb("#d6c99f"), (TH, TW, 3))     # other states: one plain, muted colour
+wi =mix(np.broadcast_to(rgb("#c3d572"), (TH, TW, 3)), np.broadcast_to(rgb("#4f8d48"), (TH, TW, 3)), np.broadcast_to(north_px ** 0.8, (TH, TW)))
 tex = np.where(wi_px[..., None], wi, other)
 
 # Field patches in southern Wisconsin (and lighter ones next door)
@@ -327,15 +332,15 @@ for _ in range(16000):
     col = palette[int(rng.integers(0, len(palette)))]
     fd.polygon(pts, fill=col + format(int(60 + 120 * s), "02x"))
 fa = np.asarray(fields, dtype=np.float32)
-alpha = fa[..., 3:] / 255 * np.where(wi_px, 1.0, 0.45)[..., None]
+alpha = fa[..., 3:] / 255 * wi_px[..., None]
 tex = tex * (1 - alpha) + fa[..., :3] * alpha
 
 # Rocky slopes and high ground turn lavender-grey; beaches are sand
 up = lambda g: np.asarray(Image.fromarray(g.astype(np.float32)).resize((TW, TH), Image.BILINEAR))
 rock_t = np.clip(up(slope) * 1.6 - 0.35, 0, 0.7) + np.clip((up(height) - 4.6) / 2, 0, 0.3)
-tex = mix(tex, np.broadcast_to(rgb("#b4a597"), tex.shape), np.clip(rock_t, 0, 0.8))
+tex = mix(tex, np.broadcast_to(rgb("#b4a597"), tex.shape), np.clip(rock_t, 0, 0.8) * wi_px)
 shore_d = np.clip(sdf_px, 0, None) / PX_KM                  # pixels inland from the shore
-beach = np.clip(1 - (shore_d - 1) / 5, 0, 1) * land_px
+beach = np.clip(1 - (shore_d - 1) / 5, 0, 1) * wi_px
 tex = mix(tex, np.broadcast_to(rgb("#efd9a7"), tex.shape), beach)
 
 # Baked hillshade so relief reads even when looking straight down (sun from the north-west)
@@ -344,7 +349,7 @@ normal = np.dstack([-gx_, gy_, np.ones_like(height)])     # x east, y north, z u
 normal /= np.linalg.norm(normal, axis=2, keepdims=True)
 light = np.array([-0.55, 0.45, 0.7]) / np.linalg.norm([-0.55, 0.45, 0.7])
 shade = up(np.clip(normal @ light, 0, 1) / light[2])        # 1.0 on flat ground
-tex *= (1 + 0.55 * (shade - 1))[..., None]
+tex *= (1 + 0.55 * (shade - 1) * wi_px)[..., None]
 tex = np.where(land_px[..., None], tex, rgb("#5b86cf"))
 Image.fromarray(np.clip(tex, 0, 255).astype(np.uint8)).filter(ImageFilter.SMOOTH).save(OUT / "land.webp", quality=88, method=6)
 
@@ -356,6 +361,52 @@ Image.fromarray(np.clip(water_px_d / 40 * 255, 0, 255).astype(np.uint8)).resize(
 county_lines = unary_union([g.boundary for _, _, g in counties]).intersection(wisconsin.buffer(-0.8))
 other_states = to_km_geom(unary_union([g for _, g in read_shapes("cb_2023_us_state_5m.zip", lambda a: a["STUSPS"] != "WI")]).intersection(FRAME))
 state_line = wisconsin.boundary.intersection(other_states.buffer(1.0))
+# Borders between the other states, plus the US–Canada land border (coastlines excluded)
+other_lines = unary_union(
+    [to_km_geom(g).boundary for a, g in read_shapes("cb_2023_us_state_5m.zip", lambda a: a["STUSPS"] != "WI")]
+    + [us_land.boundary]
+).intersection(land.buffer(-0.8)).difference(wisconsin.buffer(0.6))
+# Neighbouring states share each border, so the union is chopped at every vertex: merge it back into
+# continuous runs, then drop slivers where the coastline datasets disagree
+other_lines = linemerge([ln for ln in getattr(other_lines, "geoms", [other_lines]) if isinstance(ln, LineString)])
+other_lines = unary_union([ln for ln in getattr(other_lines, "geoms", [other_lines]) if ln.length > 4])
+
+# ---------------------------------------------------------------- lighthouses (real Wisconsin Lake Michigan lights)
+LIGHTHOUSES = [
+    ("Kenosha Southport Light", 42.5893, -87.8122),
+    ("Wind Point Light", 42.7808, -87.7586),
+    ("Milwaukee Breakwater Light", 43.0270, -87.8826),
+    ("Sheboygan Breakwater Light", 43.7493, -87.6936),
+    ("Manitowoc Breakwater Light", 44.0927, -87.6438),
+    ("Rawley Point Light", 44.2115, -87.5093),
+    ("Kewaunee Pierhead Light", 44.4570, -87.4937),
+    ("Sturgeon Bay Ship Canal Light", 44.7953, -87.3125),
+    ("Cana Island Light", 45.0880, -87.0469),
+    ("Green Bay Harbor Entrance Light", 44.6537, -87.9017),
+    ("Pottawatomie Light", 45.4271, -86.8285),
+]
+lighthouses = [{"name": n, **dict(zip("xy", km(lon, lat)))} for n, lat, lon in LIGHTHOUSES]
+
+# ---------------------------------------------------------------- boats: back-and-forth routes in open Lake Michigan
+michigan = to_km_geom(unary_union([g for n, g in lake_feats if n == "Lake Michigan"])).intersection(to_km_geom(FRAME))
+open_water = prep(michigan.buffer(-5))
+boats = []
+while len(boats) < 16:
+    x, y = rng.uniform(*michigan.bounds[0::2]), rng.uniform(*michigan.bounds[1::2])
+    if not open_water.contains(Point(x, y)):
+        continue
+    ang = rng.uniform(0, math.pi)
+    dx, dy = math.cos(ang), math.sin(ang)
+    ends = []
+    for s in (1, -1):
+        d = 0.0
+        while d < 90 and open_water.contains(Point(x + s * dx * (d + 1), y + s * dy * (d + 1))):
+            d += 1
+        ends.append((x + s * dx * d, y + s * dy * d))
+    if math.dist(*ends) < 25:
+        continue
+    kind = 1 if len(boats) % 3 == 0 else 0   # 1 = freighter, 0 = sailboat
+    boats.append([*ends[0], *ends[1], kind, round(rng.uniform(0, 1), 2)])
 
 # ---------------------------------------------------------------- labels, scene.json
 r2 = lambda v: round(float(v), 2)
@@ -367,7 +418,10 @@ scene = {
     "wisconsin": polys_out(wisconsin.simplify(0.3), 2),
     "counties": [{"name": n, "geoid": gid, "rings": polys_out(g.simplify(0.25), 0.5),
                   "label": dict(zip("xy", map(r2, g.representative_point().coords[0])))} for n, gid, g in sorted(counties)],
-    "borders": {"county": lines_out(county_lines.simplify(0.25)), "state": lines_out(state_line.simplify(0.25))},
+    "borders": {"county": lines_out(county_lines.simplify(0.25)), "state": lines_out(state_line.simplify(0.25)),
+                "other": lines_out(other_lines.simplify(0.3), 2.0)},
+    "lighthouses": [{"name": l["name"], "x": r2(l["x"]), "y": r2(l["y"])} for l in lighthouses],
+    "boats": [v for b in boats for v in map(r2, b)],
     "lakes": lakes_out,
     "rivers": rivers,
     "places": [{"name": p["name"], "pop": p["pop"], "county": p["county"], "x": r2(p["x"]), "y": r2(p["y"]),
@@ -377,8 +431,6 @@ scene = {
         lbl("Green Bay", -87.86, 44.98, "bay"), lbl("Wisconsin", -89.9, 44.9, "state"),
         lbl("Michigan", -85.1, 43.3, "neighbor"), lbl("Minnesota", -93.6, 45.6, "neighbor"),
         lbl("Iowa", -92.8, 42.1, "neighbor"), lbl("Illinois", -89.4, 41.6, "neighbor"),
-        lbl("Upper Peninsula", -86.9, 46.3, "neighbor"), lbl("Ontario", -84.3, 47.6, "neighbor"),
-        lbl("Lake Huron", -82.6, 44.6, "water"), lbl("Chicago", -87.75, 41.85, "neighbor"),
     ],
     "trees": [v for t in trees for v in (r2(t[0]), r2(t[1]), t[2], t[3])],
     "rocks": [v for t in rocks for v in map(r2, t)],

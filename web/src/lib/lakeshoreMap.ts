@@ -3,7 +3,11 @@
 
 import * as THREE from "three";
 import { MapControls } from "three/addons/controls/MapControls.js";
+import { LineMaterial } from "three/addons/lines/LineMaterial.js";
+import { LineSegments2 } from "three/addons/lines/LineSegments2.js";
+import { LineSegmentsGeometry } from "three/addons/lines/LineSegmentsGeometry.js";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
+import { createLabelLayer, type LabelKind } from "./mapLabels";
 import type { LoadedMap, Place, Polygon, Ring } from "./scene";
 
 export interface MapController {
@@ -11,14 +15,14 @@ export interface MapController {
   reset(): void;
   /** Turn the map so `deg` (0 = north, 90 = east, …) points to the top of the screen */
   setHeading(deg: number): void;
-  rotateBy(deg: number): void;
   focusPlace(name: string): void;
+  /** Jump to map coordinates (km, x east / y north) at a camera distance */
+  viewAt(x: number, y: number, dist: number): void;
   dispose(): void;
 }
 
 interface MapOptions {
   container: HTMLElement;
-  labelLayer: HTMLElement;
   map: LoadedMap;
   reducedMotion: boolean;
   onHeading?: (deg: number) => void;
@@ -28,23 +32,8 @@ interface MapOptions {
 
 const FOV = 35;
 const MAX_TILT = 1.15; // radians from straight down
+const MIN_TILT = 0.0005; // a hair off vertical so the camera always knows which way it faces
 const TREE_SCALE = 0.5; // trees are stylised: big enough to read from afar, not towering over houses
-
-// Tailwind classes for HTML labels pinned to 3D points
-const LABEL = {
-  water: "font-display text-2xl font-semibold italic text-foam [text-shadow:0_2px_6px_rgb(40_60_120/.45)]",
-  bay: "font-display text-[15px] font-semibold italic text-foam [text-shadow:0_1px_4px_rgb(40_60_120/.5)]",
-  state:
-    "font-display text-[26px] font-extrabold uppercase tracking-[.3em] text-leaf-700 [text-shadow:0_0_6px_#e6efb0,0_0_2px_#e6efb0]",
-  neighbor: "font-display text-sm font-semibold tracking-[.08em] text-neighbor-ink [text-shadow:0_0_4px_#f3e6c4]",
-  county:
-    "font-body text-[11px] font-extrabold uppercase tracking-[.08em] text-leaf-700/80 [text-shadow:0_0_4px_#eef4c4,0_0_2px_#eef4c4]",
-  place:
-    "pointer-events-auto cursor-pointer rounded-full bg-sand-50/85 px-2 py-0.5 font-body text-[12px] font-bold text-ink shadow-[0_2px_0_var(--color-sand-300)] hover:bg-white focus-visible:outline-2 focus-visible:outline-lake-500",
-  study:
-    "pointer-events-auto cursor-pointer rounded-lg bg-[linear-gradient(180deg,var(--color-wood-light)_0_12%,var(--color-wood)_12%)] px-[11px] pt-1 pb-[5px] font-display text-[15px] font-bold text-[#fff7ea] shadow-[0_3px_0_var(--color-wood-dark),0_6px_12px_rgb(75_79_147/.3)] hover:brightness-110 focus-visible:outline-2 focus-visible:outline-lake-500",
-} as const;
-type LabelKind = keyof typeof LABEL;
 
 const PALETTE = {
   houseWalls: [0xf3e3c3, 0xe9cfa9, 0xf1d1c6, 0xd6e4ea, 0xe8e0f0, 0xf5ecd9],
@@ -60,7 +49,8 @@ const PALETTE = {
 };
 
 export function createLakeshoreMap(opts: MapOptions): MapController {
-  const { container, labelLayer, map, reducedMotion } = opts;
+  const { container, map, reducedMotion } = opts;
+  let disposed = false;
   const { data, terrain } = map;
   const W = data.frame.width;
   const H = data.frame.height;
@@ -75,7 +65,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
 
   // ---------------------------------------------------------------- renderer + camera
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // Retina at 1.5x keeps gestures smooth
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.shadowMap.autoUpdate = false; // the sun never moves: re-render shadows only when the view changes
@@ -121,7 +111,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   const sun = new THREE.DirectionalLight(0xfff0dc, 2.3);
   const SUN_DIR = new THREE.Vector3(-0.55, 0.78, 0.3).normalize();
   sun.castShadow = true;
-  sun.shadow.mapSize.set(4096, 4096);
+  sun.shadow.mapSize.set(2048, 2048); // the shadow frustum follows the view, so 2048 stays crisp up close
   sun.shadow.bias = -0.0003;
   sun.shadow.normalBias = 0.04;
   scene.add(sun, sun.target);
@@ -228,10 +218,21 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   if (riverGeos.length) scene.add(new THREE.Mesh(track(mergeGeometries(riverGeos)), toon({ color: 0x6b9ae0 })));
 
   // County and state borders, draped
-  const countyMat = track(new THREE.LineBasicMaterial({ color: 0x2e5e4a, transparent: true, opacity: 0, depthWrite: false }));
-  scene.add(new THREE.LineSegments(track(drapedSegments(data.borders.county, 0.18)), countyMat));
-  const stateMat = track(new THREE.LineBasicMaterial({ color: 0x2e5e4a, transparent: true, opacity: 0.55, depthWrite: false }));
-  scene.add(new THREE.LineSegments(track(drapedSegments(data.borders.state, 0.22)), stateMat));
+  // Borders are screen-space lines: the same pixel width at every zoom
+  const lineMats: LineMaterial[] = [];
+  const borderLines = (rings: Ring[], lift: number, opts: ConstructorParameters<typeof LineMaterial>[0]) => {
+    const mat = track(new LineMaterial({ transparent: true, depthWrite: false, ...opts }));
+    lineMats.push(mat);
+    const geo = track(new LineSegmentsGeometry());
+    geo.setPositions(drapedSegments(rings, lift));
+    const lines = new LineSegments2(geo, mat);
+    if (opts?.dashed) lines.computeLineDistances();
+    scene.add(lines);
+    return mat;
+  };
+  const countyMat = borderLines(data.borders.county, 0.25, { color: 0x2e5e4a, linewidth: 1.2, opacity: 0 });
+  borderLines(data.borders.state, 0.3, { color: 0x2e5e4a, linewidth: 2.4, opacity: 0.7 });
+  borderLines(data.borders.other, 0.3, { color: 0x7a6440, linewidth: 1.8, opacity: 0.75, dashed: true, dashSize: 5, gapSize: 3 });
 
   // ---------------------------------------------------------------- instanced helpers
   const dummy = new THREE.Object3D();
@@ -427,16 +428,155 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     pulses.push(pulse);
   }
 
-  // ---------------------------------------------------------------- clouds + birds
+  // ---------------------------------------------------------------- lighthouses
+  const beams: THREE.Object3D[] = [];
+  const lhWhite = toon({ color: 0xf7f3ea });
+  const lhRed = toon({ color: 0xc0392b });
+  const lhDark = toon({ color: 0x3a3548 });
+  const pierMat = toon({ color: 0xa99c9a });
+  const lampMat = track(new THREE.MeshBasicMaterial({ color: 0xffe9a3 }));
+  const beamMat = track(
+    new THREE.MeshBasicMaterial({ color: 0xfff3c4, transparent: true, opacity: 0.28, depthWrite: false, side: THREE.DoubleSide }),
+  );
+  const lhGeo = {
+    pier: track(new THREE.CylinderGeometry(0.55, 0.65, 0.35, 12).translate(0, 0.17, 0)),
+    tower: track(new THREE.CylinderGeometry(0.16, 0.24, 1.3, 14).translate(0, 0.65, 0)),
+    band1: track(new THREE.CylinderGeometry(0.218, 0.222, 0.2, 14).translate(0, 0.45, 0)),
+    band2: track(new THREE.CylinderGeometry(0.187, 0.192, 0.2, 14).translate(0, 0.95, 0)),
+    gallery: track(new THREE.CylinderGeometry(0.25, 0.25, 0.05, 14).translate(0, 1.32, 0)),
+    lamp: track(new THREE.CylinderGeometry(0.12, 0.12, 0.18, 10).translate(0, 1.44, 0)),
+    roof: track(new THREE.ConeGeometry(0.17, 0.2, 10).translate(0, 1.63, 0)),
+    beam: track(new THREE.ConeGeometry(0.4, 3.2, 16, 1, true).rotateZ(Math.PI / 2).translate(1.6, 0, 0)),
+  };
+  for (const lh of data.lighthouses) {
+    const g = new THREE.Group();
+    const land = ground(lh.x, lh.y);
+    const onPier = land < 0.3; // breakwater lights stand on a stone pier out in the water
+    g.position.set(lh.x, onPier ? 0 : land, -lh.y);
+    const parts: [THREE.BufferGeometry, THREE.Material][] = [
+      [lhGeo.tower, lhWhite], [lhGeo.band1, lhRed], [lhGeo.band2, lhRed],
+      [lhGeo.gallery, lhDark], [lhGeo.lamp, lampMat], [lhGeo.roof, lhRed],
+    ];
+    const tower = new THREE.Group();
+    tower.position.y = onPier ? 0.35 : 0;
+    for (const [geo, mat] of parts) {
+      const m = new THREE.Mesh(geo, mat);
+      m.castShadow = mat !== lampMat;
+      tower.add(m);
+    }
+    const beam = new THREE.Object3D();
+    beam.position.y = 1.44;
+    beam.rotation.y = rand() * Math.PI * 2;
+    beam.add(new THREE.Mesh(lhGeo.beam, beamMat));
+    tower.add(beam);
+    beams.push(beam);
+    if (onPier) g.add(new THREE.Mesh(lhGeo.pier, pierMat));
+    g.add(tower);
+    scene.add(g);
+  }
+
+  // ---------------------------------------------------------------- boats on Lake Michigan
+  /** Hull outline (top view) extruded upward, bow pointing +x */
+  const hull = (length: number, width: number, depth: number) => {
+    const s = new THREE.Shape();
+    s.moveTo(-length / 2, -width / 2);
+    s.lineTo(length * 0.36, -width / 2);
+    s.lineTo(length / 2, 0);
+    s.lineTo(length * 0.36, width / 2);
+    s.lineTo(-length / 2, width / 2);
+    s.closePath();
+    return track(new THREE.ExtrudeGeometry(s, { depth, bevelEnabled: false }).rotateX(-Math.PI / 2));
+  };
+  const tri = (pts: number[]) => {
+    const g = track(new THREE.BufferGeometry());
+    g.setAttribute("position", new THREE.Float32BufferAttribute(pts, 3));
+    g.computeVertexNormals();
+    return g;
+  };
+  const sailMat = track(new THREE.MeshToonMaterial({ gradientMap: ramp, color: 0xfbf7ee, side: THREE.DoubleSide }));
+  const wakeMat = track(new THREE.MeshBasicMaterial({ color: 0xf7fbff, transparent: true, opacity: 0.55, depthWrite: false }));
+  const boatGeo = {
+    sailHull: hull(0.55, 0.2, 0.1),
+    sail: tri([-0.17, 0.12, 0, 0.13, 0.12, 0, -0.05, 0.78, 0]),
+    jib: tri([0.15, 0.12, 0, 0.25, 0.12, 0, 0.0, 0.6, 0]),
+    mast: track(new THREE.CylinderGeometry(0.012, 0.012, 0.7, 5).translate(-0.04, 0.45, 0)),
+    shipHull: hull(2.1, 0.3, 0.16),
+    cabin: track(new THREE.BoxGeometry(0.26, 0.24, 0.26).translate(-0.82, 0.28, 0)),
+    bridge: track(new THREE.BoxGeometry(0.14, 0.14, 0.24).translate(0.86, 0.23, 0)),
+    stack: track(new THREE.CylinderGeometry(0.04, 0.05, 0.16, 8).translate(-0.9, 0.48, 0)),
+    deck: track(new THREE.BoxGeometry(1.4, 0.02, 0.22).translate(0.02, 0.17, 0)),
+    wakeSmall: tri([-0.25, 0.02, 0, -1.6, 0.02, 0.5, -1.6, 0.02, -0.5]),
+    wakeBig: tri([-1.0, 0.02, 0, -4.2, 0.02, 1.1, -4.2, 0.02, -1.1]),
+  };
+  const boatMats = {
+    sailHull: [toon({ color: 0xf2efe8 }), toon({ color: 0x2f4f7a }), toon({ color: 0xb8432c })],
+    shipHull: toon({ color: 0x8e2f2a }),
+    white: toon({ color: 0xf2efe8 }),
+    dark: toon({ color: 0x2c2a44 }),
+    deck: toon({ color: 0x6d5a4c }),
+  };
+  interface Boat { obj: THREE.Group; a: THREE.Vector2; b: THREE.Vector2; len: number; speed: number; phase: number; yaw: number }
+  const boats: Boat[] = records(data.boats, 6).map(([x0, y0, x1, y1, kind, phase], i) => {
+    const obj = new THREE.Group();
+    const add = (geo: THREE.BufferGeometry, mat: THREE.Material, shadow = true) => {
+      const m = new THREE.Mesh(geo, mat);
+      m.castShadow = shadow;
+      obj.add(m);
+    };
+    if (kind === 1) {
+      add(boatGeo.shipHull, boatMats.shipHull);
+      add(boatGeo.deck, boatMats.deck);
+      add(boatGeo.cabin, boatMats.white);
+      add(boatGeo.bridge, boatMats.white);
+      add(boatGeo.stack, boatMats.dark);
+      add(boatGeo.wakeBig, wakeMat, false);
+    } else {
+      add(boatGeo.sailHull, boatMats.sailHull[i % 3]);
+      add(boatGeo.mast, boatMats.dark);
+      add(boatGeo.sail, sailMat);
+      add(boatGeo.jib, sailMat);
+      add(boatGeo.wakeSmall, wakeMat, false);
+    }
+    // Stylised scale, like the lighthouses: big enough to spot while zoomed out over the lake
+    obj.scale.setScalar(kind === 1 ? 2.2 : 2.6);
+    const a = new THREE.Vector2(x0, y0);
+    const b = new THREE.Vector2(x1, y1);
+    const len = a.distanceTo(b);
+    scene.add(obj);
+    return { obj, a, b, len, speed: kind === 1 ? 1.1 : 0.75, phase, yaw: 0 };
+  });
+  const boatPos = new THREE.Vector2();
+  function updateBoats(time: number, dt: number) {
+    for (const boat of boats) {
+      // Sail back and forth along the route, easing into each turn
+      const u = (boat.phase + (time * boat.speed) / boat.len) % 2;
+      const s = u < 1 ? u : 2 - u;
+      const eased = 0.5 - 0.5 * Math.cos(Math.PI * s);
+      boatPos.lerpVectors(boat.a, boat.b, eased);
+      const dir = u < 1 ? 1 : -1;
+      const want = Math.atan2(dir * (boat.b.y - boat.a.y), dir * (boat.b.x - boat.a.x));
+      let d = want - boat.yaw;
+      d = Math.atan2(Math.sin(d), Math.cos(d));
+      boat.yaw += d * Math.min(1, dt * 1.5);
+      boat.obj.position.set(boatPos.x, -0.03 + Math.sin(time * 1.7 + boat.phase * 10) * 0.015, -boatPos.y);
+      boat.obj.rotation.set(Math.sin(time * 1.3 + boat.phase * 7) * 0.04, boat.yaw, 0);
+    }
+  }
+  updateBoats(0, 10);
+
+  // ---------------------------------------------------------------- clouds + birds (over Wisconsin only)
+  const sky = { minX: wiBounds.min.x, maxX: wiBounds.max.x, minZ: -wiBounds.max.y, maxZ: -wiBounds.min.y };
+  const skyW = sky.maxX - sky.minX;
+  const skyH = sky.maxZ - sky.minZ;
   const cloudMat = toon({ color: 0xffffff, transparent: true, opacity: 0.92, depthWrite: false });
   const clouds: { mesh: THREE.Mesh; speed: number }[] = [];
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 9; i++) {
     const n = 4 + Math.floor(rand() * 4);
     const puffs: [number, number, number, number][] = [];
     for (let b = 0; b < n; b++) puffs.push([(b - n / 2) * 7, rand() * 3, (rand() - 0.5) * 7, 5 + rand() * 5]);
     const cloud = new THREE.Mesh(track(blobs(puffs)), cloudMat);
     cloud.scale.y = 0.5;
-    cloud.position.set((rand() - 0.5) * W, 55 + rand() * 30, (rand() - 0.5) * H);
+    cloud.position.set(sky.minX + rand() * skyW, 55 + rand() * 30, sky.minZ + rand() * skyH);
     clouds.push({ mesh: cloud, speed: 1.5 + rand() * 2.5 });
     scene.add(cloud);
   }
@@ -446,11 +586,11 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   wingGeo.computeVertexNormals();
   const birdMat = track(new THREE.MeshBasicMaterial({ color: 0x4a4560, side: THREE.DoubleSide }));
   const flocks: { origin: THREE.Vector3; dir: THREE.Vector3; offsets: THREE.Vector3[]; phase: number }[] = [];
-  for (let f = 0; f < 8; f++) {
+  for (let f = 0; f < 6; f++) {
     const angle = rand() * Math.PI * 2;
     const n = 5 + Math.floor(rand() * 4);
     flocks.push({
-      origin: new THREE.Vector3((rand() - 0.5) * W, 38 + rand() * 25, (rand() - 0.5) * H),
+      origin: new THREE.Vector3(sky.minX + rand() * skyW, 38 + rand() * 25, sky.minZ + rand() * skyH),
       dir: new THREE.Vector3(Math.cos(angle), 0, Math.sin(angle)),
       offsets: Array.from({ length: n }, (_, k) => {
         const side = k % 2 ? 1 : -1;
@@ -478,8 +618,11 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     let i = 0;
     for (const f of flocks) {
       f.origin.addScaledVector(f.dir, dt * 9);
-      if (Math.abs(f.origin.x) > W / 2 + 30) f.origin.x = -Math.sign(f.origin.x) * (W / 2 + 25);
-      if (Math.abs(f.origin.z) > H / 2 + 30) f.origin.z = -Math.sign(f.origin.z) * (H / 2 + 25);
+      // Wrap around within the skies over Wisconsin
+      if (f.origin.x > sky.maxX) f.origin.x -= skyW;
+      if (f.origin.x < sky.minX) f.origin.x += skyW;
+      if (f.origin.z > sky.maxZ) f.origin.z -= skyH;
+      if (f.origin.z < sky.minZ) f.origin.z += skyH;
       flockQuat.setFromAxisAngle(AXIS_Y, Math.atan2(-f.dir.z, f.dir.x));
       for (const off of f.offsets) {
         tmpPos.copy(off).applyQuaternion(flockQuat).add(f.origin);
@@ -502,84 +645,27 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   }
   updateBirds(0, 0);
 
-  // ---------------------------------------------------------------- labels
-  interface Label {
-    el: HTMLElement;
-    kind: LabelKind;
-    point: THREE.Vector3;
-    place?: Place;
-    shown: boolean;
-    rank: number;
-    /** Half-size in px, measured once */
-    size?: [number, number];
-  }
-  const labels: Label[] = [];
-  const addLabel = (text: string, kind: LabelKind, x: number, y: number, lift: number, place?: Place) => {
-    const el = document.createElement(place ? "button" : "div");
-    el.className = `absolute top-0 left-0 whitespace-nowrap opacity-0 transition-opacity duration-200 will-change-transform ${place ? "" : "pointer-events-none"} ${LABEL[kind]}`;
-    el.textContent = text;
-    el.style.visibility = "hidden";
-    if (place) {
-      (el as HTMLButtonElement).type = "button";
-      el.setAttribute("aria-label", `Fly to ${place.name}`);
-      el.addEventListener("click", () => focusPlace(place));
+  // ---------------------------------------------------------------- labels (drawn in the scene)
+  const labelLayer = createLabelLayer<Place>(scene, camera);
+  let labelsBuilt = false;
+  labelLayer.ready.then(() => {
+    if (disposed) return;
+    const at3 = (x: number, y: number, h: number) => new THREE.Vector3(x, h, -y);
+    for (const l of data.labels) {
+      const h = l.kind === "water" || l.kind === "bay" ? 0.5 : Math.max(ground(l.x, l.y), 0) + 1.5;
+      labelLayer.add(l.text, l.kind, at3(l.x, l.y, h));
     }
-    labelLayer.appendChild(el);
-    const point = new THREE.Vector3(x, (kind === "water" || kind === "bay" ? 0 : ground(x, y)) + lift, -y);
-    labels.push({ el, kind, point, place, shown: false, rank: place ? place.pop : kind === "water" ? 1e9 : 1e8 });
-  };
-  data.labels.forEach((l) => addLabel(l.text, l.kind, l.x, l.y, 1.5));
-  data.counties.forEach((c) => addLabel(c.name, "county", c.label.x, c.label.y, 0.6));
-  data.places.forEach((p) => addLabel(p.name, p.study ? "study" : "place", p.x, p.y, p.study ? 2.9 : 1.2, p));
-  labels.sort((a, b) => (b.place?.study ? 1e10 : b.rank) - (a.place?.study ? 1e10 : a.rank));
-
-  // Which labels show at which zoom (camera distance in km)
-  const placeRange = (pop: number) => (pop >= 50000 ? 1400 : pop >= 15000 ? 520 : pop >= 5000 ? 240 : pop >= 2000 ? 120 : 60);
-  const projected = new THREE.Vector3();
-  const boxes: number[] = [];
-  function updateLabels(dist: number) {
-    const w = container.clientWidth;
-    const h = container.clientHeight;
-    boxes.length = 0;
-    for (const l of labels) {
-      let visible: boolean;
-      if (l.place) visible = l.place.study || dist < placeRange(l.place.pop);
-      else if (l.kind === "county") visible = dist < 260;
-      else if (l.kind === "state") visible = dist > 140;
-      else if (l.kind === "neighbor") visible = dist > 90;
-      else visible = true;
-      if (visible) {
-        projected.copy(l.point).project(camera);
-        visible = projected.z < 1 && Math.abs(projected.x) < 1.05 && Math.abs(projected.y) < 1.05;
-      }
-      let sx = 0;
-      let sy = 0;
-      if (visible) {
-        sx = (projected.x * 0.5 + 0.5) * w;
-        sy = (-projected.y * 0.5 + 0.5) * h;
-        // Skip labels that would overlap one already placed (bigger places win)
-        l.size ??= [l.el.offsetWidth / 2 + 4, l.el.offsetHeight / 2 + 2];
-        const [hw, hh] = l.size;
-        const cy = l.place?.study ? sy - hh : sy;
-        for (let b = 0; b < boxes.length && visible; b += 4) {
-          if (Math.abs(sx - boxes[b]) < hw + boxes[b + 2] && Math.abs(cy - boxes[b + 1]) < hh + boxes[b + 3]) visible = false;
-        }
-        if (visible) boxes.push(sx, cy, hw, hh);
-      }
-      if (visible) {
-        l.el.style.transform = `translate(${sx.toFixed(1)}px, ${sy.toFixed(1)}px) translate(-50%, ${l.place?.study ? "-100%" : "-50%"})`;
-        if (!l.shown) {
-          l.el.style.visibility = "visible";
-          l.el.style.opacity = "1";
-          l.shown = true;
-        }
-      } else if (l.shown) {
-        l.el.style.opacity = "0";
-        l.el.style.visibility = "hidden";
-        l.shown = false;
+    for (const c of data.counties) {
+      if (!data.places.some((p) => p.study && p.county === c.name)) {
+        labelLayer.add(c.name, "county", at3(c.label.x, c.label.y, ground(c.label.x, c.label.y) + 0.6));
       }
     }
-  }
+    // Only the three study cities are named; their signs are clickable
+    for (const p of data.places.filter((q) => q.study)) labelLayer.add(p.name, "sign", at3(p.x, p.y, ground(p.x, p.y) + 2.6), p);
+    labelsBuilt = true;
+  });
+  const labelVisible = (dist: number) => (kind: LabelKind) =>
+    kind === "county" ? dist < 260 : kind === "state" ? dist > 140 : kind === "neighbor" ? dist > 90 : true;
 
   // ---------------------------------------------------------------- camera flights
   interface Flight {
@@ -611,9 +697,11 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     const e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
     const { from, to } = flight;
     controls.target.lerpVectors(from.target, to.target, e);
+    const r = Math.min(THREE.MathUtils.lerp(from.dist, to.dist, e) + Math.sin(Math.PI * t) * flight.lift, controls.maxDistance);
     spherical.set(
-      THREE.MathUtils.lerp(from.dist, to.dist, e) + Math.sin(Math.PI * t) * flight.lift,
-      THREE.MathUtils.lerp(from.polar, to.polar, e),
+      r,
+      // Never exactly 0: looking perfectly straight down loses the heading
+      Math.max(MIN_TILT, Math.min(THREE.MathUtils.lerp(from.polar, to.polar, e), maxTiltFor(r, controls.target))),
       THREE.MathUtils.lerp(from.azimuth, to.azimuth, e),
     );
     camera.position.setFromSpherical(spherical).add(controls.target);
@@ -644,11 +732,39 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
       opts.onFirstInteraction?.();
     }
   };
+  let lastMove = 0;
   controls.addEventListener("start", () => {
     flight = null;
     hideHint();
   });
+  controls.addEventListener("change", () => (lastMove = performance.now()));
   controls.addEventListener("end", () => (shadowDirty = true));
+
+  // Wheel + trackpad zoom, handled here instead of by MapControls: a MacBook pinch arrives as
+  // ctrl+wheel with tiny deltas, which the stock controls turn into very slow zooming.
+  // Zooms toward the point under the cursor, applied immediately for a direct feel.
+  const zoomRay = new THREE.Raycaster();
+  const zoomNdc = new THREE.Vector2();
+  const onWheel = (e: WheelEvent) => {
+    e.preventDefault();
+    e.stopPropagation(); // keep MapControls' own (slow) wheel zoom from also running
+    flight = null;
+    hideHint();
+    lastMove = performance.now();
+    const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 400 : 1;
+    const speed = e.ctrlKey ? 0.011 : 0.0024; // pinch vs. scroll/mouse wheel
+    const factor = Math.exp(THREE.MathUtils.clamp(e.deltaY * unit * speed, -0.5, 0.5));
+    const offset = camera.position.clone().sub(controls.target);
+    const dist = offset.length();
+    const next = THREE.MathUtils.clamp(dist * factor, controls.minDistance, controls.maxDistance);
+    const rect = renderer.domElement.getBoundingClientRect();
+    zoomNdc.set(((e.clientX - rect.left) / rect.width) * 2 - 1, -((e.clientY - rect.top) / rect.height) * 2 + 1);
+    zoomRay.setFromCamera(zoomNdc, camera);
+    const hit = groundHit(zoomRay.ray);
+    if (hit) controls.target.addScaledVector(hit.sub(controls.target), 1 - next / dist);
+    camera.position.copy(controls.target).add(offset.setLength(next));
+  };
+  container.addEventListener("wheel", onWheel, { capture: true, passive: false });
 
   // Click (not drag) on the map: fly to the nearest town or city
   const raycaster = new THREE.Raycaster();
@@ -664,6 +780,8 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     const rect = renderer.domElement.getBoundingClientRect();
     ndc.set(((e.clientX - rect.left) / rect.width) * 2 - 1, -((e.clientY - rect.top) / rect.height) * 2 + 1);
     raycaster.setFromCamera(ndc, camera);
+    const sign = labelLayer.pick(raycaster);
+    if (sign?.data) return focusPlace(sign.data);
     const hit = groundHit(raycaster.ray);
     if (!hit) return;
     const dist = camera.position.distanceTo(controls.target);
@@ -678,6 +796,21 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   };
   renderer.domElement.addEventListener("pointerdown", onDown);
   renderer.domElement.addEventListener("pointerup", onUp);
+
+  // Pointer cursor over the clickable city signs
+  let hoverQueued = false;
+  const onHover = (e: PointerEvent) => {
+    if (down || hoverQueued) return;
+    hoverQueued = true;
+    requestAnimationFrame(() => {
+      hoverQueued = false;
+      const rect = renderer.domElement.getBoundingClientRect();
+      ndc.set(((e.clientX - rect.left) / rect.width) * 2 - 1, -((e.clientY - rect.top) / rect.height) * 2 + 1);
+      raycaster.setFromCamera(ndc, camera);
+      renderer.domElement.style.cursor = labelLayer.pick(raycaster) ? "pointer" : "";
+    });
+  };
+  renderer.domElement.addEventListener("pointermove", onHover);
 
   // Ray → terrain intersection by marching the height field
   function groundHit(ray: THREE.Ray) {
@@ -697,6 +830,29 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   function updateBounds() {
     controls.maxDistance = Math.min(W, H) / 2 / (tanHalf * Math.max(camera.aspect, 1));
   }
+  // Steepest tilt that keeps the far edge of the view on the map (never the sky or the map's edge)
+  const vHalf = THREE.MathUtils.degToRad(FOV / 2);
+  function maxTiltFor(dist: number, target: THREE.Vector3) {
+    const room = Math.min(W / 2 - Math.abs(target.x), H / 2 - Math.abs(target.z));
+    const hHalf = Math.atan(Math.tan(vHalf) * Math.max(camera.aspect, 1));
+    const fits = (polar: number) => {
+      const top = polar + vHalf;
+      if (top >= 1.4) return false;
+      const height = dist * Math.cos(polar);
+      const far = height * Math.tan(top) - dist * Math.sin(polar);
+      const side = (height / Math.cos(top)) * Math.tan(hHalf);
+      return Math.hypot(far, side) <= room;
+    };
+    let lo = 0;
+    let hi = MAX_TILT;
+    for (let k = 0; k < 12; k++) {
+      const mid = (lo + hi) / 2;
+      if (fits(mid)) lo = mid;
+      else hi = mid;
+    }
+    return lo;
+  }
+
   function clampTarget(dist: number) {
     const half = dist * tanHalf * Math.max(camera.aspect, 1);
     const t = controls.target;
@@ -719,6 +875,8 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   let shadowDirty = true;
   let lastShadow = { x: 1e9, z: 1e9, half: 0 };
   function updateShadows(dist: number) {
+    // Re-render the shadow map only once the view settles: gestures stay smooth
+    if (flight || performance.now() - lastMove < 160) return;
     const half = THREE.MathUtils.clamp(dist * 1.1, 30, 560);
     const t = controls.target;
     const moved = Math.hypot(t.x - lastShadow.x, t.z - lastShadow.z);
@@ -741,6 +899,8 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     renderer.setSize(w, h, false);
     camera.aspect = w / Math.max(h, 1);
     camera.updateProjectionMatrix();
+    lineMats.forEach((m) => m.resolution.set(w, h));
+    labelLayer.resize(w, h);
     updateBounds();
   };
   const resizeObserver = new ResizeObserver(resize);
@@ -761,6 +921,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
 
     const dist = camera.position.distanceTo(controls.target);
     clampTarget(dist);
+    controls.maxPolarAngle = Math.max(MIN_TILT, maxTiltFor(dist, controls.target));
     camera.near = THREE.MathUtils.clamp(dist * 0.01, 0.05, 25);
     camera.far = dist * 5 + 1200;
     camera.updateProjectionMatrix();
@@ -771,9 +932,11 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
       waterUniforms.uTime.value = time;
       for (const c of clouds) {
         c.mesh.position.x += c.speed * dt;
-        if (c.mesh.position.x > W / 2 + 40) c.mesh.position.x = -W / 2 - 40;
+        if (c.mesh.position.x > sky.maxX) c.mesh.position.x -= skyW;
       }
       updateBirds(time, dt);
+      updateBoats(time, dt);
+      for (const beam of beams) beam.rotation.y += dt * 0.9;
       const p = (time % 2.2) / 2.2;
       for (const pulse of pulses) {
         pulse.scale.setScalar(1 + p * 1.4);
@@ -795,7 +958,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     }
 
     updateShadows(dist);
-    updateLabels(dist);
+    if (labelsBuilt) labelLayer.update(dist, dt, labelVisible(dist));
     renderer.render(scene, camera);
     raf = requestAnimationFrame(frame);
   };
@@ -813,25 +976,27 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     setHeading(deg) {
       flyTo({ azimuth: THREE.MathUtils.degToRad(-deg) }, 650);
     },
-    rotateBy(deg) {
-      const v = currentView();
-      flyTo({ azimuth: v.azimuth - THREE.MathUtils.degToRad(deg) }, 650);
-    },
     focusPlace(name) {
       const p = data.places.find((q) => q.name === name);
       if (p) focusPlace(p);
     },
+    viewAt(x, y, dist) {
+      flyTo({ target: new THREE.Vector3(x, Math.max(ground(x, y), 0), -y), dist, polar: 0.5 }, 0);
+    },
     dispose() {
+      disposed = true;
       cancelAnimationFrame(raf);
       resizeObserver.disconnect();
       renderer.domElement.removeEventListener("pointerdown", onDown);
       renderer.domElement.removeEventListener("pointerup", onUp);
+      renderer.domElement.removeEventListener("pointermove", onHover);
+      container.removeEventListener("wheel", onWheel, { capture: true });
       controls.stopListenToKeyEvents();
       controls.dispose();
       disposables.forEach((d) => d.dispose());
       renderer.dispose();
       renderer.domElement.remove();
-      labels.forEach((l) => l.el.remove());
+      labelLayer.dispose();
     },
   };
 
@@ -882,7 +1047,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     return g;
   }
 
-  /** Line segments along rings, draped over the terrain */
+  /** Segment pairs [x0,y0,z0, x1,y1,z1, ...] along polylines, draped over the terrain */
   function drapedSegments(rings: Ring[], lift: number) {
     const p: number[] = [];
     for (const ring of rings) {
@@ -893,9 +1058,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
         prev = cur;
       });
     }
-    const g = new THREE.BufferGeometry();
-    g.setAttribute("position", new THREE.Float32BufferAttribute(p, 3));
-    return g;
+    return p;
   }
 }
 

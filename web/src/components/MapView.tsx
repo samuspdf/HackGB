@@ -29,7 +29,6 @@ const DIRECTIONS = [
 
 export default function MapView() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const labelsRef = useRef<HTMLDivElement>(null);
   const controllerRef = useRef<MapController | null>(null);
   const compassRef = useRef<HTMLDivElement>(null);
   const webgl = useSyncExternalStore(noSubscribe, hasWebGL, () => null);
@@ -41,15 +40,13 @@ export default function MapView() {
 
   useEffect(() => {
     const container = containerRef.current;
-    const labelLayer = labelsRef.current;
-    if (!webgl || !container || !labelLayer) return;
+    if (!webgl || !container) return;
     let cancelled = false;
     loadMap()
       .then((map) => {
         if (cancelled) return;
         controllerRef.current = createLakeshoreMap({
           container,
-          labelLayer,
           map,
           reducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
           // Written straight to a CSS variable: no React re-render on every frame while rotating
@@ -59,10 +56,13 @@ export default function MapView() {
         });
         setSource(map.data.source);
         setLoaded(true);
-        // Shareable links: ?focus=Green%20Bay flies to a place, ?heading=90 puts east at the top
+        // Shareable links: ?focus=Green%20Bay flies to a place, ?heading=90 puts east at the top,
+        // ?view=x,y,dist jumps to map coordinates in km
         const params = new URLSearchParams(window.location.search);
         const focus = params.get("focus");
         const heading = Number(params.get("heading"));
+        const view = params.get("view")?.split(",").map(Number);
+        if (view?.length === 3 && view.every(Number.isFinite)) controllerRef.current.viewAt(view[0], view[1], view[2]);
         if (heading) controllerRef.current.setHeading(heading);
         if (focus) controllerRef.current.focusPlace(focus);
       })
@@ -93,7 +93,6 @@ export default function MapView() {
         aria-label="3D map of Wisconsin and Lake Michigan. Drag to move, scroll to zoom, click a city to fly there."
         className="fixed inset-0 z-[1] cursor-grab touch-none active:cursor-grabbing"
       />
-      <div ref={labelsRef} className="pointer-events-none fixed inset-0 z-[2] overflow-hidden" />
 
       {status && (
         <p className="fixed top-1/2 left-1/2 z-[4] max-w-sm -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-sand-50 px-5 py-4 text-center text-sm font-semibold text-ink-soft shadow-[0_4px_0_var(--color-sand-300)]">
@@ -102,11 +101,11 @@ export default function MapView() {
       )}
 
       {/* Compass: shows where north is; N / E / S / W turn that direction to the top */}
-      <div className="fixed z-[3] flex flex-col items-center gap-2" style={{ top: gutter, right: gutter }}>
-        <div
-          ref={compassRef}
-          className="relative size-[92px] rounded-full bg-sand-50/90 shadow-[0_4px_0_var(--color-sand-300),0_10px_18px_rgb(75_79_147/.2)] backdrop-blur [--heading:0deg]"
-        >
+      <div
+        ref={compassRef}
+        className="fixed z-[3] size-[92px] rounded-full bg-sand-50/90 shadow-[0_4px_0_var(--color-sand-300),0_10px_18px_rgb(75_79_147/.2)] backdrop-blur [--heading:0deg]"
+        style={{ top: gutter, right: gutter }}
+      >
           <div className="absolute inset-0 rotate-[calc(-1*var(--heading))]">
             <svg viewBox="0 0 92 92" aria-hidden="true" className="absolute inset-0">
               <circle cx="46" cy="46" r="30" fill="none" stroke="var(--color-sand-300)" strokeWidth="1.5" strokeDasharray="2 4" />
@@ -125,15 +124,6 @@ export default function MapView() {
                 {d.label}
               </button>
             ))}
-          </div>
-        </div>
-        <div className="flex gap-1.5">
-          <button type="button" aria-label="Rotate map 90° left" className={`${chip} size-10`} onClick={() => controllerRef.current?.rotateBy(-90)}>
-            <svg viewBox="0 0 20 20" aria-hidden="true" className={icon}><path d="M8 4 4.5 7.5 8 11M4.5 7.5H12a4 4 0 0 1 0 8H9" /></svg>
-          </button>
-          <button type="button" aria-label="Rotate map 90° right" className={`${chip} size-10`} onClick={() => controllerRef.current?.rotateBy(90)}>
-            <svg viewBox="0 0 20 20" aria-hidden="true" className={icon}><path d="M12 4l3.5 3.5L12 11m3.5-3.5H8a4 4 0 0 0 0 8h3" /></svg>
-          </button>
         </div>
       </div>
 
