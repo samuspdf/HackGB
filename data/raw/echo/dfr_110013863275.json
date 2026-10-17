@@ -1,0 +1,2937 @@
+{
+"Results":{
+"Message":"Success",
+"MultipleFRSFacilities":{
+}
+,
+"RegistryID":"110013863275",
+"Reports":{
+"HasPollRpt":"Y",
+"HasAimRpt":"N",
+"HasBiosolidAnnualRpt":"N",
+"HasBflmRpt":"N"
+}
+,
+"Permits":[
+{
+"Statute":"",
+"EPASystem":"FRS",
+"EPARegion":"05",
+"SourceID":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC BROADWAY LLC",
+"FacilityStreet":"1919 S BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.4925",
+"Longitude":"-88.0323",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"INTERPOLATION-SATELLITE",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"200",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"",
+"EPASystem":"ICIS",
+"EPARegion":"05",
+"SourceID":"9600",
+"FacilityName":"FORT JAMES OPERATING COMPANY",
+"FacilityStreet":"1919 S. BROADWAY AVE.",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.493651",
+"Longitude":"-88.036887",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"EPARegion":"05",
+"SourceID":"WI0000005500900003",
+"FacilityName":"GEORGIA PACIFIC BROADWAY LLC",
+"FacilityStreet":"1919 S BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"543044905",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"Major Emissions",
+"Areas":"CAAMACT, CAANESH, CAANSPS, CAAPSD, CAASIP, CAATVP",
+"ExpDate":null,
+"Latitude":"44.4925",
+"Longitude":"-88.0323",
+"IndianCountry":"N",
+"SIC":"2621",
+"NAICS":"322120 322121",
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Operating"
+}
+,{
+"Statute":"CAA",
+"EPASystem":"CAMDBS",
+"EPARegion":"05",
+"SourceID":"10360",
+"FacilityName":"BROADWAY MILL",
+"FacilityStreet":null,
+"FacilityCity":null,
+"FacilityState":"WI",
+"FacilityZip":null,
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":null,
+"Longitude":null,
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"322121",
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"INACTIVE"
+}
+,{
+"Statute":"CAA",
+"EPASystem":"CEDRI",
+"EPARegion":"05",
+"SourceID":"CEDRI115781",
+"FacilityName":"GEORGIA-PACIFIC BROADWAY LLC",
+"FacilityStreet":"1919 S BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.492472",
+"Longitude":"-88.032743",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17630",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"CEDRI",
+"EPARegion":"05",
+"SourceID":"CEDRI10144940",
+"FacilityName":"GEORGIA PACIFIC CONSUMER PRODUCTS LP",
+"FacilityStreet":"1919 S BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54307",
+"FacilityFipsCode":null,
+"FacilityCountyName":null,
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.493911",
+"Longitude":"-88.036622",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17630",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"CEDRI",
+"EPARegion":"05",
+"SourceID":"CEDRI123781",
+"FacilityName":"GEORGIA PACIFIC CONSUMER PRODUCTS LP - GREEN BAY BROADWAY MILL",
+"FacilityStreet":"1919 S BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.493911",
+"Longitude":"-88.036622",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17630",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"EIS",
+"EPARegion":"05",
+"SourceID":"4944011",
+"FacilityName":"GEORGIA PACIFIC BROADWAY LLC",
+"FacilityStreet":"1919 S BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.4925",
+"Longitude":"-88.0323",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"322120",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"INTERPOLATION-SATELLITE",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"200",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"GHGRP",
+"EPARegion":"05",
+"SourceID":"1000589",
+"FacilityName":"GEORGIA-PACIFIC BROADWAY LLC",
+"FacilityStreet":"1919 S. BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"Direct Emitter",
+"Areas":"General Stationary Fuel Combustion",
+"ExpDate":null,
+"Latitude":null,
+"Longitude":null,
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"322120",
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Reporting Year 2023:  Emitter - Reporting and meeting Verification requirements."
+}
+,{
+"Statute":"CWA",
+"EPASystem":"ICIS-NPDES",
+"EPARegion":"05",
+"SourceID":"WI0001848",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER PRODUCTS",
+"FacilityStreet":"1919 S BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54307",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"Major: NPDES Individual Permit",
+"Areas":null,
+"ExpDate":"06/30/2028",
+"Latitude":"44.500957",
+"Longitude":"-88.041559",
+"IndianCountry":"N",
+"SIC":"2621",
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Effective"
+}
+,{
+"Statute":"CWA",
+"EPASystem":"ICIS-NPDES",
+"EPARegion":"05",
+"SourceID":"WIG012816",
+"FacilityName":"GEORGIA-PACIFIC BROADWAY LLC SITE",
+"FacilityStreet":"1919 SOUTH BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54307",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"Non-Major: General Permit Covered Facility",
+"Areas":null,
+"ExpDate":"09/30/2026",
+"Latitude":"44.492192",
+"Longitude":"-88.031067",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Admin Continued"
+}
+,{
+"Statute":"CWA",
+"EPASystem":"ICIS-NPDES",
+"EPARegion":"05",
+"SourceID":"WIG012723",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC SITE",
+"FacilityStreet":"1919 BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"Non-Major: General Permit Covered Facility",
+"Areas":null,
+"ExpDate":"09/30/2026",
+"Latitude":"44.49367",
+"Longitude":"-88.029916",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Admin Continued"
+}
+,{
+"Statute":"EP313",
+"EPASystem":"TRI",
+"EPARegion":"5",
+"SourceID":"54307FRTHW1919S",
+"FacilityName":"GEORGIA-PACIFIC BROADWAY LLC",
+"FacilityStreet":"1919 S BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"Toxics Release Inventory",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.4925",
+"Longitude":"-88.0323",
+"IndianCountry":"N",
+"SIC":"2621 2676",
+"NAICS":"322120 322121 322291",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"INTERPOLATION-SATELLITE",
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"230",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Last Reported for 2024"
+}
+,{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"EPARegion":"05",
+"SourceID":"WID006136659",
+"FacilityName":"GEORGIA PACIFIC BROADWAY LLC",
+"FacilityStreet":"1919 S BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304-4905",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"LQG",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.49283",
+"Longitude":"-88.037373",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"322120",
+"DQURL":null,
+"HdatumDesc":"WGS84",
+"CollectDesc":"Address Geocode",
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Active (H    )"
+}
+,{
+"Statute":"TSCA",
+"EPASystem":"TSCA",
+"EPARegion":"05",
+"SourceID":"TSCA10152919",
+"FacilityName":"GEORGIA-PACIFIC BROADWAY LLC",
+"FacilityStreet":"1919 S. BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.49446",
+"Longitude":"-88.03622",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17630",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"TSCA",
+"EPASystem":"TSCA",
+"EPARegion":"05",
+"SourceID":"100606100",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER PRODUCTS, L.P.",
+"FacilityStreet":"1919 S. BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":null,
+"FacilityCountyName":null,
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.493911",
+"Longitude":"-88.036622",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17447",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"TSCA",
+"EPASystem":"TSCA",
+"EPARegion":"05",
+"SourceID":"TSCA6764",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"FacilityStreet":"1919 S. BROADWAY",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.4925",
+"Longitude":"-88.0323",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17630",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+]
+,
+"SystemExtractDates":{
+"Dates":[
+{
+"EPASystem":"ICIS-Air",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"ICIS-NPDES",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"RCRAInfo",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"SDWIS",
+"SystemExtractDate":"10/07/2026"
+}
+]
+}
+,
+"EnforcementComplianceSummaries":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"CWA",
+"StartDate3Yr":"07/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"06/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Summaries":[
+{
+"Statute":"CAA",
+"Inspections":"2",
+"LastInspection":"06/23/2025",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"0",
+"QtrsInSNC":"0",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+,{
+"Statute":"CWA",
+"Inspections":"2",
+"LastInspection":"02/27/2024",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"7",
+"QtrsInSNC":"2",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+,{
+"Statute":"RCRA",
+"Inspections":"1",
+"LastInspection":"02/28/2024",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"2",
+"QtrsInSNC":"0",
+"InformalActions":"1",
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+]
+}
+,
+"NAICS":{
+"Sources":[
+{
+"NAICSCodes":[
+{
+"SourceID":"1000589",
+"EPASystem":"GHGRP",
+"NAICSCode":"322120",
+"NAICSDesc":"Paper Mills"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"10360",
+"EPASystem":"CAMDBS",
+"NAICSCode":"322121",
+"NAICSDesc":"Paper (except Newsprint) Mills"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"4944011",
+"EPASystem":"EIS",
+"NAICSCode":"322120",
+"NAICSDesc":"Paper Mills"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"54307FRTHW1919S",
+"EPASystem":"TRI",
+"NAICSCode":"322120",
+"NAICSDesc":"Paper Mills"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"EPASystem":"TRI",
+"NAICSCode":"322121",
+"NAICSDesc":"Paper (except Newsprint) Mills"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"EPASystem":"TRI",
+"NAICSCode":"322291",
+"NAICSDesc":"Sanitary Paper Product Manufacturing"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"NAICSCode":"322120",
+"NAICSDesc":"Paper Mills"
+}
+,{
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"NAICSCode":"322121",
+"NAICSDesc":"Paper (except Newsprint) Mills"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"WID006136659",
+"EPASystem":"RCRAInfo",
+"NAICSCode":"322120",
+"NAICSDesc":"Paper Mills"
+}
+]
+}
+]
+}
+,
+"SBEEventTotals":{
+}
+,
+"SIC":{
+"Sources":[
+{
+"SICCodes":[
+{
+"SourceID":"54307FRTHW1919S",
+"EPASystem":"TRI",
+"SICCode":"2621",
+"SICDesc":"Paper Mills"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"EPASystem":"TRI",
+"SICCode":"2676",
+"SICDesc":"Sanitary Paper Products"
+}
+]
+}
+,{
+"SICCodes":[
+{
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"SICCode":"2621",
+"SICDesc":"Paper Mills"
+}
+]
+}
+,{
+"SICCodes":[
+{
+"SourceID":"WI0001848",
+"EPASystem":"ICIS-NPDES",
+"SICCode":"2621",
+"SICDesc":"Paper Mills"
+}
+]
+}
+]
+}
+,
+"EffluentGuidelines":{
+}
+,
+"InspectionEnforcementSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"CWA",
+"StartDate":"10/10/2021",
+"EndDate":"06/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"SourceID":"WI0000005500900003",
+"InspectionCount":"2",
+"DateLastInspection":"06/23/2025",
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+,{
+"Statute":"CWA",
+"EPASystem":"ICIS-NPDES",
+"SourceID":"WI0001848",
+"InspectionCount":"2",
+"DateLastInspection":"02/27/2024",
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+,{
+"Statute":"CWA",
+"EPASystem":"ICIS-NPDES",
+"SourceID":"WIG012723",
+"InspectionCount":"0",
+"DateLastInspection":null,
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+,{
+"Statute":"CWA",
+"EPASystem":"ICIS-NPDES",
+"SourceID":"WIG012816",
+"InspectionCount":"0",
+"DateLastInspection":null,
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+,{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"SourceID":"WID006136659",
+"InspectionCount":"1",
+"DateLastInspection":"02/28/2024",
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+]
+}
+,
+"ComplianceHistory":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"CWA",
+"StartDate":"10/10/2021",
+"EndDate":"06/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Inspection":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"07/23/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300555"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"07/23/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300554"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"07/23/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300556"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"04/22/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300551"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/26/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/26/2026 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000550090000300547"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"01/28/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300553"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"01/28/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300549"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"01/28/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300548"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"10/28/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300550"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"07/22/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000550090000300544"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"FCE On-Site",
+"LeadAgency":"State",
+"Date":"06/23/2025",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300546"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"05/27/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300545"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/24/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 03/12/2025 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000550090000300542"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"09/10/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000550090000300543"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"08/27/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000550090000300541"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"03/21/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 03/26/2024 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000550090000300540"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"08/29/2023",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000550090000300538"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"06/27/2023",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000550090000300537"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"FCE On-Site",
+"LeadAgency":"State",
+"Date":"06/01/2023",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550090000300535"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"03/29/2023",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 03/29/2023 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000550090000300534"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"08/09/2022",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000550090000300533"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"03/30/2022",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000550090000300530"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"03/25/2022",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 03/28/2022 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000550090000300529"
+}
+,{
+"Statute":"CWA",
+"SourceID":"WI0001848",
+"EPASystem":"ICIS-NPDES",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"Base Program - Evaluation",
+"LeadAgency":"State",
+"Date":"02/27/2024",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000N0000731055"
+}
+,{
+"Statute":"CWA",
+"SourceID":"WI0001848",
+"EPASystem":"ICIS-NPDES",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"Base Program - Evaluation",
+"LeadAgency":"State",
+"Date":"03/24/2022",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000N0000651559"
+}
+,{
+"Statute":"RCRA",
+"SourceID":"WID006136659",
+"EPASystem":"RCRAInfo",
+"ActivityType":null,
+"InspectionType":"Compliance Evaluation Inspection",
+"LeadAgency":"State",
+"Date":"02/28/2024",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":"Violations Or Compliance Issues Were Found",
+"CompMonitorID":"707"
+}
+]
+}
+,
+"ComplianceSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"CWA",
+"StartDate":"07/01/2023",
+"EndDate":"06/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005500900003",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/10/2026",
+"QtrsInNC":"0"
+}
+,{
+"Statute":"CWA",
+"SourceID":"WI0001848",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"06/30/2026",
+"QtrsInNC":"7"
+}
+,{
+"Statute":"CWA",
+"SourceID":"WIG012723",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"06/30/2026",
+"QtrsInNC":"0"
+}
+,{
+"Statute":"CWA",
+"SourceID":"WIG012816",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"06/30/2026",
+"QtrsInNC":"0"
+}
+,{
+"Statute":"RCRA",
+"SourceID":"WID006136659",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/10/2026",
+"QtrsInNC":"2"
+}
+]
+}
+,
+"CWA3YrCompliance":{
+"Header":{
+"Qtr1Start":"07/01/2023",
+"Qtr1End":"09/30/2023",
+"Qtr2Start":"10/01/2023",
+"Qtr2End":"12/31/2023",
+"Qtr3Start":"01/01/2024",
+"Qtr3End":"03/31/2024",
+"Qtr4Start":"04/01/2024",
+"Qtr4End":"06/30/2024",
+"Qtr5Start":"07/01/2024",
+"Qtr5End":"09/30/2024",
+"Qtr6Start":"10/01/2024",
+"Qtr6End":"12/31/2024",
+"Qtr7Start":"01/01/2025",
+"Qtr7End":"03/31/2025",
+"Qtr8Start":"04/01/2025",
+"Qtr8End":"06/30/2025",
+"Qtr9Start":"07/01/2025",
+"Qtr9End":"09/30/2025",
+"Qtr10Start":"10/01/2025",
+"Qtr10End":"12/31/2025",
+"Qtr11Start":"01/01/2026",
+"Qtr11End":"03/31/2026",
+"Qtr12Start":"04/01/2026",
+"Qtr12End":"06/30/2026",
+"Qtr13Start":"07/01/2026",
+"Qtr13End":"10/09/2026"
+}
+,
+"Sources":[
+{
+"Status":[
+{
+"SourceID":"WI0001848",
+"Qtr1Status":"Significant/Category I Noncompliance",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"Violation Identified",
+"Qtr5Status":"Violation Identified",
+"Qtr6Status":"Violation Identified",
+"Qtr7Status":"Violation Identified",
+"Qtr8Status":"Violation Identified",
+"Qtr9Status":"Significant/Category I Noncompliance",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified",
+"Qtr13Status":"Undetermined"
+}
+]
+}
+,{
+"Status":[
+{
+"SourceID":"WIG012723",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified",
+"Qtr13Status":"Undetermined"
+}
+]
+}
+,{
+"Status":[
+{
+"SourceID":"WIG012816",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified",
+"Qtr13Status":"Undetermined"
+}
+]
+}
+]
+}
+,
+"CWARNCCompliance":{
+"Header":{
+"Qtr1Start":"07/01/2023",
+"Qtr1End":"09/30/2023",
+"Qtr2Start":"10/01/2023",
+"Qtr2End":"12/31/2023",
+"Qtr3Start":"01/01/2024",
+"Qtr3End":"03/31/2024",
+"Qtr4Start":"04/01/2024",
+"Qtr4End":"06/30/2024",
+"Qtr5Start":"07/01/2024",
+"Qtr5End":"09/30/2024",
+"Qtr6Start":"10/01/2024",
+"Qtr6End":"12/31/2024",
+"Qtr7Start":"01/01/2025",
+"Qtr7End":"03/31/2025",
+"Qtr8Start":"04/01/2025",
+"Qtr8End":"06/30/2025",
+"Qtr9Start":"07/01/2025",
+"Qtr9End":"09/30/2025",
+"Qtr10Start":"10/01/2025",
+"Qtr10End":"12/31/2025",
+"Qtr11Start":"01/01/2026",
+"Qtr11End":"03/31/2026",
+"Qtr12Start":"04/01/2026",
+"Qtr12End":"06/30/2026"
+}
+,
+"Sources":[
+{
+"Status":[
+{
+"SourceID":"WI0001848",
+"Qtr1Status":"Failure to Report DMR - Not Received",
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":"Reportable Noncompliance",
+"Qtr5Status":"Reportable Noncompliance",
+"Qtr6Status":"Reportable Noncompliance",
+"Qtr7Status":"Reportable Noncompliance",
+"Qtr8Status":"Reportable Noncompliance",
+"Qtr9Status":"Failure to Report DMR - Not Received",
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null
+}
+]
+}
+,{
+"Status":[
+{
+"SourceID":"WIG012723",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null
+}
+]
+}
+,{
+"Status":[
+{
+"SourceID":"WIG012816",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null
+}
+]
+}
+]
+}
+,
+"CWA3YrD80D90Counts":{
+"Header":{
+"Qtr1Start":"07/01/2023",
+"Qtr1End":"09/30/2023",
+"Qtr2Start":"10/01/2023",
+"Qtr2End":"12/31/2023",
+"Qtr3Start":"01/01/2024",
+"Qtr3End":"03/31/2024",
+"Qtr4Start":"04/01/2024",
+"Qtr4End":"06/30/2024",
+"Qtr5Start":"07/01/2024",
+"Qtr5End":"09/30/2024",
+"Qtr6Start":"10/01/2024",
+"Qtr6End":"12/31/2024",
+"Qtr7Start":"01/01/2025",
+"Qtr7End":"03/31/2025",
+"Qtr8Start":"04/01/2025",
+"Qtr8End":"06/30/2025",
+"Qtr9Start":"07/01/2025",
+"Qtr9End":"09/30/2025",
+"Qtr10Start":"10/01/2025",
+"Qtr10End":"12/31/2025",
+"Qtr11Start":"01/01/2026",
+"Qtr11End":"03/31/2026",
+"Qtr12Start":"04/01/2026",
+"Qtr12End":"06/30/2026",
+"Qtr13Start":"07/01/2026",
+"Qtr13End":"10/09/2026"
+}
+,
+"Sources":[
+{
+"Status":[
+{
+"SourceID":"WI0001848",
+"MissingLate":"MISSING",
+"Qtr1Count":"44",
+"Qtr2Count":"44",
+"Qtr3Count":"44",
+"Qtr4Count":"44",
+"Qtr5Count":"44",
+"Qtr6Count":"44",
+"Qtr7Count":"44",
+"Qtr8Count":"44",
+"Qtr9Count":"20",
+"Qtr10Count":"6",
+"Qtr11Count":"6",
+"Qtr12Count":"6",
+"Qtr13Count":"14"
+}
+]
+}
+]
+}
+,
+"CWAEffluentComplianceEXP":{
+}
+,
+"CWAPSCompliance":{
+}
+,
+"CWAPSComplianceNew":{
+}
+,
+"CWASECompliance":{
+}
+,
+"CWACSCompliance":{
+}
+,
+"CWACSComplianceNew":{
+}
+,
+"CWAEffluentALRExceedencesEXP":{
+}
+,
+"AirCompliance":{
+"Header":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+}
+,
+"Sources":[
+{
+"PermitHistory":{
+"SourceID":"WI0000005500900003",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"HPVHistory":{
+"SourceID":"WI0000005500900003",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null
+}
+,
+"HPVProgramsPollutants":[
+]
+,
+"FRVProgramsPollutants":[
+]
+,
+"AFSPrograms":[
+]
+}
+]
+}
+,
+"BflmCompliance":{
+}
+,
+"RCRACompliance":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+,
+"Sources":[
+{
+"Status":{
+"SourceID":"WID006136659",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"Violation Identified",
+"Qtr3Status":"Violation",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"Evaluations":[
+]
+,
+"Violations":[
+{
+"SourceID":"WID006136659",
+"ViolationType":"262.A",
+"Violation":"Generators - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":"02/28/2024-02/28/2024",
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID006136659&p_viol_activity_location=WI&p_viol_seq=1116&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID006136659",
+"ViolationType":"262.A",
+"Violation":"Generators - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":"02/28/2024-02/28/2024",
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID006136659&p_viol_activity_location=WI&p_viol_seq=1117&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID006136659",
+"ViolationType":"262.A",
+"Violation":"Generators - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":"02/28/2024-03/08/2024",
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID006136659&p_viol_activity_location=WI&p_viol_seq=1118&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID006136659",
+"ViolationType":"FSS",
+"Violation":"Federal or State Statute",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":"02/28/2024-02/28/2024",
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID006136659&p_viol_activity_location=WI&p_viol_seq=1119&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID006136659",
+"ViolationType":"262.A",
+"Violation":"Generators - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":"02/28/2024-03/08/2024",
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID006136659&p_viol_activity_location=WI&p_viol_seq=1132&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID006136659",
+"ViolationType":"262.B",
+"Violation":"Generators - Manifest",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":"02/28/2024",
+"Qtr3Status":"04/04/2024",
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID006136659&p_viol_activity_location=WI&p_viol_seq=1186&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID006136659",
+"ViolationType":"268.A",
+"Violation":"LDR - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":"02/28/2024",
+"Qtr3Status":"04/04/2024",
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID006136659&p_viol_activity_location=WI&p_viol_seq=1187&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID006136659",
+"ViolationType":"268.A",
+"Violation":"LDR - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":"02/28/2024",
+"Qtr3Status":"04/04/2024",
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID006136659&p_viol_activity_location=WI&p_viol_seq=1188&p_viol_determined_by_agency=S"
+}
+]
+}
+]
+}
+,
+"SDWISCompliance":{
+}
+,
+"Watersheds":{
+"WBD12s":[
+{
+"WBD12":"040302040405",
+"WBD12Name":"City of Green Bay-Fox River",
+"ICISWaterBodyNames":"FOX R",
+"BeachCloseLastYearFlg":"No",
+"BeachCloseLast2yrsFlg":"No",
+"PossibleImpairingParameters":"Phosphorus, total (as P) | Solids, total suspended",
+"E90PossibleImpairingParameters":null,
+"EsaAquaticSpeciesFlg":"No"
+}
+]
+}
+,
+"AssessedWaters":{
+"AssessmentUnits":[
+{
+"State":"WI",
+"ReportingCycle":"2026",
+"AssessmentUnitIdentifier":"WI10008021",
+"AUURL":"https://mywaterway.epa.gov/waterbody-report/WIDNR/WI10008021",
+"AssessmentUnitName":"Fox River",
+"WaterCondition":"Impaired - 303(d) Listed - With Restoration Plan",
+"CauseGroupsImpaired":"NUTRIENTS | POLYCHLORINATED BIPHENYLS (PCBS) | TURBIDITY",
+"DrinkingWaterUse":null,
+"EcologicalUse":"Not Supporting",
+"AquaticLifeUse":"Not Supporting",
+"FishConsumptionUse":"Not Supporting",
+"RecreationUse":"Not Supporting",
+"OtherUse":null
+}
+,{
+"State":"WI",
+"ReportingCycle":"2026",
+"AssessmentUnitIdentifier":"WI10020376",
+"AUURL":"https://mywaterway.epa.gov/waterbody-report/WIDNR/WI10020376",
+"AssessmentUnitName":"Unnamed",
+"WaterCondition":"Unknown",
+"CauseGroupsImpaired":null,
+"DrinkingWaterUse":null,
+"EcologicalUse":"Not Assessed",
+"AquaticLifeUse":"Not Assessed",
+"FishConsumptionUse":"Not Assessed",
+"RecreationUse":"Not Assessed",
+"OtherUse":null
+}
+,{
+"State":"WI",
+"ReportingCycle":"2026",
+"AssessmentUnitIdentifier":"WI10020375",
+"AUURL":"https://mywaterway.epa.gov/waterbody-report/WIDNR/WI10020375",
+"AssessmentUnitName":"Unnamed",
+"WaterCondition":"Unknown",
+"CauseGroupsImpaired":null,
+"DrinkingWaterUse":null,
+"EcologicalUse":"Not Assessed",
+"AquaticLifeUse":"Not Assessed",
+"FishConsumptionUse":"Not Assessed",
+"RecreationUse":"Not Assessed",
+"OtherUse":null
+}
+,{
+"State":"WI",
+"ReportingCycle":"2026",
+"AssessmentUnitIdentifier":"WI10020373",
+"AUURL":"https://mywaterway.epa.gov/waterbody-report/WIDNR/WI10020373",
+"AssessmentUnitName":"Unnamed",
+"WaterCondition":"Unknown",
+"CauseGroupsImpaired":null,
+"DrinkingWaterUse":null,
+"EcologicalUse":"Not Assessed",
+"AquaticLifeUse":"Not Assessed",
+"FishConsumptionUse":"Not Assessed",
+"RecreationUse":"Not Assessed",
+"OtherUse":null
+}
+,{
+"State":"WI",
+"ReportingCycle":"2026",
+"AssessmentUnitIdentifier":"WI10020374",
+"AUURL":"https://mywaterway.epa.gov/waterbody-report/WIDNR/WI10020374",
+"AssessmentUnitName":"Unnamed",
+"WaterCondition":"Unknown",
+"CauseGroupsImpaired":null,
+"DrinkingWaterUse":null,
+"EcologicalUse":"Not Assessed",
+"AquaticLifeUse":"Not Assessed",
+"FishConsumptionUse":"Not Assessed",
+"RecreationUse":"Not Assessed",
+"OtherUse":null
+}
+]
+}
+,
+"Notices":{
+"ProgramDates":[
+{
+"Program":"RCRA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Notice":[
+{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"SourceID":"WID006136659",
+"ActionType":"NOTICE OF NONCOMPLIANCE",
+"LeadAgency":"State",
+"NoticeDate":"03/27/2024",
+"EnfIdentifier":"758",
+"OfficialFlag":"Y"
+}
+]
+}
+,
+"FormalActions":{
+}
+,
+"ICISFormalActions":{
+}
+,
+"CaseFormalActions":{
+}
+,
+"TRIHistory":{
+"Sources":[
+{
+"ReleaseYear":[
+{
+"SourceID":"54307FRTHW1919S",
+"Year":"2024",
+"TotalAirEmissions":"18,647",
+"SurfaceWaterDischarges":"230,457",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"249,104",
+"TotalOffSiteReleases":"2,858",
+"TotalReleasesTransfers":"251,962"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"Year":"2023",
+"TotalAirEmissions":"19,147",
+"SurfaceWaterDischarges":"230,457",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"249,604",
+"TotalOffSiteReleases":"3,130",
+"TotalReleasesTransfers":"252,734"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"Year":"2022",
+"TotalAirEmissions":"18,895",
+"SurfaceWaterDischarges":"230,310",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"249,205",
+"TotalOffSiteReleases":"3,354",
+"TotalReleasesTransfers":"252,559"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"Year":"2021",
+"TotalAirEmissions":"38,155",
+"SurfaceWaterDischarges":"211,733",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"249,888",
+"TotalOffSiteReleases":"1,944",
+"TotalReleasesTransfers":"251,832"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"Year":"2020",
+"TotalAirEmissions":"37,198",
+"SurfaceWaterDischarges":"220,275",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"257,473",
+"TotalOffSiteReleases":"557",
+"TotalReleasesTransfers":"258,030"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"Year":"2019",
+"TotalAirEmissions":"45,493",
+"SurfaceWaterDischarges":"290,301",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"335,794",
+"TotalOffSiteReleases":"1,375",
+"TotalReleasesTransfers":"337,169"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"Year":"2018",
+"TotalAirEmissions":"42,313",
+"SurfaceWaterDischarges":"170,334",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"212,647",
+"TotalOffSiteReleases":"1,610",
+"TotalReleasesTransfers":"214,257"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"Year":"2017",
+"TotalAirEmissions":"44,627",
+"SurfaceWaterDischarges":"241,219",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"285,846",
+"TotalOffSiteReleases":"1,504",
+"TotalReleasesTransfers":"287,350"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"Year":"2016",
+"TotalAirEmissions":"75,410",
+"SurfaceWaterDischarges":"294,320",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"369,730",
+"TotalOffSiteReleases":"1,611",
+"TotalReleasesTransfers":"371,341"
+}
+,{
+"SourceID":"54307FRTHW1919S",
+"Year":"2015",
+"TotalAirEmissions":"590,665",
+"SurfaceWaterDischarges":"332,007",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"922,672",
+"TotalOffSiteReleases":"3,632",
+"TotalReleasesTransfers":"926,304"
+}
+]
+}
+]
+}
+,
+"TRIReleases":{
+"TRIFacilities":null,
+"Header":[
+{
+"Year10":"2024",
+"Year9":"2023",
+"Year8":"2022",
+"Year7":"2021",
+"Year6":"2020",
+"Year5":"2019",
+"Year4":"2018",
+"Year3":"2017",
+"Year2":"2016",
+"Year1":"2015"
+}
+]
+,
+"Chemicals":[
+{
+"ChemicalName":"1,3-Dichloro-2-propanol",
+"Year10Pounds":"321",
+"Year9Pounds":"268",
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":null,
+"Year1Pounds":null
+}
+,
+{
+"ChemicalName":"Ammonia",
+"Year10Pounds":"4,050",
+"Year9Pounds":"6,560",
+"Year8Pounds":"6,340",
+"Year7Pounds":"6,342",
+"Year6Pounds":"6,530",
+"Year5Pounds":"7,560",
+"Year4Pounds":"7,280",
+"Year3Pounds":"7,600",
+"Year2Pounds":"8,590",
+"Year1Pounds":"9,090"
+}
+,
+{
+"ChemicalName":"Barium compounds (except for barium sulfate (CAS No. 7727-43-7))",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":"62",
+"Year4Pounds":"64",
+"Year3Pounds":"927",
+"Year2Pounds":"1,069",
+"Year1Pounds":"1,072"
+}
+,
+{
+"ChemicalName":"Benzo[g,h,i]perylene",
+"Year10Pounds":null,
+"Year9Pounds":"14",
+"Year8Pounds":"28",
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":null,
+"Year1Pounds":null
+}
+,
+{
+"ChemicalName":"Dioxin and dioxin-like compounds (in grams)",
+"Year10Pounds":"<0.5",
+"Year9Pounds":"<0.5",
+"Year8Pounds":"<0.5",
+"Year7Pounds":"<0.5",
+"Year6Pounds":"<0.5",
+"Year5Pounds":"<0.5",
+"Year4Pounds":"<0.5",
+"Year3Pounds":"<0.5",
+"Year2Pounds":"<0.5",
+"Year1Pounds":"<0.5"
+}
+,
+{
+"ChemicalName":"Hydrochloric acid (acid aerosols including mists, vapors, gas, fog, and other airborne forms of any particle size)",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":null,
+"Year1Pounds":"320,000"
+}
+,
+{
+"ChemicalName":"Hydrogen fluoride",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":null,
+"Year1Pounds":"27,003"
+}
+,
+{
+"ChemicalName":"Hydrogen sulfide",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":null,
+"Year1Pounds":"26,979"
+}
+,
+{
+"ChemicalName":"Lead compounds",
+"Year10Pounds":"1,687",
+"Year9Pounds":"2,459",
+"Year8Pounds":"2,569",
+"Year7Pounds":"1,400",
+"Year6Pounds":"92",
+"Year5Pounds":"211",
+"Year4Pounds":"446",
+"Year3Pounds":"348",
+"Year2Pounds":"309",
+"Year1Pounds":"540"
+}
+,
+{
+"ChemicalName":"Mercury compounds",
+"Year10Pounds":"13",
+"Year9Pounds":"17",
+"Year8Pounds":"18",
+"Year7Pounds":"19",
+"Year6Pounds":"5",
+"Year5Pounds":"8",
+"Year4Pounds":"7",
+"Year3Pounds":"7",
+"Year2Pounds":"36",
+"Year1Pounds":"17"
+}
+,
+{
+"ChemicalName":"Methanol",
+"Year10Pounds":"15,350",
+"Year9Pounds":"13,390",
+"Year8Pounds":"13,386",
+"Year7Pounds":"32,730",
+"Year6Pounds":"31,393",
+"Year5Pounds":"39,310",
+"Year4Pounds":"36,440",
+"Year3Pounds":"38,450",
+"Year2Pounds":"40,470",
+"Year1Pounds":"41,130"
+}
+,
+{
+"ChemicalName":"Nickel compounds",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":"284",
+"Year1Pounds":"283"
+}
+,
+{
+"ChemicalName":"Nitrate compounds (water dissociable; reportable only when in aqueous solution)",
+"Year10Pounds":"230,540",
+"Year9Pounds":"230,000",
+"Year8Pounds":"230,000",
+"Year7Pounds":"211,335",
+"Year6Pounds":"220,000",
+"Year5Pounds":"290,000",
+"Year4Pounds":"170,000",
+"Year3Pounds":"240,000",
+"Year2Pounds":"290,000",
+"Year1Pounds":"330,000"
+}
+,
+{
+"ChemicalName":"Polychlorinated biphenyls",
+"Year10Pounds":null,
+"Year9Pounds":"26",
+"Year8Pounds":"31",
+"Year7Pounds":"6",
+"Year6Pounds":"10",
+"Year5Pounds":"17",
+"Year4Pounds":"21",
+"Year3Pounds":"18",
+"Year2Pounds":"24",
+"Year1Pounds":"16"
+}
+,
+{
+"ChemicalName":"Polycyclic aromatic compounds",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":"187",
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":"0",
+"Year1Pounds":"0"
+}
+,
+{
+"ChemicalName":"Potassium dimethyldithiocarbamate",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":"R",
+"Year6Pounds":null,
+"Year5Pounds":"A",
+"Year4Pounds":"A",
+"Year3Pounds":"A",
+"Year2Pounds":"A",
+"Year1Pounds":"A"
+}
+,
+{
+"ChemicalName":"Sulfuric acid (acid aerosols including mists, vapors, gas, fog, and other airborne forms of any particle size)",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":"28,000",
+"Year1Pounds":"170,000"
+}
+,
+{
+"ChemicalName":"Vanadium compounds",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":"179",
+"Year1Pounds":"173"
+}
+,
+{
+"ChemicalName":"Zinc compounds",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":"2,380",
+"Year1Pounds":null
+}
+]
+}
+,
+"DmrPollLoads":{
+"Header":[
+{
+"Year5":"2026",
+"Year4":"2025",
+"Year3":"2024",
+"Year2":"2023",
+"Year1":"2022"
+}
+]
+,
+"Loads":[
+{
+"SourceID":"WI0001848",
+"LoadingsType":"DMR Pollutant Loadings (lb/year)",
+"Year5Value":"415",
+"Year4Value":"494",
+"Year3Value":"0",
+"Year2Value":"64,721",
+"Year1Value":"87,077"
+}
+,
+{
+"SourceID":"WI0001848",
+"LoadingsType":"DMR Pollutant Loadings - Load Over Limit (lb/year)",
+"Year5Value":"0",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+,
+{
+"SourceID":"WI0001848",
+"LoadingsType":"DMR Conventional Loadings (lb/year)",
+"Year5Value":null,
+"Year4Value":null,
+"Year3Value":null,
+"Year2Value":null,
+"Year1Value":null
+}
+,
+{
+"SourceID":"WI0001848",
+"LoadingsType":"DMR Conventional Loadings - Load Over Limit (lb/year)",
+"Year5Value":null,
+"Year4Value":"0",
+"Year3Value":null,
+"Year2Value":null,
+"Year1Value":null
+}
+,
+{
+"SourceID":"WI0001848",
+"LoadingsType":"DMR Toxic-Weighted Loadings (lb-eq/year)",
+"Year5Value":"259",
+"Year4Value":"308",
+"Year3Value":"0",
+"Year2Value":"249",
+"Year1Value":"215"
+}
+,
+{
+"SourceID":"WI0001848",
+"LoadingsType":"DMR Toxic-Weighted Loadings - Load Over Limit (lb-eq/year)",
+"Year5Value":"0",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+]
+}
+,
+"RCRAWasteHistory":{
+"Header":[
+{
+"Year4":"2026",
+"Year3":"2025",
+"Year2":"2024",
+"Year1":"2023"
+}
+]
+,
+"WasteHistory":[
+{
+"SourceID":"WID006136659",
+"WasteType":"Hazardous Waste",
+"Year4Value":"658",
+"Year3Value":"2,301",
+"Year2Value":"2,057",
+"Year1Value":"5,507"
+}
+,
+{
+"SourceID":"WID006136659",
+"WasteType":"Acute Hazardous Waste",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+,
+{
+"SourceID":"WID006136659",
+"WasteType":"Pharmaceutical Hazardous Waste",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+]
+}
+,
+"AirQuality":{
+}
+,
+"AirQualityNAAs":{
+"AirQualityNAA":[
+]
+}
+,
+"SiteVisits":{
+}
+,
+"SanitarySurveys":{
+}
+,
+"ViolationsEnforcementActions":{
+}
+,
+"LeadAndCopperRule5Yr":{
+}
+,
+"Tribes":[
+{
+"AreaName":"Oneida (WI) Reservation",
+"EPAId":"100000183",
+"TribeName":"Oneida Nation",
+"DistanceToArea":"3"
+}
+]
+,
+"WebFireDocuments":[
+{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2021-01-26",
+"DocumentName":"WI_Tune Up Bulk Upload 2H2020.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81097042"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2020-10-12",
+"DocumentName":"Georgia Pacific Green Bay WI Stack S10 C_10-08-2020_07-28_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81042220"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2020-10-12",
+"DocumentName":"Georgia Pacific Green Bay Stack S08 MACT_10-08-2020_08-14_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81042262"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2020-10-01",
+"DocumentName":"WI_Tune Up Bulk Upload 1H2020.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80822723"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2020-09-24",
+"DocumentName":"WI_CMS Bulk Upload 1H2020.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80821485"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2020-01-27",
+"DocumentName":"PT Bulk Upload 2H2019.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80632103"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2020-01-27",
+"DocumentName":"CMS Bulk Upload 2H2019.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80632106"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2020-01-27",
+"DocumentName":"Tune Up Bulk Upload 2H2019.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80632099"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2019-10-11",
+"DocumentName":"gp-19-greenbay wi-comp 2-S10-CO RATA-ERT_10-01-2019_06-32_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80439460"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2019-10-11",
+"DocumentName":"gp-19-greenbay wi-comp2-S08-Hg-ERT_10-01-2019_06-25_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80439474"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2019-10-11",
+"DocumentName":"gp-19-greenbay wi-comp2-S10-Hg-ERT_10-01-2019_06-30_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80439447"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2019-09-24",
+"DocumentName":"CMS Bulk Upload 1H2019.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80425075"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2019-09-24",
+"DocumentName":"Tune Up Bulk Upload 1H2019.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80425071"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2019-09-24",
+"DocumentName":"PT Bulk Upload 1H2019.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80425067"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2019-07-19",
+"DocumentName":"gp-19-greenbay wi-rata 1-S10-ERT_07-16-2019_15-05_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80413668"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2019-03-28",
+"DocumentName":"WI_Tune Up Bulk Upload 2H2018.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80339271"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2019-03-28",
+"DocumentName":"WI_CMS Bulk Upload 2H2018.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80339275"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2019-03-28",
+"DocumentName":"WI_PT Bulk Upload 2H2018.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80339279"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2018-10-19",
+"DocumentName":"gp-18-greenbay wi-comp2-S08-ERT_10-16-2018_08-35_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80323108"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2018-10-19",
+"DocumentName":"gp-18-greenbay wi-comp2-S10-ERT_10-16-2018_08-44_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80323065"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER OPERATIONS LLC",
+"ReportSubmissionDate":"2018-06-06",
+"DocumentName":"gp-18-greenbay wi-comp1-Hg-ERT_06-05-2018_07-20_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80700132"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER PRODUCTS LP",
+"ReportSubmissionDate":"2017-10-19",
+"DocumentName":"Georgia Pacific Green Bay WI Stack S10 C_10-19-2017_15-28_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80284332"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER PRODUCTS LP",
+"ReportSubmissionDate":"2017-10-19",
+"DocumentName":"Georgia Pacific Green Bay WI Stack S10 M_10-19-2017_09-49_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80284354"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER PRODUCTS LP",
+"ReportSubmissionDate":"2017-10-19",
+"DocumentName":"Georgia Pacific Green Bay Stack S08 MACT_10-18-2017_16-36_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80284379"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER PRODUCTS LP",
+"ReportSubmissionDate":"2017-03-13",
+"DocumentName":"Georgia Pacific Green Bay Stack 8 (Boile_03-13-2017_12-05_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80258091"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER PRODUCTS LP",
+"ReportSubmissionDate":"2016-11-18",
+"DocumentName":"Georgia Pacific Green Bay WI No. 10 Stac_11-17-2016_15-55_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80181093"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER PRODUCTS LP",
+"ReportSubmissionDate":"2016-11-18",
+"DocumentName":"Georgia Pacific Green Bay WI No. 10 Stac_11-17-2016_13-00_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80181119"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"GEORGIA-PACIFIC CONSUMER PRODUCTS LP",
+"ReportSubmissionDate":"2016-11-18",
+"DocumentName":"Georgia Pacific Green Bay Stack 8 (Boile_11-17-2016_13-30_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80181106"
+}
+,{
+"RegistryId":"110013863275",
+"FacilityName":"WIGPGreenBay2818",
+"ReportSubmissionDate":"2016-06-30",
+"DocumentName":"WIGPGreenBay2818_12-28-2015_16-34_PKG.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80760529"
+}
+]
+,
+"CAEDDocuments":[
+]
+,
+"SpatialMetadata":{
+"RegistryID":"110013863275",
+"Latitude83":"44.4925",
+"Longitude83":"-88.0323",
+"CollectionMethod":"INTERPOLATION-SATELLITE",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"CalculatedAccuracy":"200 Meters",
+"CoordinateSourceSystem":"EIS",
+"CoordinateSourceSystemId":"4944011"
+}
+,
+"ACS2023Demographics":{
+"Radius":"1",
+"CenterLatitude":"44.4925",
+"CenterLongitude":"-88.0323",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"84%",
+"WaterArea":"16%",
+"PopulationDensity":"2,622/sq.mi.",
+"PercentMinority":"21%",
+"Households":"2,680",
+"HousingUnits":"2,856",
+"HouseholdsPublicAssistance":"23",
+"PersonsBelowPovertyLevel":"543",
+"PercentBelowPovertyLevel":"8%",
+"PersonsBelowLowIncomeLevel":"1,220",
+"PercentBelowLowIncomeLevel":"18%",
+"ACSPopulation":"6,919",
+"ACSPovertyBasis":"6,828",
+"PercentPeopleOfColor":"21%",
+"White":"5,598 (81%)",
+"AfricanAmerican":"100 (1%)",
+"HispanicOrigin":"499 (7%)",
+"Asian":"407 (6%)",
+"HawaiinPacificIslander":"8 (0%)",
+"AmericanIndian":"94 (1%)",
+"OtherMultiracial":"400 (6%)",
+"Child":"367 (5%)",
+"Minors":"1,644 (24%)",
+"Adults":"5,272 (76%)",
+"Seniors":"1,240 (18%)",
+"Less9thGrade":"39 (.81%)",
+"Grades9to12":"290 (6.03%)",
+"HSDiploma":"1,103 (22.95%)",
+"SomeCollege":"789 (16.42%)",
+"BSBA":"2,077 (43.22%)",
+"IncomeLess15k":"84 (3.14%)",
+"Income15to25k":"83 (3.1%)",
+"Income25to50k":"284 (10.62%)",
+"Income50to75k":"387 (14.47%)",
+"Income75kPlus":"1,837 (68.67%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"ACS2024Demographics":{
+"Radius":"1",
+"CenterLatitude":"44.4925",
+"CenterLongitude":"-88.0323",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"84%",
+"WaterArea":"16%",
+"PopulationDensity":"2,482/sq.mi.",
+"PercentMinority":"28%",
+"Households":"3,020",
+"HousingUnits":"3,195",
+"HouseholdsPublicAssistance":"69",
+"PersonsBelowPovertyLevel":"702",
+"PercentBelowPovertyLevel":"11%",
+"PersonsBelowLowIncomeLevel":"2,487",
+"PercentBelowLowIncomeLevel":"38%",
+"ACSPopulation":"6,548",
+"ACSPovertyBasis":"6,476",
+"PercentPeopleOfColor":"28%",
+"White":"4,719 (72%)",
+"AfricanAmerican":"310 (5%)",
+"HispanicOrigin":"1,005 (15%)",
+"Asian":"156 (2%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"162 (2%)",
+"OtherMultiracial":"539 (8%)",
+"Child":"519 (8%)",
+"Minors":"1,506 (23%)",
+"Adults":"5,046 (77%)",
+"Seniors":"1,265 (19%)",
+"Less9thGrade":"182 (4.14%)",
+"Grades9to12":"151 (3.43%)",
+"HSDiploma":"1,257 (28.59%)",
+"SomeCollege":"1,020 (23.2%)",
+"BSBA":"1,429 (32.51%)",
+"IncomeLess15k":"124 (4.1%)",
+"Income15to25k":"287 (9.5%)",
+"Income25to50k":"842 (27.87%)",
+"Income50to75k":"595 (19.7%)",
+"Income75kPlus":"1,173 (38.83%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"MinorTTDemographics":{
+}
+,
+"AWSDocs":{
+}
+,
+"Industries":"Paper Manufacturing",
+"MapOutput":{
+"IconBaseURL":"https://echo.epa.gov/themes/custom/echo/images/map/",
+"PopUpBaseURL":"https://echodata.epa.gov/echo/echo_rest_services.pop_up?p_id=",
+"CenterLatitude":"44.4925",
+"CenterLongitude":"-88.0323",
+"LocationalDataSource":"EIS",
+"EstimatedAccuracyMeters":"200",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"MapData":[
+{
+"LAT":"44.4925",
+"LON":"-88.0323",
+"ICON":"MULT-IC-MJ-2.png",
+"TYPE":"Facility",
+"NAME":"GEORGIA-PACIFIC BROADWAY LLC",
+"PUV":"110013863275"
+}
+]
+}
+}
+}

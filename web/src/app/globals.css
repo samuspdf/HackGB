@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Lakeshore Watch — "painted diorama" art style.
+   Palette sampled from inspiration_images/: warm sand backdrops, pastel lavender→pink skies,
+   cel-shaded leaf greens with cool blue-violet shadows, and seasonal accents. */
+@theme {
+  --color-sand-50: #fbf1de;
+  --color-sand-100: #f6e3c4;
+  --color-sand-200: #efd2a6;
+  --color-sand-300: #e4b984;
+  --color-sky-top: #b7b4ea;
+  --color-sky-mid: #f3cfdc;
+  --color-sky-low: #fbe7d3;
+
+  --color-leaf-700: #2e5e4a;
+  --color-leaf-500: #4f8a45;
+  --color-leaf-300: #9cc457;
+  --color-bark: #9a5a35;
+  --color-wood: #a8653b;
+  --color-wood-light: #b8723f;
+  --color-wood-dark: #7b4a33;
+
+  --color-lake-500: #4f7fd1;
+  --color-lake-400: #6f9fe0;
+  --color-foam: #f7fbff;
+
+  --color-autumn-500: #e0703a;
+  --color-autumn-700: #b8432c;
+  --color-neighbor-ink: #8a6238;
+
+  --color-ink: #2c2a44;
+  --color-ink-soft: #57546f;
+  --color-shade: #4b4f93;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-nunito), system-ui, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-sand-100);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

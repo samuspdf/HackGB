@@ -1,0 +1,40 @@
+Lakeshore Watch — All Shortlisted Facilities
+============================================
+Top 10 per city by on-site releases, EPA TRI 2024 (raw pounds).
+The top 5 in each city are the study facilities (marked *).
+
+Green Bay
+ * 1. Georgia-Pacific Broadway Llc  (249,103 lb on-site, TRI ID 54307FRTHW1919S)
+ * 2. Cng Green Bay  (46,558 lb on-site, TRI ID 5430WLGCYF1327G)
+ * 3. Green Bay Packaging Inc Green Bay Coated Products Div  (23,968 lb on-site, TRI ID 54307GRNBY3250S)
+ * 4. Pioneer Metal Finishing Green Bay Wi  (14,477 lb on-site, TRI ID 54304PNRNR486GL)
+ * 5. Carboline Global Inc.  (9,060 lb on-site, TRI ID 54302WSCNS614EL)
+   6. Meca Solutions Llc  (5,368 lb on-site, TRI ID 5430WMCTCH1281P)
+   7. Bw Converting Inc  (2,663 lb on-site, TRI ID 54302NTHRN1731C)
+   8. Sanimax Usa Llc  (2,643 lb on-site, TRI ID 54303NMXCR2099S)
+   9. Green Bay Packaging Inc  (1,830 lb on-site, TRI ID 54302GRNBY1601N)
+  10. Calwis Co Inc  (145 lb on-site, TRI ID 54303CLWSC901HI)
+
+Manitowoc
+ * 1. Manitowoc Public Utilities  (9,179 lb on-site, TRI ID 54221MNTWC1303S)
+ * 2. Jagemann Plating Co  (5,535 lb on-site, TRI ID 54220JGMNN1324S)
+ * 3. Eck Industries  (3,728 lb on-site, TRI ID 54220CKNDS1602N)
+ * 4. Wisconsin Aluminum Foundry Co Inc  (739 lb on-site, TRI ID 54220WSCNS838S1)
+ * 5. Pentair - Manitowoc Ice  (403 lb on-site, TRI ID 54220MNTWC2110S)
+   6. Manitowoc Tool & Manufacturing Llc  (250 lb on-site, TRI ID 5422WMNTWC433EX)
+   7. Skana Aluminum Co  (128 lb on-site, TRI ID 54221MRRCR2001M)
+   8. Kdc/One - Northern Labs  (62 lb on-site, TRI ID 54220NRTHR5800W)
+   9. Broadwind Towers & Heavy Fabrications  (37 lb on-site, TRI ID 54221TWRTC11S16)
+  10. Rockwell Lime Co  (4 lb on-site, TRI ID 54220RCKWL4110R)
+
+Sheboygan
+ * 1. Edgewater Generating Station  (61,731 lb on-site, TRI ID 53082DGWTR3739L)
+ * 2. Hexion Inc-Sheboygan Site  (28,575 lb on-site, TRI ID 53081BRDNN2522S)
+ * 3. Saco Aei  (13,579 lb on-site, TRI ID 53081NRTHW322CR)
+ * 4. Nemak Usa Inc-Gateway  (6,387 lb on-site, TRI ID 53081JLFRN4243G)
+ * 5. Plastics Engineering Co  (3,681 lb on-site, TRI ID 53083PLSTC2732N)
+   6. Sheboygan Paint Co  (2,273 lb on-site, TRI ID 53081SHBYG1439N)
+   7. Nemak Usa Inc-Taylor  (1,279 lb on-site, TRI ID 53082JLFRN3101S)
+   8. Rockline Industries  (164 lb on-site, TRI ID 5308WRCKLN1113M)
+   9. Watry Industries  (70 lb on-site, TRI ID 5308WWTRYN3312L)
+  10. Rehlko-Mosel  (10 lb on-site, TRI ID 53083KHLRCCOUNT)

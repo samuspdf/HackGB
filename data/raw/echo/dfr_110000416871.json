@@ -1,0 +1,4607 @@
+{
+"Results":{
+"Message":"Success",
+"MultipleFRSFacilities":{
+}
+,
+"RegistryID":"110000416871",
+"Reports":{
+"HasPollRpt":"Y",
+"HasAimRpt":"N",
+"HasBiosolidAnnualRpt":"N",
+"HasBflmRpt":"N"
+}
+,
+"Permits":[
+{
+"Statute":"",
+"EPASystem":"FRS",
+"EPARegion":"05",
+"SourceID":"110000416871",
+"FacilityName":"WISCONSIN POWER AND LIGHT",
+"FacilityStreet":"3739 LAKESHORE DR",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53082",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.715592",
+"Longitude":"-87.70775",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"UNKNOWN",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"1",
+"AccuracyScore":"17400",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"EPARegion":"05",
+"SourceID":"WI0000005511700001",
+"FacilityName":"WPL - EDGEWATER GENERATING STATION",
+"FacilityStreet":"3739 LAKESHORE DR",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"530817233",
+"FacilityFipsCode":"55119",
+"FacilityCountyName":"Taylor County",
+"Universe":"Major Emissions",
+"Areas":"CAAMACT, CAANSPS, CAANSR, CAAPSD, CAASIP, CAATVP",
+"ExpDate":null,
+"Latitude":"43.715592",
+"Longitude":"-87.70775",
+"IndianCountry":"N",
+"SIC":"4911",
+"NAICS":"221112",
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"1",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Operating"
+}
+,{
+"Statute":"CAA",
+"EPASystem":"CAMDBS",
+"EPARegion":"05",
+"SourceID":"4050",
+"FacilityName":"EDGEWATER (4050)",
+"FacilityStreet":null,
+"FacilityCity":null,
+"FacilityState":"WI",
+"FacilityZip":null,
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":"ARP, CSNOX, CSOSG2, CSSO2G1, MATS",
+"ExpDate":null,
+"Latitude":null,
+"Longitude":null,
+"IndianCountry":"N",
+"SIC":"4911",
+"NAICS":"221112",
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"INACTIVE"
+}
+,{
+"Statute":"CAA",
+"EPASystem":"CEDRI",
+"EPARegion":"05",
+"SourceID":"CEDRI10004201",
+"FacilityName":"EDGEWATER GENERATING STATION",
+"FacilityStreet":"3739 LAKESHORE DR",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.71782",
+"Longitude":"-87.71033",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17630",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"EIS",
+"EPARegion":"05",
+"SourceID":"7692911",
+"FacilityName":"WPL - EDGEWATER GENERATING STATION",
+"FacilityStreet":"3739 LAKESHORE DR",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.715592",
+"Longitude":"-87.70775",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"221112",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"UNKNOWN",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"1",
+"AccuracyScore":"17400",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"GHGRP",
+"EPARegion":"05",
+"SourceID":"1000983",
+"FacilityName":"Edgewater (4050)",
+"FacilityStreet":"3739 LAKESHORE DR",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53802",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"Direct Emitter",
+"Areas":"Electricity Generation",
+"ExpDate":null,
+"Latitude":null,
+"Longitude":null,
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"221112",
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Reporting Year 2023:  Emitter - Reporting and meeting Verification requirements."
+}
+,{
+"Statute":"CWA",
+"EPASystem":"ICIS-NPDES",
+"EPARegion":"05",
+"SourceID":"WI0001589",
+"FacilityName":"WI POWER & LIGHT EDGEWATER STN",
+"FacilityStreet":"3739 LAKESHORE DR",
+"FacilityCity":"FREDERIC",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55095",
+"FacilityCountyName":"Polk County",
+"Universe":"Major: NPDES Individual Permit",
+"Areas":null,
+"ExpDate":"12/31/2025",
+"Latitude":"43.715",
+"Longitude":"-87.705556",
+"IndianCountry":"N",
+"SIC":"4911",
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Expired"
+}
+,{
+"Statute":"EP313",
+"EPASystem":"TRI",
+"EPARegion":"5",
+"SourceID":"53082DGWTR3739L",
+"FacilityName":"EDGEWATER GENERATING STATION",
+"FacilityStreet":"3739 LAKESHORE DR",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"Toxics Release Inventory",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.71559",
+"Longitude":"-87.70773",
+"IndianCountry":"N",
+"SIC":"4911",
+"NAICS":"221112",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"UNKNOWN",
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"1",
+"AccuracyScore":"17430",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Last Reported for 2024"
+}
+,{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"EPARegion":"05",
+"SourceID":"WID000713438",
+"FacilityName":"WPL-EDGEWATER GENERATING STATION",
+"FacilityStreet":"3739 LAKESHORE DR",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081-7233",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"VSQG",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.715862",
+"Longitude":"-87.706193",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"221112",
+"DQURL":null,
+"HdatumDesc":"WGS84",
+"CollectDesc":"Address Geocode",
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Active (H    )"
+}
+,{
+"Statute":"TSCA",
+"EPASystem":"TSCA",
+"EPARegion":"05",
+"SourceID":"100605685",
+"FacilityName":"EDGEWATER GENERATING STATION",
+"FacilityStreet":"3739 LAKESHORE DRIVE",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":null,
+"FacilityCountyName":null,
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.7177",
+"Longitude":"-87.71033",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17447",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"TSCA",
+"EPASystem":"TSCA",
+"EPARegion":"05",
+"SourceID":"TSCA5241",
+"FacilityName":"EDGEWATER GENERATING STATION",
+"FacilityStreet":"3739 LAKESHORE DRIVE",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.71559",
+"Longitude":"-87.70773",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17630",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+]
+,
+"SystemExtractDates":{
+"Dates":[
+{
+"EPASystem":"ICIS-Air",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"ICIS-NPDES",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"RCRAInfo",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"SDWIS",
+"SystemExtractDate":"10/07/2026"
+}
+]
+}
+,
+"EnforcementComplianceSummaries":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"CWA",
+"StartDate3Yr":"07/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"06/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Summaries":[
+{
+"Statute":"CAA",
+"Inspections":"2",
+"LastInspection":"05/06/2025",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"0",
+"QtrsInSNC":"0",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+,{
+"Statute":"CWA",
+"Inspections":"1",
+"LastInspection":"04/25/2025",
+"CurrentStatus":"Violation Identified",
+"QtrsInNC":"10",
+"QtrsInSNC":"0",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+,{
+"Statute":"RCRA",
+"Inspections":null,
+"LastInspection":"04/09/2003",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"0",
+"QtrsInSNC":"0",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+]
+}
+,
+"NAICS":{
+"Sources":[
+{
+"NAICSCodes":[
+{
+"SourceID":"1000983",
+"EPASystem":"GHGRP",
+"NAICSCode":"221112",
+"NAICSDesc":"Fossil Fuel Electric Power Generation"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"4050",
+"EPASystem":"CAMDBS",
+"NAICSCode":"221112",
+"NAICSDesc":"Fossil Fuel Electric Power Generation"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"53082DGWTR3739L",
+"EPASystem":"TRI",
+"NAICSCode":"221112",
+"NAICSDesc":"Fossil Fuel Electric Power Generation"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"7692911",
+"EPASystem":"EIS",
+"NAICSCode":"221112",
+"NAICSDesc":"Fossil Fuel Electric Power Generation"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"NAICSCode":"221112",
+"NAICSDesc":"Fossil Fuel Electric Power Generation"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"WID000713438",
+"EPASystem":"RCRAInfo",
+"NAICSCode":"221112",
+"NAICSDesc":"Fossil Fuel Electric Power Generation"
+}
+]
+}
+]
+}
+,
+"SBEEventTotals":{
+}
+,
+"SIC":{
+"Sources":[
+{
+"SICCodes":[
+{
+"SourceID":"4050",
+"EPASystem":"CAMDBS",
+"SICCode":"4911",
+"SICDesc":"Electric Services"
+}
+]
+}
+,{
+"SICCodes":[
+{
+"SourceID":"53082DGWTR3739L",
+"EPASystem":"TRI",
+"SICCode":"4911",
+"SICDesc":"Electric Services"
+}
+]
+}
+,{
+"SICCodes":[
+{
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"SICCode":"4911",
+"SICDesc":"Electric Services"
+}
+]
+}
+,{
+"SICCodes":[
+{
+"SourceID":"WI0001589",
+"EPASystem":"ICIS-NPDES",
+"SICCode":"4911",
+"SICDesc":"Electric Services"
+}
+]
+}
+]
+}
+,
+"EffluentGuidelines":{
+}
+,
+"InspectionEnforcementSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"CWA",
+"StartDate":"10/10/2021",
+"EndDate":"06/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"SourceID":"WI0000005511700001",
+"InspectionCount":"2",
+"DateLastInspection":"05/06/2025",
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+,{
+"Statute":"CWA",
+"EPASystem":"ICIS-NPDES",
+"SourceID":"WI0001589",
+"InspectionCount":"1",
+"DateLastInspection":"04/25/2025",
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+,{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"SourceID":"WID000713438",
+"InspectionCount":"0",
+"DateLastInspection":null,
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+]
+}
+,
+"ComplianceHistory":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"CWA",
+"StartDate":"10/10/2021",
+"EndDate":"06/30/2026"
+}
+]
+,
+"Inspection":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"08/31/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100592"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"08/31/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100590"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"08/31/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100591"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"08/10/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100589"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"08/10/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100586"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"08/10/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100588"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"08/10/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100585"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"08/10/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100587"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"06/24/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100579"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"06/22/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100580"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"04/30/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100582"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/26/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/26/2026 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000551170000100578"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"02/17/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100581"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"12/01/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100584"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"10/31/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100583"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"08/07/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100577"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"08/04/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100576"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"05/16/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100575"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"FCE On-Site",
+"LeadAgency":"State",
+"Date":"05/06/2025",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100563"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"05/06/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100572"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"05/06/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100574"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"05/06/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100573"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"05/06/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100571"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"03/17/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100570"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/17/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/18/2025 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000551170000100566"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"02/11/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100568"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"02/11/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100567"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"02/11/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100569"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"10/21/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100565"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"10/08/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100564"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"09/30/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100562"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"05/22/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100560"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"05/21/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100561"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/12/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/12/2024 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000551170000100559"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"10/21/2023",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100557"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"06/20/2023",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100554"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"06/19/2023",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100553"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"FCE On-Site",
+"LeadAgency":"State",
+"Date":"04/05/2023",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170000100552"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/27/2023",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 03/09/2023 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000551170000100551"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"05/11/2022",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100548"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"05/09/2022",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100550"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Stack Test",
+"LeadAgency":"State",
+"Date":"05/03/2022",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Findings:  Pass",
+"CompMonitorID":"WI000A0000551170000100549"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"01/25/2022",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/01/2022 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000551170000100547"
+}
+,{
+"Statute":"CWA",
+"SourceID":"WI0001589",
+"EPASystem":"ICIS-NPDES",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"Base Program - Evaluation",
+"LeadAgency":"State",
+"Date":"04/25/2025",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000N0000782749"
+}
+]
+}
+,
+"ComplianceSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"CWA",
+"StartDate":"07/01/2023",
+"EndDate":"06/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005511700001",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/10/2026",
+"QtrsInNC":"0"
+}
+,{
+"Statute":"CWA",
+"SourceID":"WI0001589",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"06/30/2026",
+"QtrsInNC":"10"
+}
+,{
+"Statute":"RCRA",
+"SourceID":"WID000713438",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/10/2026",
+"QtrsInNC":"0"
+}
+]
+}
+,
+"CWA3YrCompliance":{
+"Header":{
+"Qtr1Start":"07/01/2023",
+"Qtr1End":"09/30/2023",
+"Qtr2Start":"10/01/2023",
+"Qtr2End":"12/31/2023",
+"Qtr3Start":"01/01/2024",
+"Qtr3End":"03/31/2024",
+"Qtr4Start":"04/01/2024",
+"Qtr4End":"06/30/2024",
+"Qtr5Start":"07/01/2024",
+"Qtr5End":"09/30/2024",
+"Qtr6Start":"10/01/2024",
+"Qtr6End":"12/31/2024",
+"Qtr7Start":"01/01/2025",
+"Qtr7End":"03/31/2025",
+"Qtr8Start":"04/01/2025",
+"Qtr8End":"06/30/2025",
+"Qtr9Start":"07/01/2025",
+"Qtr9End":"09/30/2025",
+"Qtr10Start":"10/01/2025",
+"Qtr10End":"12/31/2025",
+"Qtr11Start":"01/01/2026",
+"Qtr11End":"03/31/2026",
+"Qtr12Start":"04/01/2026",
+"Qtr12End":"06/30/2026",
+"Qtr13Start":"07/01/2026",
+"Qtr13End":"10/09/2026"
+}
+,
+"Sources":[
+{
+"Status":[
+{
+"SourceID":"WI0001589",
+"Qtr1Status":"Violation Identified",
+"Qtr2Status":"Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"Violation Identified",
+"Qtr5Status":"Violation Identified",
+"Qtr6Status":"Violation Identified",
+"Qtr7Status":"Violation Identified",
+"Qtr8Status":"Violation Identified",
+"Qtr9Status":"Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"Violation Identified",
+"Qtr12Status":"Violation Identified",
+"Qtr13Status":"Undetermined"
+}
+]
+}
+]
+}
+,
+"CWARNCCompliance":{
+"Header":{
+"Qtr1Start":"07/01/2023",
+"Qtr1End":"09/30/2023",
+"Qtr2Start":"10/01/2023",
+"Qtr2End":"12/31/2023",
+"Qtr3Start":"01/01/2024",
+"Qtr3End":"03/31/2024",
+"Qtr4Start":"04/01/2024",
+"Qtr4End":"06/30/2024",
+"Qtr5Start":"07/01/2024",
+"Qtr5End":"09/30/2024",
+"Qtr6Start":"10/01/2024",
+"Qtr6End":"12/31/2024",
+"Qtr7Start":"01/01/2025",
+"Qtr7End":"03/31/2025",
+"Qtr8Start":"04/01/2025",
+"Qtr8End":"06/30/2025",
+"Qtr9Start":"07/01/2025",
+"Qtr9End":"09/30/2025",
+"Qtr10Start":"10/01/2025",
+"Qtr10End":"12/31/2025",
+"Qtr11Start":"01/01/2026",
+"Qtr11End":"03/31/2026",
+"Qtr12Start":"04/01/2026",
+"Qtr12End":"06/30/2026"
+}
+,
+"Sources":[
+{
+"Status":[
+{
+"SourceID":"WI0001589",
+"Qtr1Status":"Reportable Noncompliance",
+"Qtr2Status":"Reportable Noncompliance",
+"Qtr3Status":null,
+"Qtr4Status":"Reportable Noncompliance",
+"Qtr5Status":"Reportable Noncompliance",
+"Qtr6Status":"Reportable Noncompliance",
+"Qtr7Status":"Reportable Noncompliance",
+"Qtr8Status":"Reportable Noncompliance",
+"Qtr9Status":"Reportable Noncompliance",
+"Qtr10Status":null,
+"Qtr11Status":"Reportable Noncompliance",
+"Qtr12Status":"Reportable Noncompliance"
+}
+]
+}
+]
+}
+,
+"CWA3YrD80D90Counts":{
+"Header":{
+"Qtr1Start":"07/01/2023",
+"Qtr1End":"09/30/2023",
+"Qtr2Start":"10/01/2023",
+"Qtr2End":"12/31/2023",
+"Qtr3Start":"01/01/2024",
+"Qtr3End":"03/31/2024",
+"Qtr4Start":"04/01/2024",
+"Qtr4End":"06/30/2024",
+"Qtr5Start":"07/01/2024",
+"Qtr5End":"09/30/2024",
+"Qtr6Start":"10/01/2024",
+"Qtr6End":"12/31/2024",
+"Qtr7Start":"01/01/2025",
+"Qtr7End":"03/31/2025",
+"Qtr8Start":"04/01/2025",
+"Qtr8End":"06/30/2025",
+"Qtr9Start":"07/01/2025",
+"Qtr9End":"09/30/2025",
+"Qtr10Start":"10/01/2025",
+"Qtr10End":"12/31/2025",
+"Qtr11Start":"01/01/2026",
+"Qtr11End":"03/31/2026",
+"Qtr12Start":"04/01/2026",
+"Qtr12End":"06/30/2026",
+"Qtr13Start":"07/01/2026",
+"Qtr13End":"10/09/2026"
+}
+,
+"Sources":[
+{
+"Status":[
+{
+"SourceID":"WI0001589",
+"MissingLate":"MISSING",
+"Qtr1Count":"9",
+"Qtr2Count":"4",
+"Qtr3Count":"3",
+"Qtr4Count":"4",
+"Qtr5Count":"3",
+"Qtr6Count":"3",
+"Qtr7Count":"7",
+"Qtr8Count":"6",
+"Qtr9Count":"6",
+"Qtr10Count":"6",
+"Qtr11Count":"6",
+"Qtr12Count":"8",
+"Qtr13Count":"36"
+}
+]
+}
+]
+}
+,
+"CWAEffluentComplianceEXP":{
+"Header":{
+"Qtr1Start":"07/01/2023",
+"Qtr1End":"09/30/2023",
+"Qtr2Start":"10/01/2023",
+"Qtr2End":"12/31/2023",
+"Qtr3Start":"01/01/2024",
+"Qtr3End":"03/31/2024",
+"Qtr4Start":"04/01/2024",
+"Qtr4End":"06/30/2024",
+"Qtr5Start":"07/01/2024",
+"Qtr5End":"09/30/2024",
+"Qtr6Start":"10/01/2024",
+"Qtr6End":"12/31/2024",
+"Qtr7Start":"01/01/2025",
+"Qtr7End":"03/31/2025",
+"Qtr8Start":"04/01/2025",
+"Qtr8End":"06/30/2025",
+"Qtr9Start":"07/01/2025",
+"Qtr9End":"09/30/2025",
+"Qtr10Start":"10/01/2025",
+"Qtr10End":"12/31/2025",
+"Qtr11Start":"01/01/2026",
+"Qtr11End":"03/31/2026",
+"Qtr12Start":"04/01/2026",
+"Qtr12End":"06/30/2026",
+"Qtr13Start":"07/01/2026",
+"Qtr13End":"10/09/2026",
+"Mnth1Start":"07/01/2023",
+"Mnth1End":"07/31/2023",
+"Mnth2Start":"08/01/2023",
+"Mnth2End":"08/31/2023",
+"Mnth3Start":"09/01/2023",
+"Mnth3End":"09/30/2023",
+"Mnth4Start":"10/01/2023",
+"Mnth4End":"10/31/2023",
+"Mnth5Start":"11/01/2023",
+"Mnth5End":"11/30/2023",
+"Mnth6Start":"12/01/2023",
+"Mnth6End":"12/31/2023",
+"Mnth7Start":"01/01/2024",
+"Mnth7End":"01/31/2024",
+"Mnth8Start":"02/01/2024",
+"Mnth8End":"02/29/2024",
+"Mnth9Start":"03/01/2024",
+"Mnth9End":"03/31/2024",
+"Mnth10Start":"04/01/2024",
+"Mnth10End":"04/30/2024",
+"Mnth11Start":"05/01/2024",
+"Mnth11End":"05/31/2024",
+"Mnth12Start":"06/01/2024",
+"Mnth12End":"06/30/2024",
+"Mnth13Start":"07/01/2024",
+"Mnth13End":"07/31/2024",
+"Mnth14Start":"08/01/2024",
+"Mnth14End":"08/31/2024",
+"Mnth15Start":"09/01/2024",
+"Mnth15End":"09/30/2024",
+"Mnth16Start":"10/01/2024",
+"Mnth16End":"10/31/2024",
+"Mnth17Start":"11/01/2024",
+"Mnth17End":"11/30/2024",
+"Mnth18Start":"12/01/2024",
+"Mnth18End":"12/31/2024",
+"Mnth19Start":"01/01/2025",
+"Mnth19End":"01/31/2025",
+"Mnth20Start":"02/01/2025",
+"Mnth20End":"02/28/2025",
+"Mnth21Start":"03/01/2025",
+"Mnth21End":"03/31/2025",
+"Mnth22Start":"04/01/2025",
+"Mnth22End":"04/30/2025",
+"Mnth23Start":"05/01/2025",
+"Mnth23End":"05/31/2025",
+"Mnth24Start":"06/01/2025",
+"Mnth24End":"06/30/2025",
+"Mnth25Start":"07/01/2025",
+"Mnth25End":"07/31/2025",
+"Mnth26Start":"08/01/2025",
+"Mnth26End":"08/31/2025",
+"Mnth27Start":"09/01/2025",
+"Mnth27End":"09/30/2025",
+"Mnth28Start":"10/01/2025",
+"Mnth28End":"10/31/2025",
+"Mnth29Start":"11/01/2025",
+"Mnth29End":"11/30/2025",
+"Mnth30Start":"12/01/2025",
+"Mnth30End":"12/31/2025",
+"Mnth31Start":"01/01/2026",
+"Mnth31End":"01/31/2026",
+"Mnth32Start":"02/01/2026",
+"Mnth32End":"02/28/2026",
+"Mnth33Start":"03/01/2026",
+"Mnth33End":"03/31/2026",
+"Mnth34Start":"04/01/2026",
+"Mnth34End":"04/30/2026",
+"Mnth35Start":"05/01/2026",
+"Mnth35End":"05/31/2026",
+"Mnth36Start":"06/01/2026",
+"Mnth36End":"06/30/2026",
+"Mnth37Start":"07/01/2026",
+"Mnth37End":"07/31/2026",
+"Mnth38Start":"08/01/2026",
+"Mnth38End":"08/31/2026",
+"Mnth39Start":"09/01/2026",
+"Mnth39End":"10/09/2026"
+}
+,
+"Sources":[
+{
+"Parameters":[
+{
+"SourceID":"WI0001589",
+"ParameterCode":"00530",
+"ParameterName":"Solids, total suspended",
+"DischargePoint":"004 - A",
+"MonitoringLocation":"Effluent Gross",
+"MeasurementType":"NMth",
+"Qtr1Status":null,
+"Qtr1Value":null,
+"Qtr2Status":null,
+"Qtr2Value":null,
+"Qtr3Status":null,
+"Qtr3Value":null,
+"Qtr4Status":null,
+"Qtr4Value":null,
+"Qtr5Status":null,
+"Qtr5Value":"5%",
+"Qtr6Status":null,
+"Qtr6Value":null,
+"Qtr7Status":null,
+"Qtr7Value":null,
+"Qtr8Status":null,
+"Qtr8Value":null,
+"Qtr9Status":null,
+"Qtr9Value":null,
+"Qtr10Status":null,
+"Qtr10Value":null,
+"Qtr11Status":null,
+"Qtr11Value":null,
+"Qtr12Status":null,
+"Qtr12Value":null,
+"Qtr13Status":null,
+"Qtr13Value":null,
+"Qtr13Value":null,
+"Mnth1Status":null,
+"Mnth1Value":null,
+"Mnth2Status":null,
+"Mnth2Value":null,
+"Mnth3Status":null,
+"Mnth3Value":null,
+"Mnth4Status":null,
+"Mnth4Value":null,
+"Mnth5Status":null,
+"Mnth5Value":null,
+"Mnth6Status":null,
+"Mnth6Value":null,
+"Mnth7Status":null,
+"Mnth7Value":null,
+"Mnth8Status":null,
+"Mnth8Value":null,
+"Mnth9Status":null,
+"Mnth9Value":null,
+"Mnth10Status":null,
+"Mnth10Value":null,
+"Mnth11Status":null,
+"Mnth11Value":null,
+"Mnth12Status":null,
+"Mnth12Value":null,
+"Mnth13Status":null,
+"Mnth13Value":"JUL",
+"Mnth14Status":null,
+"Mnth14Value":"AUG 5%",
+"Mnth15Status":null,
+"Mnth15Value":"SEP",
+"Mnth16Status":null,
+"Mnth16Value":null,
+"Mnth17Status":null,
+"Mnth17Value":null,
+"Mnth18Status":null,
+"Mnth18Value":null,
+"Mnth19Status":null,
+"Mnth19Value":null,
+"Mnth20Status":null,
+"Mnth20Value":null,
+"Mnth21Status":null,
+"Mnth21Value":null,
+"Mnth22Status":null,
+"Mnth22Value":null,
+"Mnth23Status":null,
+"Mnth23Value":null,
+"Mnth24Status":null,
+"Mnth24Value":null,
+"Mnth25Status":null,
+"Mnth25Value":null,
+"Mnth26Status":null,
+"Mnth26Value":null,
+"Mnth27Status":null,
+"Mnth27Value":null,
+"Mnth28Status":null,
+"Mnth28Value":null,
+"Mnth29Status":null,
+"Mnth29Value":null,
+"Mnth30Status":null,
+"Mnth30Value":null,
+"Mnth31Status":null,
+"Mnth31Value":null,
+"Mnth32Status":null,
+"Mnth32Value":null,
+"Mnth33Status":null,
+"Mnth33Value":null,
+"Mnth34Status":null,
+"Mnth34Value":null,
+"Mnth35Status":null,
+"Mnth35Value":null,
+"Mnth36Status":null,
+"Mnth36Value":null,
+"Mnth37Status":null,
+"Mnth37Value":null,
+"Mnth38Status":null,
+"Mnth38Value":null,
+"Mnth39Status":null,
+"Mnth39Value":null
+}
+,{
+"SourceID":"WI0001589",
+"ParameterCode":"00400",
+"ParameterName":"pH",
+"DischargePoint":"004 - A",
+"MonitoringLocation":"Effluent Gross",
+"MeasurementType":"NMth",
+"Qtr1Status":null,
+"Qtr1Value":null,
+"Qtr2Status":null,
+"Qtr2Value":null,
+"Qtr3Status":null,
+"Qtr3Value":null,
+"Qtr4Status":null,
+"Qtr4Value":null,
+"Qtr5Status":null,
+"Qtr5Value":null,
+"Qtr6Status":null,
+"Qtr6Value":null,
+"Qtr7Status":null,
+"Qtr7Value":null,
+"Qtr8Status":null,
+"Qtr8Value":null,
+"Qtr9Status":null,
+"Qtr9Value":null,
+"Qtr10Status":null,
+"Qtr10Value":"LIMIT VIOLATION",
+"Qtr11Status":null,
+"Qtr11Value":null,
+"Qtr12Status":null,
+"Qtr12Value":"LIMIT VIOLATION",
+"Qtr13Status":null,
+"Qtr13Value":null,
+"Qtr13Value":null,
+"Mnth1Status":null,
+"Mnth1Value":null,
+"Mnth2Status":null,
+"Mnth2Value":null,
+"Mnth3Status":null,
+"Mnth3Value":null,
+"Mnth4Status":null,
+"Mnth4Value":null,
+"Mnth5Status":null,
+"Mnth5Value":null,
+"Mnth6Status":null,
+"Mnth6Value":null,
+"Mnth7Status":null,
+"Mnth7Value":null,
+"Mnth8Status":null,
+"Mnth8Value":null,
+"Mnth9Status":null,
+"Mnth9Value":null,
+"Mnth10Status":null,
+"Mnth10Value":null,
+"Mnth11Status":null,
+"Mnth11Value":null,
+"Mnth12Status":null,
+"Mnth12Value":null,
+"Mnth13Status":null,
+"Mnth13Value":null,
+"Mnth14Status":null,
+"Mnth14Value":null,
+"Mnth15Status":null,
+"Mnth15Value":null,
+"Mnth16Status":null,
+"Mnth16Value":null,
+"Mnth17Status":null,
+"Mnth17Value":null,
+"Mnth18Status":null,
+"Mnth18Value":null,
+"Mnth19Status":null,
+"Mnth19Value":null,
+"Mnth20Status":null,
+"Mnth20Value":null,
+"Mnth21Status":null,
+"Mnth21Value":null,
+"Mnth22Status":null,
+"Mnth22Value":null,
+"Mnth23Status":null,
+"Mnth23Value":null,
+"Mnth24Status":null,
+"Mnth24Value":null,
+"Mnth25Status":null,
+"Mnth25Value":null,
+"Mnth26Status":null,
+"Mnth26Value":null,
+"Mnth27Status":null,
+"Mnth27Value":null,
+"Mnth28Status":null,
+"Mnth28Value":"OCT LIMIT VIOLATION",
+"Mnth29Status":null,
+"Mnth29Value":"NOV LIMIT VIOLATION",
+"Mnth30Status":null,
+"Mnth30Value":"DEC",
+"Mnth31Status":null,
+"Mnth31Value":null,
+"Mnth32Status":null,
+"Mnth32Value":null,
+"Mnth33Status":null,
+"Mnth33Value":null,
+"Mnth34Status":null,
+"Mnth34Value":"APR",
+"Mnth35Status":null,
+"Mnth35Value":"MAY",
+"Mnth36Status":null,
+"Mnth36Value":"JUN LIMIT VIOLATION",
+"Mnth37Status":null,
+"Mnth37Value":null,
+"Mnth38Status":null,
+"Mnth38Value":null,
+"Mnth39Status":null,
+"Mnth39Value":null
+}
+]
+}
+]
+}
+,
+"CWAPSCompliance":{
+}
+,
+"CWAPSComplianceNew":{
+}
+,
+"CWASECompliance":{
+}
+,
+"CWACSCompliance":{
+}
+,
+"CWACSComplianceNew":{
+}
+,
+"CWAEffluentALRExceedencesEXP":{
+}
+,
+"AirCompliance":{
+"Header":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+}
+,
+"Sources":[
+{
+"PermitHistory":{
+"SourceID":"WI0000005511700001",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"HPVHistory":{
+"SourceID":"WI0000005511700001",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null
+}
+,
+"HPVProgramsPollutants":[
+]
+,
+"FRVProgramsPollutants":[
+]
+,
+"AFSPrograms":[
+]
+}
+]
+}
+,
+"BflmCompliance":{
+}
+,
+"RCRACompliance":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+,
+"Sources":[
+{
+"Status":{
+"SourceID":"WID000713438",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"Evaluations":[
+]
+,
+"Violations":[
+]
+}
+]
+}
+,
+"SDWISCompliance":{
+}
+,
+"Watersheds":{
+}
+,
+"AssessedWaters":{
+}
+,
+"Notices":{
+}
+,
+"FormalActions":{
+}
+,
+"ICISFormalActions":{
+}
+,
+"CaseFormalActions":{
+}
+,
+"TRIHistory":{
+"Sources":[
+{
+"ReleaseYear":[
+{
+"SourceID":"53082DGWTR3739L",
+"Year":"2024",
+"TotalAirEmissions":"61,652",
+"SurfaceWaterDischarges":"80",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"61,732",
+"TotalOffSiteReleases":"7,816",
+"TotalReleasesTransfers":"69,548"
+}
+,{
+"SourceID":"53082DGWTR3739L",
+"Year":"2023",
+"TotalAirEmissions":"42,548",
+"SurfaceWaterDischarges":"71",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"42,619",
+"TotalOffSiteReleases":"14,676",
+"TotalReleasesTransfers":"57,295"
+}
+,{
+"SourceID":"53082DGWTR3739L",
+"Year":"2022",
+"TotalAirEmissions":"88,904",
+"SurfaceWaterDischarges":"137",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"89,041",
+"TotalOffSiteReleases":"121,444",
+"TotalReleasesTransfers":"210,485"
+}
+,{
+"SourceID":"53082DGWTR3739L",
+"Year":"2021",
+"TotalAirEmissions":"104,161",
+"SurfaceWaterDischarges":"119",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"104,280",
+"TotalOffSiteReleases":"13,858",
+"TotalReleasesTransfers":"118,138"
+}
+,{
+"SourceID":"53082DGWTR3739L",
+"Year":"2020",
+"TotalAirEmissions":"32,914",
+"SurfaceWaterDischarges":"152",
+"UndergroundInjections":null,
+"ReleasesToLand":"14,636",
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"47,702",
+"TotalOffSiteReleases":"9,990",
+"TotalReleasesTransfers":"57,692"
+}
+,{
+"SourceID":"53082DGWTR3739L",
+"Year":"2019",
+"TotalAirEmissions":"38,076",
+"SurfaceWaterDischarges":"912",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"38,988",
+"TotalOffSiteReleases":"1,588",
+"TotalReleasesTransfers":"40,576"
+}
+,{
+"SourceID":"53082DGWTR3739L",
+"Year":"2018",
+"TotalAirEmissions":"93,279",
+"SurfaceWaterDischarges":"2,711",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"95,990",
+"TotalOffSiteReleases":"123,036",
+"TotalReleasesTransfers":"219,026"
+}
+,{
+"SourceID":"53082DGWTR3739L",
+"Year":"2017",
+"TotalAirEmissions":"85,970",
+"SurfaceWaterDischarges":"3,939",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"89,909",
+"TotalOffSiteReleases":"72,714",
+"TotalReleasesTransfers":"162,623"
+}
+,{
+"SourceID":"53082DGWTR3739L",
+"Year":"2016",
+"TotalAirEmissions":"82,931",
+"SurfaceWaterDischarges":"4,795",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"87,726",
+"TotalOffSiteReleases":"41,810",
+"TotalReleasesTransfers":"129,536"
+}
+,{
+"SourceID":"53082DGWTR3739L",
+"Year":"2015",
+"TotalAirEmissions":"138,375",
+"SurfaceWaterDischarges":"5,009",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"143,384",
+"TotalOffSiteReleases":"77,100",
+"TotalReleasesTransfers":"220,484"
+}
+]
+}
+]
+}
+,
+"TRIReleases":{
+"TRIFacilities":null,
+"Header":[
+{
+"Year10":"2024",
+"Year9":"2023",
+"Year8":"2022",
+"Year7":"2021",
+"Year6":"2020",
+"Year5":"2019",
+"Year4":"2018",
+"Year3":"2017",
+"Year2":"2016",
+"Year1":"2015"
+}
+]
+,
+"Chemicals":[
+{
+"ChemicalName":"Ammonia",
+"Year10Pounds":"35,169",
+"Year9Pounds":"18,368",
+"Year8Pounds":"49,060",
+"Year7Pounds":"56,796",
+"Year6Pounds":"18,042",
+"Year5Pounds":"20,281",
+"Year4Pounds":"43,263",
+"Year3Pounds":"30,471",
+"Year2Pounds":"24,855",
+"Year1Pounds":"23,495"
+}
+,
+{
+"ChemicalName":"Barium compounds (except for barium sulfate (CAS No. 7727-43-7))",
+"Year10Pounds":"7,376",
+"Year9Pounds":"8,759",
+"Year8Pounds":"7,363",
+"Year7Pounds":"13,692",
+"Year6Pounds":"21,350",
+"Year5Pounds":"3,440",
+"Year4Pounds":"50,515",
+"Year3Pounds":"28,416",
+"Year2Pounds":"19,305",
+"Year1Pounds":"54,953"
+}
+,
+{
+"ChemicalName":"Benzo[g,h,i]perylene",
+"Year10Pounds":"0",
+"Year9Pounds":"0",
+"Year8Pounds":"0",
+"Year7Pounds":"0",
+"Year6Pounds":"0",
+"Year5Pounds":"0",
+"Year4Pounds":"<0.5",
+"Year3Pounds":"<0.5",
+"Year2Pounds":"<0.5",
+"Year1Pounds":"<0.5"
+}
+,
+{
+"ChemicalName":"Chromium compounds (except for chromite ore mined in the Transvaal Region)",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":"2,668",
+"Year2Pounds":"1,485",
+"Year1Pounds":null
+}
+,
+{
+"ChemicalName":"Copper compounds",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":"392",
+"Year7Pounds":"695",
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":"5,883",
+"Year3Pounds":"11,257",
+"Year2Pounds":"6,363",
+"Year1Pounds":"3,445"
+}
+,
+{
+"ChemicalName":"Dioxin and dioxin-like compounds (in grams)",
+"Year10Pounds":"<0.5",
+"Year9Pounds":"<0.5",
+"Year8Pounds":"<0.5",
+"Year7Pounds":"1",
+"Year6Pounds":"<0.5",
+"Year5Pounds":"<0.5",
+"Year4Pounds":"1",
+"Year3Pounds":"1",
+"Year2Pounds":"1",
+"Year1Pounds":"1"
+}
+,
+{
+"ChemicalName":"Ethylene glycol",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":"114,344",
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":"48,604",
+"Year3Pounds":null,
+"Year2Pounds":null,
+"Year1Pounds":null
+}
+,
+{
+"ChemicalName":"Hydrochloric acid (acid aerosols including mists, vapors, gas, fog, and other airborne forms of any particle size)",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":"14,829",
+"Year7Pounds":"17,475",
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":"23,127",
+"Year3Pounds":"27,055",
+"Year2Pounds":"25,005",
+"Year1Pounds":"22,787"
+}
+,
+{
+"ChemicalName":"Hydrogen fluoride",
+"Year10Pounds":"25,189",
+"Year9Pounds":"23,417",
+"Year8Pounds":"23,186",
+"Year7Pounds":"27,339",
+"Year6Pounds":"13,387",
+"Year5Pounds":"16,509",
+"Year4Pounds":"24,287",
+"Year3Pounds":"26,817",
+"Year2Pounds":"27,896",
+"Year1Pounds":"79,307"
+}
+,
+{
+"ChemicalName":"Lead compounds",
+"Year10Pounds":"1,409",
+"Year9Pounds":"111",
+"Year8Pounds":"86",
+"Year7Pounds":"239",
+"Year6Pounds":"2,690",
+"Year5Pounds":"70",
+"Year4Pounds":"1,780",
+"Year3Pounds":"3,107",
+"Year2Pounds":"1,674",
+"Year1Pounds":"2,480"
+}
+,
+{
+"ChemicalName":"Manganese compounds",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":"840",
+"Year7Pounds":"1,129",
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":"4,126",
+"Year3Pounds":"5,074",
+"Year2Pounds":"2,959",
+"Year1Pounds":"6,413"
+}
+,
+{
+"ChemicalName":"Mercury compounds",
+"Year10Pounds":"20",
+"Year9Pounds":"21",
+"Year8Pounds":"33",
+"Year7Pounds":"65",
+"Year6Pounds":"44",
+"Year5Pounds":"29",
+"Year4Pounds":"111",
+"Year3Pounds":"110",
+"Year2Pounds":"65",
+"Year1Pounds":"107"
+}
+,
+{
+"ChemicalName":"Naphthalene",
+"Year10Pounds":null,
+"Year9Pounds":"20",
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":"12",
+"Year5Pounds":null,
+"Year4Pounds":"44",
+"Year3Pounds":"56",
+"Year2Pounds":"43",
+"Year1Pounds":"57"
+}
+,
+{
+"ChemicalName":"Polycyclic aromatic compounds",
+"Year10Pounds":"6",
+"Year9Pounds":"5",
+"Year8Pounds":"5",
+"Year7Pounds":"6",
+"Year6Pounds":"5",
+"Year5Pounds":"5",
+"Year4Pounds":"6",
+"Year3Pounds":"7",
+"Year2Pounds":"4",
+"Year1Pounds":"4"
+}
+,
+{
+"ChemicalName":"Sulfuric acid (acid aerosols including mists, vapors, gas, fog, and other airborne forms of any particle size)",
+"Year10Pounds":"8",
+"Year9Pounds":"41",
+"Year8Pounds":"13",
+"Year7Pounds":"18",
+"Year6Pounds":"28",
+"Year5Pounds":"45",
+"Year4Pounds":"47",
+"Year3Pounds":"79",
+"Year2Pounds":"4,307",
+"Year1Pounds":"11,241"
+}
+,
+{
+"ChemicalName":"Vanadium compounds",
+"Year10Pounds":"371",
+"Year9Pounds":"6,552",
+"Year8Pounds":"333",
+"Year7Pounds":"684",
+"Year6Pounds":"2,133",
+"Year5Pounds":"197",
+"Year4Pounds":"5,375",
+"Year3Pounds":"8,900",
+"Year2Pounds":"4,962",
+"Year1Pounds":"6,255"
+}
+,
+{
+"ChemicalName":"Zinc compounds",
+"Year10Pounds":null,
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":"11,857",
+"Year3Pounds":"18,605",
+"Year2Pounds":"10,613",
+"Year1Pounds":"9,939"
+}
+]
+}
+,
+"DmrPollLoads":{
+"Header":[
+{
+"Year5":"2026",
+"Year4":"2025",
+"Year3":"2024",
+"Year2":"2023",
+"Year1":"2022"
+}
+]
+,
+"Loads":[
+{
+"SourceID":"WI0001589",
+"LoadingsType":"DMR Pollutant Loadings (lb/year)",
+"Year5Value":"3,396",
+"Year4Value":"3,366",
+"Year3Value":"3,595",
+"Year2Value":"5,167",
+"Year1Value":"5,742"
+}
+,
+{
+"SourceID":"WI0001589",
+"LoadingsType":"DMR Pollutant Loadings - Load Over Limit (lb/year)",
+"Year5Value":"0",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+,
+{
+"SourceID":"WI0001589",
+"LoadingsType":"DMR Conventional Loadings (lb/year)",
+"Year5Value":null,
+"Year4Value":"2,967",
+"Year3Value":null,
+"Year2Value":null,
+"Year1Value":null
+}
+,
+{
+"SourceID":"WI0001589",
+"LoadingsType":"DMR Conventional Loadings - Load Over Limit (lb/year)",
+"Year5Value":null,
+"Year4Value":"0",
+"Year3Value":null,
+"Year2Value":null,
+"Year1Value":null
+}
+,
+{
+"SourceID":"WI0001589",
+"LoadingsType":"DMR Toxic-Weighted Loadings (lb-eq/year)",
+"Year5Value":"1,041",
+"Year4Value":"1,162",
+"Year3Value":"2.04",
+"Year2Value":"2.39",
+"Year1Value":"6.75"
+}
+,
+{
+"SourceID":"WI0001589",
+"LoadingsType":"DMR Toxic-Weighted Loadings - Load Over Limit (lb-eq/year)",
+"Year5Value":"0",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+]
+}
+,
+"RCRAWasteHistory":{
+"Header":[
+{
+"Year4":"2026",
+"Year3":"2025",
+"Year2":"2024",
+"Year1":"2023"
+}
+]
+,
+"WasteHistory":[
+{
+"SourceID":"WID000713438",
+"WasteType":"Hazardous Waste",
+"Year4Value":"24",
+"Year3Value":"86",
+"Year2Value":"127",
+"Year1Value":"143"
+}
+,
+{
+"SourceID":"WID000713438",
+"WasteType":"Acute Hazardous Waste",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+,
+{
+"SourceID":"WID000713438",
+"WasteType":"Pharmaceutical Hazardous Waste",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+]
+}
+,
+"AirQuality":{
+"Ozone8hr1997Area":null,
+"Ozone8hr2008Area":"Chicago-Naperville IL-IN-WI",
+"Ozone8hr2015Area":"Sheboygan County WI",
+"Lead1978Area":null,
+"Lead2008Area":null,
+"CarbonMonoxide1971Area":null,
+"NitrogenDioxide1971Area":null,
+"SulfurDioxide1971Area":null,
+"SulfurDioxide2010Area":null,
+"ParticulateMatter1987Area":null,
+"ParticulateMatter1997Area":null,
+"ParticulateMatter2006Area":null,
+"ParticulateMatter2012Area":null
+}
+,
+"AirQualityNAAs":{
+"AirQualityNAA":[
+{
+"Pollutant":"Ozone",
+"WithinNAStatusArea":"Yes",
+"NAStatusStandards":"8-Hour Ozone (2015)",
+"WithinMaintStatusArea":"Yes",
+"MaintStatusStandards":"1-Hour Ozone (1979); 8-Hour Ozone (2008)"
+}
+,{
+"Pollutant":"Lead",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Particulate Matter",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Carbon Monoxide",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Sulfur Dioxide",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+]
+}
+,
+"SiteVisits":{
+}
+,
+"SanitarySurveys":{
+}
+,
+"ViolationsEnforcementActions":{
+}
+,
+"LeadAndCopperRule5Yr":{
+}
+,
+"Tribes":[
+]
+,
+"WebFireDocuments":[
+{
+"RegistryId":"110000416871",
+"FacilityName":"EDGEWATER (4050)",
+"ReportSubmissionDate":"2026-08-27",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=87322055"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"EDGEWATER (4050)",
+"ReportSubmissionDate":"2026-08-07",
+"DocumentName":"MATS_RRA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=87348242"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"EDGEWATER (4050)",
+"ReportSubmissionDate":"2026-08-07",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=87348311"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"EDGEWATER (4050)",
+"ReportSubmissionDate":"2026-08-07",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=87348334"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"EDGEWATER (4050)",
+"ReportSubmissionDate":"2026-07-31",
+"DocumentName":"MATS_ACA_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=87176305"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"EDGEWATER (4050)",
+"ReportSubmissionDate":"2026-07-31",
+"DocumentName":"MATS_EMPM_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=87176318"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"WISCONSIN POWER AND LIGHT",
+"ReportSubmissionDate":"2026-05-28",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=87116698"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"EDGEWATER (4050)",
+"ReportSubmissionDate":"2026-04-29",
+"DocumentName":"MATS_ACA_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=87206801"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"EDGEWATER (4050)",
+"ReportSubmissionDate":"2026-04-29",
+"DocumentName":"MATS_EMPM_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=87206792"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2026-02-13",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86955830"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2026-02-13",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86955839"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2026-01-26",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86914737"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2026-01-26",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86914728"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-11-21",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86807043"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-11-21",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86807052"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-10-27",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86597012"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-10-27",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86597021"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-09-26",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86590352"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-09-26",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86590361"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-09-26",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86590379"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-09-26",
+"DocumentName":"MATS_RCA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86590334"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-09-26",
+"DocumentName":"MATS_RCA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86590343"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-09-26",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86590370"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-08-29",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86436629"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-08-29",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86436620"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-07-28",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86366892"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-07-28",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86366843"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-05-28",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86276635"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-05-28",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86276626"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-04-22",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86236650"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-04-22",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86236641"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-02-11",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86169751"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-02-11",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86169760"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-01-21",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86146457"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2025-01-21",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86146506"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-11-07",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86116279"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-11-07",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86116270"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-10-28",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85977959"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-10-28",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85977968"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-08-26",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85876034"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-08-26",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85876025"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-08-05",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85863016"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-08-05",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85863025"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-07-12",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85865061"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-07-12",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85865088"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-07-12",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85865097"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-07-12",
+"DocumentName":"MATS_RRA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85865079"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-07-12",
+"DocumentName":"MATS_RRA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85865070"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-07-12",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85865052"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-05-17",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85822320"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-05-17",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85822311"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-04-29",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85817108"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-04-29",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85817121"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-02-12",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85794516"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-02-05",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85781419"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2024-01-22",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85762818"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-11-17",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85744032"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-11-03",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85731741"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-08-14",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85481055"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-08-14",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85481064"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-08-03",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85478744"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-08-03",
+"DocumentName":"MATS_RRA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85478753"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-08-03",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85478762"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-07-28",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85465577"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-07-24",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85458316"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-04-24",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85433907"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-02-03",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85398171"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-01-31",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85416561"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2023-01-30",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85396494"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-12-01",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85294593"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-11-04",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=82253649"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-09-19",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81611338"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-07-29",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81502965"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-07-27",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81498276"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-06-20",
+"DocumentName":"MATS_RCA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81494159"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-06-20",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81494219"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-06-20",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81494189"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-06-03",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81491220"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-04-26",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81471013"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-03-11",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81467834"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-02-10",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81446882"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2022-01-20",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81424732"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-12-03",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81413855"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-11-03",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81372821"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-09-23",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81208979"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-08-06",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81163856"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-07-28",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81155245"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-07-02",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81162908"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-07-02",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81162917"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-07-02",
+"DocumentName":"MATS_RRA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81162886"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-05-10",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81138355"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-03-19",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81133838"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-02-10",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81114731"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-02-10",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81114915"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-02-10",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81114722"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-02-10",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81114740"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-01-27",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81099947"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-01-07",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81113703"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-01-06",
+"DocumentName":"MATS_RCA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81113303"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2021-01-06",
+"DocumentName":"MATS_RCA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81113264"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2020-07-28",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80778636"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2020-07-17",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80796055"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2020-07-17",
+"DocumentName":"MATS_RRA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80796073"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2020-07-17",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80796064"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2020-01-28",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80633384"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2020-01-17",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80583377"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2019-11-21",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80441698"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2019-08-22",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80414707"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2019-07-19",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80430028"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2019-05-09",
+"DocumentName":"MATS_RCA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80360861"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2019-05-02",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80429740"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2019-04-24",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80352572"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2019-04-24",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80352563"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2019-02-20",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80107602"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2019-01-23",
+"DocumentName":"MATS_CR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80065518"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2019-01-23",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80065527"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-10-30",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=79827870"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-10-30",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=79827795"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-08-17",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7886535"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-08-17",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7886526"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-08-13",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=79749945"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-07-27",
+"DocumentName":"MATS_CR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7849716"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-07-27",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7849725"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-07-26",
+"DocumentName":"MATS_RATA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7896905"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-07-26",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7897879"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-07-26",
+"DocumentName":"MATS_RRA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7897888"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-07-26",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7897897"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-06-22",
+"DocumentName":"MATS_RCA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7835822"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-06-22",
+"DocumentName":"MATS_RATA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7835831"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-06-22",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=7835840"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-05-22",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2602484"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-05-22",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2602493"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-02-13",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2448100"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-02-13",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2448109"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-02-05",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2497744"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-01-26",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2385107"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-01-26",
+"DocumentName":"MATS_CR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2378680"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-01-22",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2363317"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-01-22",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2458764"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-01-22",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2363308"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2018-01-22",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2458089"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-08-21",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2138355"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-08-21",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2138346"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-08-03",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2173748"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-07-31",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2072419"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-07-31",
+"DocumentName":"MATS_CR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2072410"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-05-15",
+"DocumentName":"MATS_RATA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1973057"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-05-15",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1973048"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-05-15",
+"DocumentName":"MATS_RRA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1973066"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-05-03",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1917159"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-05-03",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1917141"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-04-27",
+"DocumentName":"MATS_RRA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1956872"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-04-27",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1956899"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-04-27",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1956908"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-03-30",
+"DocumentName":"MATS_CR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1769023"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-03-30",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1769032"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-02-21",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1439527"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-02-21",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1439518"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-02-13",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1470842"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-01-31",
+"DocumentName":"MATS_CR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1234335"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-01-31",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1234344"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2017-01-31",
+"DocumentName":"MATS_NOCS_4.zip",
+"ReportDocType":"NOCS",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1234353"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-12-21",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1178739"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-11-01",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=904851"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-11-01",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=904860"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-09-30",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=903582"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-08-29",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=888442"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-08-29",
+"DocumentName":"MATS_NOCS_5.zip",
+"ReportDocType":"NOCS",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=861982"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-08-12",
+"DocumentName":"MATS_RATA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=876180"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-08-12",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=876162"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-08-12",
+"DocumentName":"MATS_RRA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=876171"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-08-09",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=826027"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-08-09",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=826018"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-08-01",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=867858"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-08-01",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=867867"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-07-28",
+"DocumentName":"MATS_CR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=712635"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-07-28",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=712671"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-07-05",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=822174"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-04-25",
+"DocumentName":"MATS_RRA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=570667"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-04-20",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=550618"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-04-20",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=550609"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-04-07",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=561202"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-04-07",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=561211"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-02-19",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=351789"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-02-19",
+"DocumentName":"MATS_RATA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=351780"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-01-27",
+"DocumentName":"MATS_CR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=279413"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-01-27",
+"DocumentName":"MATS_CR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=279422"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-01-21",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=276233"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2016-01-21",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=276224"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-12-23",
+"DocumentName":"MATS_RATA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=276648"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-12-21",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=275609"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-12-21",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=275618"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-11-19",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=242876"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-11-19",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=242849"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-10-14",
+"DocumentName":"MATS_NOCS_4.zip",
+"ReportDocType":"NOCS",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=238900"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-10-14",
+"DocumentName":"MATS_NOCS_5.zip",
+"ReportDocType":"NOCS",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=238909"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-10-09",
+"DocumentName":"MATS_PT_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=241924"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-10-09",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=241915"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-08-25",
+"DocumentName":"MATS_TDR_4.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=234121"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-08-25",
+"DocumentName":"MATS_TDR_5.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=234130"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-08-19",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=236326"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-08-19",
+"DocumentName":"MATS_PT_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=236416"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-08-13",
+"DocumentName":"MATS_NOCS_4.zip",
+"ReportDocType":"NOCS",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=233374"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-07-24",
+"DocumentName":"MATS_RRA_5.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=234013"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-07-22",
+"DocumentName":"MATS_RATA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=233806"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-07-10",
+"DocumentName":"MATS_NOCS_5.zip",
+"ReportDocType":"NOCS",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=230593"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-07-03",
+"DocumentName":"MATS_RATA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=232996"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-07-03",
+"DocumentName":"MATS_RATA_4.zip",
+"ReportDocType":"ST",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=233005"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-06-12",
+"DocumentName":"MATS_NOCS_5.zip",
+"ReportDocType":"NOCS",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=228208"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-06-12",
+"DocumentName":"MATS_NOCS_4.zip",
+"ReportDocType":"NOCS",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=228199"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-06-08",
+"DocumentName":"MATS_NOCS_4.zip",
+"ReportDocType":"NOCS",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=227695"
+}
+,{
+"RegistryId":"110000416871",
+"FacilityName":"Edgewater (4050)",
+"ReportSubmissionDate":"2015-06-08",
+"DocumentName":"MATS_NOCS_5.zip",
+"ReportDocType":"NOCS",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=227686"
+}
+]
+,
+"CAEDDocuments":[
+]
+,
+"SpatialMetadata":{
+"RegistryID":"110000416871",
+"Latitude83":"43.715592",
+"Longitude83":"-87.70775",
+"CollectionMethod":"UNKNOWN",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"CalculatedAccuracy":"17400 Meters",
+"CoordinateSourceSystem":"EIS",
+"CoordinateSourceSystemId":"7692911"
+}
+,
+"ACS2023Demographics":{
+"Radius":"1",
+"CenterLatitude":"43.715592",
+"CenterLongitude":"-87.70775",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"55%",
+"WaterArea":"45%",
+"PopulationDensity":"2,873/sq.mi.",
+"PercentMinority":"17%",
+"Households":"2,363",
+"HousingUnits":"2,597",
+"HouseholdsPublicAssistance":"24",
+"PersonsBelowPovertyLevel":"329",
+"PercentBelowPovertyLevel":"7%",
+"PersonsBelowLowIncomeLevel":"1,003",
+"PercentBelowLowIncomeLevel":"21%",
+"ACSPopulation":"4,935",
+"ACSPovertyBasis":"4,835",
+"PercentPeopleOfColor":"17%",
+"White":"4,217 (85%)",
+"AfricanAmerican":"103 (2%)",
+"HispanicOrigin":"438 (9%)",
+"Asian":"74 (1%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"0 (0%)",
+"OtherMultiracial":"351 (7%)",
+"Child":"245 (5%)",
+"Minors":"946 (19%)",
+"Adults":"3,987 (81%)",
+"Seniors":"1,082 (22%)",
+"Less9thGrade":"110 (3.03%)",
+"Grades9to12":"117 (3.22%)",
+"HSDiploma":"1,117 (30.73%)",
+"SomeCollege":"753 (20.72%)",
+"BSBA":"1,043 (28.69%)",
+"IncomeLess15k":"175 (7.4%)",
+"Income15to25k":"71 (3%)",
+"Income25to50k":"625 (26.44%)",
+"Income50to75k":"419 (17.72%)",
+"Income75kPlus":"1,074 (45.43%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"ACS2024Demographics":{
+"Radius":"1",
+"CenterLatitude":"43.715592",
+"CenterLongitude":"-87.70775",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"55%",
+"WaterArea":"45%",
+"PopulationDensity":"2,731/sq.mi.",
+"PercentMinority":"15%",
+"Households":"1,880",
+"HousingUnits":"1,931",
+"HouseholdsPublicAssistance":"12",
+"PersonsBelowPovertyLevel":"195",
+"PercentBelowPovertyLevel":"4%",
+"PersonsBelowLowIncomeLevel":"755",
+"PercentBelowLowIncomeLevel":"16%",
+"ACSPopulation":"4,691",
+"ACSPovertyBasis":"4,620",
+"PercentPeopleOfColor":"15%",
+"White":"4,042 (86%)",
+"AfricanAmerican":"128 (3%)",
+"HispanicOrigin":"206 (4%)",
+"Asian":"260 (6%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"19 (0%)",
+"OtherMultiracial":"111 (2%)",
+"Child":"284 (6%)",
+"Minors":"1,257 (27%)",
+"Adults":"3,433 (73%)",
+"Seniors":"826 (18%)",
+"Less9thGrade":"57 (1.85%)",
+"Grades9to12":"141 (4.56%)",
+"HSDiploma":"960 (31.08%)",
+"SomeCollege":"741 (23.99%)",
+"BSBA":"770 (24.93%)",
+"IncomeLess15k":"55 (2.92%)",
+"Income15to25k":"94 (4.99%)",
+"Income25to50k":"284 (15.09%)",
+"Income50to75k":"473 (25.13%)",
+"Income75kPlus":"976 (51.86%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"MinorTTDemographics":{
+}
+,
+"AWSDocs":{
+}
+,
+"Industries":"Utilities",
+"MapOutput":{
+"IconBaseURL":"https://echo.epa.gov/themes/custom/echo/images/map/",
+"PopUpBaseURL":"https://echodata.epa.gov/echo/echo_rest_services.pop_up?p_id=",
+"CenterLatitude":"43.715592",
+"CenterLongitude":"-87.70775",
+"LocationalDataSource":"EIS",
+"EstimatedAccuracyMeters":"17400",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"MapData":[
+{
+"LAT":"43.715592",
+"LON":"-87.70775",
+"ICON":"MULT-NC-MJ-2.png",
+"TYPE":"Facility",
+"NAME":"WISCONSIN POWER AND LIGHT",
+"PUV":"110000416871"
+}
+,{
+"LAT":"43.715592",
+"LON":"-87.70775",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"EDG B-POND (ALLIANT)",
+"PUV":"110071860903"
+}
+]
+}
+}
+}

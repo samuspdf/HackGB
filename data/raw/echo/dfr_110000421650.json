@@ -1,0 +1,1443 @@
+{
+"Results":{
+"Message":"Success",
+"MultipleFRSFacilities":{
+}
+,
+"RegistryID":"110000421650",
+"Reports":{
+"HasPollRpt":"Y",
+"HasAimRpt":"N",
+"HasBiosolidAnnualRpt":"N",
+"HasBflmRpt":"N"
+}
+,
+"Permits":[
+{
+"Statute":"",
+"EPASystem":"FRS",
+"EPARegion":"05",
+"SourceID":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING COATED P",
+"FacilityStreet":"3250 SOUTH RIDGE ROAD",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.46219",
+"Longitude":"-88.0956",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"ADDRESS MATCHING-HOUSE NUMBER",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":"30",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"EPARegion":"05",
+"SourceID":"WI0000005500990034",
+"FacilityName":"GREEN BAY PACKAGING COATED PRODUCTS DIV",
+"FacilityStreet":"3250 S RIDGE RD",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"543045643",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"Major Emissions",
+"Areas":"CAANSPS, CAAPSD, CAASIP, CAATVP",
+"ExpDate":null,
+"Latitude":"44.46219",
+"Longitude":"-88.0956",
+"IndianCountry":"N",
+"SIC":"2672",
+"NAICS":"322220",
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Operating"
+}
+,{
+"Statute":"CAA",
+"EPASystem":"CEDRI",
+"EPARegion":"05",
+"SourceID":"CEDRI10001701",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"FacilityStreet":"3250 SOUTH RIDGE ROAD",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.46328",
+"Longitude":"-88.09541",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17630",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"EIS",
+"EPARegion":"05",
+"SourceID":"6617011",
+"FacilityName":"GREEN BAY PACKAGING COATED PRODUCTS DIV",
+"FacilityStreet":"3250 S RIDGE RD",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.4632",
+"Longitude":"-88.0963",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"322220",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17630",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"EP313",
+"EPASystem":"TRI",
+"EPARegion":"5",
+"SourceID":"54307GRNBY3250S",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"FacilityStreet":"3250 S RIDGE RD",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"Toxics Release Inventory",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.46219",
+"Longitude":"-88.0956",
+"IndianCountry":"N",
+"SIC":"2649 2672",
+"NAICS":"322220 322222",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"ADDRESS MATCHING-HOUSE NUMBER",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":"30",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Last Reported for 2024"
+}
+,{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"EPARegion":"05",
+"SourceID":"WID099943649",
+"FacilityName":"GREEN BAY PACKAGING COATED PRODUCTS DIV",
+"FacilityStreet":"3250 S RIDGE RD",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304-5643",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"SQG",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.46302",
+"Longitude":"-88.095075",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"322220",
+"DQURL":null,
+"HdatumDesc":"WGS84",
+"CollectDesc":"Address Geocode",
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Active (H    )"
+}
+]
+,
+"SystemExtractDates":{
+"Dates":[
+{
+"EPASystem":"ICIS-Air",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"RCRAInfo",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"SDWIS",
+"SystemExtractDate":"10/07/2026"
+}
+]
+}
+,
+"EnforcementComplianceSummaries":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Summaries":[
+{
+"Statute":"CAA",
+"Inspections":"3",
+"LastInspection":"10/06/2025",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"0",
+"QtrsInSNC":"0",
+"InformalActions":"1",
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+,{
+"Statute":"RCRA",
+"Inspections":null,
+"LastInspection":"06/24/2008",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"0",
+"QtrsInSNC":"0",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+]
+}
+,
+"NAICS":{
+"Sources":[
+{
+"NAICSCodes":[
+{
+"SourceID":"54307GRNBY3250S",
+"EPASystem":"TRI",
+"NAICSCode":"322220",
+"NAICSDesc":"Paper Bag and Coated and Treated Paper Manufacturing"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"EPASystem":"TRI",
+"NAICSCode":"322222",
+"NAICSDesc":"Coated and Laminated Paper Manufacturing"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"6617011",
+"EPASystem":"EIS",
+"NAICSCode":"322220",
+"NAICSDesc":"Paper Bag and Coated and Treated Paper Manufacturing"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"NAICSCode":"322220",
+"NAICSDesc":"Paper Bag and Coated and Treated Paper Manufacturing"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"WID099943649",
+"EPASystem":"RCRAInfo",
+"NAICSCode":"322220",
+"NAICSDesc":"Paper Bag and Coated and Treated Paper Manufacturing"
+}
+]
+}
+]
+}
+,
+"SBEEventTotals":{
+}
+,
+"SIC":{
+"Sources":[
+{
+"SICCodes":[
+{
+"SourceID":"54307GRNBY3250S",
+"EPASystem":"TRI",
+"SICCode":"2649",
+"SICDesc":"Legacy Docket Conv"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"EPASystem":"TRI",
+"SICCode":"2672",
+"SICDesc":"Paper Coated And Laminated"
+}
+]
+}
+,{
+"SICCodes":[
+{
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"SICCode":"2672",
+"SICDesc":"Paper Coated And Laminated"
+}
+]
+}
+]
+}
+,
+"EffluentGuidelines":{
+}
+,
+"InspectionEnforcementSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"SourceID":"WI0000005500990034",
+"InspectionCount":"3",
+"DateLastInspection":"10/06/2025",
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+,{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"SourceID":"WID099943649",
+"InspectionCount":"0",
+"DateLastInspection":null,
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+]
+}
+,
+"ComplianceHistory":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Inspection":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"02/04/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550099003400527"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"01/12/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 01/27/2026 Facility Reported No Deviations",
+"CompMonitorID":"WI000A0000550099003400526"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"FCE On-Site",
+"LeadAgency":"State",
+"Date":"10/06/2025",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550099003400525"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"08/26/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550099003400524"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE On-Site",
+"LeadAgency":"EPA",
+"Date":"07/23/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"05000F1742277"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"07/07/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550099003400523"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/17/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/19/2025 Facility Reported No Deviations",
+"CompMonitorID":"WI000A0000550099003400518"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"01/15/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550099003400522"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"01/15/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550099003400521"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"FCE On-Site",
+"LeadAgency":"State",
+"Date":"10/03/2024",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550099003400519"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Off-Site",
+"LeadAgency":"State",
+"Date":"10/02/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550099003400520"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/21/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/21/2024 Facility Reported No Deviations",
+"CompMonitorID":"WI000A0000550099003400517"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/22/2023",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/22/2023 Facility Reported Deviations",
+"CompMonitorID":"WI000A0000550099003400516"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"FCE On-Site",
+"LeadAgency":"State",
+"Date":"10/24/2022",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550099003400511"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"01/26/2022",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 01/27/2022 Facility Reported No Deviations",
+"CompMonitorID":"WI000A0000550099003400510"
+}
+]
+}
+,
+"ComplianceSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005500990034",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/10/2026",
+"QtrsInNC":"0"
+}
+,{
+"Statute":"RCRA",
+"SourceID":"WID099943649",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/10/2026",
+"QtrsInNC":"0"
+}
+]
+}
+,
+"CWA3YrCompliance":{
+}
+,
+"CWARNCCompliance":{
+}
+,
+"CWA3YrD80D90Counts":{
+}
+,
+"CWAEffluentComplianceEXP":{
+}
+,
+"CWAPSCompliance":{
+}
+,
+"CWAPSComplianceNew":{
+}
+,
+"CWASECompliance":{
+}
+,
+"CWACSCompliance":{
+}
+,
+"CWACSComplianceNew":{
+}
+,
+"CWAEffluentALRExceedencesEXP":{
+}
+,
+"AirCompliance":{
+"Header":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+}
+,
+"Sources":[
+{
+"PermitHistory":{
+"SourceID":"WI0000005500990034",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"HPVHistory":{
+"SourceID":"WI0000005500990034",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null
+}
+,
+"HPVProgramsPollutants":[
+]
+,
+"FRVProgramsPollutants":[
+]
+,
+"AFSPrograms":[
+]
+}
+]
+}
+,
+"BflmCompliance":{
+}
+,
+"RCRACompliance":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+,
+"Sources":[
+{
+"Status":{
+"SourceID":"WID099943649",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"Evaluations":[
+]
+,
+"Violations":[
+]
+}
+]
+}
+,
+"SDWISCompliance":{
+}
+,
+"Watersheds":{
+}
+,
+"AssessedWaters":{
+}
+,
+"Notices":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Notice":[
+{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"SourceID":"WI0000005500990034",
+"ActionType":"Other Response - No Further Action",
+"LeadAgency":"EPA",
+"NoticeDate":"09/19/2025",
+"EnfIdentifier":"05-200281235",
+"OfficialFlag":"N"
+}
+,{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"SourceID":"WI0000005500990034",
+"ActionType":"Warning Letter",
+"LeadAgency":"State",
+"NoticeDate":"12/05/2022",
+"EnfIdentifier":"WI000A0000550099003400514",
+"OfficialFlag":"Y"
+}
+]
+}
+,
+"FormalActions":{
+}
+,
+"ICISFormalActions":{
+}
+,
+"CaseFormalActions":{
+}
+,
+"TRIHistory":{
+"Sources":[
+{
+"ReleaseYear":[
+{
+"SourceID":"54307GRNBY3250S",
+"Year":"2024",
+"TotalAirEmissions":"23,968",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"2",
+"TotalOnSiteReleases":"23,968",
+"TotalOffSiteReleases":"90",
+"TotalReleasesTransfers":"24,058"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"Year":"2023",
+"TotalAirEmissions":"25,191",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"2",
+"TotalOnSiteReleases":"25,191",
+"TotalOffSiteReleases":"186",
+"TotalReleasesTransfers":"25,377"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"Year":"2022",
+"TotalAirEmissions":"33,849",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"2",
+"TotalOnSiteReleases":"33,849",
+"TotalOffSiteReleases":"241",
+"TotalReleasesTransfers":"34,090"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"Year":"2021",
+"TotalAirEmissions":"36,474",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"1",
+"TotalOnSiteReleases":"36,474",
+"TotalOffSiteReleases":"150",
+"TotalReleasesTransfers":"36,624"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"Year":"2020",
+"TotalAirEmissions":"33,513",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"1",
+"TotalOnSiteReleases":"33,513",
+"TotalOffSiteReleases":"132",
+"TotalReleasesTransfers":"33,645"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"Year":"2019",
+"TotalAirEmissions":"39,777",
+"SurfaceWaterDischarges":"0",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"1",
+"TotalOnSiteReleases":"39,777",
+"TotalOffSiteReleases":"85",
+"TotalReleasesTransfers":"39,862"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"Year":"2018",
+"TotalAirEmissions":"29,102",
+"SurfaceWaterDischarges":"0",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"1",
+"TotalOnSiteReleases":"29,102",
+"TotalOffSiteReleases":"54",
+"TotalReleasesTransfers":"29,156"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"Year":"2017",
+"TotalAirEmissions":"53,660",
+"SurfaceWaterDischarges":"7",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"2",
+"TotalOnSiteReleases":"53,667",
+"TotalOffSiteReleases":"108",
+"TotalReleasesTransfers":"53,775"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"Year":"2016",
+"TotalAirEmissions":"27,675",
+"SurfaceWaterDischarges":"0",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"2",
+"TotalOnSiteReleases":"27,675",
+"TotalOffSiteReleases":"43",
+"TotalReleasesTransfers":"27,718"
+}
+,{
+"SourceID":"54307GRNBY3250S",
+"Year":"2015",
+"TotalAirEmissions":"33,184",
+"SurfaceWaterDischarges":"0",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"2",
+"TotalOnSiteReleases":"33,184",
+"TotalOffSiteReleases":"132",
+"TotalReleasesTransfers":"33,316"
+}
+]
+}
+]
+}
+,
+"TRIReleases":{
+"TRIFacilities":null,
+"Header":[
+{
+"Year10":"2024",
+"Year9":"2023",
+"Year8":"2022",
+"Year7":"2021",
+"Year6":"2020",
+"Year5":"2019",
+"Year4":"2018",
+"Year3":"2017",
+"Year2":"2016",
+"Year1":"2015"
+}
+]
+,
+"Chemicals":[
+{
+"ChemicalName":"Vinyl acetate",
+"Year10Pounds":"24,058",
+"Year9Pounds":"25,377",
+"Year8Pounds":"34,090",
+"Year7Pounds":"36,624",
+"Year6Pounds":"33,645",
+"Year5Pounds":"39,862",
+"Year4Pounds":"29,156",
+"Year3Pounds":"53,774",
+"Year2Pounds":"27,718",
+"Year1Pounds":"33,316"
+}
+]
+}
+,
+"DmrPollLoads":{
+}
+,
+"RCRAWasteHistory":{
+"Header":[
+{
+"Year4":"2026",
+"Year3":"2025",
+"Year2":"2024",
+"Year1":"2023"
+}
+]
+,
+"WasteHistory":[
+{
+"SourceID":"WID099943649",
+"WasteType":"Hazardous Waste",
+"Year4Value":"677",
+"Year3Value":"1,479",
+"Year2Value":"1,106",
+"Year1Value":"2,626"
+}
+,
+{
+"SourceID":"WID099943649",
+"WasteType":"Acute Hazardous Waste",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+,
+{
+"SourceID":"WID099943649",
+"WasteType":"Pharmaceutical Hazardous Waste",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+]
+}
+,
+"AirQuality":{
+}
+,
+"AirQualityNAAs":{
+"AirQualityNAA":[
+]
+}
+,
+"SiteVisits":{
+}
+,
+"SanitarySurveys":{
+}
+,
+"ViolationsEnforcementActions":{
+}
+,
+"LeadAndCopperRule5Yr":{
+}
+,
+"Tribes":[
+{
+"AreaName":"Oneida (WI) Reservation",
+"EPAId":"100000183",
+"TribeName":"Oneida Nation",
+"DistanceToArea":"1"
+}
+]
+,
+"WebFireDocuments":[
+{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2026-07-17",
+"DocumentName":"2026-07-10 D61 POWC MACT Semi-Annual Report 1H26 - SPREADSHEET.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=87214011"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2026-01-13",
+"DocumentName":"2026-01-13 D61 POWC MACT Semi-Annual Report 2H25 - SPREADSHEET.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86885477"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2025-07-09",
+"DocumentName":"2025-07-01 D61 POWC MACT Semi-Annual Report 1H25 - SPREADSHEET.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86334885"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2025-01-13",
+"DocumentName":"2025-01-13 D61 POWC MACT Semi-Annual Report 2H24 Spreadsheet.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86142380"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2025-01-13",
+"DocumentName":"2025-01-13 D61 Boiler MACT - Bulk Upload Template - COMPLETED.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=86142376"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2024-05-16",
+"DocumentName":"2024-01-08 D61 Boiler MACT Annual Compl Report (B51 and B52)-REPORT.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85821982"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2023-01-25",
+"DocumentName":"2023-01-03 D61 Boiler MACT Annual Compl Report (B51 and B52)-REPORT.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=85400738"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2022-01-17",
+"DocumentName":"2022-01-06 D61 Boiler MACT Annual Compl Report (B51 and B52)-REPORT.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81422644"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2021-01-28",
+"DocumentName":"2021-01-08 D61 Boiler MACT Annual Compl Report (B51 and B52) - TEMPLATE.zip",
+"ReportDocType":"AER",
+"DocumentType":"ZIP",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=81102872"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2020-01-31",
+"DocumentName":"COMPLIANCE REPORT_DDDDD_63.7550(h)(3).xml",
+"ReportDocType":"AER",
+"DocumentType":"XML",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80647184"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2020-01-31",
+"DocumentName":"COMPLIANCE REPORT_DDDDD_63.7550(h)(3).pdf",
+"ReportDocType":"AER",
+"DocumentType":"PDF",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80647185"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2020-01-31",
+"DocumentName":"2020-01-27 D61 Boiler MACT Annual Compliance Report (B09 B51 B52) - TO CEDRI.pdf",
+"ReportDocType":"AER",
+"DocumentType":"PDF",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80647186"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2019-01-30",
+"DocumentName":"NOCS_63_DDDDD.xml",
+"ReportDocType":"NOCS",
+"DocumentType":"XML",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80080377"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2019-01-30",
+"DocumentName":"2019-01-21 D61 Boiler MACT Annual Compliance Report (B51 and B52) - SIGNED.pdf",
+"ReportDocType":"NOCS",
+"DocumentType":"PDF",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=80080376"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2018-01-24",
+"DocumentName":"COMPLIANCE REPORT_DDDDD_63.7550(h)(3) .xml",
+"ReportDocType":"AER",
+"DocumentType":"XML",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2368155"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2018-01-24",
+"DocumentName":"2018-01-19 D61 Boiler MACT Annual Compliance Report (B51 and B52) - SIGNED.pdf",
+"ReportDocType":"AER",
+"DocumentType":"PDF",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2368157"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2018-01-24",
+"DocumentName":"COMPLIANCE REPORT_DDDDD_63.7550(h)(3) .pdf",
+"ReportDocType":"AER",
+"DocumentType":"PDF",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=2368156"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2017-01-30",
+"DocumentName":"COMPLIANCE REPORT_DDDDD_63.7550(h)(3) .pdf",
+"ReportDocType":"AER",
+"DocumentType":"PDF",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1204673"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2017-01-30",
+"DocumentName":"2017-01-24 D61 GBCPD Boiler MACT Annual Compliance Report (B50-B51) - SIGNED.pdf",
+"ReportDocType":"AER",
+"DocumentType":"PDF",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1204674"
+}
+,{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING INC GREEN BAY COATED PRODUCTS DIV",
+"ReportSubmissionDate":"2017-01-30",
+"DocumentName":"COMPLIANCE REPORT_DDDDD_63.7550(h)(3) .xml",
+"ReportDocType":"AER",
+"DocumentType":"XML",
+"DocumentLink":"https://cfpub.epa.gov/webfire/FIRE/view/dspERTDocumentDetails.cfm?ID=1204672"
+}
+]
+,
+"CAEDDocuments":[
+{
+"RegistryId":"110000421650",
+"FacilityName":"GREEN BAY PACKAGING COATED PRODUCTS DIV",
+"PublishDate":"2019-11-23T05:00:00Z",
+"EPAProgram":"Air",
+"DocumentLink":"https://caedtor.epa.gov/ords/caedtor/tocar/resp/attach/6226"
+}
+]
+,
+"SpatialMetadata":{
+"RegistryID":"110000421650",
+"Latitude83":"44.46219",
+"Longitude83":"-88.0956",
+"CollectionMethod":"ADDRESS MATCHING-HOUSE NUMBER",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"CalculatedAccuracy":"30 Meters",
+"CoordinateSourceSystem":"TRIS",
+"CoordinateSourceSystemId":"54307GRNBY3250S"
+}
+,
+"ACS2023Demographics":{
+"Radius":"1",
+"CenterLatitude":"44.46219",
+"CenterLongitude":"-88.0956",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"97%",
+"WaterArea":"3%",
+"PopulationDensity":"699/sq.mi.",
+"PercentMinority":"15%",
+"Households":"901",
+"HousingUnits":"969",
+"HouseholdsPublicAssistance":"25",
+"PersonsBelowPovertyLevel":"185",
+"PercentBelowPovertyLevel":"9%",
+"PersonsBelowLowIncomeLevel":"546",
+"PercentBelowLowIncomeLevel":"26%",
+"ACSPopulation":"2,132",
+"ACSPovertyBasis":"2,120",
+"PercentPeopleOfColor":"15%",
+"White":"1,842 (86%)",
+"AfricanAmerican":"27 (1%)",
+"HispanicOrigin":"182 (9%)",
+"Asian":"71 (3%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"10 (0%)",
+"OtherMultiracial":"146 (7%)",
+"Child":"105 (5%)",
+"Minors":"430 (20%)",
+"Adults":"1,699 (80%)",
+"Seniors":"415 (19%)",
+"Less9thGrade":"35 (2.33%)",
+"Grades9to12":"65 (4.32%)",
+"HSDiploma":"516 (34.31%)",
+"SomeCollege":"300 (19.95%)",
+"BSBA":"384 (25.53%)",
+"IncomeLess15k":"73 (8.13%)",
+"Income15to25k":"66 (7.35%)",
+"Income25to50k":"157 (17.48%)",
+"Income50to75k":"177 (19.71%)",
+"Income75kPlus":"425 (47.33%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"ACS2024Demographics":{
+"Radius":"1",
+"CenterLatitude":"44.46219",
+"CenterLongitude":"-88.0956",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"97%",
+"WaterArea":"3%",
+"PopulationDensity":"976/sq.mi.",
+"PercentMinority":"21%",
+"Households":"1,502",
+"HousingUnits":"1,529",
+"HouseholdsPublicAssistance":"21",
+"PersonsBelowPovertyLevel":"291",
+"PercentBelowPovertyLevel":"10%",
+"PersonsBelowLowIncomeLevel":"635",
+"PercentBelowLowIncomeLevel":"22%",
+"ACSPopulation":"2,979",
+"ACSPovertyBasis":"2,940",
+"PercentPeopleOfColor":"21%",
+"White":"2,386 (80%)",
+"AfricanAmerican":"11 (0%)",
+"HispanicOrigin":"133 (4%)",
+"Asian":"223 (7%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"81 (3%)",
+"OtherMultiracial":"222 (7%)",
+"Child":"137 (5%)",
+"Minors":"452 (15%)",
+"Adults":"2,524 (85%)",
+"Seniors":"560 (19%)",
+"Less9thGrade":"23 (1.07%)",
+"Grades9to12":"44 (2.06%)",
+"HSDiploma":"534 (24.95%)",
+"SomeCollege":"463 (21.64%)",
+"BSBA":"792 (37.01%)",
+"IncomeLess15k":"126 (8.38%)",
+"Income15to25k":"62 (4.13%)",
+"Income25to50k":"300 (19.96%)",
+"Income50to75k":"372 (24.75%)",
+"Income75kPlus":"643 (42.78%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"MinorTTDemographics":{
+}
+,
+"AWSDocs":{
+}
+,
+"Industries":"Paper Manufacturing",
+"MapOutput":{
+"IconBaseURL":"https://echo.epa.gov/themes/custom/echo/images/map/",
+"PopUpBaseURL":"https://echodata.epa.gov/echo/echo_rest_services.pop_up?p_id=",
+"CenterLatitude":"44.46219",
+"CenterLongitude":"-88.0956",
+"LocationalDataSource":"TRIS",
+"EstimatedAccuracyMeters":"30",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"MapData":[
+{
+"LAT":"44.460403",
+"LON":"-88.093449",
+"ICON":"CWA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"GREEN BAY PACKAGING, INC SITE",
+"PUV":"110071279328"
+}
+,{
+"LAT":"44.46175",
+"LON":"-88.09811",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"BROWN COUNTY GRAPHICS",
+"PUV":"110024434637"
+}
+,{
+"LAT":"44.46219",
+"LON":"-88.0956",
+"ICON":"MULT-IC-MJ-2.png",
+"TYPE":"Facility",
+"NAME":"GREEN BAY PACKAGING COATED P",
+"PUV":"110000421650"
+}
+]
+}
+}
+}

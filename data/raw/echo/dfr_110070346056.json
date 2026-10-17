@@ -1,0 +1,475 @@
+{
+"Results":{
+"Message":"Success",
+"MultipleFRSFacilities":{
+}
+,
+"RegistryID":"110070346056",
+"Reports":{
+"HasPollRpt":"Y",
+"HasAimRpt":"N",
+"HasBiosolidAnnualRpt":"N",
+"HasBflmRpt":"N"
+}
+,
+"Permits":[
+{
+"Statute":"",
+"EPASystem":"FRS",
+"EPARegion":"05",
+"SourceID":"110070346056",
+"FacilityName":"LEGACY FLEXO",
+"FacilityStreet":"1327 GLORY RD",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":null,
+"FacilityCountyName":null,
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.46698",
+"Longitude":"-88.10405",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"ADDRESS MATCHING-HOUSE NUMBER",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":"30",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"EP313",
+"EPASystem":"TRI",
+"EPARegion":"5",
+"SourceID":"5430WLGCYF1327G",
+"FacilityName":"CNG GREEN BAY",
+"FacilityStreet":"1327 GLORY RD",
+"FacilityCity":"GREEN BAY",
+"FacilityState":"WI",
+"FacilityZip":"54304",
+"FacilityFipsCode":"55009",
+"FacilityCountyName":"Brown County",
+"Universe":"Toxics Release Inventory",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"44.46613",
+"Longitude":"-88.104672",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"323111",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17630",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Last Reported for 2024"
+}
+]
+,
+"SystemExtractDates":{
+}
+,
+"EnforcementComplianceSummaries":{
+}
+,
+"NAICS":{
+"Sources":[
+{
+"NAICSCodes":[
+{
+"SourceID":"5430WLGCYF1327G",
+"EPASystem":"TRI",
+"NAICSCode":"323111",
+"NAICSDesc":"Commercial Printing (except Screen and Books)"
+}
+]
+}
+]
+}
+,
+"SBEEventTotals":{
+}
+,
+"SIC":{
+}
+,
+"EffluentGuidelines":{
+}
+,
+"InspectionEnforcementSummary":{
+}
+,
+"ComplianceHistory":{
+}
+,
+"ComplianceSummary":{
+}
+,
+"CWA3YrCompliance":{
+}
+,
+"CWARNCCompliance":{
+}
+,
+"CWA3YrD80D90Counts":{
+}
+,
+"CWAEffluentComplianceEXP":{
+}
+,
+"CWAPSCompliance":{
+}
+,
+"CWAPSComplianceNew":{
+}
+,
+"CWASECompliance":{
+}
+,
+"CWACSCompliance":{
+}
+,
+"CWACSComplianceNew":{
+}
+,
+"CWAEffluentALRExceedencesEXP":{
+}
+,
+"AirCompliance":{
+}
+,
+"BflmCompliance":{
+}
+,
+"RCRACompliance":{
+}
+,
+"SDWISCompliance":{
+}
+,
+"Watersheds":{
+}
+,
+"AssessedWaters":{
+}
+,
+"Notices":{
+}
+,
+"FormalActions":{
+}
+,
+"ICISFormalActions":{
+}
+,
+"CaseFormalActions":{
+}
+,
+"TRIHistory":{
+"Sources":[
+{
+"ReleaseYear":[
+{
+"SourceID":"5430WLGCYF1327G",
+"Year":"2024",
+"TotalAirEmissions":"46,558",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"46,558",
+"TotalOffSiteReleases":null,
+"TotalReleasesTransfers":"46,558"
+}
+,{
+"SourceID":"5430WLGCYF1327G",
+"Year":"2023",
+"TotalAirEmissions":"42,716",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"42,716",
+"TotalOffSiteReleases":null,
+"TotalReleasesTransfers":"42,716"
+}
+,{
+"SourceID":"5430WLGCYF1327G",
+"Year":"2022",
+"TotalAirEmissions":"43,198",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"43,198",
+"TotalOffSiteReleases":null,
+"TotalReleasesTransfers":"43,198"
+}
+,{
+"SourceID":"5430WLGCYF1327G",
+"Year":"2021",
+"TotalAirEmissions":"37,798",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"37,798",
+"TotalOffSiteReleases":null,
+"TotalReleasesTransfers":"37,798"
+}
+]
+}
+]
+}
+,
+"TRIReleases":{
+"TRIFacilities":null,
+"Header":[
+{
+"Year10":"2024",
+"Year9":"2023",
+"Year8":"2022",
+"Year7":"2021",
+"Year6":"2020",
+"Year5":"2019",
+"Year4":"2018",
+"Year3":"2017",
+"Year2":"2016",
+"Year1":"2015"
+}
+]
+,
+"Chemicals":[
+{
+"ChemicalName":"Ozone",
+"Year10Pounds":"46,558",
+"Year9Pounds":"42,716",
+"Year8Pounds":"43,198",
+"Year7Pounds":"37,798",
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":null,
+"Year1Pounds":null
+}
+]
+}
+,
+"DmrPollLoads":{
+}
+,
+"RCRAWasteHistory":{
+}
+,
+"AirQuality":{
+}
+,
+"AirQualityNAAs":{
+"AirQualityNAA":[
+]
+}
+,
+"SiteVisits":{
+}
+,
+"SanitarySurveys":{
+}
+,
+"ViolationsEnforcementActions":{
+}
+,
+"LeadAndCopperRule5Yr":{
+}
+,
+"Tribes":[
+{
+"AreaName":"Oneida (WI) Reservation",
+"EPAId":"100000183",
+"TribeName":"Oneida Nation",
+"DistanceToArea":"1"
+}
+]
+,
+"WebFireDocuments":[
+]
+,
+"CAEDDocuments":[
+]
+,
+"SpatialMetadata":{
+"RegistryID":"110070346056",
+"Latitude83":"44.46698",
+"Longitude83":"-88.10405",
+"CollectionMethod":"ADDRESS MATCHING-HOUSE NUMBER",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"CalculatedAccuracy":"30 Meters",
+"CoordinateSourceSystem":"FRS",
+"CoordinateSourceSystemId":"110070346056"
+}
+,
+"ACS2023Demographics":{
+"Radius":"1",
+"CenterLatitude":"44.46698",
+"CenterLongitude":"-88.10405",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"100%",
+"WaterArea":"0%",
+"PopulationDensity":"458/sq.mi.",
+"PercentMinority":"13%",
+"Households":"563",
+"HousingUnits":"609",
+"HouseholdsPublicAssistance":"7",
+"PersonsBelowPovertyLevel":"79",
+"PercentBelowPovertyLevel":"6%",
+"PersonsBelowLowIncomeLevel":"291",
+"PercentBelowLowIncomeLevel":"20%",
+"ACSPopulation":"1,436",
+"ACSPovertyBasis":"1,433",
+"PercentPeopleOfColor":"13%",
+"White":"1,280 (89%)",
+"AfricanAmerican":"18 (1%)",
+"HispanicOrigin":"109 (8%)",
+"Asian":"38 (3%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"2 (0%)",
+"OtherMultiracial":"66 (5%)",
+"Child":"60 (4%)",
+"Minors":"326 (23%)",
+"Adults":"1,110 (77%)",
+"Seniors":"312 (22%)",
+"Less9thGrade":"30 (2.95%)",
+"Grades9to12":"43 (4.22%)",
+"HSDiploma":"346 (33.99%)",
+"SomeCollege":"185 (18.17%)",
+"BSBA":"248 (24.36%)",
+"IncomeLess15k":"24 (4.26%)",
+"Income15to25k":"28 (4.96%)",
+"Income25to50k":"88 (15.6%)",
+"Income50to75k":"143 (25.35%)",
+"Income75kPlus":"281 (49.82%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"ACS2024Demographics":{
+"Radius":"1",
+"CenterLatitude":"44.46698",
+"CenterLongitude":"-88.10405",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"100%",
+"WaterArea":"0%",
+"PopulationDensity":"789/sq.mi.",
+"PercentMinority":"23%",
+"Households":"1,257",
+"HousingUnits":"1,270",
+"HouseholdsPublicAssistance":"15",
+"PersonsBelowPovertyLevel":"199",
+"PercentBelowPovertyLevel":"8%",
+"PersonsBelowLowIncomeLevel":"442",
+"PercentBelowLowIncomeLevel":"18%",
+"ACSPopulation":"2,476",
+"ACSPovertyBasis":"2,472",
+"PercentPeopleOfColor":"23%",
+"White":"1,905 (77%)",
+"AfricanAmerican":"21 (1%)",
+"HispanicOrigin":"83 (3%)",
+"Asian":"209 (8%)",
+"HawaiinPacificIslander":"2 (0%)",
+"AmericanIndian":"87 (4%)",
+"OtherMultiracial":"206 (8%)",
+"Child":"111 (4%)",
+"Minors":"393 (16%)",
+"Adults":"2,084 (84%)",
+"Seniors":"426 (17%)",
+"Less9thGrade":"15 (.85%)",
+"Grades9to12":"39 (2.21%)",
+"HSDiploma":"383 (21.75%)",
+"SomeCollege":"370 (21.01%)",
+"BSBA":"729 (41.4%)",
+"IncomeLess15k":"90 (7.15%)",
+"Income15to25k":"46 (3.65%)",
+"Income25to50k":"232 (18.43%)",
+"Income50to75k":"324 (25.73%)",
+"Income75kPlus":"567 (45.04%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"MinorTTDemographics":{
+}
+,
+"AWSDocs":{
+}
+,
+"Industries":"Printing and Related Support Activities",
+"MapOutput":{
+"IconBaseURL":"https://echo.epa.gov/themes/custom/echo/images/map/",
+"PopUpBaseURL":"https://echodata.epa.gov/echo/echo_rest_services.pop_up?p_id=",
+"CenterLatitude":"44.46698",
+"CenterLongitude":"-88.10405",
+"LocationalDataSource":"FRS",
+"EstimatedAccuracyMeters":"30",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"MapData":[
+{
+"LAT":"44.46864",
+"LON":"-88.10435",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"VALLEY PACKAGING SUPPLY COMPANY",
+"PUV":"110067098900"
+}
+,{
+"LAT":"44.46592",
+"LON":"-88.10109",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"SUOMINEN GREEN BAY NONWOVENS INC",
+"PUV":"110067534083"
+}
+,{
+"LAT":"44.46698",
+"LON":"-88.10405",
+"ICON":"MULT-SNC-MN-1.png",
+"TYPE":"Facility",
+"NAME":"CNG GREEN BAY",
+"PUV":"110060291759"
+}
+,{
+"LAT":"44.46592",
+"LON":"-88.10109",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"GREEN BAY NONWOVENS INC",
+"PUV":"110041405565"
+}
+,{
+"LAT":"44.46698",
+"LON":"-88.10405",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"LEGACY FLEXO",
+"PUV":"110070346056"
+}
+]
+}
+}
+}

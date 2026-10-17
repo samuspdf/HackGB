@@ -1,0 +1,50 @@
+Lakeshore Watch — Manitowoc Study Facilities
+============================================
+Source: EPA Toxics Release Inventory (TRI) Basic Data File, Wisconsin, reporting year 2024
+        https://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-present
+Method: top 5 facilities per city (TRI 'CITY' field) ranked by total ON-SITE releases
+        (air + water + land at the facility). Ranking uses RAW POUNDS, not toxicity-weighted;
+        it will be re-checked once RSEI toxicity weights are loaded (spec rule 2.3).
+Note:   These are REPORTED releases, which are mostly legal under permit. They are not violations.
+
+Manitowoc (Manitowoc County) — 18 TRI facilities reported in 2024
+------------------------------------------------------------
+1. Manitowoc Public Utilities
+   TRI ID: 54221MNTWC1303S | Industry: Electric Utilities
+   Address: 1303 S 8Th St, Manitowoc, WI 54220 | Lat/Lon: 44.08364, -87.65773
+   On-site releases: 9,179 lb (air 9,179 | water 0 | land 0)
+   Total incl. off-site transfers: 9,416 lb | Chemicals reported: 3
+   Top chemicals: Hydrochloric acid, Ammonia, Lead  And Lead Compounds
+   Flags: PBT chemical
+
+2. Jagemann Plating Co
+   TRI ID: 54220JGMNN1324S | Industry: Fabricated Metals
+   Address: 1324 S 26Th St, Manitowoc, WI 54220 | Lat/Lon: 44.08684, -87.68033
+   On-site releases: 5,535 lb (air 5,535 | water 0 | land 0)
+   Total incl. off-site transfers: 73,565 lb | Chemicals reported: 5
+   Top chemicals: Zinc compounds, Nitric acid, Nitrate compounds
+   Flags: carcinogen
+
+3. Eck Industries
+   TRI ID: 54220CKNDS1602N | Industry: Primary Metals
+   Address: 1602 N 8Th St, Manitowoc, WI 54220 | Lat/Lon: 44.11721, -87.65798
+   On-site releases: 3,728 lb (air 3,728 | water 0 | land 0)
+   Total incl. off-site transfers: 25,523 lb | Chemicals reported: 11
+   Top chemicals: Tetrachloroethylene, Formaldehyde, Copper
+   Flags: PBT chemical, carcinogen
+
+4. Wisconsin Aluminum Foundry Co Inc
+   TRI ID: 54220WSCNS838S1 | Industry: Primary Metals
+   Address: 838 S 16Th St, Manitowoc, WI 54220 | Lat/Lon: 44.09158, -87.66902
+   On-site releases: 739 lb (air 739 | water 0 | land 0)
+   Total incl. off-site transfers: 1,644 lb | Chemicals reported: 4
+   Top chemicals: Naphthalene, Copper, Lead
+   Flags: PBT chemical, carcinogen
+
+5. Pentair - Manitowoc Ice
+   TRI ID: 54220MNTWC2110S | Industry: Machinery
+   Address: 2110 S 26Th Street, Manitowoc, WI 54220 | Lat/Lon: 44.07737, -87.68092
+   On-site releases: 403 lb (air 403 | water 0 | land 0)
+   Total incl. off-site transfers: 4,205 lb | Chemicals reported: 5
+   Top chemicals: Ammonia, Nitric acid, Nickel  And Nickel Compounds
+   Flags: PBT chemical, carcinogen

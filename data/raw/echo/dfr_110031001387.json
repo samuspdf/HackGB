@@ -1,0 +1,945 @@
+{
+"Results":{
+"Message":"Success",
+"MultipleFRSFacilities":{
+}
+,
+"RegistryID":"110031001387",
+"Reports":{
+"HasPollRpt":"Y",
+"HasAimRpt":"N",
+"HasBiosolidAnnualRpt":"N",
+"HasBflmRpt":"N"
+}
+,
+"Permits":[
+{
+"Statute":"",
+"EPASystem":"FRS",
+"EPARegion":"05",
+"SourceID":"110031001387",
+"FacilityName":"SACO AEI",
+"FacilityStreet":"3220 CROCKER AVE",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.72117",
+"Longitude":"-87.74897",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"ADDRESS MATCHING-HOUSE NUMBER",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":"30",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"",
+"EPASystem":"ICIS",
+"EPARegion":"05",
+"SourceID":"3601127808",
+"FacilityName":"SACO AEI POLMERS",
+"FacilityStreet":"3220 CROCKER AVENUE",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":null,
+"FacilityCountyName":null,
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.72117",
+"Longitude":"-87.74897",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CWA",
+"EPASystem":"ICIS-NPDES",
+"EPARegion":"05",
+"SourceID":"WIG006072",
+"FacilityName":"SACO POLYMERS INC",
+"FacilityStreet":"3220 CROCKER AVE.",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"Non-Major: General Permit Covered Facility",
+"Areas":null,
+"ExpDate":"06/02/2025",
+"Latitude":"43.721889",
+"Longitude":"-87.749583",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Expired"
+}
+,{
+"Statute":"EP313",
+"EPASystem":"TRI",
+"EPARegion":"5",
+"SourceID":"53081NRTHW322CR",
+"FacilityName":"SACO AEI",
+"FacilityStreet":"3220 CROCKER AVE",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"Toxics Release Inventory",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.72117",
+"Longitude":"-87.74897",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"325211 325991",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"ADDRESS MATCHING-HOUSE NUMBER",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":"30",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Last Reported for 2024"
+}
+]
+,
+"SystemExtractDates":{
+"Dates":[
+{
+"EPASystem":"ICIS-NPDES",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"SDWIS",
+"SystemExtractDate":"10/07/2026"
+}
+]
+}
+,
+"EnforcementComplianceSummaries":{
+"ProgramDates":[
+{
+"Program":"CWA",
+"StartDate3Yr":"07/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"06/30/2026"
+}
+]
+,
+"Summaries":[
+{
+"Statute":"CWA",
+"Inspections":null,
+"LastInspection":null,
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"0",
+"QtrsInSNC":"0",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+]
+}
+,
+"NAICS":{
+"Sources":[
+{
+"NAICSCodes":[
+{
+"SourceID":"53081NRTHW322CR",
+"EPASystem":"TRI",
+"NAICSCode":"325211",
+"NAICSDesc":"Plastics Material and Resin Manufacturing"
+}
+,{
+"SourceID":"53081NRTHW322CR",
+"EPASystem":"TRI",
+"NAICSCode":"325991",
+"NAICSDesc":"Custom Compounding of Purchased Resins"
+}
+]
+}
+]
+}
+,
+"SBEEventTotals":{
+}
+,
+"SIC":{
+}
+,
+"EffluentGuidelines":{
+}
+,
+"InspectionEnforcementSummary":{
+"ProgramDates":[
+{
+"Program":"CWA",
+"StartDate":"10/10/2021",
+"EndDate":"06/30/2026"
+}
+,{
+"Program":"TSCA",
+"StartDate":null,
+"EndDate":null
+}
+]
+,
+"Source":[
+{
+"Statute":"CWA",
+"EPASystem":"ICIS-NPDES",
+"SourceID":"WIG006072",
+"InspectionCount":"0",
+"DateLastInspection":null,
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+,{
+"Statute":"TSCA",
+"EPASystem":"ICIS",
+"SourceID":"HQ-2019-5005",
+"InspectionCount":null,
+"DateLastInspection":null,
+"FormalEnfActCount":"1",
+"TotalPenalties":"$22,479"
+}
+]
+}
+,
+"ComplianceHistory":{
+}
+,
+"ComplianceSummary":{
+"ProgramDates":[
+{
+"Program":"CWA",
+"StartDate":"07/01/2023",
+"EndDate":"06/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CWA",
+"SourceID":"WIG006072",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"06/30/2026",
+"QtrsInNC":"0"
+}
+]
+}
+,
+"CWA3YrCompliance":{
+"Header":{
+"Qtr1Start":"07/01/2023",
+"Qtr1End":"09/30/2023",
+"Qtr2Start":"10/01/2023",
+"Qtr2End":"12/31/2023",
+"Qtr3Start":"01/01/2024",
+"Qtr3End":"03/31/2024",
+"Qtr4Start":"04/01/2024",
+"Qtr4End":"06/30/2024",
+"Qtr5Start":"07/01/2024",
+"Qtr5End":"09/30/2024",
+"Qtr6Start":"10/01/2024",
+"Qtr6End":"12/31/2024",
+"Qtr7Start":"01/01/2025",
+"Qtr7End":"03/31/2025",
+"Qtr8Start":"04/01/2025",
+"Qtr8End":"06/30/2025",
+"Qtr9Start":"07/01/2025",
+"Qtr9End":"09/30/2025",
+"Qtr10Start":"10/01/2025",
+"Qtr10End":"12/31/2025",
+"Qtr11Start":"01/01/2026",
+"Qtr11End":"03/31/2026",
+"Qtr12Start":"04/01/2026",
+"Qtr12End":"06/30/2026",
+"Qtr13Start":"07/01/2026",
+"Qtr13End":"10/09/2026"
+}
+,
+"Sources":[
+{
+"Status":[
+{
+"SourceID":"WIG006072",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified",
+"Qtr13Status":"Undetermined"
+}
+]
+}
+]
+}
+,
+"CWARNCCompliance":{
+"Header":{
+"Qtr1Start":"07/01/2023",
+"Qtr1End":"09/30/2023",
+"Qtr2Start":"10/01/2023",
+"Qtr2End":"12/31/2023",
+"Qtr3Start":"01/01/2024",
+"Qtr3End":"03/31/2024",
+"Qtr4Start":"04/01/2024",
+"Qtr4End":"06/30/2024",
+"Qtr5Start":"07/01/2024",
+"Qtr5End":"09/30/2024",
+"Qtr6Start":"10/01/2024",
+"Qtr6End":"12/31/2024",
+"Qtr7Start":"01/01/2025",
+"Qtr7End":"03/31/2025",
+"Qtr8Start":"04/01/2025",
+"Qtr8End":"06/30/2025",
+"Qtr9Start":"07/01/2025",
+"Qtr9End":"09/30/2025",
+"Qtr10Start":"10/01/2025",
+"Qtr10End":"12/31/2025",
+"Qtr11Start":"01/01/2026",
+"Qtr11End":"03/31/2026",
+"Qtr12Start":"04/01/2026",
+"Qtr12End":"06/30/2026"
+}
+,
+"Sources":[
+{
+"Status":[
+{
+"SourceID":"WIG006072",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null
+}
+]
+}
+]
+}
+,
+"CWA3YrD80D90Counts":{
+}
+,
+"CWAEffluentComplianceEXP":{
+}
+,
+"CWAPSCompliance":{
+}
+,
+"CWAPSComplianceNew":{
+}
+,
+"CWASECompliance":{
+}
+,
+"CWACSCompliance":{
+}
+,
+"CWACSComplianceNew":{
+}
+,
+"CWAEffluentALRExceedencesEXP":{
+}
+,
+"AirCompliance":{
+}
+,
+"BflmCompliance":{
+}
+,
+"RCRACompliance":{
+}
+,
+"SDWISCompliance":{
+}
+,
+"Watersheds":{
+"WBD12s":[
+{
+"WBD12":"040301011109",
+"WBD12Name":"Sheboygan River-Frontal Lake Michigan",
+"ICISWaterBodyNames":null,
+"BeachCloseLastYearFlg":"No",
+"BeachCloseLast2yrsFlg":"Yes",
+"PossibleImpairingParameters":null,
+"E90PossibleImpairingParameters":null,
+"EsaAquaticSpeciesFlg":"No"
+}
+]
+}
+,
+"AssessedWaters":{
+}
+,
+"Notices":{
+}
+,
+"FormalActions":{
+}
+,
+"ICISFormalActions":{
+}
+,
+"CaseFormalActions":{
+}
+,
+"TRIHistory":{
+"Sources":[
+{
+"ReleaseYear":[
+{
+"SourceID":"53081NRTHW322CR",
+"Year":"2024",
+"TotalAirEmissions":"13,564",
+"SurfaceWaterDischarges":"15",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"5,690",
+"TotalOnSiteReleases":"13,579",
+"TotalOffSiteReleases":"7,797",
+"TotalReleasesTransfers":"21,376"
+}
+,{
+"SourceID":"53081NRTHW322CR",
+"Year":"2023",
+"TotalAirEmissions":"5,627",
+"SurfaceWaterDischarges":"10",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"1,346",
+"TotalOnSiteReleases":"5,637",
+"TotalOffSiteReleases":"3,076",
+"TotalReleasesTransfers":"8,713"
+}
+,{
+"SourceID":"53081NRTHW322CR",
+"Year":"2022",
+"TotalAirEmissions":"5,515",
+"SurfaceWaterDischarges":"15",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"1,333",
+"TotalOnSiteReleases":"5,530",
+"TotalOffSiteReleases":"3,168",
+"TotalReleasesTransfers":"8,698"
+}
+,{
+"SourceID":"53081NRTHW322CR",
+"Year":"2021",
+"TotalAirEmissions":"5,198",
+"SurfaceWaterDischarges":"15",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"956",
+"TotalOnSiteReleases":"5,213",
+"TotalOffSiteReleases":"2,867",
+"TotalReleasesTransfers":"8,080"
+}
+,{
+"SourceID":"53081NRTHW322CR",
+"Year":"2020",
+"TotalAirEmissions":"4,739",
+"SurfaceWaterDischarges":"15",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"872",
+"TotalOnSiteReleases":"4,754",
+"TotalOffSiteReleases":"2,038",
+"TotalReleasesTransfers":"6,792"
+}
+,{
+"SourceID":"53081NRTHW322CR",
+"Year":"2019",
+"TotalAirEmissions":"4,698",
+"SurfaceWaterDischarges":"15",
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"843",
+"TotalOnSiteReleases":"4,713",
+"TotalOffSiteReleases":"3,149",
+"TotalReleasesTransfers":"7,862"
+}
+,{
+"SourceID":"53081NRTHW322CR",
+"Year":"2018",
+"TotalAirEmissions":"5,156",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"942",
+"TotalOnSiteReleases":"5,156",
+"TotalOffSiteReleases":"2,298",
+"TotalReleasesTransfers":"7,454"
+}
+,{
+"SourceID":"53081NRTHW322CR",
+"Year":"2017",
+"TotalAirEmissions":"3,566",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"3,318",
+"TotalOnSiteReleases":"3,566",
+"TotalOffSiteReleases":"5,380",
+"TotalReleasesTransfers":"8,946"
+}
+,{
+"SourceID":"53081NRTHW322CR",
+"Year":"2016",
+"TotalAirEmissions":"5,517",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"250",
+"TotalOnSiteReleases":"5,517",
+"TotalOffSiteReleases":"2,918",
+"TotalReleasesTransfers":"8,435"
+}
+,{
+"SourceID":"53081NRTHW322CR",
+"Year":"2015",
+"TotalAirEmissions":"6,203",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"281",
+"TotalOnSiteReleases":"6,203",
+"TotalOffSiteReleases":"1,830",
+"TotalReleasesTransfers":"8,033"
+}
+]
+}
+]
+}
+,
+"TRIReleases":{
+"TRIFacilities":null,
+"Header":[
+{
+"Year10":"2024",
+"Year9":"2023",
+"Year8":"2022",
+"Year7":"2021",
+"Year6":"2020",
+"Year5":"2019",
+"Year4":"2018",
+"Year3":"2017",
+"Year2":"2016",
+"Year1":"2015"
+}
+]
+,
+"Chemicals":[
+{
+"ChemicalName":"Antimony compounds",
+"Year10Pounds":"1,446",
+"Year9Pounds":"1,332",
+"Year8Pounds":"1,272",
+"Year7Pounds":"1,190",
+"Year6Pounds":"922",
+"Year5Pounds":"1,104",
+"Year4Pounds":"1,106",
+"Year3Pounds":"1,870",
+"Year2Pounds":"2,445",
+"Year1Pounds":"1,251"
+}
+,
+{
+"ChemicalName":"Lead",
+"Year10Pounds":"6",
+"Year9Pounds":null,
+"Year8Pounds":null,
+"Year7Pounds":null,
+"Year6Pounds":null,
+"Year5Pounds":null,
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":null,
+"Year1Pounds":null
+}
+,
+{
+"ChemicalName":"Maleic anhydride",
+"Year10Pounds":"272",
+"Year9Pounds":null,
+"Year8Pounds":"12",
+"Year7Pounds":"425",
+"Year6Pounds":"12",
+"Year5Pounds":"955",
+"Year4Pounds":null,
+"Year3Pounds":null,
+"Year2Pounds":null,
+"Year1Pounds":null
+}
+,
+{
+"ChemicalName":"Methanol",
+"Year10Pounds":"19,235",
+"Year9Pounds":"6,974",
+"Year8Pounds":"7,081",
+"Year7Pounds":"6,142",
+"Year6Pounds":"5,603",
+"Year5Pounds":"5,414",
+"Year4Pounds":"6,093",
+"Year3Pounds":"6,880",
+"Year2Pounds":"5,763",
+"Year1Pounds":"6,481"
+}
+,
+{
+"ChemicalName":"Zinc compounds",
+"Year10Pounds":"417",
+"Year9Pounds":"407",
+"Year8Pounds":"333",
+"Year7Pounds":"323",
+"Year6Pounds":"255",
+"Year5Pounds":"389",
+"Year4Pounds":"255",
+"Year3Pounds":"196",
+"Year2Pounds":"227",
+"Year1Pounds":"301"
+}
+]
+}
+,
+"DmrPollLoads":{
+}
+,
+"RCRAWasteHistory":{
+}
+,
+"AirQuality":{
+"Ozone8hr1997Area":null,
+"Ozone8hr2008Area":"Chicago-Naperville IL-IN-WI",
+"Ozone8hr2015Area":"Sheboygan County WI",
+"Lead1978Area":null,
+"Lead2008Area":null,
+"CarbonMonoxide1971Area":null,
+"NitrogenDioxide1971Area":null,
+"SulfurDioxide1971Area":null,
+"SulfurDioxide2010Area":null,
+"ParticulateMatter1987Area":null,
+"ParticulateMatter1997Area":null,
+"ParticulateMatter2006Area":null,
+"ParticulateMatter2012Area":null
+}
+,
+"AirQualityNAAs":{
+"AirQualityNAA":[
+{
+"Pollutant":"Ozone",
+"WithinNAStatusArea":"Yes",
+"NAStatusStandards":"8-Hour Ozone (2015)",
+"WithinMaintStatusArea":"Yes",
+"MaintStatusStandards":"1-Hour Ozone (1979); 8-Hour Ozone (2008)"
+}
+,{
+"Pollutant":"Lead",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Particulate Matter",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Carbon Monoxide",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Sulfur Dioxide",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+]
+}
+,
+"SiteVisits":{
+}
+,
+"SanitarySurveys":{
+}
+,
+"ViolationsEnforcementActions":{
+}
+,
+"LeadAndCopperRule5Yr":{
+}
+,
+"Tribes":[
+]
+,
+"WebFireDocuments":[
+]
+,
+"CAEDDocuments":[
+]
+,
+"SpatialMetadata":{
+"RegistryID":"110031001387",
+"Latitude83":"43.72117",
+"Longitude83":"-87.74897",
+"CollectionMethod":"ADDRESS MATCHING-HOUSE NUMBER",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"CalculatedAccuracy":"30 Meters",
+"CoordinateSourceSystem":"FRS",
+"CoordinateSourceSystemId":"110031001387"
+}
+,
+"ACS2023Demographics":{
+"Radius":"1",
+"CenterLatitude":"43.72117",
+"CenterLongitude":"-87.74897",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"99%",
+"WaterArea":"1%",
+"PopulationDensity":"747/sq.mi.",
+"PercentMinority":"8%",
+"Households":"935",
+"HousingUnits":"1,101",
+"HouseholdsPublicAssistance":"6",
+"PersonsBelowPovertyLevel":"130",
+"PercentBelowPovertyLevel":"6%",
+"PersonsBelowLowIncomeLevel":"416",
+"PercentBelowLowIncomeLevel":"18%",
+"ACSPopulation":"2,320",
+"ACSPovertyBasis":"2,318",
+"PercentPeopleOfColor":"8%",
+"White":"2,151 (93%)",
+"AfricanAmerican":"5 (0%)",
+"HispanicOrigin":"137 (6%)",
+"Asian":"6 (0%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"1 (0%)",
+"OtherMultiracial":"115 (5%)",
+"Child":"88 (4%)",
+"Minors":"479 (21%)",
+"Adults":"1,841 (79%)",
+"Seniors":"590 (25%)",
+"Less9thGrade":"13 (.76%)",
+"Grades9to12":"61 (3.54%)",
+"HSDiploma":"590 (34.28%)",
+"SomeCollege":"406 (23.59%)",
+"BSBA":"466 (27.08%)",
+"IncomeLess15k":"39 (4.17%)",
+"Income15to25k":"37 (3.96%)",
+"Income25to50k":"145 (15.51%)",
+"Income50to75k":"202 (21.6%)",
+"Income75kPlus":"512 (54.76%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"ACS2024Demographics":{
+"Radius":"1",
+"CenterLatitude":"43.72117",
+"CenterLongitude":"-87.74897",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"99%",
+"WaterArea":"1%",
+"PopulationDensity":"1,272/sq.mi.",
+"PercentMinority":"25%",
+"Households":"1,826",
+"HousingUnits":"1,923",
+"HouseholdsPublicAssistance":"141",
+"PersonsBelowPovertyLevel":"515",
+"PercentBelowPovertyLevel":"14%",
+"PersonsBelowLowIncomeLevel":"1,131",
+"PercentBelowLowIncomeLevel":"30%",
+"ACSPopulation":"3,952",
+"ACSPovertyBasis":"3,768",
+"PercentPeopleOfColor":"25%",
+"White":"3,037 (77%)",
+"AfricanAmerican":"117 (3%)",
+"HispanicOrigin":"241 (6%)",
+"Asian":"557 (14%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"18 (0%)",
+"OtherMultiracial":"77 (2%)",
+"Child":"305 (8%)",
+"Minors":"827 (21%)",
+"Adults":"3,128 (79%)",
+"Seniors":"576 (15%)",
+"Less9thGrade":"35 (1.29%)",
+"Grades9to12":"109 (4.01%)",
+"HSDiploma":"1,111 (40.85%)",
+"SomeCollege":"504 (18.53%)",
+"BSBA":"705 (25.92%)",
+"IncomeLess15k":"224 (12.26%)",
+"Income15to25k":"126 (6.9%)",
+"Income25to50k":"381 (20.85%)",
+"Income50to75k":"454 (24.85%)",
+"Income75kPlus":"642 (35.14%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"MinorTTDemographics":{
+}
+,
+"AWSDocs":{
+}
+,
+"Industries":"Chemical Manufacturing",
+"MapOutput":{
+"IconBaseURL":"https://echo.epa.gov/themes/custom/echo/images/map/",
+"PopUpBaseURL":"https://echodata.epa.gov/echo/echo_rest_services.pop_up?p_id=",
+"CenterLatitude":"43.72117",
+"CenterLongitude":"-87.74897",
+"LocationalDataSource":"FRS",
+"EstimatedAccuracyMeters":"30",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"MapData":[
+{
+"LAT":"43.72065",
+"LON":"-87.74897",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"K/P WELDING & FABRICATING, INC",
+"PUV":"110070333661"
+}
+,{
+"LAT":"43.72065",
+"LON":"-87.74897",
+"ICON":"MULT-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"K P WELDING & FABRICATING INC",
+"PUV":"110005436395"
+}
+,{
+"LAT":"43.72116",
+"LON":"-87.75112",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"PEMCO INC.",
+"PUV":"110001928424"
+}
+,{
+"LAT":"43.72117",
+"LON":"-87.74897",
+"ICON":"CWA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"SACO AEI",
+"PUV":"110031001387"
+}
+,{
+"LAT":"43.72238",
+"LON":"-87.74576",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"AMERICAN EXCELSIOR CO",
+"PUV":"110000416808"
+}
+,{
+"LAT":"43.72117",
+"LON":"-87.74897",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"SACO AEI POLYMERS",
+"PUV":"110005504720"
+}
+,{
+"LAT":"43.72115",
+"LON":"-87.74757",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"ALAARK MFG CORP",
+"PUV":"110005451466"
+}
+,{
+"LAT":"43.72181",
+"LON":"-87.7465",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"IAC SHEBOYGAN, LLC",
+"PUV":"110010503650"
+}
+,{
+"LAT":"43.72116",
+"LON":"-87.75248",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"WIGWAM MILLS INC",
+"PUV":"110005423684"
+}
+]
+}
+}
+}

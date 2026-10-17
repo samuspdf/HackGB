@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local Claude Code settings
+.claude/
+
+# macOS
+.DS_Store
+
+# Web app build output and dependencies are covered by web/.gitignore

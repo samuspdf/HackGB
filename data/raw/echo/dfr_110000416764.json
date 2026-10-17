@@ -1,0 +1,1709 @@
+{
+"Results":{
+"Message":"Success",
+"MultipleFRSFacilities":{
+}
+,
+"RegistryID":"110000416764",
+"Reports":{
+"HasPollRpt":"Y",
+"HasAimRpt":"N",
+"HasBiosolidAnnualRpt":"N",
+"HasBflmRpt":"N"
+}
+,
+"Permits":[
+{
+"Statute":"",
+"EPASystem":"FRS",
+"EPARegion":"05",
+"SourceID":"110000416764",
+"FacilityName":"BORDEN CHEMICAL, INC., SHEBOYGAN PLANT",
+"FacilityStreet":"2522 SOUTH 24TH STREET",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.726944",
+"Longitude":"-87.738056",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"INTERPOLATION-PHOTO",
+"RefPointDesc":"CENTER OF FACILITY",
+"Scale":"24000",
+"AccuracyValue":"25",
+"AccuracyScore":"25",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"",
+"EPASystem":"ICIS",
+"EPARegion":"05",
+"SourceID":"3600168929",
+"FacilityName":"HEXION INC.",
+"FacilityStreet":"2522 SOUTH 24TH STREET",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.726944",
+"Longitude":"-87.738056",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"25",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"",
+"EPASystem":"ICIS",
+"EPARegion":"05",
+"SourceID":"3000017780",
+"FacilityName":"MOMENTIVE SPECIALTY CHEMICALS INC",
+"FacilityStreet":"2522 S 24TH ST",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.726944",
+"Longitude":"-87.738056",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"25",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"EPARegion":"05",
+"SourceID":"WI0000005511700051",
+"FacilityName":"HEXION INC",
+"FacilityStreet":"2522 S 24TH ST",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"530815554",
+"FacilityFipsCode":"55119",
+"FacilityCountyName":"Taylor County",
+"Universe":"Synthetic Minor Emissions",
+"Areas":"CAAFESOP, CAAGACTM, CAAMACT, CAANSPS, CAASIP",
+"ExpDate":null,
+"Latitude":"43.726944",
+"Longitude":"-87.738056",
+"IndianCountry":"N",
+"SIC":"2821",
+"NAICS":"325199 325211",
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"25",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Operating"
+}
+,{
+"Statute":"CAA",
+"EPASystem":"EIS",
+"EPARegion":"05",
+"SourceID":"3963111",
+"FacilityName":"HEXION INC",
+"FacilityStreet":"2522 S 24TH ST",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.727372",
+"Longitude":"-87.737721",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"325211",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"UNKNOWN",
+"RefPointDesc":"ACRES POINTS NOT REPRESENTED BY 101-107",
+"Scale":null,
+"AccuracyValue":"1",
+"AccuracyScore":"17400",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"RMP",
+"EPARegion":"05",
+"SourceID":"100000095354",
+"FacilityName":"HEXION INC. - SHEBOYGAN",
+"FacilityStreet":"2522 SOUTH 24TH STREET",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.726944",
+"Longitude":"-87.738056",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"325199 325211",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"INTERPOLATION-PHOTO",
+"RefPointDesc":"CENTER OF FACILITY",
+"Scale":"24000",
+"AccuracyValue":"25",
+"AccuracyScore":"25",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CERCLA",
+"EPASystem":"SEMS",
+"EPARegion":"05",
+"SourceID":"WID023540263",
+"FacilityName":"BORDEN CHEM CO ADHESIVES & CHEM DIV",
+"FacilityStreet":"2522 SOUTH 24TH STREET",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":null,
+"FacilityCountyName":null,
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":null,
+"Longitude":null,
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"EP313",
+"EPASystem":"TRI",
+"EPARegion":"5",
+"SourceID":"53081BRDNN2522S",
+"FacilityName":"HEXION INC-SHEBOYGAN SITE",
+"FacilityStreet":"2522 S 24TH ST",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"Toxics Release Inventory",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.726944",
+"Longitude":"-87.738056",
+"IndianCountry":"N",
+"SIC":"2821 2869",
+"NAICS":"325199 325211",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"INTERPOLATION-PHOTO",
+"RefPointDesc":"CENTER OF FACILITY",
+"Scale":"24000",
+"AccuracyValue":"25",
+"AccuracyScore":"25",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Last Reported for 2024"
+}
+,{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"EPARegion":"05",
+"SourceID":"WID023540263",
+"FacilityName":"HEXION INC",
+"FacilityStreet":"2522 S 24TH ST",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081-5554",
+"FacilityFipsCode":"55117",
+"FacilityCountyName":"Sheboygan County",
+"Universe":"SQG",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.726959",
+"Longitude":"-87.737332",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"325199 325211",
+"DQURL":null,
+"HdatumDesc":"WGS84",
+"CollectDesc":"Address Geocode",
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Active (H    )"
+}
+,{
+"Statute":"TSCA",
+"EPASystem":"TSCA",
+"EPARegion":"05",
+"SourceID":"100607134",
+"FacilityName":"MOMENTIVE SPECIALTY CHEMICALS INC SHEBOYGAN SITE",
+"FacilityStreet":"2522 S 24TH ST",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":null,
+"FacilityCountyName":null,
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.72915",
+"Longitude":"-87.73726",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":"17447",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"TSCA",
+"EPASystem":"TSCA",
+"EPARegion":"05",
+"SourceID":"TSCA7600",
+"FacilityName":"MOMENTIVE SPECIALTY CHEMICALS INC SHEBOYGAN SITE",
+"FacilityStreet":"2522 S 24TH ST",
+"FacilityCity":"SHEBOYGAN",
+"FacilityState":"WI",
+"FacilityZip":"53081",
+"FacilityFipsCode":null,
+"FacilityCountyName":null,
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":null,
+"Longitude":null,
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+]
+,
+"SystemExtractDates":{
+"Dates":[
+{
+"EPASystem":"ICIS-Air",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"RCRAInfo",
+"SystemExtractDate":"10/09/2026"
+}
+,{
+"EPASystem":"SDWIS",
+"SystemExtractDate":"10/07/2026"
+}
+]
+}
+,
+"EnforcementComplianceSummaries":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Summaries":[
+{
+"Statute":"CAA",
+"Inspections":"2",
+"LastInspection":"12/04/2025",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"0",
+"QtrsInSNC":"0",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+,{
+"Statute":"RCRA",
+"Inspections":"1",
+"LastInspection":"02/05/2025",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"1",
+"QtrsInSNC":"0",
+"InformalActions":"1",
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+]
+}
+,
+"NAICS":{
+"Sources":[
+{
+"NAICSCodes":[
+{
+"SourceID":"100000095354",
+"EPASystem":"RMP",
+"NAICSCode":"325199",
+"NAICSDesc":"All Other Basic Organic Chemical Manufacturing"
+}
+,{
+"SourceID":"100000095354",
+"EPASystem":"RMP",
+"NAICSCode":"325211",
+"NAICSDesc":"Plastics Material and Resin Manufacturing"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"3963111",
+"EPASystem":"EIS",
+"NAICSCode":"325211",
+"NAICSDesc":"Plastics Material and Resin Manufacturing"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"53081BRDNN2522S",
+"EPASystem":"TRI",
+"NAICSCode":"325199",
+"NAICSDesc":"All Other Basic Organic Chemical Manufacturing"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"EPASystem":"TRI",
+"NAICSCode":"325211",
+"NAICSDesc":"Plastics Material and Resin Manufacturing"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"WI0000005511700051",
+"EPASystem":"ICIS-Air",
+"NAICSCode":"325199",
+"NAICSDesc":"All Other Basic Organic Chemical Manufacturing"
+}
+,{
+"SourceID":"WI0000005511700051",
+"EPASystem":"ICIS-Air",
+"NAICSCode":"325211",
+"NAICSDesc":"Plastics Material and Resin Manufacturing"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"WID023540263",
+"EPASystem":"RCRAInfo",
+"NAICSCode":"325199",
+"NAICSDesc":"All Other Basic Organic Chemical Manufacturing"
+}
+,{
+"SourceID":"WID023540263",
+"EPASystem":"RCRAInfo",
+"NAICSCode":"325211",
+"NAICSDesc":"Plastics Material and Resin Manufacturing"
+}
+]
+}
+]
+}
+,
+"SBEEventTotals":{
+}
+,
+"SIC":{
+"Sources":[
+{
+"SICCodes":[
+{
+"SourceID":"53081BRDNN2522S",
+"EPASystem":"TRI",
+"SICCode":"2821",
+"SICDesc":"Plastics Materials And Resins"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"EPASystem":"TRI",
+"SICCode":"2869",
+"SICDesc":"Industrial Organic Chemicals"
+}
+]
+}
+,{
+"SICCodes":[
+{
+"SourceID":"WI0000005511700051",
+"EPASystem":"ICIS-Air",
+"SICCode":"2821",
+"SICDesc":"Plastics Materials And Resins"
+}
+]
+}
+]
+}
+,
+"EffluentGuidelines":{
+}
+,
+"InspectionEnforcementSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"SourceID":"WI0000005511700051",
+"InspectionCount":"1",
+"DateLastInspection":"07/07/2025",
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+,{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"SourceID":"WID023540263",
+"InspectionCount":"1",
+"DateLastInspection":"02/05/2025",
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+]
+}
+,
+"ComplianceHistory":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Inspection":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005511700051",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"112(r)(7) Inspection",
+"LeadAgency":"EPA",
+"Date":"12/04/2025",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"05000F1757840"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700051",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"FCE On-Site",
+"LeadAgency":"State",
+"Date":"07/07/2025",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000551170005100505"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700051",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/06/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/14/2025 Facility Reported No Deviations",
+"CompMonitorID":"WI000A0000551170005100506"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005511700051",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE On-Site",
+"LeadAgency":"EPA",
+"Date":"03/11/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"05000F1675446"
+}
+,{
+"Statute":"RCRA",
+"SourceID":"WID023540263",
+"EPASystem":"RCRAInfo",
+"ActivityType":null,
+"InspectionType":"Compliance Evaluation Inspection",
+"LeadAgency":"State",
+"Date":"02/05/2025",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":"Violations Or Compliance Issues Were Found",
+"CompMonitorID":"269"
+}
+]
+}
+,
+"ComplianceSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005511700051",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/10/2026",
+"QtrsInNC":"0"
+}
+,{
+"Statute":"RCRA",
+"SourceID":"WID023540263",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/10/2026",
+"QtrsInNC":"1"
+}
+]
+}
+,
+"CWA3YrCompliance":{
+}
+,
+"CWARNCCompliance":{
+}
+,
+"CWA3YrD80D90Counts":{
+}
+,
+"CWAEffluentComplianceEXP":{
+}
+,
+"CWAPSCompliance":{
+}
+,
+"CWAPSComplianceNew":{
+}
+,
+"CWASECompliance":{
+}
+,
+"CWACSCompliance":{
+}
+,
+"CWACSComplianceNew":{
+}
+,
+"CWAEffluentALRExceedencesEXP":{
+}
+,
+"AirCompliance":{
+"Header":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+}
+,
+"Sources":[
+{
+"PermitHistory":{
+"SourceID":"WI0000005511700051",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"HPVHistory":{
+"SourceID":"WI0000005511700051",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null
+}
+,
+"HPVProgramsPollutants":[
+]
+,
+"FRVProgramsPollutants":[
+]
+,
+"AFSPrograms":[
+]
+}
+]
+}
+,
+"BflmCompliance":{
+}
+,
+"RCRACompliance":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+,
+"Sources":[
+{
+"Status":{
+"SourceID":"WID023540263",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"Evaluations":[
+]
+,
+"Violations":[
+{
+"SourceID":"WID023540263",
+"ViolationType":"262.A",
+"Violation":"Generators - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/12/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3204&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID023540263",
+"ViolationType":"262.M",
+"Violation":"Preparedness, Prevention, and Emergency Procedures",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/12/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3205&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID023540263",
+"ViolationType":"262.A",
+"Violation":"Generators - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/05/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3206&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID023540263",
+"ViolationType":"262.A",
+"Violation":"Generators - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/12/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3207&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID023540263",
+"ViolationType":"262.A",
+"Violation":"Generators - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/12/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3208&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID023540263",
+"ViolationType":"262.A",
+"Violation":"Generators - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/12/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3209&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID023540263",
+"ViolationType":"273.B",
+"Violation":"Universal Waste - Small Quantity Handlers",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/12/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3210&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID023540263",
+"ViolationType":"265.CC",
+"Violation":"TSD IS-Air Emission Standards - Tank/SI/Container",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/12/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3211&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID023540263",
+"ViolationType":"265.CC",
+"Violation":"TSD IS-Air Emission Standards - Tank/SI/Container",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/12/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3212&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID023540263",
+"ViolationType":"262.B",
+"Violation":"Generators - Manifest",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/27/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3277&p_viol_determined_by_agency=S"
+}
+,{
+"SourceID":"WID023540263",
+"ViolationType":"268.A",
+"Violation":"LDR - General",
+"Agency":"WI",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":"02/05/2025-02/26/2025",
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null,
+"RCRAViolReportURL":"https://echo.epa.gov/violation-report?p_id=WID023540263&p_viol_activity_location=WI&p_viol_seq=3279&p_viol_determined_by_agency=S"
+}
+]
+}
+]
+}
+,
+"SDWISCompliance":{
+}
+,
+"Watersheds":{
+}
+,
+"AssessedWaters":{
+}
+,
+"Notices":{
+"ProgramDates":[
+{
+"Program":"RCRA",
+"StartDate":"10/10/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Notice":[
+{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"SourceID":"WID023540263",
+"ActionType":"NOTICE OF NONCOMPLIANCE",
+"LeadAgency":"State",
+"NoticeDate":"02/12/2025",
+"EnfIdentifier":"695",
+"OfficialFlag":"Y"
+}
+]
+}
+,
+"FormalActions":{
+}
+,
+"ICISFormalActions":{
+"ProgramDates":[
+{
+"Program":"EPCRA",
+"StartDate":null,
+"EndDate":null
+}
+]
+,
+"Action":[
+{
+"StatuteCode":"EPCRA",
+"LawSectionCode":"313",
+"CaseID":null,
+"ActivityName":"Hexion INC",
+"LeadAgency":"EPA",
+"CaseType":"Notice Of Determination",
+"CaseName":"Hexion INC",
+"IssueDate":"03/26/2020",
+"NumberSettlements":null,
+"TotalCostRecovery":null,
+"SettlementDate":"07/22/2022",
+"LatestSettlementEnteredDate":"07/22/2022",
+"FederalPenalty":null,
+"StateLocalPenalty":null,
+"SepCost":null,
+"CompActionCost":null
+}
+,{
+"StatuteCode":"EPCRA",
+"LawSectionCode":"313",
+"CaseID":"HQ-2022-5007",
+"ActivityName":"Hexion Inc.",
+"LeadAgency":"EPA",
+"CaseType":"Administrative - Formal",
+"CaseName":"Hexion Inc.",
+"IssueDate":"07/22/2022",
+"NumberSettlements":"1",
+"TotalCostRecovery":"$0",
+"SettlementDate":"07/22/2022",
+"LatestSettlementEnteredDate":"07/22/2022",
+"FederalPenalty":"$0",
+"StateLocalPenalty":"$0",
+"SepCost":"$0",
+"CompActionCost":"$204,225"
+}
+]
+}
+,
+"CaseFormalActions":{
+"ProgramDates":[
+{
+"Program":"EPCRA",
+"StartDate":null,
+"EndDate":null
+}
+]
+,
+"Action":[
+{
+"DataSource":"I",
+"StatuteCode":"EPCRA",
+"LawSectionCode":"313",
+"CaseID":"HQ-2022-5007",
+"ActivityID":"3603372724",
+"EPASystem":"ICIS",
+"SourceID":"TRIS/53081BRDNN2522S",
+"ActivityName":"Hexion Inc.",
+"LeadAgency":"EPA",
+"CaseType":"Administrative - Formal",
+"CaseName":"Hexion Inc.",
+"IssueDate":"07/22/2022",
+"NumberSettlements":"1",
+"Settlements":{
+"Settlement":[
+{
+"TotalCostRecovery":"$0",
+"SettlementDate":"07/22/2022",
+"FederalPenalty":"$0",
+"StateLocalPenalty":"$0",
+"PenaltyAmountCollected":null,
+"SepCost":"$0",
+"CompActionCost":"$204,225"
+}
+]
+}
+}
+]
+}
+,
+"TRIHistory":{
+"Sources":[
+{
+"ReleaseYear":[
+{
+"SourceID":"53081BRDNN2522S",
+"Year":"2024",
+"TotalAirEmissions":"28,575",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"34,987",
+"TotalOnSiteReleases":"28,575",
+"TotalOffSiteReleases":"117,419",
+"TotalReleasesTransfers":"145,994"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"Year":"2023",
+"TotalAirEmissions":"30,594",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":"20,787",
+"OffSiteTransfersPOTWS":"35,853",
+"TotalOnSiteReleases":"51,381",
+"TotalOffSiteReleases":"112,818",
+"TotalReleasesTransfers":"164,199"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"Year":"2022",
+"TotalAirEmissions":"22,035",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"35,728",
+"TotalOnSiteReleases":"22,035",
+"TotalOffSiteReleases":"90,230",
+"TotalReleasesTransfers":"112,265"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"Year":"2021",
+"TotalAirEmissions":"21,257",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"39,315",
+"TotalOnSiteReleases":"21,257",
+"TotalOffSiteReleases":"170,965",
+"TotalReleasesTransfers":"192,222"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"Year":"2020",
+"TotalAirEmissions":"19,842",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"35,406",
+"TotalOnSiteReleases":"19,842",
+"TotalOffSiteReleases":"313,114",
+"TotalReleasesTransfers":"332,956"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"Year":"2019",
+"TotalAirEmissions":"20,919",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"56,150",
+"TotalOnSiteReleases":"20,919",
+"TotalOffSiteReleases":"371,022",
+"TotalReleasesTransfers":"391,941"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"Year":"2018",
+"TotalAirEmissions":"20,195",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"31,991",
+"TotalOnSiteReleases":"20,195",
+"TotalOffSiteReleases":"230,054",
+"TotalReleasesTransfers":"250,249"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"Year":"2017",
+"TotalAirEmissions":"21,529",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"27,699",
+"TotalOnSiteReleases":"21,529",
+"TotalOffSiteReleases":"136,363",
+"TotalReleasesTransfers":"157,892"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"Year":"2016",
+"TotalAirEmissions":"19,140",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"47,791",
+"TotalOnSiteReleases":"19,140",
+"TotalOffSiteReleases":"162,272",
+"TotalReleasesTransfers":"181,412"
+}
+,{
+"SourceID":"53081BRDNN2522S",
+"Year":"2015",
+"TotalAirEmissions":"19,880",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"44,027",
+"TotalOnSiteReleases":"19,880",
+"TotalOffSiteReleases":"109,800",
+"TotalReleasesTransfers":"129,680"
+}
+]
+}
+]
+}
+,
+"TRIReleases":{
+"TRIFacilities":null,
+"Header":[
+{
+"Year10":"2024",
+"Year9":"2023",
+"Year8":"2022",
+"Year7":"2021",
+"Year6":"2020",
+"Year5":"2019",
+"Year4":"2018",
+"Year3":"2017",
+"Year2":"2016",
+"Year1":"2015"
+}
+]
+,
+"Chemicals":[
+{
+"ChemicalName":"Ammonia",
+"Year10Pounds":"754",
+"Year9Pounds":"754",
+"Year8Pounds":"754",
+"Year7Pounds":"754",
+"Year6Pounds":"754",
+"Year5Pounds":"754",
+"Year4Pounds":"755",
+"Year3Pounds":"754",
+"Year2Pounds":"754",
+"Year1Pounds":"818"
+}
+,
+{
+"ChemicalName":"Certain glycol ethers",
+"Year10Pounds":null,
+"Year9Pounds":"427",
+"Year8Pounds":"765",
+"Year7Pounds":"1,346",
+"Year6Pounds":"868",
+"Year5Pounds":"1,126",
+"Year4Pounds":"1,394",
+"Year3Pounds":"1,468",
+"Year2Pounds":"1,514",
+"Year1Pounds":"2,037"
+}
+,
+{
+"ChemicalName":"Formaldehyde",
+"Year10Pounds":"79,008",
+"Year9Pounds":"76,319",
+"Year8Pounds":"64,436",
+"Year7Pounds":"120,042",
+"Year6Pounds":"218,991",
+"Year5Pounds":"257,865",
+"Year4Pounds":"161,298",
+"Year3Pounds":"96,746",
+"Year2Pounds":"112,965",
+"Year1Pounds":"76,900"
+}
+,
+{
+"ChemicalName":"Methanol",
+"Year10Pounds":"60,609",
+"Year9Pounds":"71,366",
+"Year8Pounds":"42,254",
+"Year7Pounds":"65,815",
+"Year6Pounds":"108,403",
+"Year5Pounds":"127,206",
+"Year4Pounds":"82,978",
+"Year3Pounds":"55,398",
+"Year2Pounds":"61,134",
+"Year1Pounds":"45,634"
+}
+,
+{
+"ChemicalName":"Phenol",
+"Year10Pounds":"4,605",
+"Year9Pounds":"14,345",
+"Year8Pounds":"3,013",
+"Year7Pounds":"3,229",
+"Year6Pounds":"2,991",
+"Year5Pounds":"3,978",
+"Year4Pounds":"2,745",
+"Year3Pounds":"2,470",
+"Year2Pounds":"4,141",
+"Year1Pounds":"3,458"
+}
+,
+{
+"ChemicalName":"Triethylamine",
+"Year10Pounds":"1,019",
+"Year9Pounds":"988",
+"Year8Pounds":"1,043",
+"Year7Pounds":"1,036",
+"Year6Pounds":"949",
+"Year5Pounds":"1,012",
+"Year4Pounds":"1,079",
+"Year3Pounds":"1,056",
+"Year2Pounds":"904",
+"Year1Pounds":"833"
+}
+]
+}
+,
+"DmrPollLoads":{
+}
+,
+"RCRAWasteHistory":{
+"Header":[
+{
+"Year4":"2026",
+"Year3":"2025",
+"Year2":"2024",
+"Year1":"2023"
+}
+]
+,
+"WasteHistory":[
+{
+"SourceID":"WID023540263",
+"WasteType":"Hazardous Waste",
+"Year4Value":"336",
+"Year3Value":"4,717",
+"Year2Value":"13,416",
+"Year1Value":"983"
+}
+,
+{
+"SourceID":"WID023540263",
+"WasteType":"Acute Hazardous Waste",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+,
+{
+"SourceID":"WID023540263",
+"WasteType":"Pharmaceutical Hazardous Waste",
+"Year4Value":"0",
+"Year3Value":"0",
+"Year2Value":"0",
+"Year1Value":"0"
+}
+]
+}
+,
+"AirQuality":{
+"Ozone8hr1997Area":null,
+"Ozone8hr2008Area":"Chicago-Naperville IL-IN-WI",
+"Ozone8hr2015Area":"Sheboygan County WI",
+"Lead1978Area":null,
+"Lead2008Area":null,
+"CarbonMonoxide1971Area":null,
+"NitrogenDioxide1971Area":null,
+"SulfurDioxide1971Area":null,
+"SulfurDioxide2010Area":null,
+"ParticulateMatter1987Area":null,
+"ParticulateMatter1997Area":null,
+"ParticulateMatter2006Area":null,
+"ParticulateMatter2012Area":null
+}
+,
+"AirQualityNAAs":{
+"AirQualityNAA":[
+{
+"Pollutant":"Ozone",
+"WithinNAStatusArea":"Yes",
+"NAStatusStandards":"8-Hour Ozone (2015)",
+"WithinMaintStatusArea":"Yes",
+"MaintStatusStandards":"1-Hour Ozone (1979); 8-Hour Ozone (2008)"
+}
+,{
+"Pollutant":"Lead",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Particulate Matter",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Carbon Monoxide",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Sulfur Dioxide",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+]
+}
+,
+"SiteVisits":{
+}
+,
+"SanitarySurveys":{
+}
+,
+"ViolationsEnforcementActions":{
+}
+,
+"LeadAndCopperRule5Yr":{
+}
+,
+"Tribes":[
+]
+,
+"WebFireDocuments":[
+]
+,
+"CAEDDocuments":[
+]
+,
+"SpatialMetadata":{
+"RegistryID":"110000416764",
+"Latitude83":"43.726944",
+"Longitude83":"-87.738056",
+"CollectionMethod":"INTERPOLATION-PHOTO",
+"ReferencePoint":"CENTER OF FACILITY",
+"CalculatedAccuracy":"25 Meters",
+"CoordinateSourceSystem":"TRIS",
+"CoordinateSourceSystemId":"53081BRDNN2522S"
+}
+,
+"ACS2023Demographics":{
+"Radius":"1",
+"CenterLatitude":"43.726944",
+"CenterLongitude":"-87.738056",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"99%",
+"WaterArea":"1%",
+"PopulationDensity":"2,030/sq.mi.",
+"PercentMinority":"9%",
+"Households":"2,567",
+"HousingUnits":"2,984",
+"HouseholdsPublicAssistance":"21",
+"PersonsBelowPovertyLevel":"270",
+"PercentBelowPovertyLevel":"4%",
+"PersonsBelowLowIncomeLevel":"1,057",
+"PercentBelowLowIncomeLevel":"17%",
+"ACSPopulation":"6,340",
+"ACSPovertyBasis":"6,279",
+"PercentPeopleOfColor":"9%",
+"White":"5,831 (92%)",
+"AfricanAmerican":"31 (0%)",
+"HispanicOrigin":"376 (6%)",
+"Asian":"16 (0%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"6 (0%)",
+"OtherMultiracial":"297 (5%)",
+"Child":"286 (5%)",
+"Minors":"1,292 (20%)",
+"Adults":"5,048 (80%)",
+"Seniors":"1,357 (21%)",
+"Less9thGrade":"34 (.73%)",
+"Grades9to12":"208 (4.47%)",
+"HSDiploma":"1,667 (35.82%)",
+"SomeCollege":"998 (21.44%)",
+"BSBA":"1,232 (26.47%)",
+"IncomeLess15k":"111 (4.33%)",
+"Income15to25k":"89 (3.47%)",
+"Income25to50k":"373 (14.55%)",
+"Income50to75k":"448 (17.48%)",
+"Income75kPlus":"1,542 (60.16%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"ACS2024Demographics":{
+"Radius":"1",
+"CenterLatitude":"43.726944",
+"CenterLongitude":"-87.738056",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"99%",
+"WaterArea":"1%",
+"PopulationDensity":"2,796/sq.mi.",
+"PercentMinority":"27%",
+"Households":"3,376",
+"HousingUnits":"3,600",
+"HouseholdsPublicAssistance":"138",
+"PersonsBelowPovertyLevel":"852",
+"PercentBelowPovertyLevel":"10%",
+"PersonsBelowLowIncomeLevel":"2,396",
+"PercentBelowLowIncomeLevel":"28%",
+"ACSPopulation":"8,731",
+"ACSPovertyBasis":"8,522",
+"PercentPeopleOfColor":"27%",
+"White":"6,803 (78%)",
+"AfricanAmerican":"123 (1%)",
+"HispanicOrigin":"929 (11%)",
+"Asian":"1,079 (12%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"22 (0%)",
+"OtherMultiracial":"185 (2%)",
+"Child":"660 (8%)",
+"Minors":"2,247 (26%)",
+"Adults":"6,484 (74%)",
+"Seniors":"1,266 (15%)",
+"Less9thGrade":"206 (3.61%)",
+"Grades9to12":"261 (4.58%)",
+"HSDiploma":"2,059 (36.12%)",
+"SomeCollege":"1,235 (21.66%)",
+"BSBA":"1,279 (22.43%)",
+"IncomeLess15k":"270 (7.99%)",
+"Income15to25k":"169 (5%)",
+"Income25to50k":"632 (18.71%)",
+"Income50to75k":"912 (27%)",
+"Income75kPlus":"1,395 (41.3%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"MinorTTDemographics":{
+}
+,
+"AWSDocs":{
+}
+,
+"Industries":"Chemical Manufacturing",
+"MapOutput":{
+"IconBaseURL":"https://echo.epa.gov/themes/custom/echo/images/map/",
+"PopUpBaseURL":"https://echodata.epa.gov/echo/echo_rest_services.pop_up?p_id=",
+"CenterLatitude":"43.726944",
+"CenterLongitude":"-87.738056",
+"LocationalDataSource":"TRIS",
+"EstimatedAccuracyMeters":"25",
+"ReferencePoint":"CENTER OF FACILITY",
+"MapData":[
+{
+"LAT":"43.72619",
+"LON":"-87.73451",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"KMART #7100",
+"PUV":"110005448284"
+}
+,{
+"LAT":"43.72544",
+"LON":"-87.73488",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"FAMILY DOLLAR #9435",
+"PUV":"110063676570"
+}
+,{
+"LAT":"43.726944",
+"LON":"-87.738056",
+"ICON":"MULT-IC-MN-2.png",
+"TYPE":"Facility",
+"NAME":"BORDEN CHEMICAL, INC., SHEBOYGAN PLANT",
+"PUV":"110000416764"
+}
+]
+}
+}
+}

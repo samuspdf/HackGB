@@ -1,0 +1,50 @@
+Lakeshore Watch — Green Bay Study Facilities
+============================================
+Source: EPA Toxics Release Inventory (TRI) Basic Data File, Wisconsin, reporting year 2024
+        https://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-present
+Method: top 5 facilities per city (TRI 'CITY' field) ranked by total ON-SITE releases
+        (air + water + land at the facility). Ranking uses RAW POUNDS, not toxicity-weighted;
+        it will be re-checked once RSEI toxicity weights are loaded (spec rule 2.3).
+Note:   These are REPORTED releases, which are mostly legal under permit. They are not violations.
+
+Green Bay (Brown County) — 31 TRI facilities reported in 2024
+------------------------------------------------------------
+1. Georgia-Pacific Broadway Llc
+   TRI ID: 54307FRTHW1919S | Industry: Paper
+   Address: 1919 S Broadway, Green Bay, WI 54304 | Lat/Lon: 44.49249, -88.03754
+   On-site releases: 249,103 lb (air 18,647 | water 230,457 | land 0)
+   Total incl. off-site transfers: 251,961 lb | Chemicals reported: 7
+   Top chemicals: Nitrate compounds, Methanol, Ammonia
+   Flags: PBT chemical, carcinogen
+
+2. Cng Green Bay
+   TRI ID: 5430WLGCYF1327G | Industry: Printing
+   Address: 1327 Glory Rd, Green Bay, WI 54304 | Lat/Lon: 44.46698, -88.10439
+   On-site releases: 46,558 lb (air 46,558 | water 0 | land 0)
+   Total incl. off-site transfers: 46,558 lb | Chemicals reported: 1
+   Top chemicals: Ozone
+   Flags: none
+
+3. Green Bay Packaging Inc Green Bay Coated Products Div
+   TRI ID: 54307GRNBY3250S | Industry: Paper
+   Address: 3250 S Ridge Rd, Green Bay, WI 54304 | Lat/Lon: 44.46352, -88.09478
+   On-site releases: 23,968 lb (air 23,968 | water 0 | land 0)
+   Total incl. off-site transfers: 23,968 lb | Chemicals reported: 1
+   Top chemicals: Vinyl acetate
+   Flags: carcinogen
+
+4. Pioneer Metal Finishing Green Bay Wi
+   TRI ID: 54304PNRNR486GL | Industry: Fabricated Metals
+   Address: 486 Globe Ave, Green Bay, WI 54304 | Lat/Lon: 44.47571, -88.05318
+   On-site releases: 14,477 lb (air 14,477 | water 0 | land 0)
+   Total incl. off-site transfers: 46,962 lb | Chemicals reported: 3
+   Top chemicals: Nitric acid, Nickel  And Nickel Compounds, Nitrate compounds
+   Flags: carcinogen
+
+5. Carboline Global Inc.
+   TRI ID: 54302WSCNS614EL | Industry: Chemicals
+   Address: 614 Elizabeth St, Green Bay, WI 54302 | Lat/Lon: 44.51147, -87.98275
+   On-site releases: 9,060 lb (air 9,060 | water 0 | land 0)
+   Total incl. off-site transfers: 263,313 lb | Chemicals reported: 12
+   Top chemicals: Xylene, Toluene, n-Butyl alcohol
+   Flags: PBT chemical, carcinogen
