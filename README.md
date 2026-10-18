@@ -22,6 +22,6 @@ GEMINI_MODEL=gemini-3.5-flash-lite    # optional: which Gemini model Ruby uses
 ```
 
 Without `GEMINI_API_KEY`, Ruby still guides visitors through the cities and factories but can't answer typed
-questions. Without `FORUM_COMPANY_CODE`, neighbors can message the factories in the forum but companies can't reply
+questions. Without `FORUM_COMPANY_CODE`, neighbors can message the factories in the forum, but companies can't reply
 (with it, a company opens its chat, taps "Reply as the company" and enters the code).
 Forum messages are saved in `cities/<city>/<company>/forum.json` (also kept out of git).
