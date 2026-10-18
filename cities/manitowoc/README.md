@@ -1,0 +1,3 @@
+# Manitowoc (Manitowoc County)
+
+**Local setting:** The Manitowoc River enters Lake Michigan downtown. It's on the impaired list for **PCBs in fish tissue and sediment** (since 2002) and has specific restricted fish-consumption advice. Lake Michigan along Manitowoc County is impaired for **mercury and PCBs in fish**. Red Arrow Park Beach is impaired for **pathogens** (bacteria), which comes from stormwater and wildlife, not these facilities. Lakeshore Manitowoc County is an ozone **maintenance area** under the 2015 standard (per a DNR 2025 memo; ECHO also flags it). **All three study facilities release almost entirely to air, and they sit within about 2.5 miles of each other**, so their nearby schools overlap. Each facility's 1-mile population is 3,700–10,500.

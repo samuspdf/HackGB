@@ -79,17 +79,13 @@ Science notes to display in plain language:
 Keep it simple and demo-proof: **no live backend required.**
 
 ```
-data_pipeline/  (Python, run offline)
-  fetch_*.py        → download raw data into data/raw/
-  clean_*.py        → filter to the three cities, join, compute toxicity weights
-  ml/               → train and apply the ML model (Phase 3)
-  export_geojson.py → write data/processed/*.geojson and *.json
-
-web/  (static site)
-  index.html
-  app.js            → map, layers, click panel
-  styles.css        → art style TBD (Sam will provide)
-  data/             → copied GeoJSON from the pipeline
+background/            Wisconsin-wide map (Python, run offline)
+  raw/                 statewide raw data (terrain, Census, Natural Earth, TRI)
+  build_basemap.py     → web/public/data/ (terrain, textures, scene.json)
+cities/                everything needed to make each city
+  <city>/city.json, README.md, facilities.txt
+  <city>/<company>/    facility.json, model.json, impacts.json, research.md, raw ECHO + school data
+web/                   static site (Next.js + three.js), reads web/public/data/
 ```
 
 - **Python:** pandas, geopandas, requests, scikit-learn.

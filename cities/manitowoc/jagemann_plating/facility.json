@@ -1,0 +1,17 @@
+{
+  "name": "Jagemann Plating",
+  "tri_id": "54220JGMNN1324S",
+  "industry": "Metal plating shop",
+  "address": "1324 S 26th St, Manitowoc",
+  "lon": -87.68033,
+  "lat": 44.08684,
+  "released": 5535,
+  "air": 5535,
+  "water": 0,
+  "land": 0,
+  "chemicals": [
+    "Zinc compounds",
+    "Nitric acid",
+    "Nitrate compounds"
+  ]
+}

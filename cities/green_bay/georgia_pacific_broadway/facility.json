@@ -1,0 +1,17 @@
+{
+  "name": "Georgia-Pacific Broadway",
+  "tri_id": "54307FRTHW1919S",
+  "industry": "Paper mill",
+  "address": "1919 S Broadway, Green Bay",
+  "lon": -88.03754,
+  "lat": 44.49249,
+  "released": 249103,
+  "air": 18647,
+  "water": 230457,
+  "land": 0,
+  "chemicals": [
+    "Nitrate compounds",
+    "Methanol",
+    "Ammonia"
+  ]
+}

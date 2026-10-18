@@ -1,0 +1,38 @@
+{
+  "summary": "This polymer plant released about 13,600 lb to the air in 2024, almost all methanol, plus a small amount to water.",
+  "impacts": [
+    {
+      "icon": "🫁",
+      "title": "Air & breathing",
+      "where": "Within 1 mile: 3,952 residents; Horace Mann Middle School",
+      "how": "About 13,600 lb of methanol went out the stack. At high levels methanol can cause headaches and dizziness. Small amounts of maleic anhydride, which can sensitize the lungs, were also released.",
+      "avoid": [
+        "Report strong or unusual odors to the Wisconsin DNR",
+        "Check the daily air quality index (AirNow), especially on hot, still days",
+        "Ask the DNR whether the plant's methanol is covered by an air permit"
+      ]
+    },
+    {
+      "icon": "🌫️",
+      "title": "Smog",
+      "where": "Lakeshore Sheboygan County",
+      "how": "Methanol helps form ground-level ozone, and Sheboygan's lakeshore doesn't meet the federal ozone standard.",
+      "avoid": [
+        "Plan outdoor exercise for mornings on hot, sunny days",
+        "Drive less on ozone action days",
+        "Keep rescue inhalers handy on high-ozone days"
+      ]
+    },
+    {
+      "icon": "🐟",
+      "title": "Sheboygan River",
+      "where": "Sheboygan River watershed",
+      "how": "About 15 lb of antimony and zinc reached water. That's small, and these aren't the river's main problem: older PCB pollution is why the DNR still says not to eat resident fish from the lower 14 miles of the river.",
+      "avoid": [
+        "Don't eat resident fish from the lower 14 miles of the Sheboygan River",
+        "Follow the DNR fish advisory for other catches",
+        "Keep stormwater drains clear of trash and chemicals"
+      ]
+    }
+  ]
+}

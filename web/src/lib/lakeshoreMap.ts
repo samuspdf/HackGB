@@ -8,7 +8,7 @@ import { LineSegments2 } from "three/addons/lines/LineSegments2.js";
 import { LineSegmentsGeometry } from "three/addons/lines/LineSegmentsGeometry.js";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 import { createLabelLayer, type LabelKind } from "./mapLabels";
-import type { LoadedMap, Place, Polygon, Ring } from "./scene";
+import type { Facility, LoadedMap, Place, Polygon, Ring } from "./scene";
 
 export interface MapController {
   zoomBy(factor: number): void;
@@ -16,6 +16,8 @@ export interface MapController {
   /** Turn the map so `deg` (0 = north, 90 = east, …) points to the top of the screen */
   setHeading(deg: number): void;
   focusPlace(name: string): void;
+  /** Fly a little closer to a facility (by TRI ID) and report it through onFacility */
+  focusFacility(triId: string): void;
   /** Jump to map coordinates (km, x east / y north) at a camera distance */
   viewAt(x: number, y: number, dist: number): void;
   dispose(): void;
@@ -27,6 +29,7 @@ interface MapOptions {
   reducedMotion: boolean;
   onHeading?: (deg: number) => void;
   onFocus?: (place: Place) => void;
+  onFacility?: (facility: Facility) => void;
   onFirstInteraction?: () => void;
 }
 
@@ -34,7 +37,6 @@ const FOV = 35;
 const MAX_TILT = 1.15; // radians from straight down
 const MIN_TILT = 0.0005; // a hair off vertical so the camera always knows which way it faces
 const SITE_MIN_DIST = 9; // closest zoom (km) around a study facility
-const MILL_SCALE = 1.7; // facilities are drawn larger than life so they stand out from the city
 const TREE_SCALE = 0.5; // trees are stylised: big enough to read from afar, not towering over houses
 
 const PALETTE = {
@@ -122,14 +124,14 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   const SUN_DIR = new THREE.Vector3(-0.55, 0.78, 0.3).normalize();
   sun.castShadow = true;
   sun.shadow.mapSize.set(2048, 2048); // the shadow frustum follows the view, so 2048 stays crisp up close
-  sun.shadow.bias = -0.0003;
-  sun.shadow.normalBias = 0.04;
+  Object.assign(sun.shadow, { bias: -0.0003, normalBias: 0.04 });
   scene.add(sun, sun.target);
 
   // ---------------------------------------------------------------- materials
-  const ramp = track(new THREE.DataTexture(new Uint8Array([105, 185, 255]), 3, 1, THREE.RedFormat));
-  ramp.minFilter = ramp.magFilter = THREE.NearestFilter;
-  ramp.needsUpdate = true;
+  const ramp = track(Object.assign(new THREE.DataTexture(new Uint8Array([105, 185, 255]), 3, 1, THREE.RedFormat),
+    { minFilter: THREE.NearestFilter, magFilter: THREE.NearestFilter, needsUpdate: true }));
+  const load = (url: string, colorSpace: string = THREE.NoColorSpace, onLoad?: () => void) =>
+    track(Object.assign(new THREE.TextureLoader().load(url, onLoad), { colorSpace }));
   const toon = (p: THREE.MeshToonMaterialParameters = {}) => track(new THREE.MeshToonMaterial({ gradientMap: ramp, ...p }));
   const white = toon({ color: 0xffffff });
 
@@ -139,14 +141,11 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   const pos = terrainGeo.attributes.position as THREE.BufferAttribute;
   for (let i = 0; i < pos.count; i++) pos.setY(i, terrain.heights[i]);
   terrainGeo.computeVertexNormals();
-  const landTex = track(new THREE.TextureLoader().load(map.textureUrl, () => (renderer.shadowMap.needsUpdate = true)));
-  landTex.colorSpace = THREE.SRGBColorSpace;
+  const landTex = load(map.textureUrl, THREE.SRGBColorSpace, () => (renderer.shadowMap.needsUpdate = true));
   landTex.anisotropy = renderer.capabilities.getMaxAnisotropy();
   // Beyond 200 miles from Wisconsin the map dissolves into warm fog (mask baked by the pipeline)
-  const fadeTex = track(new THREE.TextureLoader().load(map.fadeUrl));
-  fadeTex.colorSpace = THREE.NoColorSpace;
   const fadeUniforms = {
-    uFade: { value: fadeTex },
+    uFade: { value: load(map.fadeUrl) },
     uFadeColor: { value: new THREE.Vector3(0xef / 255, 0xe3 / 255, 0xd5 / 255) }, // output-space colour
     uFrame: { value: new THREE.Vector2(W, H) },
   };
@@ -172,10 +171,8 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   // ---------------------------------------------------------------- water
   // One opaque plane at height 0. The lakebed sits well below it and every shore is lifted above it,
   // so the two surfaces never share depth — that was the source of the flicker.
-  const distTex = track(new THREE.TextureLoader().load(map.waterUrl));
-  distTex.colorSpace = THREE.NoColorSpace;
   const waterUniforms = {
-    uDist: { value: distTex },
+    uDist: { value: load(map.waterUrl) },
     uTime: { value: 0 },
     uFar: { value: 1 },
     uShallow: { value: new THREE.Color(0x8fcbef) },
@@ -237,18 +234,12 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
         }`,
     }),
   );
-  const water = new THREE.Mesh(track(new THREE.PlaneGeometry(W, H)), waterMat);
-  water.rotation.x = -Math.PI / 2;
-  scene.add(water);
+  scene.add(new THREE.Mesh(track(new THREE.PlaneGeometry(W, H).rotateX(-Math.PI / 2)), waterMat));
 
   // Inland lakes: flat water at their own level
   const lakeMat = toon({ color: 0x78a9e6 });
-  for (const lake of data.lakes) {
-    const g = track(new THREE.ShapeGeometry(lake.rings.map(toShape)));
-    g.rotateX(-Math.PI / 2);
-    g.translate(0, lake.level, 0);
-    scene.add(new THREE.Mesh(g, lakeMat));
-  }
+  for (const lake of data.lakes)
+    scene.add(new THREE.Mesh(track(new THREE.ShapeGeometry(lake.rings.map(toShape)).rotateX(-Math.PI / 2).translate(0, lake.level, 0)), lakeMat));
 
   // Rivers draped over the terrain
   const riverGeos = data.rivers.map((line) => ribbon(line, 0.9, 0.14));
@@ -260,9 +251,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   const borderLines = (rings: Ring[], lift: number, opts: ConstructorParameters<typeof LineMaterial>[0]) => {
     const mat = track(new LineMaterial({ transparent: true, depthWrite: false, ...opts }));
     lineMats.push(mat);
-    const geo = track(new LineSegmentsGeometry());
-    geo.setPositions(drapedSegments(rings, lift));
-    const lines = new LineSegments2(geo, mat);
+    const lines = new LineSegments2(track(new LineSegmentsGeometry().setPositions(drapedSegments(rings, lift))), mat);
     if (opts?.dashed) lines.computeLineDistances();
     scene.add(lines);
     return mat;
@@ -298,11 +287,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     return mesh;
   }
   const at = (o: THREE.Object3D, x: number, y: number, lift = 0) => o.position.set(x, ground(x, y) + lift, -y);
-  const records = (arr: number[], size: number) => {
-    const out: number[][] = [];
-    for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
-    return out;
-  };
+  const records = (arr: number[], size: number) => Array.from({ length: arr.length / size }, (_, i) => arr.slice(i * size, (i + 1) * size));
 
   // ---------------------------------------------------------------- trees
   const trees = records(data.trees, 4);
@@ -425,12 +410,8 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     const [x, y, w, d, h, r] = list[i];
     at(o, x, y, -0.04);
     o.rotation.y = r;
-    if (roof) {
-      o.position.y += h;
-      o.scale.set(w * 1.08, w * 0.5, d * 1.08);
-    } else {
-      o.scale.set(w, h, d);
-    }
+    if (roof) o.position.y += h;
+    o.scale.set(roof ? w * 1.08 : w, roof ? w * 0.5 : h, roof ? d * 1.08 : d);
   };
   const unitBox = () => new THREE.BoxGeometry(1, 1, 1).translate(0, 0.5, 0);
   const houses = byKind[0];
@@ -438,7 +419,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   instanced(gableRoof(), white, houses.length, (i, o) => (bSet(houses, true)(i, o), pick(PALETTE.houseRoofs)));
   for (const [list, walls] of [[byKind[1], PALETTE.blockWalls], [byKind[2], PALETTE.towerWalls]] as const) {
     instanced(unitBox(), white, list.length, (i, o) => (bSet(list, false)(i, o), pick(walls)));
-    instanced(new THREE.BoxGeometry(1, 1, 1).translate(0, 0.5, 0), toon({ color: 0x8d8597 }), list.length, (i, o) => {
+    instanced(unitBox(), toon({ color: 0x8d8597 }), list.length, (i, o) => {
       const [x, y, w, d, h, r] = list[i];
       at(o, x, y, h - 0.04);
       o.rotation.y = r;
@@ -448,6 +429,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
 
   // Study cities: signpost with a pulsing pin
   const pulses: THREE.Mesh<THREE.BufferGeometry, THREE.MeshBasicMaterial>[] = [];
+  const cityMarkers: THREE.Object3D[] = [];
   const postMat = toon({ color: 0x8a5532 });
   const pinMat = toon({ color: 0xe0703a });
   for (const p of data.places.filter((q) => q.study)) {
@@ -463,11 +445,12 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     at(pulse, p.x, p.y, 0.2);
     scene.add(post, pin, pulse);
     pulses.push(pulse);
+    cityMarkers.push(post, pin, pulse);
   }
 
   // ---------------------------------------------------------------- study facilities
-  // Each study facility is a stylised paper mill on its real site, wrapped in a pulsing orange glow.
-  // Local frame: x runs along the river, +z points away from it (the pipeline sets the rotation).
+  // Each study facility is drawn from its company's model.json (cities/<city>/<company>/) on its real site,
+  // wrapped in a pulsing orange glow. Local frame: x runs along the water, +z points away from it.
   const GLOW_M = 0.05; // glow shell thickness (model units)
   const glowMat = track(
     new THREE.MeshBasicMaterial({ color: 0xff8a2a, transparent: true, opacity: 0.55, side: THREE.BackSide, depthWrite: false }),
@@ -488,22 +471,11 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
         }`,
     }),
   );
-  const mill = {
-    wall: toon({ color: 0xe6d6bf }),
-    wall2: toon({ color: 0xd3c4b1 }),
-    roof: toon({ color: 0x6f6a85 }),
-    stack: toon({ color: 0xece5d9 }),
-    band: toon({ color: 0xc0392b }),
-    tank: toon({ color: 0xf4eee3 }),
-    pad: toon({ color: 0xb9b0a6 }),
-    rim: toon({ color: 0xa99c9a }),
-    pool: toon({ color: 0x6f9a8c }),
-    chips: toon({ color: 0xc08f55 }),
-  };
+  const millMats = new Map<string, THREE.Material>(); // one material per model colour
   const millGeo = {
-    box: track(new THREE.BoxGeometry(1, 1, 1).translate(0, 0.5, 0)),
+    box: track(unitBox()),
     roof: track(gableRoof()),
-    cyl: track(new THREE.CylinderGeometry(0.5, 0.5, 1, 20).translate(0, 0.5, 0)),
+    cylinder: track(new THREE.CylinderGeometry(0.5, 0.5, 1, 20).translate(0, 0.5, 0)),
     stack: track(new THREE.CylinderGeometry(0.36, 0.5, 1, 16).translate(0, 0.5, 0)),
     cone: track(new THREE.ConeGeometry(0.5, 1, 20).translate(0, 0.5, 0)),
     halo: track(new THREE.PlaneGeometry(1, 1).rotateX(-Math.PI / 2)),
@@ -511,74 +483,50 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   };
   const puffs: { mesh: THREE.Mesh<THREE.BufferGeometry, THREE.MeshToonMaterial>; top: THREE.Vector3; phase: number }[] = [];
   const facilityTops: THREE.Vector3[] = [];
+  const facilityGroups: THREE.Group[] = []; // clickable buildings
   for (const f of data.facilities) {
     const g = new THREE.Group();
     // Sit on the highest ground under the footprint; the concrete pad reaches down over any slope
+    const { model } = f;
     let base = 0;
-    for (const [u, v] of [[0, 0], [-1.3, -0.9], [1.3, -0.9], [-1.3, 0.9], [1.3, 0.9]]) {
-      const x = f.x + MILL_SCALE * (u * Math.cos(f.rot) + v * Math.sin(f.rot));
-      const y = f.y + MILL_SCALE * (u * Math.sin(f.rot) - v * Math.cos(f.rot));
-      base = Math.max(base, ground(x, y));
+    for (const [u, v] of [[0, 0], [-1, -1], [1, -1], [-1, 1], [1, 1]]) {
+      const [du, dv] = [(u * model.footprint[0] * model.scale) / 2, (v * model.footprint[1] * model.scale) / 2];
+      base = Math.max(base, ground(f.x + du * Math.cos(f.rot) + dv * Math.sin(f.rot), f.y + du * Math.sin(f.rot) - dv * Math.cos(f.rot)));
     }
     g.position.set(f.x, base, -f.y);
     g.rotation.y = f.rot;
-    g.scale.setScalar(MILL_SCALE);
-    const part = (geo: THREE.BufferGeometry, mat: THREE.Material, x: number, z: number, w: number, h: number, d: number, y = 0, glow = true) => {
-      const m = new THREE.Mesh(geo, mat);
-      m.position.set(x, y, z);
-      m.scale.set(w, h, d);
+    g.scale.setScalar(model.scale);
+    g.userData.facility = f;
+    facilityGroups.push(g);
+    for (const p of model.parts) {
+      if (!millMats.has(p.color)) millMats.set(p.color, toon({ color: p.color }));
+      const m = new THREE.Mesh(millGeo[p.shape], millMats.get(p.color));
+      m.position.set(...p.at);
+      m.scale.set(...p.size);
       m.castShadow = m.receiveShadow = true;
       g.add(m);
-      if (glow) {
-        const shell = new THREE.Mesh(geo, glowMat);
-        shell.position.set(x, y - GLOW_M, z);
-        shell.scale.set(w + 2 * GLOW_M, h + 2 * GLOW_M, d + 2 * GLOW_M);
-        g.add(shell);
-      }
-      return m;
-    };
-    const hall = (x: number, z: number, w: number, h: number, d: number, mat: THREE.Material) => {
-      part(millGeo.box, mat, x, z, w, h, d);
-      part(millGeo.roof, mill.roof, x, z, w * 1.04, 0.16, d * 1.08, h);
-    };
-    part(millGeo.box, mill.pad, 0, 0, 2.7, 0.46, 1.9, -0.4, false); // concrete yard
-    hall(-0.2, 0.1, 1.55, 0.42, 0.5, mill.wall); // paper machine hall
-    hall(-0.5, 0.62, 0.95, 0.3, 0.42, mill.wall2); // finishing + warehouse
-    part(millGeo.box, mill.wall2, 0.78, 0.5, 0.44, 0.72, 0.4); // boiler house
-    part(millGeo.box, mill.roof, 0.78, 0.5, 0.46, 0.04, 0.42, 0.72, false);
-    // Smokestacks with red bands near the top
-    for (const [x, z, r, h] of [[0.86, 0.82, 0.075, 2.0], [0.62, 0.88, 0.062, 1.55]]) {
-      part(millGeo.stack, mill.stack, x, z, r * 2, h, r * 2, 0, false); // too thin for a glow shell
-      part(millGeo.cyl, mill.band, x, z, r * 1.62, 0.12, r * 1.62, h - 0.2, false);
-      const top = new THREE.Vector3(x, h, z);
+      if (p.glow === false) continue;
+      const shell = new THREE.Mesh(millGeo[p.shape], glowMat);
+      shell.position.set(p.at[0], p.at[1] - GLOW_M, p.at[2]);
+      shell.scale.set(...(p.size.map((v) => v + 2 * GLOW_M) as [number, number, number]));
+      g.add(shell);
+    }
+    for (const at of model.smoke) {
       for (let i = 0; i < 4; i++) {
         const mesh = new THREE.Mesh(millGeo.puff, toon({ color: 0xf7f3ea, transparent: true, depthWrite: false }));
         g.add(mesh);
-        puffs.push({ mesh, top, phase: i / 4 });
+        puffs.push({ mesh, top: new THREE.Vector3(...at), phase: i / 4 });
       }
     }
-    // Pulp digesters / storage tanks
-    for (const x of [0.48, 0.8, 1.1]) {
-      part(millGeo.cyl, mill.tank, x, -0.28, 0.26, 0.62, 0.26);
-      part(millGeo.cone, mill.tank, x, -0.28, 0.27, 0.12, 0.27, 0.62);
-    }
-    // Wastewater clarifiers on the river side (most of this mill's releases go to water)
-    for (const [x, z, r] of [[-0.75, -0.55, 0.26], [-0.18, -0.6, 0.22]]) {
-      part(millGeo.cyl, mill.rim, x, z, r * 2, 0.09, r * 2, 0, false);
-      part(millGeo.cyl, mill.pool, x, z, r * 1.8, 0.02, r * 1.8, 0.08, false);
-    }
-    // Wood chip piles
-    part(millGeo.cone, mill.chips, 0.95, 0.05 - 0.65, 0.5, 0.24, 0.5, 0, false);
-    part(millGeo.cone, mill.chips, 1.15, -0.72, 0.36, 0.18, 0.36, 0, false);
     // Soft orange glow on the ground around the site
     const halo = new THREE.Mesh(millGeo.halo, haloMat);
     halo.position.y = 0.07;
-    halo.scale.set(4.6, 1, 3.8);
+    halo.scale.set(model.halo[0], 1, model.halo[1]);
     halo.renderOrder = 1;
     g.add(halo);
     scene.add(g);
     g.updateMatrixWorld(true);
-    facilityTops.push(new THREE.Vector3(0.86, 2.35, 0.82).applyMatrix4(g.matrixWorld));
+    facilityTops.push(new THREE.Vector3(...model.label).applyMatrix4(g.matrixWorld));
   }
   function updateFacilities(time: number) {
     const pulse = 0.5 + 0.5 * Math.sin(time * 2.4);
@@ -629,10 +577,9 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
       m.castShadow = mat !== lampMat;
       tower.add(m);
     }
-    const beam = new THREE.Object3D();
+    const beam = new THREE.Mesh(lhGeo.beam, beamMat);
     beam.position.y = 1.44;
     beam.rotation.y = rand() * Math.PI * 2;
-    beam.add(new THREE.Mesh(lhGeo.beam, beamMat));
     tower.add(beam);
     beams.push(beam);
     if (onPier) g.add(new THREE.Mesh(lhGeo.pier, pierMat));
@@ -642,22 +589,10 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
 
   // ---------------------------------------------------------------- boats on Lake Michigan
   /** Hull outline (top view) extruded upward, bow pointing +x */
-  const hull = (length: number, width: number, depth: number) => {
-    const s = new THREE.Shape();
-    s.moveTo(-length / 2, -width / 2);
-    s.lineTo(length * 0.36, -width / 2);
-    s.lineTo(length / 2, 0);
-    s.lineTo(length * 0.36, width / 2);
-    s.lineTo(-length / 2, width / 2);
-    s.closePath();
-    return track(new THREE.ExtrudeGeometry(s, { depth, bevelEnabled: false }).rotateX(-Math.PI / 2));
-  };
-  const tri = (pts: number[]) => {
-    const g = track(new THREE.BufferGeometry());
-    g.setAttribute("position", new THREE.Float32BufferAttribute(pts, 3));
-    g.computeVertexNormals();
-    return g;
-  };
+  const hull = (l: number, w: number, depth: number) => track(new THREE.ExtrudeGeometry(
+    new THREE.Shape([[-l / 2, -w / 2], [l * 0.36, -w / 2], [l / 2, 0], [l * 0.36, w / 2], [-l / 2, w / 2]].map(([x, y]) => new THREE.Vector2(x, y))),
+    { depth, bevelEnabled: false },
+  ).rotateX(-Math.PI / 2));
   const sailMat = track(new THREE.MeshToonMaterial({ gradientMap: ramp, color: 0xfbf7ee, side: THREE.DoubleSide }));
   const wakeMat = track(new THREE.MeshBasicMaterial({ color: 0xf7fbff, transparent: true, opacity: 0.55, depthWrite: false }));
   const boatGeo = {
@@ -683,25 +618,12 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   interface Boat { obj: THREE.Group; a: THREE.Vector2; b: THREE.Vector2; len: number; speed: number; phase: number; yaw: number }
   const boats: Boat[] = records(data.boats, 6).map(([x0, y0, x1, y1, kind, phase], i) => {
     const obj = new THREE.Group();
-    const add = (geo: THREE.BufferGeometry, mat: THREE.Material, shadow = true) => {
-      const m = new THREE.Mesh(geo, mat);
-      m.castShadow = shadow;
-      obj.add(m);
-    };
-    if (kind === 1) {
-      add(boatGeo.shipHull, boatMats.shipHull);
-      add(boatGeo.deck, boatMats.deck);
-      add(boatGeo.cabin, boatMats.white);
-      add(boatGeo.bridge, boatMats.white);
-      add(boatGeo.stack, boatMats.dark);
-      add(boatGeo.wakeBig, wakeMat, false);
-    } else {
-      add(boatGeo.sailHull, boatMats.sailHull[i % 3]);
-      add(boatGeo.mast, boatMats.dark);
-      add(boatGeo.sail, sailMat);
-      add(boatGeo.jib, sailMat);
-      add(boatGeo.wakeSmall, wakeMat, false);
-    }
+    const parts: [THREE.BufferGeometry, THREE.Material][] = kind === 1
+      ? [[boatGeo.shipHull, boatMats.shipHull], [boatGeo.deck, boatMats.deck], [boatGeo.cabin, boatMats.white],
+        [boatGeo.bridge, boatMats.white], [boatGeo.stack, boatMats.dark], [boatGeo.wakeBig, wakeMat]]
+      : [[boatGeo.sailHull, boatMats.sailHull[i % 3]], [boatGeo.mast, boatMats.dark], [boatGeo.sail, sailMat],
+        [boatGeo.jib, sailMat], [boatGeo.wakeSmall, wakeMat]];
+    for (const [geo, mat] of parts) obj.add(Object.assign(new THREE.Mesh(geo, mat), { castShadow: mat !== wakeMat }));
     // Stylised scale, like the lighthouses: big enough to spot while zoomed out over the lake
     obj.scale.setScalar(kind === 1 ? 2.2 : 2.6);
     const a = new THREE.Vector2(x0, y0);
@@ -720,9 +642,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
       boatPos.lerpVectors(boat.a, boat.b, eased);
       const dir = u < 1 ? 1 : -1;
       const want = Math.atan2(dir * (boat.b.y - boat.a.y), dir * (boat.b.x - boat.a.x));
-      let d = want - boat.yaw;
-      d = Math.atan2(Math.sin(d), Math.cos(d));
-      boat.yaw += d * Math.min(1, dt * 1.5);
+      boat.yaw += wrapAngle(want - boat.yaw) * Math.min(1, dt * 1.5);
       boat.obj.position.set(boatPos.x, -0.03 + Math.sin(time * 1.7 + boat.phase * 10) * 0.015, -boatPos.y);
       boat.obj.rotation.set(Math.sin(time * 1.3 + boat.phase * 7) * 0.04, boat.yaw, 0);
     }
@@ -737,8 +657,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   const clouds: { mesh: THREE.Mesh; speed: number }[] = [];
   for (let i = 0; i < 9; i++) {
     const n = 4 + Math.floor(rand() * 4);
-    const puffs: [number, number, number, number][] = [];
-    for (let b = 0; b < n; b++) puffs.push([(b - n / 2) * 7, rand() * 3, (rand() - 0.5) * 7, 5 + rand() * 5]);
+    const puffs = Array.from({ length: n }, (_, b): [number, number, number, number] => [(b - n / 2) * 7, rand() * 3, (rand() - 0.5) * 7, 5 + rand() * 5]);
     const cloud = new THREE.Mesh(track(blobs(puffs)), cloudMat);
     cloud.scale.y = 0.5;
     cloud.position.set(sky.minX + rand() * skyW, 55 + rand() * 30, sky.minZ + rand() * skyH);
@@ -746,9 +665,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     scene.add(cloud);
   }
 
-  const wingGeo = track(new THREE.BufferGeometry());
-  wingGeo.setAttribute("position", new THREE.Float32BufferAttribute([0, 0, -0.35, 0, 0, 0.35, 1.6, 0, 0.1], 3));
-  wingGeo.computeVertexNormals();
+  const wingGeo = tri([0, 0, -0.35, 0, 0, 0.35, 1.6, 0, 0.1]);
   const birdMat = track(new THREE.MeshBasicMaterial({ color: 0x4a4560, side: THREE.DoubleSide }));
   const flocks: { origin: THREE.Vector3; dir: THREE.Vector3; offsets: THREE.Vector3[]; phase: number }[] = [];
   for (let f = 0; f < 6; f++) {
@@ -784,10 +701,8 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     for (const f of flocks) {
       f.origin.addScaledVector(f.dir, dt * 9);
       // Wrap around within the skies over Wisconsin
-      if (f.origin.x > sky.maxX) f.origin.x -= skyW;
-      if (f.origin.x < sky.minX) f.origin.x += skyW;
-      if (f.origin.z > sky.maxZ) f.origin.z -= skyH;
-      if (f.origin.z < sky.minZ) f.origin.z += skyH;
+      f.origin.x = sky.minX + THREE.MathUtils.euclideanModulo(f.origin.x - sky.minX, skyW);
+      f.origin.z = sky.minZ + THREE.MathUtils.euclideanModulo(f.origin.z - sky.minZ, skyH);
       flockQuat.setFromAxisAngle(AXIS_Y, Math.atan2(-f.dir.z, f.dir.x));
       for (const off of f.offsets) {
         tmpPos.copy(off).applyQuaternion(flockQuat).add(f.origin);
@@ -811,7 +726,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   updateBirds(0, 0);
 
   // ---------------------------------------------------------------- labels (drawn in the scene)
-  const labelLayer = createLabelLayer<Place>(scene, camera);
+  const labelLayer = createLabelLayer<Place | Facility>(scene, camera);
   let labelsBuilt = false;
   labelLayer.ready.then(() => {
     if (disposed) return;
@@ -820,20 +735,18 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
       const h = l.kind === "water" || l.kind === "bay" ? 0.5 : Math.max(ground(l.x, l.y), 0) + 1.5;
       labelLayer.add(l.text, l.kind, at3(l.x, l.y, h));
     }
-    for (const c of data.counties) {
-      if (!data.places.some((p) => p.study && p.county === c.name)) {
-        labelLayer.add(c.name, "county", at3(c.label.x, c.label.y, ground(c.label.x, c.label.y) + 0.6));
-      }
-    }
+    for (const c of data.counties)
+      if (!data.places.some((p) => p.study && p.county === c.name)) labelLayer.add(c.name, "county", at3(c.label.x, c.label.y, ground(c.label.x, c.label.y) + 0.6));
     // Only the three study cities are named; their signs are clickable
     for (const p of data.places.filter((q) => q.study)) labelLayer.add(p.name, "sign", at3(p.x, p.y, ground(p.x, p.y) + 2.6), p);
-    data.facilities.forEach((f, i) => labelLayer.add(f.name, "facility", facilityTops[i]));
+    data.facilities.forEach((f, i) => labelLayer.add(f.name, "facility", facilityTops[i], f));
     labelsBuilt = true;
   });
   // Zoomed in on a city (about a county across or closer): its facilities are named, the city signs step aside.
   // Zoomed out: the city signs return and facility names hide.
+  const isCityView = (dist: number) => dist < countyMin * 1.4;
   const labelVisible = (dist: number) => {
-    const cityView = dist < countyMin * 1.4;
+    const cityView = isCityView(dist);
     return (kind: LabelKind) =>
       kind === "sign" ? !cityView
       : kind === "facility" ? cityView
@@ -850,7 +763,6 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     start: number;
     ms: number;
     lift: number;
-    done?: () => void;
   }
   let flight: Flight | null = null;
   const spherical = new THREE.Spherical();
@@ -858,14 +770,11 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     spherical.setFromVector3(camera.position.clone().sub(controls.target));
     return { target: controls.target.clone(), dist: spherical.radius, polar: spherical.phi, azimuth: spherical.theta };
   };
-  function flyTo(to: Partial<Flight["to"]>, ms = 900, lift = 0, done?: () => void) {
+  function flyTo(to: Partial<Flight["to"]>, ms = 900, lift = 0) {
     const from = currentView();
     const dest = { ...from, ...to, target: (to.target ?? from.target).clone() };
-    // Rotate the short way round
-    let dAz = dest.azimuth - from.azimuth;
-    dAz = Math.atan2(Math.sin(dAz), Math.cos(dAz));
-    dest.azimuth = from.azimuth + dAz;
-    flight = { from, to: dest, start: performance.now(), ms: reducedMotion ? 0 : ms, lift, done };
+    dest.azimuth = from.azimuth + wrapAngle(dest.azimuth - from.azimuth); // rotate the short way round
+    flight = { from, to: dest, start: performance.now(), ms: reducedMotion ? 0 : ms, lift };
   }
   function stepFlight(now: number) {
     if (!flight) return;
@@ -887,12 +796,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     );
     camera.position.setFromSpherical(spherical).add(controls.target);
     camera.lookAt(controls.target);
-    if (t === 1) {
-      const done = flight.done;
-      flight = null;
-      done?.();
-      shadowDirty = true;
-    }
+    if (t === 1) [flight, shadowDirty] = [null, true];
   }
 
   function focusPlace(place: Place) {
@@ -908,6 +812,12 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     const now = currentView();
     flyTo({ target, dist, polar: sites.length ? 0.68 : 0.62 }, 1500 + Math.min(travel, 600) * 1.2, Math.max(0, travel * 0.55 - (now.dist - dist) * 0.3));
     opts.onFocus?.(place);
+    hideHint();
+  }
+
+  function focusFacility(f: Facility) {
+    flyTo({ target: new THREE.Vector3(f.x, ground(f.x, f.y), -f.y), dist: SITE_MIN_DIST * 1.6, polar: 0.7 }, 1100);
+    opts.onFacility?.(f);
     hideHint();
   }
 
@@ -953,7 +863,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   };
   container.addEventListener("wheel", onWheel, { capture: true, passive: false });
 
-  // Click (not drag) on the map: fly to the nearest town or city
+  // Click (not drag) on the map: a facility, a city sign, or the nearest town
   const raycaster = new THREE.Raycaster();
   const ndc = new THREE.Vector2();
   let down: { x: number; y: number; t: number } | null = null;
@@ -967,8 +877,10 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     const rect = renderer.domElement.getBoundingClientRect();
     ndc.set(((e.clientX - rect.left) / rect.width) * 2 - 1, -((e.clientY - rect.top) / rect.height) * 2 + 1);
     raycaster.setFromCamera(ndc, camera);
-    const sign = labelLayer.pick(raycaster);
-    if (sign?.data) return focusPlace(sign.data);
+    const sign = labelLayer.pick(raycaster)?.data;
+    if (sign) return "tri_id" in sign ? focusFacility(sign) : focusPlace(sign);
+    const plant = raycaster.intersectObjects(facilityGroups, true)[0];
+    if (plant) return focusFacility(plant.object.parent!.userData.facility);
     const hit = groundHit(raycaster.ray);
     if (!hit) return;
     const dist = camera.position.distanceTo(controls.target);
@@ -984,7 +896,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   renderer.domElement.addEventListener("pointerdown", onDown);
   renderer.domElement.addEventListener("pointerup", onUp);
 
-  // Pointer cursor over the clickable city signs
+  // Pointer cursor over the clickable signs and facility buildings
   let hoverQueued = false;
   const onHover = (e: PointerEvent) => {
     if (down || hoverQueued) return;
@@ -994,7 +906,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
       const rect = renderer.domElement.getBoundingClientRect();
       ndc.set(((e.clientX - rect.left) / rect.width) * 2 - 1, -((e.clientY - rect.top) / rect.height) * 2 + 1);
       raycaster.setFromCamera(ndc, camera);
-      renderer.domElement.style.cursor = labelLayer.pick(raycaster) ? "pointer" : "";
+      renderer.domElement.style.cursor = labelLayer.pick(raycaster) || raycaster.intersectObjects(facilityGroups, true).length ? "pointer" : "";
     });
   };
   renderer.domElement.addEventListener("pointermove", onHover);
@@ -1163,6 +1075,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
 
     updateShadows(dist);
     if (labelsBuilt) labelLayer.update(dist, dt, labelVisible(dist));
+    cityMarkers.forEach((m) => (m.visible = !isCityView(dist))); // city posts step aside with their names
     renderer.render(scene, camera);
     raf = requestAnimationFrame(frame);
   };
@@ -1183,6 +1096,10 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     focusPlace(name) {
       const p = data.places.find((q) => q.name === name);
       if (p) focusPlace(p);
+    },
+    focusFacility(id) {
+      const f = data.facilities.find((q) => q.tri_id === id);
+      if (f) focusFacility(f);
     },
     viewAt(x, y, dist) {
       flyTo({ target: new THREE.Vector3(x, Math.max(ground(x, y), 0), -y), dist, polar: 0.5 }, 0);
@@ -1215,13 +1132,17 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
       [-0.5, 0, -0.5], [0.5, 0, -0.5], [0.5, 1, 0], [-0.5, 1, 0],
       [-0.5, 0, 0.5], [0.5, 0, 0.5],
     ];
-    const tri = (a: number, b: number, c: number) => [...v[a], ...v[b], ...v[c]];
-    const g = new THREE.BufferGeometry();
-    g.setAttribute("position", new THREE.Float32BufferAttribute([
-      ...tri(0, 3, 1), ...tri(1, 3, 2), // north slope
-      ...tri(4, 5, 3), ...tri(5, 2, 3), // south slope
-      ...tri(0, 4, 3), ...tri(1, 2, 5), // gable ends
-    ], 3));
+    const t = (a: number, b: number, c: number) => [...v[a], ...v[b], ...v[c]];
+    return tri([
+      ...t(0, 3, 1), ...t(1, 3, 2), // north slope
+      ...t(4, 5, 3), ...t(5, 2, 3), // south slope
+      ...t(0, 4, 3), ...t(1, 2, 5), // gable ends
+    ]);
+  }
+
+  /** Geometry from a flat list of triangle vertices */
+  function tri(pts: number[]) {
+    const g = track(new THREE.BufferGeometry().setAttribute("position", new THREE.Float32BufferAttribute(pts, 3)));
     g.computeVertexNormals();
     return g;
   }
@@ -1265,6 +1186,9 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     return p;
   }
 }
+
+/** Angle difference folded into -π..π */
+const wrapAngle = (a: number) => Math.atan2(Math.sin(a), Math.cos(a));
 
 /** Signed area of a flat ring (shoelace formula), km² */
 function ringArea(flat: Ring) {

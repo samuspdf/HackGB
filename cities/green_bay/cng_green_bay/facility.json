@@ -1,0 +1,15 @@
+{
+  "name": "CNG Green Bay",
+  "tri_id": "5430WLGCYF1327G",
+  "industry": "Printing plant",
+  "address": "1327 Glory Rd, Green Bay",
+  "lon": -88.10439,
+  "lat": 44.46698,
+  "released": 46558,
+  "air": 46558,
+  "water": 0,
+  "land": 0,
+  "chemicals": [
+    "Ozone"
+  ]
+}

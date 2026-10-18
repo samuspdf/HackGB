@@ -1,0 +1,162 @@
+{
+  "scale": 1.3,
+  "footprint": [
+    1.3,
+    0.95
+  ],
+  "halo": [
+    2.27,
+    1.8
+  ],
+  "label": [
+    0.5,
+    1.1,
+    -0.22
+  ],
+  "smoke": [
+    [
+      0.5,
+      0.8,
+      -0.22
+    ]
+  ],
+  "parts": [
+    {
+      "name": "concrete yard",
+      "shape": "box",
+      "color": "#b9b0a6",
+      "at": [
+        0,
+        -0.4,
+        0
+      ],
+      "size": [
+        1.4,
+        0.46,
+        1.05
+      ],
+      "glow": false
+    },
+    {
+      "name": "plating shop",
+      "shape": "box",
+      "color": "#d9cdbd",
+      "at": [
+        -0.1,
+        0,
+        0.1
+      ],
+      "size": [
+        0.9,
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "name": "plating shop roof",
+      "shape": "roof",
+      "color": "#5b6b8c",
+      "at": [
+        -0.1,
+        0.3,
+        0.1
+      ],
+      "size": [
+        0.936,
+        0.14,
+        0.54
+      ]
+    },
+    {
+      "name": "fume scrubber",
+      "shape": "cylinder",
+      "color": "#8fb3a0",
+      "at": [
+        0.45,
+        0,
+        0.15
+      ],
+      "size": [
+        0.22,
+        0.5,
+        0.22
+      ]
+    },
+    {
+      "name": "fume scrubber cap",
+      "shape": "cone",
+      "color": "#8fb3a0",
+      "at": [
+        0.45,
+        0.5,
+        0.15
+      ],
+      "size": [
+        0.229,
+        0.099,
+        0.229
+      ]
+    },
+    {
+      "name": "exhaust stack",
+      "shape": "stack",
+      "color": "#ece5d9",
+      "at": [
+        0.5,
+        0,
+        -0.22
+      ],
+      "size": [
+        0.09,
+        0.8,
+        0.09
+      ],
+      "glow": false
+    },
+    {
+      "name": "chemical tank 1",
+      "shape": "cylinder",
+      "color": "#c9d6e3",
+      "at": [
+        -0.4,
+        0,
+        -0.3
+      ],
+      "size": [
+        0.16,
+        0.25,
+        0.16
+      ]
+    },
+    {
+      "name": "chemical tank 2",
+      "shape": "cylinder",
+      "color": "#c9d6e3",
+      "at": [
+        -0.2,
+        0,
+        -0.3
+      ],
+      "size": [
+        0.16,
+        0.25,
+        0.16
+      ]
+    },
+    {
+      "name": "chemical tank 3",
+      "shape": "cylinder",
+      "color": "#c9d6e3",
+      "at": [
+        0.0,
+        0,
+        -0.3
+      ],
+      "size": [
+        0.16,
+        0.25,
+        0.16
+      ]
+    }
+  ]
+}

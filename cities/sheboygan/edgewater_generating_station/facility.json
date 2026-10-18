@@ -1,0 +1,17 @@
+{
+  "name": "Edgewater Generating Station",
+  "tri_id": "53082DGWTR3739L",
+  "industry": "Power plant",
+  "address": "3739 Lakeshore Dr, Sheboygan",
+  "lon": -87.71008,
+  "lat": 43.71638,
+  "released": 61731,
+  "air": 61651,
+  "water": 80,
+  "land": 0,
+  "chemicals": [
+    "Ammonia",
+    "Hydrogen fluoride",
+    "Barium compounds"
+  ]
+}

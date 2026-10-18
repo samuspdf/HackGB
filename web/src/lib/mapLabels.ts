@@ -130,7 +130,6 @@ export function createLabelLayer<T>(scene: THREE.Scene, camera: THREE.Perspectiv
 
   return {
     ready: fontsReady,
-    labels,
 
     add(text: string, kind: LabelKind, position: THREE.Vector3, data?: T) {
       const { tex, w, h } = draw(text, kind);
@@ -169,8 +168,11 @@ export function createLabelLayer<T>(scene: THREE.Scene, camera: THREE.Perspectiv
       const p = new THREE.Vector3();
       const fade = Math.min(1, dt * 9);
       for (const l of labels) {
-        const w = l.px.w * zoomScale;
-        const h = l.px.h * zoomScale;
+        // Factory names shrink along with their buildings as you zoom out, so neighbours don't collide
+        // (large right after clicking a city, at about 18 km away; only shrinks when you zoom out past that)
+        const k = l.kind === "facility" ? THREE.MathUtils.clamp(20 / dist, 0.6, 1.1) : zoomScale;
+        const w = l.px.w * k;
+        const h = l.px.h * k;
         l.sprite.scale.set(w * toWorld, h * toWorld, 1);
         let want = visible(l.kind);
         if (want) {
@@ -182,7 +184,8 @@ export function createLabelLayer<T>(scene: THREE.Scene, camera: THREE.Perspectiv
             const sy = (-p.y * 0.5 + 0.5) * viewportH - (BOARDS[l.kind] ? h / 2 : 0);
             const hw = w / 2 + 3;
             const hh = h / 2 + 2;
-            for (let b = 0; b < placed.length && want; b += 4) {
+            // Factory names never hide each other (they shrink instead); other labels give way
+            for (let b = 0; b < placed.length && want && l.kind !== "facility"; b += 4) {
               if (Math.abs(sx - placed[b]) < hw + placed[b + 2] && Math.abs(sy - placed[b + 1]) < hh + placed[b + 3]) want = false;
             }
             if (want) placed.push(sx, sy, hw, hh);

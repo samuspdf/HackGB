@@ -1,0 +1,38 @@
+{
+  "summary": "This aluminum foundry released about 3,700 lb to the air in 2024, mostly the solvent tetrachloroethylene.",
+  "impacts": [
+    {
+      "icon": "🫁",
+      "title": "Air & breathing",
+      "where": "North side of Manitowoc, within 1 mile: 3,747 residents",
+      "how": "About 2,600 lb of tetrachloroethylene, which EPA lists as likely to cause cancer, went into the air, plus 500 lb of formaldehyde and small amounts of nickel. Both solvents irritate the eyes and lungs.",
+      "avoid": [
+        "Check the daily air quality index (AirNow), especially on hot, still days",
+        "Report strong or unusual odors to the Wisconsin DNR",
+        "Comment on the plant's air permit when the DNR opens it for public input"
+      ]
+    },
+    {
+      "icon": "👵",
+      "title": "Seniors & schools",
+      "where": "23% of nearby residents are seniors; 4 schools within 1 mile",
+      "how": "This neighborhood has Manitowoc's highest share of older residents, who are more sensitive to air pollution, along with four schools.",
+      "avoid": [
+        "Older adults with heart or lung disease should limit time outdoors on poor-air days",
+        "Ask schools whether they track the air quality index",
+        "Join DNR public hearings, like the one held in 2023 on the foundry's new furnaces"
+      ]
+    },
+    {
+      "icon": "💧",
+      "title": "Groundwater",
+      "where": "Soil and private wells nearby",
+      "how": "Tetrachloroethylene lasts a long time in groundwater wherever it reaches the soil. It's released here to the air, so this is a possible pathway rather than a confirmed one.",
+      "avoid": [
+        "If you use a private well, test it for volatile organic compounds (VOCs)",
+        "City water users are on Lake Michigan water",
+        "Report spills or strong solvent smells to the DNR"
+      ]
+    }
+  ]
+}

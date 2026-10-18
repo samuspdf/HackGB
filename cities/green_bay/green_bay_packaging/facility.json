@@ -1,0 +1,15 @@
+{
+  "name": "Green Bay Packaging Coated Products",
+  "tri_id": "54307GRNBY3250S",
+  "industry": "Paper coating plant",
+  "address": "3250 S Ridge Rd, Green Bay",
+  "lon": -88.09478,
+  "lat": 44.46352,
+  "released": 23968,
+  "air": 23968,
+  "water": 0,
+  "land": 0,
+  "chemicals": [
+    "Vinyl acetate"
+  ]
+}

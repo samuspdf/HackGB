@@ -1,0 +1,27 @@
+{
+  "summary": "Manitowoc's city-owned power plant released about 9,200 lb to the air in 2024, mostly hydrochloric acid from burning fuel.",
+  "impacts": [
+    {
+      "icon": "🫁",
+      "title": "Air & breathing",
+      "where": "Within 1 mile: 8,471 residents, 5 schools",
+      "how": "About 7,200 lb of hydrochloric acid and 2,000 lb of ammonia went into the air. Both irritate the eyes, nose and lungs. The plant mostly burns wood now, with some petroleum coke and coal, and it is switching two boilers to renewable fuel pellets.",
+      "avoid": [
+        "Check the daily air quality index (AirNow), especially on hot, still days",
+        "Keep kids with asthma indoors when the air quality index is orange or worse",
+        "Follow MPU's switch to cleaner fuel at city utility meetings"
+      ]
+    },
+    {
+      "icon": "🌱",
+      "title": "Soil & gardens",
+      "where": "Yards and gardens near the plant",
+      "how": "The plant also released 3 lb of lead compounds. Lead doesn't break down: it settles onto soil and stays there, and small children are the most at risk.",
+      "avoid": [
+        "Test garden soil for lead before growing food near the plant",
+        "Wash vegetables and hands after gardening",
+        "Take shoes off at the door so soil dust stays outside"
+      ]
+    }
+  ]
+}

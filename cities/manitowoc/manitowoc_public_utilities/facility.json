@@ -1,0 +1,17 @@
+{
+  "name": "Manitowoc Public Utilities",
+  "tri_id": "54221MNTWC1303S",
+  "industry": "Power plant",
+  "address": "1303 S 8th St, Manitowoc",
+  "lon": -87.65773,
+  "lat": 44.08364,
+  "released": 9179,
+  "air": 9179,
+  "water": 0,
+  "land": 0,
+  "chemicals": [
+    "Hydrochloric acid",
+    "Ammonia",
+    "Lead compounds"
+  ]
+}

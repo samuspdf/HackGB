@@ -1,0 +1,194 @@
+{
+  "scale": 1.3,
+  "footprint": [
+    1.6,
+    1.1
+  ],
+  "halo": [
+    2.8,
+    2.09
+  ],
+  "label": [
+    0.62,
+    1.55,
+    -0.28
+  ],
+  "smoke": [
+    [
+      0.62,
+      1.25,
+      -0.28
+    ]
+  ],
+  "parts": [
+    {
+      "name": "concrete yard",
+      "shape": "box",
+      "color": "#b9b0a6",
+      "at": [
+        0,
+        -0.4,
+        0
+      ],
+      "size": [
+        1.7,
+        0.46,
+        1.2
+      ],
+      "glow": false
+    },
+    {
+      "name": "coating line",
+      "shape": "box",
+      "color": "#e9cfa9",
+      "at": [
+        -0.15,
+        0,
+        0.12
+      ],
+      "size": [
+        1.2,
+        0.36,
+        0.5
+      ]
+    },
+    {
+      "name": "coating line roof",
+      "shape": "roof",
+      "color": "#8a5532",
+      "at": [
+        -0.15,
+        0.36,
+        0.12
+      ],
+      "size": [
+        1.248,
+        0.14,
+        0.54
+      ]
+    },
+    {
+      "name": "dryer tower",
+      "shape": "box",
+      "color": "#e3d3c0",
+      "at": [
+        0.58,
+        0,
+        0.12
+      ],
+      "size": [
+        0.3,
+        0.62,
+        0.36
+      ]
+    },
+    {
+      "name": "dryer tower roof",
+      "shape": "box",
+      "color": "#6f6a85",
+      "at": [
+        0.58,
+        0.62,
+        0.12
+      ],
+      "size": [
+        0.306,
+        0.03,
+        0.367
+      ],
+      "glow": false
+    },
+    {
+      "name": "adhesive silo 1",
+      "shape": "cylinder",
+      "color": "#f4eee3",
+      "at": [
+        -0.45,
+        0,
+        -0.33
+      ],
+      "size": [
+        0.22,
+        0.55,
+        0.22
+      ]
+    },
+    {
+      "name": "adhesive silo 1 cap",
+      "shape": "cone",
+      "color": "#f4eee3",
+      "at": [
+        -0.45,
+        0.55,
+        -0.33
+      ],
+      "size": [
+        0.229,
+        0.099,
+        0.229
+      ]
+    },
+    {
+      "name": "adhesive silo 2",
+      "shape": "cylinder",
+      "color": "#f4eee3",
+      "at": [
+        -0.18,
+        0,
+        -0.33
+      ],
+      "size": [
+        0.22,
+        0.55,
+        0.22
+      ]
+    },
+    {
+      "name": "adhesive silo 2 cap",
+      "shape": "cone",
+      "color": "#f4eee3",
+      "at": [
+        -0.18,
+        0.55,
+        -0.33
+      ],
+      "size": [
+        0.229,
+        0.099,
+        0.229
+      ]
+    },
+    {
+      "name": "smokestack",
+      "shape": "stack",
+      "color": "#ece5d9",
+      "at": [
+        0.62,
+        0,
+        -0.28
+      ],
+      "size": [
+        0.12,
+        1.25,
+        0.12
+      ],
+      "glow": false
+    },
+    {
+      "name": "smokestack band",
+      "shape": "cylinder",
+      "color": "#c0392b",
+      "at": [
+        0.62,
+        1.07,
+        -0.28
+      ],
+      "size": [
+        0.097,
+        0.1,
+        0.097
+      ],
+      "glow": false
+    }
+  ]
+}

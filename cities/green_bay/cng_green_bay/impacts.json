@@ -1,0 +1,27 @@
+{
+  "summary": "Everything this printing plant reports goes into the air as ozone, about 46,600 lb in 2024.",
+  "impacts": [
+    {
+      "icon": "🫁",
+      "title": "Air & breathing",
+      "where": "Within 1 mile: 2,476 residents",
+      "how": "Ground-level ozone irritates the airways, causing coughing, a sore throat and chest tightness. Packaging printers usually make it with equipment that treats plastic film before printing. Ozone breaks down within hours, so the effect stays close to the plant.",
+      "avoid": [
+        "Check the daily air quality index (AirNow), especially on hot, still days",
+        "Plan outdoor exercise for mornings, when ozone is lower",
+        "Report strong or unusual odors to the Wisconsin DNR"
+      ]
+    },
+    {
+      "icon": "🧒",
+      "title": "Kids & people with asthma",
+      "where": "Family Services of Northeast Wisconsin is within 1 mile",
+      "how": "Children, older adults and anyone with asthma feel ozone first, and it can trigger asthma attacks.",
+      "avoid": [
+        "Keep rescue inhalers handy on high-ozone days",
+        "Move kids' outdoor play indoors when the air quality index is orange or worse",
+        "Ask the DNR whether the plant's ozone is covered by an air permit"
+      ]
+    }
+  ]
+}

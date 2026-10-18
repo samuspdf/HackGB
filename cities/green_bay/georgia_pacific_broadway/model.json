@@ -1,0 +1,387 @@
+{
+  "scale": 1.7,
+  "footprint": [
+    2.6,
+    1.8
+  ],
+  "halo": [
+    4.6,
+    3.8
+  ],
+  "label": [
+    0.86,
+    2.35,
+    0.82
+  ],
+  "smoke": [
+    [
+      0.86,
+      2.0,
+      0.82
+    ],
+    [
+      0.62,
+      1.55,
+      0.88
+    ]
+  ],
+  "parts": [
+    {
+      "name": "concrete yard",
+      "shape": "box",
+      "color": "#b9b0a6",
+      "at": [
+        0,
+        -0.4,
+        0
+      ],
+      "size": [
+        2.7,
+        0.46,
+        1.9
+      ],
+      "glow": false
+    },
+    {
+      "name": "main hall",
+      "shape": "box",
+      "color": "#e6d6bf",
+      "at": [
+        -0.2,
+        0,
+        0.1
+      ],
+      "size": [
+        1.55,
+        0.42,
+        0.5
+      ]
+    },
+    {
+      "name": "main hall roof",
+      "shape": "roof",
+      "color": "#6f6a85",
+      "at": [
+        -0.2,
+        0.42,
+        0.1
+      ],
+      "size": [
+        1.612,
+        0.16,
+        0.54
+      ]
+    },
+    {
+      "name": "warehouse",
+      "shape": "box",
+      "color": "#d3c4b1",
+      "at": [
+        -0.5,
+        0,
+        0.62
+      ],
+      "size": [
+        0.95,
+        0.3,
+        0.42
+      ]
+    },
+    {
+      "name": "warehouse roof",
+      "shape": "roof",
+      "color": "#6f6a85",
+      "at": [
+        -0.5,
+        0.3,
+        0.62
+      ],
+      "size": [
+        0.988,
+        0.16,
+        0.454
+      ]
+    },
+    {
+      "name": "boiler house",
+      "shape": "box",
+      "color": "#d3c4b1",
+      "at": [
+        0.78,
+        0,
+        0.5
+      ],
+      "size": [
+        0.44,
+        0.72,
+        0.4
+      ]
+    },
+    {
+      "name": "boiler house roof",
+      "shape": "box",
+      "color": "#6f6a85",
+      "at": [
+        0.78,
+        0.72,
+        0.5
+      ],
+      "size": [
+        0.46,
+        0.04,
+        0.42
+      ],
+      "glow": false
+    },
+    {
+      "name": "smokestack 1",
+      "shape": "stack",
+      "color": "#ece5d9",
+      "at": [
+        0.86,
+        0,
+        0.82
+      ],
+      "size": [
+        0.15,
+        2.0,
+        0.15
+      ],
+      "glow": false
+    },
+    {
+      "name": "smokestack 1 band",
+      "shape": "cylinder",
+      "color": "#c0392b",
+      "at": [
+        0.86,
+        1.8,
+        0.82
+      ],
+      "size": [
+        0.1215,
+        0.12,
+        0.1215
+      ],
+      "glow": false
+    },
+    {
+      "name": "smokestack 2",
+      "shape": "stack",
+      "color": "#ece5d9",
+      "at": [
+        0.62,
+        0,
+        0.88
+      ],
+      "size": [
+        0.124,
+        1.55,
+        0.124
+      ],
+      "glow": false
+    },
+    {
+      "name": "smokestack 2 band",
+      "shape": "cylinder",
+      "color": "#c0392b",
+      "at": [
+        0.62,
+        1.35,
+        0.88
+      ],
+      "size": [
+        0.1004,
+        0.12,
+        0.1004
+      ],
+      "glow": false
+    },
+    {
+      "name": "tank 1",
+      "shape": "cylinder",
+      "color": "#f4eee3",
+      "at": [
+        0.48,
+        0,
+        -0.28
+      ],
+      "size": [
+        0.26,
+        0.62,
+        0.26
+      ]
+    },
+    {
+      "name": "tank 1 cap",
+      "shape": "cone",
+      "color": "#f4eee3",
+      "at": [
+        0.48,
+        0.62,
+        -0.28
+      ],
+      "size": [
+        0.27,
+        0.12,
+        0.27
+      ]
+    },
+    {
+      "name": "tank 2",
+      "shape": "cylinder",
+      "color": "#f4eee3",
+      "at": [
+        0.8,
+        0,
+        -0.28
+      ],
+      "size": [
+        0.26,
+        0.62,
+        0.26
+      ]
+    },
+    {
+      "name": "tank 2 cap",
+      "shape": "cone",
+      "color": "#f4eee3",
+      "at": [
+        0.8,
+        0.62,
+        -0.28
+      ],
+      "size": [
+        0.27,
+        0.12,
+        0.27
+      ]
+    },
+    {
+      "name": "tank 3",
+      "shape": "cylinder",
+      "color": "#f4eee3",
+      "at": [
+        1.1,
+        0,
+        -0.28
+      ],
+      "size": [
+        0.26,
+        0.62,
+        0.26
+      ]
+    },
+    {
+      "name": "tank 3 cap",
+      "shape": "cone",
+      "color": "#f4eee3",
+      "at": [
+        1.1,
+        0.62,
+        -0.28
+      ],
+      "size": [
+        0.27,
+        0.12,
+        0.27
+      ]
+    },
+    {
+      "name": "wastewater pond 1 rim",
+      "shape": "cylinder",
+      "color": "#a99c9a",
+      "at": [
+        -0.75,
+        0,
+        -0.55
+      ],
+      "size": [
+        0.52,
+        0.09,
+        0.52
+      ],
+      "glow": false
+    },
+    {
+      "name": "wastewater pond 1",
+      "shape": "cylinder",
+      "color": "#6f9a8c",
+      "at": [
+        -0.75,
+        0.08,
+        -0.55
+      ],
+      "size": [
+        0.468,
+        0.02,
+        0.468
+      ],
+      "glow": false
+    },
+    {
+      "name": "wastewater pond 2 rim",
+      "shape": "cylinder",
+      "color": "#a99c9a",
+      "at": [
+        -0.18,
+        0,
+        -0.6
+      ],
+      "size": [
+        0.44,
+        0.09,
+        0.44
+      ],
+      "glow": false
+    },
+    {
+      "name": "wastewater pond 2",
+      "shape": "cylinder",
+      "color": "#6f9a8c",
+      "at": [
+        -0.18,
+        0.08,
+        -0.6
+      ],
+      "size": [
+        0.396,
+        0.02,
+        0.396
+      ],
+      "glow": false
+    },
+    {
+      "name": "wood chip pile 1",
+      "shape": "cone",
+      "color": "#c08f55",
+      "at": [
+        0.95,
+        0,
+        -0.6
+      ],
+      "size": [
+        0.5,
+        0.24,
+        0.5
+      ],
+      "glow": false
+    },
+    {
+      "name": "wood chip pile 2",
+      "shape": "cone",
+      "color": "#c08f55",
+      "at": [
+        1.15,
+        0,
+        -0.72
+      ],
+      "size": [
+        0.36,
+        0.18,
+        0.36
+      ],
+      "glow": false
+    }
+  ]
+}

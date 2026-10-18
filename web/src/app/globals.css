@@ -21,13 +21,8 @@
   --font-body: var(--font-nunito), system-ui, sans-serif;
 }
 
-html,
+/* html/body height comes from h-full in layout.tsx; margin from Tailwind's preflight */
 body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
   overflow: hidden;
   background: var(--color-sand-100);
   color: var(--color-ink);

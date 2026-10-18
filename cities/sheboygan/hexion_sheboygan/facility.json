@@ -1,0 +1,17 @@
+{
+  "name": "Hexion Sheboygan",
+  "tri_id": "53081BRDNN2522S",
+  "industry": "Chemical plant",
+  "address": "2522 S 24th St, Sheboygan",
+  "lon": -87.73734,
+  "lat": 43.7269,
+  "released": 28575,
+  "air": 28575,
+  "water": 0,
+  "land": 0,
+  "chemicals": [
+    "Methanol",
+    "Formaldehyde",
+    "Triethylamine"
+  ]
+}

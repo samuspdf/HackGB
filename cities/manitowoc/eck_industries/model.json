@@ -1,0 +1,235 @@
+{
+  "scale": 1.3,
+  "footprint": [
+    1.5,
+    1.05
+  ],
+  "halo": [
+    2.62,
+    1.99
+  ],
+  "label": [
+    0.55,
+    1.6,
+    -0.22
+  ],
+  "smoke": [
+    [
+      0.55,
+      1.3,
+      -0.22
+    ],
+    [
+      0.33,
+      1.0,
+      -0.27
+    ]
+  ],
+  "parts": [
+    {
+      "name": "concrete yard",
+      "shape": "box",
+      "color": "#b9b0a6",
+      "at": [
+        0,
+        -0.4,
+        0
+      ],
+      "size": [
+        1.6,
+        0.46,
+        1.15
+      ],
+      "glow": false
+    },
+    {
+      "name": "casting hall",
+      "shape": "box",
+      "color": "#c8bfb3",
+      "at": [
+        -0.15,
+        0,
+        0.12
+      ],
+      "size": [
+        1.0,
+        0.38,
+        0.55
+      ]
+    },
+    {
+      "name": "casting hall roof",
+      "shape": "roof",
+      "color": "#4f4a5e",
+      "at": [
+        -0.15,
+        0.38,
+        0.12
+      ],
+      "size": [
+        1.04,
+        0.14,
+        0.594
+      ]
+    },
+    {
+      "name": "furnace house",
+      "shape": "box",
+      "color": "#b7aca3",
+      "at": [
+        0.52,
+        0,
+        0.12
+      ],
+      "size": [
+        0.38,
+        0.6,
+        0.42
+      ]
+    },
+    {
+      "name": "furnace house roof",
+      "shape": "box",
+      "color": "#6f6a85",
+      "at": [
+        0.52,
+        0.6,
+        0.12
+      ],
+      "size": [
+        0.388,
+        0.03,
+        0.428
+      ],
+      "glow": false
+    },
+    {
+      "name": "furnace stack 1",
+      "shape": "stack",
+      "color": "#ece5d9",
+      "at": [
+        0.55,
+        0,
+        -0.22
+      ],
+      "size": [
+        0.13,
+        1.3,
+        0.13
+      ],
+      "glow": false
+    },
+    {
+      "name": "furnace stack 1 band",
+      "shape": "cylinder",
+      "color": "#c0392b",
+      "at": [
+        0.55,
+        1.12,
+        -0.22
+      ],
+      "size": [
+        0.105,
+        0.1,
+        0.105
+      ],
+      "glow": false
+    },
+    {
+      "name": "furnace stack 2",
+      "shape": "stack",
+      "color": "#ece5d9",
+      "at": [
+        0.33,
+        0,
+        -0.27
+      ],
+      "size": [
+        0.1,
+        1.0,
+        0.1
+      ],
+      "glow": false
+    },
+    {
+      "name": "furnace stack 2 band",
+      "shape": "cylinder",
+      "color": "#c0392b",
+      "at": [
+        0.33,
+        0.82,
+        -0.27
+      ],
+      "size": [
+        0.081,
+        0.1,
+        0.081
+      ],
+      "glow": false
+    },
+    {
+      "name": "aluminium ingots 1",
+      "shape": "box",
+      "color": "#c9ced6",
+      "at": [
+        -0.6,
+        0,
+        -0.32
+      ],
+      "size": [
+        0.12,
+        0.08,
+        0.2
+      ],
+      "glow": false
+    },
+    {
+      "name": "aluminium ingots 2",
+      "shape": "box",
+      "color": "#c9ced6",
+      "at": [
+        -0.45,
+        0,
+        -0.32
+      ],
+      "size": [
+        0.12,
+        0.08,
+        0.2
+      ],
+      "glow": false
+    },
+    {
+      "name": "aluminium ingots 3",
+      "shape": "box",
+      "color": "#c9ced6",
+      "at": [
+        -0.3,
+        0,
+        -0.32
+      ],
+      "size": [
+        0.12,
+        0.08,
+        0.2
+      ],
+      "glow": false
+    },
+    {
+      "name": "casting sand",
+      "shape": "cone",
+      "color": "#d8c9a0",
+      "at": [
+        -0.05,
+        0,
+        -0.32
+      ],
+      "size": [
+        0.3,
+        0.14,
+        0.3
+      ],
+      "glow": false
+    }
+  ]
+}

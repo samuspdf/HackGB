@@ -1,0 +1,38 @@
+{
+  "summary": "This resin plant released about 28,600 lb to the air in 2024, mostly methanol and formaldehyde, and sent more to the city sewer plant.",
+  "impacts": [
+    {
+      "icon": "🫁",
+      "title": "Air & breathing",
+      "where": "Within 1 mile: 8,731 residents, 660 children under 5, 6 schools",
+      "how": "About 6,400 lb of formaldehyde, a known human carcinogen, went into the air, most of it escaping from leaks and vents rather than the smokestack. Another 19,600 lb of methanol was released. Both irritate the eyes, nose and throat.",
+      "avoid": [
+        "Report strong or unusual odors to the Wisconsin DNR",
+        "Check the daily air quality index (AirNow), especially on hot, still days",
+        "Comment on the plant's air permit when the DNR opens it for public input"
+      ]
+    },
+    {
+      "icon": "🌫️",
+      "title": "Smog",
+      "where": "Lakeshore Sheboygan County",
+      "how": "Methanol and formaldehyde help form ground-level ozone. Sheboygan's lakeshore doesn't meet the federal ozone standard, so this plant is one possible contributor.",
+      "avoid": [
+        "Plan outdoor exercise for mornings on hot, sunny days",
+        "Keep rescue inhalers handy on high-ozone days",
+        "Drive less on ozone action days"
+      ]
+    },
+    {
+      "icon": "🚰",
+      "title": "Sewer & Lake Michigan",
+      "where": "Sheboygan Regional Wastewater Treatment Facility, then Lake Michigan",
+      "how": "The plant sent about 22,100 lb of formaldehyde, 10,700 lb of methanol and 2,200 lb of phenol to the sewer. These break down readily at the treatment plant before its water reaches Lake Michigan. The exact route still needs to be confirmed.",
+      "avoid": [
+        "Never pour chemicals down drains",
+        "Check DNR Beach Health before swimming",
+        "Support upgrades at the regional wastewater plant"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "scale": 1.3,
+  "footprint": [
+    1.6,
+    1.1
+  ],
+  "halo": [
+    2.8,
+    2.09
+  ],
+  "label": [
+    0.62,
+    1.5,
+    -0.05
+  ],
+  "smoke": [
+    [
+      0.62,
+      1.2,
+      -0.05
+    ]
+  ],
+  "parts": [
+    {
+      "name": "concrete yard",
+      "shape": "box",
+      "color": "#b9b0a6",
+      "at": [
+        0,
+        -0.4,
+        0
+      ],
+      "size": [
+        1.7,
+        0.46,
+        1.2
+      ],
+      "glow": false
+    },
+    {
+      "name": "process building",
+      "shape": "box",
+      "color": "#e2d9cc",
+      "at": [
+        -0.45,
+        0,
+        0.15
+      ],
+      "size": [
+        0.55,
+        0.42,
+        0.5
+      ]
+    },
+    {
+      "name": "process building roof",
+      "shape": "box",
+      "color": "#6f6a85",
+      "at": [
+        -0.45,
+        0.42,
+        0.15
+      ],
+      "size": [
+        0.561,
+        0.03,
+        0.51
+      ],
+      "glow": false
+    },
+    {
+      "name": "reactor 1",
+      "shape": "cylinder",
+      "color": "#dfe6ee",
+      "at": [
+        0.05,
+        0,
+        0.2
+      ],
+      "size": [
+        0.2,
+        0.95,
+        0.2
+      ]
+    },
+    {
+      "name": "reactor 1 cap",
+      "shape": "cone",
+      "color": "#dfe6ee",
+      "at": [
+        0.05,
+        0.95,
+        0.2
+      ],
+      "size": [
+        0.208,
+        0.09,
+        0.208
+      ]
+    },
+    {
+      "name": "reactor 2",
+      "shape": "cylinder",
+      "color": "#dfe6ee",
+      "at": [
+        0.3,
+        0,
+        0.25
+      ],
+      "size": [
+        0.16,
+        0.8,
+        0.16
+      ]
+    },
+    {
+      "name": "reactor 2 cap",
+      "shape": "cone",
+      "color": "#dfe6ee",
+      "at": [
+        0.3,
+        0.8,
+        0.25
+      ],
+      "size": [
+        0.166,
+        0.072,
+        0.166
+      ]
+    },
+    {
+      "name": "storage tank 1",
+      "shape": "cylinder",
+      "color": "#f4eee3",
+      "at": [
+        -0.55,
+        0,
+        -0.32
+      ],
+      "size": [
+        0.26,
+        0.32,
+        0.26
+      ]
+    },
+    {
+      "name": "storage tank 2",
+      "shape": "cylinder",
+      "color": "#f4eee3",
+      "at": [
+        -0.25,
+        0,
+        -0.32
+      ],
+      "size": [
+        0.26,
+        0.32,
+        0.26
+      ]
+    },
+    {
+      "name": "storage tank 3",
+      "shape": "cylinder",
+      "color": "#f4eee3",
+      "at": [
+        0.05,
+        0,
+        -0.32
+      ],
+      "size": [
+        0.26,
+        0.32,
+        0.26
+      ]
+    },
+    {
+      "name": "storage tank 4",
+      "shape": "cylinder",
+      "color": "#f4eee3",
+      "at": [
+        0.35,
+        0,
+        -0.32
+      ],
+      "size": [
+        0.26,
+        0.32,
+        0.26
+      ]
+    },
+    {
+      "name": "flare stack",
+      "shape": "stack",
+      "color": "#ece5d9",
+      "at": [
+        0.62,
+        0,
+        -0.05
+      ],
+      "size": [
+        0.08,
+        1.2,
+        0.08
+      ],
+      "glow": false
+    },
+    {
+      "name": "flare stack band",
+      "shape": "cylinder",
+      "color": "#c0392b",
+      "at": [
+        0.62,
+        1.02,
+        -0.05
+      ],
+      "size": [
+        0.065,
+        0.1,
+        0.065
+      ],
+      "glow": false
+    }
+  ]
+}

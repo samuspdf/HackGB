@@ -1,0 +1,17 @@
+{
+  "name": "Eck Industries",
+  "tri_id": "54220CKNDS1602N",
+  "industry": "Aluminum foundry",
+  "address": "1602 N 8th St, Manitowoc",
+  "lon": -87.65798,
+  "lat": 44.11721,
+  "released": 3728,
+  "air": 3728,
+  "water": 0,
+  "land": 0,
+  "chemicals": [
+    "Tetrachloroethylene",
+    "Formaldehyde",
+    "Copper"
+  ]
+}

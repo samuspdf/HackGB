@@ -38,6 +38,7 @@ export default function MapView() {
   const [focused, setFocused] = useState<Place | null>(null);
   const [source, setSource] = useState("");
   const [facilities, setFacilities] = useState<Facility[]>([]);
+  const [facility, setFacility] = useState<Facility | null>(null);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -52,14 +53,15 @@ export default function MapView() {
           reducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
           // Written straight to a CSS variable: no React re-render on every frame while rotating
           onHeading: (deg) => compassRef.current?.style.setProperty("--heading", `${deg}deg`),
-          onFocus: setFocused,
+          onFocus: (p) => (setFocused(p), setFacility(null)),
+          onFacility: setFacility,
           onFirstInteraction: () => setShowHint(false),
         });
         setSource(map.data.source);
         setFacilities(map.data.facilities);
         setLoaded(true);
         // Shareable links: ?focus=Green%20Bay flies to a place, ?heading=90 puts east at the top,
-        // ?view=x,y,dist jumps to map coordinates in km
+        // ?view=x,y,dist jumps to map coordinates in km, ?facility=<TRI ID> opens a facility
         const params = new URLSearchParams(window.location.search);
         const focus = params.get("focus");
         const heading = Number(params.get("heading"));
@@ -67,6 +69,7 @@ export default function MapView() {
         if (view?.length === 3 && view.every(Number.isFinite)) controllerRef.current.viewAt(view[0], view[1], view[2]);
         if (heading) controllerRef.current.setHeading(heading);
         if (focus) controllerRef.current.focusPlace(focus);
+        if (params.get("facility")) controllerRef.current.focusFacility(params.get("facility")!);
       })
       .catch((err) => {
         console.error(err);
@@ -79,6 +82,8 @@ export default function MapView() {
     };
   }, [webgl]);
 
+  const cityFacilities = facilities.filter((f) => f.city === focused?.name);
+  const effects = facility?.impacts;
   const status = webgl === false
     ? "This map needs WebGL, which isn't available in this browser."
     : failed
@@ -110,7 +115,7 @@ export default function MapView() {
       {/* Compass: shows where north is; N / E / S / W turn that direction to the top */}
       <div
         ref={compassRef}
-        className="fixed z-[3] size-[92px] rounded-full bg-sand-50/90 shadow-[0_4px_0_var(--color-sand-300),0_10px_18px_rgb(75_79_147/.2)] backdrop-blur [--heading:0deg]"
+        className={`fixed z-[3] size-[92px] rounded-full bg-sand-50/90 ${facility ? "hidden" : ""} shadow-[0_4px_0_var(--color-sand-300),0_10px_18px_rgb(75_79_147/.2)] backdrop-blur [--heading:0deg]`}
         style={{ top: gutter, right: gutter }}
       >
           <div className="absolute inset-0 rotate-[calc(-1*var(--heading))]">
@@ -138,8 +143,8 @@ export default function MapView() {
       <div
         role="toolbar"
         aria-label="Map controls"
-        className="fixed z-[3] flex flex-col gap-2"
-        style={{ right: gutter, bottom: `calc(${gutter} + 40px)` }}
+        className="fixed z-[3] flex gap-2"
+        style={{ right: gutter, bottom: gutter }}
       >
         <button type="button" aria-label="Zoom in" className={`${chip} size-11`} onClick={() => controllerRef.current?.zoomBy(0.5)}>
           <svg viewBox="0 0 20 20" aria-hidden="true" className={icon}><path d="M10 4v12M4 10h12" /></svg>
@@ -156,7 +161,7 @@ export default function MapView() {
       {focused && (
         <section
           aria-live="polite"
-          className="fixed z-[3] w-[min(300px,calc(100vw-120px))] rounded-2xl bg-sand-50/92 px-4 pt-3 pb-3.5 shadow-[0_5px_0_var(--color-sand-300),0_14px_26px_rgb(75_79_147/.22)] backdrop-blur"
+          className={`fixed z-[3] w-[min(300px,calc(100vw-120px))] rounded-2xl ${facility ? "hidden" : ""} bg-sand-50/92 px-4 pt-3 pb-3.5 shadow-[0_5px_0_var(--color-sand-300),0_14px_26px_rgb(75_79_147/.22)] backdrop-blur`}
           style={{ left: gutter, top: gutter }}
         >
           <div className="flex items-start gap-2">
@@ -180,25 +185,90 @@ export default function MapView() {
           </p>
           {focused.study && (
             <ul className="mt-2.5 space-y-2 border-t border-sand-300 pt-2.5">
-              {facilities
-                .filter((f) => f.city === focused.name)
-                .map((f) => (
-                  <li key={f.tri_id} className="flex gap-2">
-                    <span aria-hidden="true" className="mt-1.5 size-2.5 shrink-0 rounded-full bg-[#e0703a] shadow-[0_0_0_3px_rgb(224_112_58/.25)]" />
-                    <div className="min-w-0">
-                      <p className="text-sm font-bold leading-snug">{f.name}</p>
-                      <p className="text-xs text-ink-soft">
-                        {f.industry} · {f.released.toLocaleString()} lb released on site (2024)
-                      </p>
-                    </div>
-                  </li>
-                ))}
+              {cityFacilities.map((f) => (
+                <li key={f.tri_id} className="flex gap-2">
+                  <span aria-hidden="true" className="mt-1.5 size-2.5 shrink-0 rounded-full bg-[#e0703a] shadow-[0_0_0_3px_rgb(224_112_58/.25)]" />
+                  <div className="min-w-0">
+                    <button
+                      type="button"
+                      onClick={() => controllerRef.current?.focusFacility(f.tri_id)}
+                      className="cursor-pointer text-left text-sm font-bold leading-snug text-autumn-700 underline decoration-[#e0703a]/50 underline-offset-2 hover:decoration-[#e0703a]"
+                    >
+                      {f.name}
+                    </button>
+                    <p className="text-xs text-ink-soft">
+                      {f.industry} · {f.released.toLocaleString()} lb released on site (2024)
+                    </p>
+                  </div>
+                </li>
+              ))}
               <li className="text-xs font-semibold text-leaf-700">
-                {facilities.filter((f) => f.city === focused.name).length} of 5 study facilities mapped so far
+                {cityFacilities.length} study facilities: the city&apos;s top 3 by 2024 on-site releases
               </li>
             </ul>
           )}
         </section>
+      )}
+
+      {/* What the selected facility touches in daily life */}
+      {facility && (
+        <aside
+          aria-live="polite"
+          aria-label={`What ${facility.name} affects`}
+          className="fixed z-[3] flex w-[min(300px,calc(100vw-32px))] flex-col overflow-hidden rounded-2xl bg-sand-50/95 shadow-[0_5px_0_var(--color-sand-300),0_14px_26px_rgb(75_79_147/.22)] backdrop-blur"
+          style={{ right: gutter, top: gutter, maxHeight: "min(42dvh, 400px)" }}
+        >
+          <header className="bg-linear-to-br from-[#f08a48] to-[#c9552a] px-3.5 pt-2.5 pb-3 text-sand-50">
+            <div className="flex items-start gap-2">
+              <div className="min-w-0 flex-1">
+                <p className="text-[11px] font-extrabold tracking-[.1em] uppercase opacity-85">What it affects</p>
+                <h2 className="font-display text-lg leading-tight font-bold">{facility.name}</h2>
+                <p className="text-xs opacity-90">{facility.industry} · {facility.city}</p>
+              </div>
+              <button type="button" aria-label="Close" onClick={() => setFacility(null)} className="grid size-7 cursor-pointer place-items-center rounded-full bg-white/20 hover:bg-white/35">
+                <svg viewBox="0 0 20 20" aria-hidden="true" className="size-3.5 fill-none stroke-sand-50 stroke-[2.4] [stroke-linecap:round]"><path d="M5 5l10 10M15 5 5 15" /></svg>
+              </button>
+            </div>
+            <div className="mt-2 flex gap-1.5 text-[11px] font-bold">
+              {facility.water > 0 && <span className="rounded-full bg-white/20 px-2.5 py-1">💧 {facility.water.toLocaleString()} lb to water</span>}
+              {facility.air > 0 && <span className="rounded-full bg-white/20 px-2.5 py-1">💨 {facility.air.toLocaleString()} lb to air</span>}
+            </div>
+          </header>
+          <div className="space-y-2 overflow-y-auto p-3">
+            {effects ? (
+              <>
+                <p className="px-1 text-xs text-ink-soft">{effects.summary}</p>
+                {effects.impacts.map((i, k) => (
+                  <details key={i.title} open={k === 0} className="group rounded-xl bg-white/75 shadow-[0_2px_0_var(--color-sand-300)]">
+                    <summary className="flex cursor-pointer list-none items-center gap-2.5 p-2 [&::-webkit-details-marker]:hidden">
+                      <span aria-hidden="true" className="grid size-8 shrink-0 place-items-center rounded-lg bg-lake-500/12 text-lg">{i.icon}</span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-sm font-extrabold">{i.title}</span>
+                        <span className="block text-xs text-ink-soft">{i.where}</span>
+                      </span>
+                      <svg viewBox="0 0 20 20" aria-hidden="true" className="size-4 fill-none stroke-ink-soft stroke-[2.4] transition-transform group-open:rotate-180"><path d="m5 8 5 5 5-5" /></svg>
+                    </summary>
+                    <div className="px-3 pb-3">
+                      <p className="text-xs leading-relaxed">{i.how}</p>
+                      <p className="mt-2.5 text-[11px] font-extrabold tracking-[.08em] text-leaf-700 uppercase">How to avoid it</p>
+                      <ul className="mt-1 space-y-1">
+                        {i.avoid.map((a) => (
+                          <li key={a} className="flex gap-2 text-xs leading-snug">
+                            <span aria-hidden="true" className="mt-0.5 grid size-4 shrink-0 place-items-center rounded-full bg-leaf-700 text-[9px] text-sand-50">✓</span>
+                            {a}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </details>
+                ))}
+              </>
+            ) : (
+              <p className="px-1 text-sm text-ink-soft">Details on what this facility affects are coming soon.</p>
+            )}
+            <p className="px-1 pt-1 text-[11px] text-ink-soft/80">Reported releases (EPA TRI 2024) are mostly legal under permit, not violations.</p>
+          </div>
+        </aside>
       )}
 
       <p

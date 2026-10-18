@@ -1,0 +1,17 @@
+{
+  "name": "SACO AEI",
+  "tri_id": "53081NRTHW322CR",
+  "industry": "Polymer plant",
+  "address": "3220 Crocker Ave, Sheboygan",
+  "lon": -87.74953,
+  "lat": 43.7212,
+  "released": 13579,
+  "air": 13564,
+  "water": 15,
+  "land": 0,
+  "chemicals": [
+    "Methanol",
+    "Maleic anhydride",
+    "Antimony compounds"
+  ]
+}

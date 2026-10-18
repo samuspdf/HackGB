@@ -1,0 +1,49 @@
+{
+  "summary": "Sheboygan's largest air releaser: this coal plant on the lakeshore released about 61,700 lb in 2024. It plans to switch to natural gas in 2028.",
+  "impacts": [
+    {
+      "icon": "🫁",
+      "title": "Air & breathing",
+      "where": "Within 1 mile: 4,691 residents, 5 schools",
+      "how": "About 35,200 lb of ammonia and 25,200 lb of hydrogen fluoride, an acid gas from burning coal, went into the air. Both strongly irritate the eyes, nose and lungs.",
+      "avoid": [
+        "Check the daily air quality index (AirNow), especially on hot, still days",
+        "Keep kids with asthma indoors when the air quality index is orange or worse",
+        "Follow the plant's coal-to-gas conversion and comment when it comes up for review"
+      ]
+    },
+    {
+      "icon": "🐟",
+      "title": "Lake Michigan fish",
+      "where": "Lake Michigan",
+      "how": "The plant released 6.3 lb of mercury and 45 lb of lead. Both settle onto the lake and build up in fish. Lake Michigan's mercury advisory comes mostly from regional and global sources, so this plant is one possible contributor.",
+      "avoid": [
+        "Follow the Lake Michigan fish advisory (DNR Choose Wisely) before eating your catch",
+        "Keep smaller, younger fish",
+        "Pregnant people and kids should be extra careful with fish meals"
+      ]
+    },
+    {
+      "icon": "🌫️",
+      "title": "Smog",
+      "where": "Lakeshore Sheboygan County",
+      "how": "Burning coal gives off nitrogen oxides, which form ground-level ozone (smog) on sunny days. Lakeshore Sheboygan County doesn't meet the federal ozone standard. Much of that ozone also blows in from Chicago and Milwaukee.",
+      "avoid": [
+        "Plan outdoor exercise for mornings on hot, sunny days",
+        "Check the daily air quality index (AirNow), especially on hot, still days",
+        "Drive less on ozone action days"
+      ]
+    },
+    {
+      "icon": "🏖️",
+      "title": "Lake water & beaches",
+      "where": "Lake Michigan shoreline by the plant",
+      "how": "The plant's water permit was out of compliance in 10 of the last 12 quarters. Most of that was late reports, but its discharge broke the pH limit three times and the solids limit once. Small amounts of barium, lead and vanadium also reached the lake.",
+      "avoid": [
+        "Check DNR Beach Health before swimming",
+        "Rinse off after swimming",
+        "Report discolored water near the plant to the DNR"
+      ]
+    }
+  ]
+}

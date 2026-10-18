@@ -1,4 +1,4 @@
-// Map data produced by data_pipeline/build_basemap.py into public/data/.
+// Map data produced by background/build_basemap.py into public/data/.
 // Coordinates are kilometres on a local projection: x = east, y = north.
 
 /** Flat ring: [x0, y0, x1, y1, ...] */
@@ -16,28 +16,48 @@ export interface Place {
   study: boolean;
 }
 
+type Vec3 = [number, number, number];
+
+/** A facility's 3D model: cities/<city>/<company>/model.json (local units; x along the water, +z away from it) */
+export interface FacilityModel {
+  scale: number;
+  /** Width and depth of the site, for setting it on the ground */
+  footprint: [number, number];
+  /** Size of the orange glow on the ground */
+  halo: [number, number];
+  /** Where the name label sits */
+  label: Vec3;
+  /** Smokestack tops that puff smoke */
+  smoke: Vec3[];
+  parts: { name: string; shape: "box" | "roof" | "cylinder" | "stack" | "cone"; color: string; at: Vec3; size: Vec3; glow?: boolean }[];
+}
+
+/** What a facility's releases touch in daily life: cities/<city>/<company>/impacts.json */
+export interface Impacts {
+  summary: string;
+  impacts: { icon: string; title: string; where: string; how: string; avoid: string[] }[];
+}
+
 /** A study facility drawn as a 3D building (EPA TRI 2024, on-site releases in lb) */
 export interface Facility {
   name: string;
   city: string;
   tri_id: string;
   industry: string;
-  address: string;
   released: number;
   air: number;
   water: number;
-  land: number;
-  chemicals: string[];
   /** Site centre (km), moved just off the river bank */
   x: number;
   y: number;
   /** Scene rotation (radians about up): the model's +z faces away from the river */
   rot: number;
+  model: FacilityModel;
+  impacts?: Impacts;
 }
 
 export interface County {
   name: string;
-  geoid: string;
   rings: Polygon[];
   label: { x: number; y: number };
 }
@@ -55,7 +75,6 @@ export interface SceneData {
     cols: number;
     rows: number;
     cell: number;
-    exaggeration: number;
     file: string;
     texture: string;
     water: string;
@@ -68,10 +87,10 @@ export interface SceneData {
   borders: { county: Ring[]; state: Ring[]; other: Ring[] };
   facilities: Facility[];
   /** Real Wisconsin Lake Michigan lighthouses */
-  lighthouses: { name: string; x: number; y: number }[];
+  lighthouses: { x: number; y: number }[];
   /** Flat records: x0, y0, x1, y1 (route ends), kind (0 sailboat, 1 freighter), phase */
   boats: number[];
-  lakes: { name: string; level: number; rings: Polygon[] }[];
+  lakes: { level: number; rings: Polygon[] }[];
   rivers: Ring[];
   places: Place[];
   labels: MapLabel[];
