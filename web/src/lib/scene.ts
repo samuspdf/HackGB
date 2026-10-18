@@ -16,6 +16,25 @@ export interface Place {
   study: boolean;
 }
 
+/** A study facility drawn as a 3D building (EPA TRI 2024, on-site releases in lb) */
+export interface Facility {
+  name: string;
+  city: string;
+  tri_id: string;
+  industry: string;
+  address: string;
+  released: number;
+  air: number;
+  water: number;
+  land: number;
+  chemicals: string[];
+  /** Site centre (km), moved just off the river bank */
+  x: number;
+  y: number;
+  /** Scene rotation (radians about up): the model's +z faces away from the river */
+  rot: number;
+}
+
 export interface County {
   name: string;
   geoid: string;
@@ -32,11 +51,22 @@ export interface MapLabel {
 
 export interface SceneData {
   frame: { width: number; height: number };
-  terrain: { cols: number; rows: number; cell: number; exaggeration: number; file: string; texture: string; water: string };
+  terrain: {
+    cols: number;
+    rows: number;
+    cell: number;
+    exaggeration: number;
+    file: string;
+    texture: string;
+    water: string;
+    /** Fog mask: the surroundings fade out 200 miles from Wisconsin */
+    fade: string;
+  };
   wisconsin: Polygon[];
   counties: County[];
   /** Border lines drawn only over land (never along the coast) */
   borders: { county: Ring[]; state: Ring[]; other: Ring[] };
+  facilities: Facility[];
   /** Real Wisconsin Lake Michigan lighthouses */
   lighthouses: { name: string; x: number; y: number }[];
   /** Flat records: x0, y0, x1, y1 (route ends), kind (0 sailboat, 1 freighter), phase */
@@ -76,6 +106,8 @@ export interface LoadedMap {
   textureUrl: string;
   /** Distance-from-shore texture for the water shader */
   waterUrl: string;
+  /** Fog mask texture (0 = shown, 1 = fogged) */
+  fadeUrl: string;
 }
 
 export async function loadMap(base = "/data"): Promise<LoadedMap> {
@@ -106,5 +138,6 @@ export async function loadMap(base = "/data"): Promise<LoadedMap> {
     terrain: { cols, rows, cell, width, height, heights, heightAt },
     textureUrl: `${base}/${data.terrain.texture}`,
     waterUrl: `${base}/${data.terrain.water}`,
+    fadeUrl: `${base}/${data.terrain.fade}`,
   };
 }

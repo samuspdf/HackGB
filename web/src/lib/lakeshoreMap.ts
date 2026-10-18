@@ -33,6 +33,8 @@ interface MapOptions {
 const FOV = 35;
 const MAX_TILT = 1.15; // radians from straight down
 const MIN_TILT = 0.0005; // a hair off vertical so the camera always knows which way it faces
+const SITE_MIN_DIST = 9; // closest zoom (km) around a study facility
+const MILL_SCALE = 1.7; // facilities are drawn larger than life so they stand out from the city
 const TREE_SCALE = 0.5; // trees are stylised: big enough to read from afar, not towering over houses
 
 const PALETTE = {
@@ -85,6 +87,15 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   const wiCenter = wiBounds.getCenter(new THREE.Vector2()).add(new THREE.Vector2(35, 0));
   const wiSize = wiBounds.getSize(new THREE.Vector2());
 
+  // Zoom limits: closest = about one typical county across the screen;
+  // farthest = Wisconsin spanning 80% of the screen
+  const WI_SCREEN_SHARE = 0.8;
+  const countyAreas = data.counties
+    .map((c) => c.rings.reduce((sum, poly) => sum + Math.abs(ringArea(poly[0])), 0))
+    .sort((a, b) => a - b);
+  const countySpan = Math.sqrt(countyAreas[Math.floor(countyAreas.length / 2)]); // median county, km across
+  let countyMin = Infinity; // camera distance at which one county fills the screen (set in updateBounds)
+
   const controls = new MapControls(camera, renderer.domElement);
   controls.enableDamping = true;
   controls.dampingFactor = 0.12;
@@ -93,7 +104,6 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   controls.zoomSpeed = 1.6;
   controls.panSpeed = 1.1;
   controls.rotateSpeed = 0.7;
-  controls.minDistance = 4;
   controls.maxPolarAngle = MAX_TILT;
   controls.keyPanSpeed = 22;
   controls.listenToKeyEvents(window);
@@ -101,7 +111,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   const home = () => {
     const aspect = camera.aspect || 1;
     const fit = Math.max((wiSize.y * 0.62) / tanHalf, (wiSize.x * 0.62) / (tanHalf * aspect));
-    const dist = Math.min(fit, controls.maxDistance);
+    const dist = THREE.MathUtils.clamp(fit, controls.minDistance, controls.maxDistance);
     const target = new THREE.Vector3(wiCenter.x, 0, -wiCenter.y);
     return { target, position: target.clone().add(new THREE.Vector3(0, dist, 0.001)) };
   };
@@ -132,7 +142,30 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   const landTex = track(new THREE.TextureLoader().load(map.textureUrl, () => (renderer.shadowMap.needsUpdate = true)));
   landTex.colorSpace = THREE.SRGBColorSpace;
   landTex.anisotropy = renderer.capabilities.getMaxAnisotropy();
-  const terrainMesh = new THREE.Mesh(terrainGeo, toon({ map: landTex }));
+  // Beyond 200 miles from Wisconsin the map dissolves into warm fog (mask baked by the pipeline)
+  const fadeTex = track(new THREE.TextureLoader().load(map.fadeUrl));
+  fadeTex.colorSpace = THREE.NoColorSpace;
+  const fadeUniforms = {
+    uFade: { value: fadeTex },
+    uFadeColor: { value: new THREE.Vector3(0xef / 255, 0xe3 / 255, 0xd5 / 255) }, // output-space colour
+    uFrame: { value: new THREE.Vector2(W, H) },
+  };
+  const terrainMat = toon({ map: landTex });
+  terrainMat.onBeforeCompile = (shader) => {
+    Object.assign(shader.uniforms, fadeUniforms);
+    shader.vertexShader = `uniform vec2 uFrame;\nvarying vec2 vFadeUv;\n${shader.vertexShader}`.replace(
+      "#include <worldpos_vertex>",
+      `#include <worldpos_vertex>
+      vec4 fadeWorld = modelMatrix * vec4(transformed, 1.0);
+      vFadeUv = vec2(fadeWorld.x / uFrame.x + 0.5, 0.5 - fadeWorld.z / uFrame.y);`,
+    );
+    shader.fragmentShader = `uniform sampler2D uFade;\nuniform vec3 uFadeColor;\nvarying vec2 vFadeUv;\n${shader.fragmentShader}`.replace(
+      "#include <dithering_fragment>",
+      `gl_FragColor.rgb = mix(gl_FragColor.rgb, uFadeColor, texture2D(uFade, vFadeUv).r);
+      #include <dithering_fragment>`,
+    );
+  };
+  const terrainMesh = new THREE.Mesh(terrainGeo, terrainMat);
   terrainMesh.castShadow = terrainMesh.receiveShadow = true;
   scene.add(terrainMesh);
 
@@ -148,6 +181,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     uShallow: { value: new THREE.Color(0x8fcbef) },
     uMid: { value: new THREE.Color(0x5b8fd8) },
     uDeep: { value: new THREE.Color(0x3d5fb2) },
+    ...fadeUniforms,
     ...THREE.UniformsLib.fog,
   };
   const waterMat = track(
@@ -174,6 +208,8 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
         varying vec2 vWorld;
         #include <fog_pars_fragment>
         uniform float uFar;
+        uniform sampler2D uFade;
+        uniform vec3 uFadeColor;
         float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
         float waveMarks(vec2 p, float density) {
           vec2 cell = floor(p);
@@ -196,6 +232,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
           col = mix(col, vec3(0.97, 0.98, 1.0), 1.0 - smoothstep(foamEdge * 0.4, foamEdge, d));
           gl_FragColor = vec4(col, 1.0);
           #include <colorspace_fragment>
+          gl_FragColor.rgb = mix(gl_FragColor.rgb, uFadeColor, texture2D(uFade, vUv).r); // 200-mile fog
           #include <fog_fragment>
         }`,
     }),
@@ -427,6 +464,134 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     scene.add(post, pin, pulse);
     pulses.push(pulse);
   }
+
+  // ---------------------------------------------------------------- study facilities
+  // Each study facility is a stylised paper mill on its real site, wrapped in a pulsing orange glow.
+  // Local frame: x runs along the river, +z points away from it (the pipeline sets the rotation).
+  const GLOW_M = 0.05; // glow shell thickness (model units)
+  const glowMat = track(
+    new THREE.MeshBasicMaterial({ color: 0xff8a2a, transparent: true, opacity: 0.55, side: THREE.BackSide, depthWrite: false }),
+  );
+  const haloUniforms = { uStrength: { value: 0.75 } };
+  const haloMat = track(
+    new THREE.ShaderMaterial({
+      uniforms: haloUniforms,
+      transparent: true,
+      depthWrite: false,
+      vertexShader: "varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }",
+      fragmentShader: `
+        uniform float uStrength; varying vec2 vUv;
+        void main() {
+          float d = length(vUv - 0.5) * 2.0;
+          float a = pow(clamp(1.0 - d, 0.0, 1.0), 1.6) * uStrength;
+          gl_FragColor = vec4(1.0, 0.56, 0.2, a);
+        }`,
+    }),
+  );
+  const mill = {
+    wall: toon({ color: 0xe6d6bf }),
+    wall2: toon({ color: 0xd3c4b1 }),
+    roof: toon({ color: 0x6f6a85 }),
+    stack: toon({ color: 0xece5d9 }),
+    band: toon({ color: 0xc0392b }),
+    tank: toon({ color: 0xf4eee3 }),
+    pad: toon({ color: 0xb9b0a6 }),
+    rim: toon({ color: 0xa99c9a }),
+    pool: toon({ color: 0x6f9a8c }),
+    chips: toon({ color: 0xc08f55 }),
+  };
+  const millGeo = {
+    box: track(new THREE.BoxGeometry(1, 1, 1).translate(0, 0.5, 0)),
+    roof: track(gableRoof()),
+    cyl: track(new THREE.CylinderGeometry(0.5, 0.5, 1, 20).translate(0, 0.5, 0)),
+    stack: track(new THREE.CylinderGeometry(0.36, 0.5, 1, 16).translate(0, 0.5, 0)),
+    cone: track(new THREE.ConeGeometry(0.5, 1, 20).translate(0, 0.5, 0)),
+    halo: track(new THREE.PlaneGeometry(1, 1).rotateX(-Math.PI / 2)),
+    puff: track(new THREE.IcosahedronGeometry(1, 1)),
+  };
+  const puffs: { mesh: THREE.Mesh<THREE.BufferGeometry, THREE.MeshToonMaterial>; top: THREE.Vector3; phase: number }[] = [];
+  const facilityTops: THREE.Vector3[] = [];
+  for (const f of data.facilities) {
+    const g = new THREE.Group();
+    // Sit on the highest ground under the footprint; the concrete pad reaches down over any slope
+    let base = 0;
+    for (const [u, v] of [[0, 0], [-1.3, -0.9], [1.3, -0.9], [-1.3, 0.9], [1.3, 0.9]]) {
+      const x = f.x + MILL_SCALE * (u * Math.cos(f.rot) + v * Math.sin(f.rot));
+      const y = f.y + MILL_SCALE * (u * Math.sin(f.rot) - v * Math.cos(f.rot));
+      base = Math.max(base, ground(x, y));
+    }
+    g.position.set(f.x, base, -f.y);
+    g.rotation.y = f.rot;
+    g.scale.setScalar(MILL_SCALE);
+    const part = (geo: THREE.BufferGeometry, mat: THREE.Material, x: number, z: number, w: number, h: number, d: number, y = 0, glow = true) => {
+      const m = new THREE.Mesh(geo, mat);
+      m.position.set(x, y, z);
+      m.scale.set(w, h, d);
+      m.castShadow = m.receiveShadow = true;
+      g.add(m);
+      if (glow) {
+        const shell = new THREE.Mesh(geo, glowMat);
+        shell.position.set(x, y - GLOW_M, z);
+        shell.scale.set(w + 2 * GLOW_M, h + 2 * GLOW_M, d + 2 * GLOW_M);
+        g.add(shell);
+      }
+      return m;
+    };
+    const hall = (x: number, z: number, w: number, h: number, d: number, mat: THREE.Material) => {
+      part(millGeo.box, mat, x, z, w, h, d);
+      part(millGeo.roof, mill.roof, x, z, w * 1.04, 0.16, d * 1.08, h);
+    };
+    part(millGeo.box, mill.pad, 0, 0, 2.7, 0.46, 1.9, -0.4, false); // concrete yard
+    hall(-0.2, 0.1, 1.55, 0.42, 0.5, mill.wall); // paper machine hall
+    hall(-0.5, 0.62, 0.95, 0.3, 0.42, mill.wall2); // finishing + warehouse
+    part(millGeo.box, mill.wall2, 0.78, 0.5, 0.44, 0.72, 0.4); // boiler house
+    part(millGeo.box, mill.roof, 0.78, 0.5, 0.46, 0.04, 0.42, 0.72, false);
+    // Smokestacks with red bands near the top
+    for (const [x, z, r, h] of [[0.86, 0.82, 0.075, 2.0], [0.62, 0.88, 0.062, 1.55]]) {
+      part(millGeo.stack, mill.stack, x, z, r * 2, h, r * 2, 0, false); // too thin for a glow shell
+      part(millGeo.cyl, mill.band, x, z, r * 1.62, 0.12, r * 1.62, h - 0.2, false);
+      const top = new THREE.Vector3(x, h, z);
+      for (let i = 0; i < 4; i++) {
+        const mesh = new THREE.Mesh(millGeo.puff, toon({ color: 0xf7f3ea, transparent: true, depthWrite: false }));
+        g.add(mesh);
+        puffs.push({ mesh, top, phase: i / 4 });
+      }
+    }
+    // Pulp digesters / storage tanks
+    for (const x of [0.48, 0.8, 1.1]) {
+      part(millGeo.cyl, mill.tank, x, -0.28, 0.26, 0.62, 0.26);
+      part(millGeo.cone, mill.tank, x, -0.28, 0.27, 0.12, 0.27, 0.62);
+    }
+    // Wastewater clarifiers on the river side (most of this mill's releases go to water)
+    for (const [x, z, r] of [[-0.75, -0.55, 0.26], [-0.18, -0.6, 0.22]]) {
+      part(millGeo.cyl, mill.rim, x, z, r * 2, 0.09, r * 2, 0, false);
+      part(millGeo.cyl, mill.pool, x, z, r * 1.8, 0.02, r * 1.8, 0.08, false);
+    }
+    // Wood chip piles
+    part(millGeo.cone, mill.chips, 0.95, 0.05 - 0.65, 0.5, 0.24, 0.5, 0, false);
+    part(millGeo.cone, mill.chips, 1.15, -0.72, 0.36, 0.18, 0.36, 0, false);
+    // Soft orange glow on the ground around the site
+    const halo = new THREE.Mesh(millGeo.halo, haloMat);
+    halo.position.y = 0.07;
+    halo.scale.set(4.6, 1, 3.8);
+    halo.renderOrder = 1;
+    g.add(halo);
+    scene.add(g);
+    g.updateMatrixWorld(true);
+    facilityTops.push(new THREE.Vector3(0.86, 2.35, 0.82).applyMatrix4(g.matrixWorld));
+  }
+  function updateFacilities(time: number) {
+    const pulse = 0.5 + 0.5 * Math.sin(time * 2.4);
+    glowMat.opacity = 0.55 + 0.35 * pulse;
+    haloUniforms.uStrength.value = 0.7 + 0.3 * pulse;
+    for (const p of puffs) {
+      const t = (time * 0.22 + p.phase) % 1;
+      p.mesh.position.set(p.top.x + t * 0.45, p.top.y + 0.05 + t * 0.85, p.top.z - t * 0.1);
+      p.mesh.scale.setScalar(0.07 + t * 0.2);
+      p.mesh.material.opacity = 0.85 * (1 - t) * Math.min(1, t * 6);
+    }
+  }
+  updateFacilities(0);
 
   // ---------------------------------------------------------------- lighthouses
   const beams: THREE.Object3D[] = [];
@@ -662,10 +827,21 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     }
     // Only the three study cities are named; their signs are clickable
     for (const p of data.places.filter((q) => q.study)) labelLayer.add(p.name, "sign", at3(p.x, p.y, ground(p.x, p.y) + 2.6), p);
+    data.facilities.forEach((f, i) => labelLayer.add(f.name, "facility", facilityTops[i]));
     labelsBuilt = true;
   });
-  const labelVisible = (dist: number) => (kind: LabelKind) =>
-    kind === "county" ? dist < 260 : kind === "state" ? dist > 140 : kind === "neighbor" ? dist > 90 : true;
+  // Zoomed in on a city (about a county across or closer): its facilities are named, the city signs step aside.
+  // Zoomed out: the city signs return and facility names hide.
+  const labelVisible = (dist: number) => {
+    const cityView = dist < countyMin * 1.4;
+    return (kind: LabelKind) =>
+      kind === "sign" ? !cityView
+      : kind === "facility" ? cityView
+      : kind === "county" ? dist < 260
+      : kind === "state" ? dist > 140
+      : kind === "neighbor" ? dist > 90
+      : true;
+  };
 
   // ---------------------------------------------------------------- camera flights
   interface Flight {
@@ -697,7 +873,12 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     const e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
     const { from, to } = flight;
     controls.target.lerpVectors(from.target, to.target, e);
-    const r = Math.min(THREE.MathUtils.lerp(from.dist, to.dist, e) + Math.sin(Math.PI * t) * flight.lift, controls.maxDistance);
+    const r = THREE.MathUtils.clamp(
+      THREE.MathUtils.lerp(from.dist, to.dist, e) + Math.sin(Math.PI * t) * flight.lift,
+      // The zoom limit moves with the view (closer around facilities): a flight may always reach its own end
+      Math.min(controls.minDistance, to.dist),
+      controls.maxDistance,
+    );
     spherical.set(
       r,
       // Never exactly 0: looking perfectly straight down loses the heading
@@ -715,11 +896,17 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   }
 
   function focusPlace(place: Place) {
-    const target = new THREE.Vector3(place.x, ground(place.x, place.y), -place.y);
-    const dist = place.pop >= 100000 ? 34 : place.pop >= 20000 ? 22 : place.pop >= 5000 ? 14 : 9;
+    // Study cities with a mapped facility: land right over the facility, close enough to see the building
+    const sites = data.facilities.filter((f) => f.city === place.name);
+    const fx = sites.length ? sites.reduce((a, f) => a + f.x, 0) / sites.length : place.x;
+    const fy = sites.length ? sites.reduce((a, f) => a + f.y, 0) / sites.length : place.y;
+    const target = new THREE.Vector3(fx, ground(fx, fy), -fy);
+    const dist = sites.length
+      ? SITE_MIN_DIST * 2
+      : controls.minDistance * (place.pop >= 100000 ? 1.25 : 1); // as close as the zoom-in limit allows
     const travel = target.distanceTo(controls.target);
     const now = currentView();
-    flyTo({ target, dist, polar: 0.62 }, 1500 + Math.min(travel, 600) * 1.2, Math.max(0, travel * 0.55 - (now.dist - dist) * 0.3));
+    flyTo({ target, dist, polar: sites.length ? 0.68 : 0.62 }, 1500 + Math.min(travel, 600) * 1.2, Math.max(0, travel * 0.55 - (now.dist - dist) * 0.3));
     opts.onFocus?.(place);
     hideHint();
   }
@@ -826,9 +1013,24 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   }
 
   // ---------------------------------------------------------------- keep the view on the map
-  // The view may be turned any way, so the larger half-extent of the screen must fit the smaller map side
   function updateBounds() {
-    controls.maxDistance = Math.min(W, H) / 2 / (tanHalf * Math.max(camera.aspect, 1));
+    const aspect = camera.aspect || 1;
+    // Closest: one typical county fills the shorter side of the screen —
+    // except around a study facility, where you can come down to street-block scale
+    countyMin = countySpan / 2 / (tanHalf * Math.min(1, aspect));
+    let nearSite = Infinity;
+    for (const f of data.facilities) nearSite = Math.min(nearSite, Math.hypot(f.x - controls.target.x, f.y + controls.target.z));
+    controls.minDistance = THREE.MathUtils.lerp(SITE_MIN_DIST, countyMin, THREE.MathUtils.smoothstep(nearSite, 8, 30));
+    // Farthest: Wisconsin (turned to the current heading) spans 80% of the screen…
+    const az = Math.atan2(camera.position.x - controls.target.x, camera.position.z - controls.target.z);
+    const c = Math.abs(Math.cos(az));
+    const s = Math.abs(Math.sin(az));
+    const wiW = wiSize.x * c + wiSize.y * s;
+    const wiH = wiSize.x * s + wiSize.y * c;
+    const wiFit = Math.max(wiH / (2 * WI_SCREEN_SHARE * tanHalf), wiW / (2 * WI_SCREEN_SHARE * tanHalf * aspect));
+    // …and never so far that the map's edge shows (the view may be turned any way)
+    const frameFit = Math.min(W, H) / 2 / (tanHalf * Math.max(aspect, 1));
+    controls.maxDistance = Math.max(Math.min(wiFit, frameFit), controls.minDistance * 1.5);
   }
   // Steepest tilt that keeps the far edge of the view on the map (never the sky or the map's edge)
   const vHalf = THREE.MathUtils.degToRad(FOV / 2);
@@ -916,6 +1118,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   const frame = (now: number) => {
     const dt = Math.min(clock.getDelta(), 0.1);
     const time = clock.elapsedTime;
+    updateBounds(); // zoom limits follow the heading (Wisconsin is taller than it is wide)
     if (flight) stepFlight(now);
     else controls.update();
 
@@ -937,6 +1140,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
       updateBirds(time, dt);
       updateBoats(time, dt);
       for (const beam of beams) beam.rotation.y += dt * 0.9;
+      updateFacilities(time);
       const p = (time % 2.2) / 2.2;
       for (const pulse of pulses) {
         pulse.scale.setScalar(1 + p * 1.4);
@@ -1060,6 +1264,16 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     }
     return p;
   }
+}
+
+/** Signed area of a flat ring (shoelace formula), km² */
+function ringArea(flat: Ring) {
+  let a = 0;
+  for (let i = 0; i < flat.length; i += 2) {
+    const j = (i + 2) % flat.length;
+    a += flat[i] * flat[j + 1] - flat[j] * flat[i + 1];
+  }
+  return a / 2;
 }
 
 function forPoints(flat: Ring, fn: (x: number, y: number) => void) {

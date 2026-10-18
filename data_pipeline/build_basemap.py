@@ -13,7 +13,8 @@ Outputs (web/public/data/):
   terrain.bin   Int16 heights (scene km x100, row 0 = north)
   land.webp     painted ground texture covering the frame (with baked hillshade)
   water.png     distance from shore for the water shader
-  scene.json    places, counties, lakes, rivers, labels and scattered objects
+  fade.png      fog mask: surroundings fade out 200 miles from Wisconsin
+  scene.json    places, counties, lakes, rivers, labels, study facilities and scattered objects
 """
 import json
 import math
@@ -23,6 +24,7 @@ import numpy as np
 import pandas as pd
 import shapefile
 import shapely
+import shapely.ops
 from PIL import Image, ImageDraw, ImageFilter
 from scipy import ndimage
 from shapely.geometry import LineString, MultiPolygon, Point, Polygon, box, shape
@@ -44,6 +46,15 @@ TEX_PX = 4096            # ground texture width
 GREAT_LAKES = {"Lake Michigan", "Lake Superior", "Lake Huron", "Whitefish Bay", "St. Marys River", "Lake Erie",
                "Georgian Bay", "Lake St. Clair", "North Channel"}
 STUDY_CITIES = {"Green Bay": "Brown", "Manitowoc": "Manitowoc", "Sheboygan": "Sheboygan"}
+# Study facilities drawn as 3D buildings (EPA TRI 2024, research/facility_lists/). Releases in lb, on-site.
+FACILITIES = [
+    {"name": "Georgia-Pacific Broadway", "city": "Green Bay", "tri_id": "54307FRTHW1919S", "industry": "Paper mill",
+     "address": "1919 S Broadway, Green Bay", "lon": -88.03754, "lat": 44.49249,
+     "released": 249103, "air": 18647, "water": 230457, "land": 0,
+     "chemicals": ["Nitrate compounds", "Methanol", "Ammonia"]},
+]
+SITE_GAP_KM = 2.0        # factory footprint centre stays this far from a river
+SITE_CLEAR_KM = 3.0      # no generic buildings this close to a factory (trees: a little further)
 rng = np.random.default_rng(7)
 
 
@@ -209,7 +220,24 @@ places = sorted((p for p in places if p["pop"] >= MIN_TOWN_POP or p["name"] in S
 river_geom = unary_union([to_km_geom(shape(f["geometry"])) for f in json.load(open(GEO / "ne_10m_rivers.geojson"))["features"]
                           if f["properties"].get("scalerank", 9) <= 9]).intersection(wisconsin.buffer(-1.5))
 rivers = lines_out(river_geom.simplify(0.3))
-no_build = prep(unary_union([river_geom.buffer(0.45)] + [g.buffer(0.2) for _, g in inland]))
+
+# Factory sites: nudged off the river (the real mills sit right on the bank), long side along the river
+sites = []
+for f in FACILITIES:
+    p = Point(km(f["lon"], f["lat"]))
+    near = shapely.ops.nearest_points(river_geom, p)[0]
+    ax, ay = p.x - near.x, p.y - near.y
+    d = math.hypot(ax, ay) or 1.0
+    ax, ay = ax / d, ay / d
+    if d < SITE_GAP_KM:
+        p = Point(near.x + ax * SITE_GAP_KM, near.y + ay * SITE_GAP_KM)
+    # rot turns the model so its local +z points away from the river (scene rotation.y)
+    sites.append({**f, "x": p.x, "y": p.y, "rot": math.atan2(ax, -ay)})
+
+no_build = prep(unary_union([river_geom.buffer(0.45)] + [g.buffer(0.2) for _, g in inland]
+                            + [Point(f["x"], f["y"]).buffer(SITE_CLEAR_KM) for f in sites]))
+# No scenery (trees, rocks, bushes, barns…) in or right beside lakes and rivers
+wet = prep(unary_union([river_geom.buffer(0.8)] + [g.buffer(0.5) for _, g in inland]))
 
 # ---------------------------------------------------------------- buildings
 # kind: 0 = house (pitched roof), 1 = low block, 2 = tower
@@ -255,7 +283,8 @@ for pl in places:
 
 # ---------------------------------------------------------------- scattered nature
 built = prep(unary_union([pl["geom"].buffer(0.4) for pl in places if pl["pop"] >= 1500]
-                         + [Point(pl["x"], pl["y"]).buffer(1.2) for pl in places]))
+                         + [Point(pl["x"], pl["y"]).buffer(1.2) for pl in places]
+                         + [Point(f["x"], f["y"]).buffer(SITE_CLEAR_KM + 0.8) for f in sites]))
 north = np.clip((Y - (-140)) / 330, 0, 1)   # 0 in southern WI, 1 in the far north
 
 
@@ -275,7 +304,7 @@ def scatter(count, density, min_gap, tries=60):
             if any((q := grid.get((key[0] + i, key[1] + j))) and (x - q[0]) ** 2 + (y - q[1]) ** 2 < min_gap ** 2
                    for i in (-1, 0, 1) for j in (-1, 0, 1)):
                 continue
-            if built.contains(Point(x, y)):
+            if built.contains(Point(x, y)) or wet.contains(Point(x, y)):
                 continue
             grid[key] = (x, y)
             out.append((x, y))
@@ -292,7 +321,9 @@ rock_sites = scatter(420, rocky ** 1.5 + 0.004 * land_ok, 4.0)
 rocks = []
 for x, y in rock_sites:
     for _ in range(int(rng.integers(2, 5))):
-        rocks.append([x + rng.normal(0, 0.45), y + rng.normal(0, 0.45), round(rng.uniform(0.35, 0.9), 2), round(rng.uniform(0, 6.28), 2)])
+        rx, ry = x + rng.normal(0, 0.45), y + rng.normal(0, 0.45)
+        if not wet.contains(Point(rx, ry)):   # clustered rocks must stay out of the water too
+            rocks.append([rx, ry, round(rng.uniform(0.35, 0.9), 2), round(rng.uniform(0, 6.28), 2)])
 
 woods = forest * (forest > 0.35)
 logs = [[x, y, round(rng.uniform(0, 6.28), 2), round(rng.uniform(0.8, 1.4), 2)] for x, y in scatter(420, woods, 5)]
@@ -357,6 +388,15 @@ Image.fromarray(np.clip(tex, 0, 255).astype(np.uint8)).filter(ImageFilter.SMOOTH
 water_px_d = np.clip(-sdf_px, 0, None)
 Image.fromarray(np.clip(water_px_d / 40 * 255, 0, 255).astype(np.uint8)).resize((TW // 2, TH // 2), Image.BILINEAR).save(OUT / "water.png", optimize=True)
 
+# Only show the surroundings out to 200 miles from Wisconsin; beyond that the map fades into fog.
+# fade.png: 0 = fully shown, 255 = fully fogged
+REACH_KM = 322                       # 200 miles
+FADE_KM = 70                         # width of the soft edge
+wi_dist = ndimage.distance_transform_edt(~wi_px) * PX_KM
+fade = np.clip((wi_dist - (REACH_KM - FADE_KM)) / FADE_KM, 0, 1)
+fade = fade * fade * (3 - 2 * fade)  # smoothstep
+Image.fromarray((fade * 255).astype(np.uint8)).resize((TW // 4, TH // 4), Image.BILINEAR).save(OUT / "fade.png", optimize=True)
+
 # ---------------------------------------------------------------- borders (land only — never along the coast)
 county_lines = unary_union([g.boundary for _, _, g in counties]).intersection(wisconsin.buffer(-0.8))
 other_states = to_km_geom(unary_union([g for _, g in read_shapes("cb_2023_us_state_5m.zip", lambda a: a["STUSPS"] != "WI")]).intersection(FRAME))
@@ -370,6 +410,7 @@ other_lines = unary_union(
 # continuous runs, then drop slivers where the coastline datasets disagree
 other_lines = linemerge([ln for ln in getattr(other_lines, "geoms", [other_lines]) if isinstance(ln, LineString)])
 other_lines = unary_union([ln for ln in getattr(other_lines, "geoms", [other_lines]) if ln.length > 4])
+other_lines = other_lines.intersection(wisconsin.buffer(REACH_KM - FADE_KM / 2))   # stop inside the fog edge
 
 # ---------------------------------------------------------------- lighthouses (real Wisconsin Lake Michigan lights)
 LIGHTHOUSES = [
@@ -414,12 +455,14 @@ lbl = lambda text, lon, lat, kind: {"text": text, "kind": kind, **dict(zip("xy",
 scene = {
     "frame": {"width": FRAME_W, "height": FRAME_H},
     "terrain": {"cols": cols, "rows": rows, "cell": CELL_KM, "exaggeration": EXAG, "file": "terrain.bin",
-                "texture": "land.webp", "water": "water.png"},
+                "texture": "land.webp", "water": "water.png", "fade": "fade.png"},
     "wisconsin": polys_out(wisconsin.simplify(0.3), 2),
     "counties": [{"name": n, "geoid": gid, "rings": polys_out(g.simplify(0.25), 0.5),
                   "label": dict(zip("xy", map(r2, g.representative_point().coords[0])))} for n, gid, g in sorted(counties)],
     "borders": {"county": lines_out(county_lines.simplify(0.25)), "state": lines_out(state_line.simplify(0.25)),
                 "other": lines_out(other_lines.simplify(0.3), 2.0)},
+    "facilities": [{k: (r2(v) if k in ("x", "y", "rot") else v) for k, v in f.items() if k not in ("lon", "lat")}
+                   for f in sites],
     "lighthouses": [{"name": l["name"], "x": r2(l["x"]), "y": r2(l["y"])} for l in lighthouses],
     "boats": [v for b in boats for v in map(r2, b)],
     "lakes": lakes_out,

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createLakeshoreMap, type MapController } from "@/lib/lakeshoreMap";
-import { loadMap, type Place } from "@/lib/scene";
+import { loadMap, type Facility, type Place } from "@/lib/scene";
 
 // WebGL support never changes during a visit; null while prerendering on the server
 let webglSupport: boolean | undefined;
@@ -37,6 +37,7 @@ export default function MapView() {
   const [showHint, setShowHint] = useState(true);
   const [focused, setFocused] = useState<Place | null>(null);
   const [source, setSource] = useState("");
+  const [facilities, setFacilities] = useState<Facility[]>([]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -55,6 +56,7 @@ export default function MapView() {
           onFirstInteraction: () => setShowHint(false),
         });
         setSource(map.data.source);
+        setFacilities(map.data.facilities);
         setLoaded(true);
         // Shareable links: ?focus=Green%20Bay flies to a place, ?heading=90 puts east at the top,
         // ?view=x,y,dist jumps to map coordinates in km
@@ -92,6 +94,11 @@ export default function MapView() {
         role="application"
         aria-label="3D map of Wisconsin and Lake Michigan. Drag to move, scroll to zoom, click a city to fly there."
         className="fixed inset-0 z-[1] cursor-grab touch-none active:cursor-grabbing"
+      />
+      {/* Soft fog around the screen edges, in the same warm tone as the 200-mile fog */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-[2] bg-[radial-gradient(ellipse_at_center,transparent_58%,rgb(239_227_213/.55)_85%,rgb(239_227_213/.85)_100%)]"
       />
 
       {status && (
@@ -171,7 +178,26 @@ export default function MapView() {
           <p className="mt-1 text-sm text-ink-soft">
             {focused.county} County · {focused.pop.toLocaleString()} people (2024 est.)
           </p>
-          {focused.study && <p className="mt-1.5 text-sm font-semibold text-leaf-700">5 study facilities · facility details coming next</p>}
+          {focused.study && (
+            <ul className="mt-2.5 space-y-2 border-t border-sand-300 pt-2.5">
+              {facilities
+                .filter((f) => f.city === focused.name)
+                .map((f) => (
+                  <li key={f.tri_id} className="flex gap-2">
+                    <span aria-hidden="true" className="mt-1.5 size-2.5 shrink-0 rounded-full bg-[#e0703a] shadow-[0_0_0_3px_rgb(224_112_58/.25)]" />
+                    <div className="min-w-0">
+                      <p className="text-sm font-bold leading-snug">{f.name}</p>
+                      <p className="text-xs text-ink-soft">
+                        {f.industry} · {f.released.toLocaleString()} lb released on site (2024)
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              <li className="text-xs font-semibold text-leaf-700">
+                {facilities.filter((f) => f.city === focused.name).length} of 5 study facilities mapped so far
+              </li>
+            </ul>
+          )}
         </section>
       )}
 

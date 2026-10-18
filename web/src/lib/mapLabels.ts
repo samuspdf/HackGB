@@ -4,7 +4,7 @@
 
 import * as THREE from "three";
 
-export type LabelKind = "water" | "bay" | "state" | "neighbor" | "county" | "sign";
+export type LabelKind = "water" | "bay" | "state" | "neighbor" | "county" | "sign" | "facility";
 
 interface Style {
   family: "display" | "body";
@@ -25,8 +25,14 @@ const STYLES: Record<LabelKind, Style> = {
   neighbor: { family: "display", weight: 600, size: 14, color: "#8a6238", glow: "#f3e6c4", spacing: 0.08 },
   county: { family: "body", weight: 800, size: 11, color: "rgba(46,94,74,.85)", glow: "#eef4c4", upper: true, spacing: 0.08 },
   sign: { family: "display", weight: 700, size: 15, color: "#fff7ea" },
+  facility: { family: "display", weight: 700, size: 14, color: "#fff7ea" },
 };
-const PRIORITY: Record<LabelKind, number> = { sign: 5, water: 4, state: 3, bay: 2, neighbor: 2, county: 1 };
+// Board colours (edge lip, face) for the labels drawn on a sign
+const BOARDS: Partial<Record<LabelKind, { lip: string; top: string; face: string }>> = {
+  sign: { lip: "#7b4a33", top: "#b8723f", face: "#a8653b" },
+  facility: { lip: "#a8461f", top: "#f08a48", face: "#e0703a" },
+};
+const PRIORITY: Record<LabelKind, number> = { facility: 6, sign: 5, water: 4, state: 3, bay: 2, neighbor: 2, county: 1 };
 const TEXTURE_SCALE = 3; // draw text at 3x for crisp edges on Retina screens
 
 export interface MapLabel<T = unknown> {
@@ -65,7 +71,8 @@ export function createLabelLayer<T>(scene: THREE.Scene, camera: THREE.Perspectiv
     const chars = [...str];
     const widths = chars.map((c) => ctx.measureText(c).width);
     const textW = widths.reduce((a, b) => a + b, 0) + gap * (chars.length - 1);
-    const sign = kind === "sign";
+    const board = BOARDS[kind];
+    const sign = !!board;
     const padX = (sign ? 11 : 6) * k;
     const padY = (sign ? 5 : 4) * k;
     const lineH = s.size * 1.25 * k;
@@ -75,19 +82,19 @@ export function createLabelLayer<T>(scene: THREE.Scene, camera: THREE.Perspectiv
     ctx.textBaseline = "middle";
     const midY = padY + lineH / 2;
 
-    if (sign) {
-      // Wooden sign: dark lip underneath, lighter top board edge
+    if (board) {
+      // Painted board: dark lip underneath, lighter top edge
       const w = canvas.width;
       const h = canvas.height - 3 * k;
       const r = 8 * k;
-      ctx.fillStyle = "#7b4a33";
+      ctx.fillStyle = board.lip;
       roundRect(ctx, 0, 3 * k, w, h, r);
       ctx.fill();
       const grad = ctx.createLinearGradient(0, 0, 0, h);
-      grad.addColorStop(0, "#b8723f");
-      grad.addColorStop(0.12, "#b8723f");
-      grad.addColorStop(0.12, "#a8653b");
-      grad.addColorStop(1, "#a8653b");
+      grad.addColorStop(0, board.top);
+      grad.addColorStop(0.12, board.top);
+      grad.addColorStop(0.12, board.face);
+      grad.addColorStop(1, board.face);
       ctx.fillStyle = grad;
       roundRect(ctx, 0, 0, w, h, r);
       ctx.fill();
@@ -137,7 +144,7 @@ export function createLabelLayer<T>(scene: THREE.Scene, camera: THREE.Perspectiv
       });
       const sprite = new THREE.Sprite(mat);
       sprite.position.copy(position);
-      if (kind === "sign") sprite.center.set(0.5, 0); // signs sit on top of their post
+      if (BOARDS[kind]) sprite.center.set(0.5, 0); // boards sit on top of their post / building
       sprite.renderOrder = 1000 + PRIORITY[kind];
       sprite.visible = false;
       scene.add(sprite);
@@ -172,7 +179,7 @@ export function createLabelLayer<T>(scene: THREE.Scene, camera: THREE.Perspectiv
           if (want) {
             // Screen-space box; higher-priority labels claim space first
             const sx = (p.x * 0.5 + 0.5) * viewportW;
-            const sy = (-p.y * 0.5 + 0.5) * viewportH - (l.kind === "sign" ? h / 2 : 0);
+            const sy = (-p.y * 0.5 + 0.5) * viewportH - (BOARDS[l.kind] ? h / 2 : 0);
             const hw = w / 2 + 3;
             const hh = h / 2 + 2;
             for (let b = 0; b < placed.length && want; b += 4) {
