@@ -94,7 +94,6 @@ export interface SceneData {
   rivers: Ring[];
   places: Place[];
   labels: MapLabel[];
-  /** Flat records — see build_basemap.py for field order */
   trees: number[]; // x, y, size, kind(0 broadleaf, 1 birch)
   rocks: number[]; // x, y, size, rotation
   logs: number[]; // x, y, rotation, length

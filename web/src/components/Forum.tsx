@@ -85,7 +85,7 @@ export default function Forum({ ref, facilities }: { ref?: Ref<ForumHandle>; fac
                 onSubmit={async (e) => (e.preventDefault(), (await send({ company, ...draft })) && setDraft({ name: draft.name, text: "" }))}
                 className="space-y-2 rounded-xl bg-white/60 p-2.5"
               >
-                <p className="text-xs font-extrabold tracking-[.08em] text-autumn-700 uppercase">Comment on {nameOf(company)}</p>
+                <p className="text-xs font-extrabold tracking-[.08em] text-autumn-700 uppercase">Comment on {nameOf(company)} · {facilities.find((f) => f.tri_id === company)?.city}</p>
                 <input value={draft.name} onChange={(e) => setDraft({ ...draft, name: e.target.value })} maxLength={40} placeholder="Your name (optional)" aria-label="Your name" className={field} />
                 <textarea value={draft.text} onChange={(e) => setDraft({ ...draft, text: e.target.value })} maxLength={1000} rows={3} placeholder="What did you notice? What would you like the company to do?" aria-label="Your comment" className={`${field} resize-none`} />
                 <button type="submit" disabled={!draft.text.trim()} className={orange}>Post comment</button>

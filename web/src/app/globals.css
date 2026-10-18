@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Lakeshore Watch — "painted diorama" art style.
-   Palette sampled from inspiration_images/: warm sand backdrops, pastel lavender→pink skies,
+   Palette sampled from the project's style reference images: warm sand backdrops, pastel lavender→pink skies,
    cel-shaded leaf greens with cool blue-violet shadows, and seasonal accents. */
 @theme {
   --color-sand-50: #fbf1de;
@@ -21,7 +21,6 @@
   --font-body: var(--font-nunito), system-ui, sans-serif;
 }
 
-/* html/body height comes from h-full in layout.tsx; margin from Tailwind's preflight */
 body {
   overflow: hidden;
   background: var(--color-sand-100);

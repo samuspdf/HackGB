@@ -7,7 +7,7 @@ import type { Facility, Impacts } from "@/lib/scene";
 
 type Pose = "idle" | "wave" | "present" | "explain" | "think";
 type Mood = "happy" | "excited" | "concerned" | "thinking";
-type Chips = { kind: "cities" } | { kind: "factories"; city: string } | { kind: "more"; id: string };
+type Chips = { kind: "cities" } | { kind: "factories"; city: string } | { kind: "more"; id: string; forum?: boolean };
 type Area = Impacts["impacts"][number];
 interface Message { from: "ruby" | "you"; text: string; chips?: Chips; key?: string }
 export interface AssistantHandle { start(): void; city(name: string): void; facility(f: Facility): void; leave(): void }
@@ -99,11 +99,13 @@ function Ruby({ pose, mood, talking }: { pose: Pose; mood: Mood; talking: boolea
   );
 }
 
-export default function Assistant({ ref, facilities, onCity, onFacility }: {
+export default function Assistant({ ref, facilities, onCity, onFacility, onForum, onExit }: {
   ref?: Ref<AssistantHandle>;
   facilities: Facility[];
   onCity(name: string): void;
   onFacility(id: string): void;
+  onForum(id: string): void; // open the forum on this factory
+  onExit(): void; // she was closed: the map goes back to the start
 }) {
   const [started, setStarted] = useState(false);
   const [open, setOpen] = useState(true);
@@ -115,6 +117,7 @@ export default function Assistant({ ref, facilities, onCity, onFacility }: {
   const [draft, setDraft] = useState("");
   const [shown, setShown] = useState<Facility | null>(null); // the factory Ruby is showing: what it affects, as buttons up top
   const [area, setArea] = useState(""); // the area she's explaining ("" = none yet, so they all glow)
+  const [seen, setSeen] = useState<string[]>([]); // areas already explained for this factory
   const timers = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const place = useRef(""); // what the visitor is looking at, sent along with questions
   const figure = useRef<HTMLDivElement>(null);
@@ -138,28 +141,46 @@ export default function Assistant({ ref, facilities, onCity, onFacility }: {
   };
   const you = (text: string) => setMessages((all) => [...all, { from: "you", text }]);
   // The tappable choices under her latest message: cities, a city's factories, or the other factories + "Another city"
-  type Choice = { label: string; city?: string; id?: string };
+  type Choice = { label: string; city?: string; id?: string; forum?: string };
   const factoryChoices = (list: Facility[]): Choice[] => list.map((f) => ({ label: f.name, id: f.tri_id }));
   const choicesFor = (c: Chips): Choice[] => {
     if (c.kind === "cities") return cities.map((city) => ({ label: city, city }));
     if (c.kind === "factories") return factoryChoices(facilities.filter((f) => f.city === c.city));
     const city = facilities.find((f) => f.tri_id === c.id)?.city;
-    return [...factoryChoices(facilities.filter((f) => f.city === city && f.tri_id !== c.id)), { label: "Another city" }];
+    return [...(c.forum ? [{ label: "💬 Tell them in the forum", forum: c.id }] : []), ...factoryChoices(facilities.filter((f) => f.city === city && f.tri_id !== c.id)), { label: "Another city" }];
   };
   // Picking a choice echoes it as your message, then moves the map (Ruby answers when the map reports back)
-  const pick = ({ label, city, id }: Choice) => {
+  const pick = ({ label, city, id, forum }: Choice) => {
     you(label);
-    if (id) onFacility(id);
+    if (forum) {
+      onForum(forum);
+      setOpen(false); // tuck the chat away so the forum isn't covered; "Ask Ruby" brings it back
+      say("Here's the forum, already set to this factory. Write what you noticed, and the company can reply to you there!", ["present", "happy"], { kind: "more", id: forum });
+    } else if (id) onFacility(id);
     else if (city) onCity(city);
     else say("Sure! Which city next?", ["idle", "happy"], { kind: "cities" }, "cities");
+  };
+
+  const greet = () => {
+    say("Hi, I'm Ruby, your lakeshore guide! I'll show you what the factories along Lake Michigan release, and what it touches in daily life. Which city would you like to explore?", ["wave", "happy"], { kind: "cities" }, "cities");
+    later("wave", 2600, () => setPose((p) => (p === "wave" ? "idle" : p)));
+  };
+  // The X: clears her chat, minimizes her to "Ask Ruby" and flies the map back to the start
+  const exit = () => {
+    setMessages([]);
+    setShown(null);
+    setOpen(false);
+    setPose("idle");
+    setMood("happy");
+    place.current = "";
+    onExit();
   };
 
   useImperativeHandle(ref, () => ({
     start() {
       if (started) return;
       setStarted(true);
-      say("Hi, I'm Ruby, your lakeshore guide! I'll show you what the factories along Lake Michigan release, and what it touches in daily life. Which city would you like to explore?", ["wave", "happy"], { kind: "cities" }, "cities");
-      later("wave", 2600, () => setPose((p) => (p === "wave" ? "idle" : p)));
+      greet();
     },
     city(name) {
       place.current = name;
@@ -170,17 +191,21 @@ export default function Assistant({ ref, facilities, onCity, onFacility }: {
       place.current = `${f.name} (${f.city})`;
       setShown(f);
       setArea("");
+      setSeen([]);
       say(`${f.name} is ${/^[aeiou]/i.test(f.industry) ? "an" : "a"} ${f.industry.toLowerCase()} in ${f.city}. ${f.impacts?.summary ?? ""} Check the glowing buttons at the top: those are the areas it affects. Tap one and I'll explain it!`, ["explain", "concerned"], { kind: "more", id: f.tri_id }, `facility:${f.tri_id}`);
     },
     leave: () => setShown(null),
   }));
 
-  // Tapping an affected area up top: Ruby explains how it's affected and how to avoid it
+  // Tapping an affected area up top: Ruby explains how it's affected and how to avoid it.
+  // Once every area has been seen, she invites you to tell the company in the forum.
   const explain = (a: Area, f: Facility) => {
+    const all = [...new Set([...seen, a.title])], done = all.length === f.impacts?.impacts.length;
     setOpen(true);
     setArea(a.title);
+    setSeen(all);
     you(`${a.icon} ${a.title}`);
-    say(`${a.title} (${a.where}): ${a.how}\n\nHow to protect yourself:\n${a.avoid.map((x) => `• ${x}`).join("\n")}`, ["explain", "concerned"], { kind: "more", id: f.tri_id }, `area:${a.title}`);
+    say(`${a.title} (${a.where}): ${a.how}\n\nHow to protect yourself:\n${a.avoid.map((x) => `• ${x}`).join("\n")}${done ? `\n\nThat's everything ${f.name} affects! If something here bothers you, tell them in the forum: the company can reply.` : ""}`, ["explain", "concerned"], { kind: "more", id: f.tri_id, forum: done }, `area:${a.title}`);
   };
 
   // Typed questions: Gemini answers on the server (/api/chat); she thinks with a hand on her chin meanwhile
@@ -235,7 +260,7 @@ export default function Assistant({ ref, facilities, onCity, onFacility }: {
       )}
       <div className="fixed z-[3] flex items-end gap-1 [animation:ruby-enter_.7s_.6s_cubic-bezier(.34,1.45,.64,1)_both]" style={{ left: "clamp(12px,2vw,24px)", bottom: "clamp(12px,2vw,24px)" }}>
         {open ? portrait : (
-          <button type="button" onClick={() => setOpen(true)} aria-label="Open chat with Ruby" className="relative cursor-pointer">
+          <button type="button" onClick={() => (setOpen(true), messages.length || greet())} aria-label="Open chat with Ruby" className="relative cursor-pointer">
             {portrait}
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#e0703a] px-2.5 py-1 text-xs font-bold text-sand-50 shadow-[0_3px_0_#a8461f]">Ask Ruby</span>
           </button>
@@ -247,6 +272,9 @@ export default function Assistant({ ref, facilities, onCity, onFacility }: {
               <p className="flex-1 text-xs text-ink-soft"><span className="font-display text-base font-bold text-ink">Ruby</span> · your lakeshore guide</p>
               <button type="button" aria-label="Minimize chat" onClick={() => setOpen(false)} className="grid size-7 cursor-pointer place-items-center rounded-full hover:bg-white">
                 <svg viewBox="0 0 20 20" aria-hidden="true" className="size-4 fill-none stroke-ink-soft stroke-[2.4] [stroke-linecap:round] [stroke-linejoin:round]"><path d="m5 8 5 5 5-5" /></svg>
+              </button>
+              <button type="button" aria-label="Close Ruby and start over" title="Close Ruby and start over" onClick={exit} className="grid size-7 cursor-pointer place-items-center rounded-full hover:bg-white">
+                <svg viewBox="0 0 20 20" aria-hidden="true" className="size-3.5 fill-none stroke-ink-soft stroke-[2.4] [stroke-linecap:round]"><path d="M5 5l10 10M15 5 5 15" /></svg>
               </button>
             </header>
             <div ref={list} role="log" aria-live="polite" className="relative max-h-[min(260px,40vh)] space-y-2 overflow-y-auto px-3 py-3">

@@ -25,7 +25,7 @@ const chip =
   "grid cursor-pointer place-items-center rounded-[14px] bg-sand-50 text-ink shadow-[0_4px_0_var(--color-sand-300),0_10px_18px_rgb(75_79_147/.2)] transition-transform hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-[0_2px_0_var(--color-sand-300)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-lake-500";
 const icon = "size-5 fill-none stroke-current stroke-[2.2] [stroke-linecap:round] [stroke-linejoin:round]";
 const SOUNDTRACK = "/Soundtrack/Background_track.ogg";
-const SOUNDTRACK_LOOP_END = 50; // s: the soundtrack plays from the start to here, then loops back to the start
+const SOUNDTRACK_LOOP_END = 50; // seconds
 const DIRECTIONS = [
   { label: "N", deg: 0, name: "north" },
   { label: "E", deg: 90, name: "east" },
@@ -140,7 +140,7 @@ export default function MapView() {
   }, [webgl]);
 
   const cityFacilities = facilities.filter((f) => f.city === focused?.name);
-  const showStart = buttonDue && (loaded || failed || webgl === false); // never show a loading state
+  const showStart = buttonDue && (loaded || failed || webgl === false);
   const effects = facility?.impacts;
   const status = webgl === false
     ? "This map needs WebGL, which isn't available in this browser."
@@ -197,7 +197,7 @@ export default function MapView() {
         </div>
       </div>
 
-      {/* Zoom + reset */}
+      {/* Sound, zoom and reset */}
       <div
         role="toolbar"
         aria-label="Map controls"
@@ -387,6 +387,8 @@ export default function MapView() {
         facilities={facilities}
         onCity={(name) => fromRuby(() => controllerRef.current?.focusPlace(name))}
         onFacility={(id) => fromRuby(() => controllerRef.current?.focusFacility(id))}
+        onForum={(id) => forumRef.current?.open(id)}
+        onExit={() => controllerRef.current?.reset()}
       />
     </>
   );

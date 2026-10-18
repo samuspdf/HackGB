@@ -83,6 +83,19 @@ The "Open items to verify" section of `cities/README.md` lists claims that still
 | Corn and wheat fields | Cropland Data Layer 2024 (satellite crop classification), fetched as a 2480 × 1880 image of Wisconsin (about 250 m per pixel) | USDA National Agricultural Statistics Service, via CropScape | `https://nassgeodata.gmu.edu/CropScapeService/wms_cdlall.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=cdl_2024&SRS=EPSG:4326&BBOX=-92.9,42.4,-86.7,47.1&WIDTH=2480&HEIGHT=1880&FORMAT=image/png` | `background/raw/crops/cdl_2024_wi.png` |
 | Canada and other land outside the Census files | Natural Earth 1:50m land | Natural Earth | `https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_land.geojson` | `background/raw/geo/ne_50m_land.geojson` |
 
+To keep the repo small, these downloads are trimmed to the parts the pipeline reads. The map and the facility lists come out byte-for-byte the same:
+- **Counties:** Wisconsin's counties only.
+- **Population estimates:** Wisconsin's rows only.
+- **Lakes and rivers:** the features within about 1° of the map frame, keeping only the `name` and `scalerank` fields.
+- **Land and states:** the shapes within about 1° of the map frame.
+- **Places:** only the `NAME` and `GEOID` fields.
+- **Census zips:** the XML metadata files are left out.
+- **Cropland image:** reduced to a 4-colour image (corn, winter wheat, spring wheat, everything else black).
+- **TRI CSV (`tri_2024_wi.csv`):** only the 17 columns `select_facilities.py` reads.
+- **Elevation tiles:** losslessly re-compressed.
+
+Re-downloading the full files from the links above works just as well. The ECHO reports in `cities/` are kept exactly as downloaded.
+
 ### How each element is processed
 
 - **Projection:** all geometry is converted from longitude/latitude to kilometres on a local flat projection centred on the map (`background/frame.py`).

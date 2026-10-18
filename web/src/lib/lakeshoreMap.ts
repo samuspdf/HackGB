@@ -182,7 +182,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
 
   // ---------------------------------------------------------------- water
   // One opaque plane at height 0. The lakebed sits well below it and every shore is lifted above it,
-  // so the two surfaces never share depth — that was the source of the flicker.
+  // so the two surfaces never share depth (no flicker).
   const waterUniforms = {
     uDist: { value: load(map.waterUrl) },
     uTime: { value: 0 },
