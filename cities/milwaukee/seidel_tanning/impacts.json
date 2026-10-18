@@ -1,0 +1,139 @@
+{
+  "summary": "This leather tannery on the Milwaukee River released about 32,600 lb to the air in 2024, mostly glycol ether solvents, and sent about 56,500 lb of chromium waste off-site for disposal.",
+  "impacts": [
+    {
+      "icon": "🫁",
+      "title": "Air & breathing",
+      "where": "Riverwest and the East Side, within 1 mile: 38,177 residents, 12 schools",
+      "how": "About 29,700 lb of glycol ethers, solvents used in finishing leather, went out the stack in 2024, plus about 2,900 lb of formic acid that escaped from the tanning process. Glycol ether vapors can irritate the eyes and airways, and formic acid has a sharp, stinging smell.",
+      "avoid": [
+        {
+          "icon": "🌤️",
+          "label": "Check air quality",
+          "text": "Check the daily air quality index (AirNow) for Milwaukee on hot, still days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "👃",
+          "label": "Report odors",
+          "text": "Report strong or unusual odors in the forum, where the company can reply. You can also call the DNR tip line, 1-800-847-9367",
+          "forum": true,
+          "link": {
+            "text": "DNR tip line: 1-800-847-9367",
+            "url": "tel:+18008479367"
+          }
+        },
+        {
+          "icon": "🪟",
+          "label": "Close the windows",
+          "text": "Keep windows closed when odors are noticeable"
+        }
+      ]
+    },
+    {
+      "icon": "🌫️",
+      "title": "Smog",
+      "where": "Milwaukee County",
+      "how": "Glycol ethers and formic acid are volatile organic compounds, which help form ground-level ozone (smog) on hot, sunny days. Milwaukee County doesn't meet the federal ozone standard, so this tannery is one possible contributor. Much of the area's ozone also blows in from outside the region.",
+      "avoid": [
+        {
+          "icon": "🌅",
+          "label": "Exercise in the morning",
+          "text": "On ozone action days, exercise outdoors in the morning when ozone is lower",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🔔",
+          "label": "Get ozone alerts",
+          "text": "Sign up for ozone alerts from the Wisconsin DNR",
+          "link": {
+            "text": "DNR air quality",
+            "url": "https://dnr.wisconsin.gov/topic/AirQuality"
+          }
+        },
+        {
+          "icon": "🫁",
+          "label": "Keep an inhaler handy",
+          "text": "People with asthma should keep their inhalers handy on smoggy days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        }
+      ]
+    },
+    {
+      "icon": "♻️",
+      "title": "Chromium waste",
+      "where": "Off-site disposal, plus Milwaukee's sewer plant",
+      "how": "Tanning leather uses chromium. In 2024 the tannery sent about 56,500 lb of chromium compounds off-site for disposal, up from about 21,200 lb in 2020, and about 330 lb down the sewer. It's trivalent chromium, much less toxic than the hexavalent kind, and EPA doesn't flag it as a carcinogen here.",
+      "avoid": [
+        {
+          "icon": "🔎",
+          "label": "Look up the records",
+          "text": "Look up how the facility manages its waste in EPA's ECHO database",
+          "link": {
+            "text": "EPA ECHO",
+            "url": "https://echo.epa.gov/"
+          }
+        },
+        {
+          "icon": "📝",
+          "label": "Comment on permits",
+          "text": "Comment when the facility's permits come up for renewal",
+          "link": {
+            "text": "DNR air permit notices",
+            "url": "https://apps.dnr.wi.gov/warp_ext/public_notice.aspx"
+          }
+        },
+        {
+          "icon": "🚰",
+          "label": "Ask about the sewer",
+          "text": "Ask the Milwaukee Metropolitan Sewerage District about its industrial pretreatment program"
+        }
+      ]
+    },
+    {
+      "icon": "🐟",
+      "title": "Milwaukee River",
+      "where": "About 0.1 mile from the plant",
+      "how": "The tannery sits right by the Milwaukee River but reports nothing released directly to the water, and it has no water discharge permit. The river's fish advisories come from older PCB pollution, which a large estuary cleanup is now removing.",
+      "avoid": [
+        {
+          "icon": "🐟",
+          "label": "Check fish advice",
+          "text": "Follow the Wisconsin DNR fish advisory before eating fish from the Milwaukee River",
+          "link": {
+            "text": "DNR fish advice",
+            "url": "https://dnr.wisconsin.gov/topic/Fishing/consumption"
+          }
+        },
+        {
+          "icon": "🐠",
+          "label": "Keep smaller fish",
+          "text": "Eat smaller fish and avoid carp and other bottom feeders, which build up the most PCBs",
+          "link": {
+            "text": "DNR fish advice",
+            "url": "https://dnr.wisconsin.gov/topic/Fishing/consumption"
+          }
+        },
+        {
+          "icon": "📞",
+          "label": "Report spills",
+          "text": "Report spills or discolored water in the forum. If one is happening now, call the DNR 24-hour spill line, 1-800-943-0003, first",
+          "forum": true,
+          "link": {
+            "text": "DNR 24-hour spill line: 1-800-943-0003",
+            "url": "tel:+18009430003"
+          }
+        }
+      ]
+    }
+  ]
+}

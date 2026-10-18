@@ -1,4 +1,4 @@
-# Project Spec: Lakeshore Watch (working name)
+# Project Spec: Gunk Radar
 
 HackGB 2026 — Environment Track
 Builder: Sam (CS major, Math minor, ML focus) — solo
@@ -10,7 +10,7 @@ Time limit: ~24 hours (hackathon already in progress)
 
 ## 1. The idea in one paragraph
 
-An interactive web app, built around a map of Wisconsin's Lake Michigan shoreline, that shows industrial pollution from facilities in **three cities: Green Bay, Manitowoc, and Sheboygan**. Clicking a facility shows what it releases, where those releases go (air, water, land), and **what they come in contact with**: fish people eat, beaches people swim at, drinking water sources, wildlife, nearby neighborhoods and schools, and groundwater. Each facility panel ends with **actions** people can take (file a complaint with the right agency, comment on permits, follow a facility). Machine learning estimates contamination risk where official testing does not exist.
+An interactive web app, built around a map of Wisconsin's Lake Michigan shoreline, that shows industrial pollution from facilities in **four cities: Green Bay, Manitowoc, Sheboygan and Milwaukee** (Milwaukee added after the first three). Clicking a facility shows what it releases, where those releases go (air, water, land), and **what they come in contact with**: fish people eat, beaches people swim at, drinking water sources, wildlife, nearby neighborhoods and schools, and groundwater. Each facility panel ends with **actions** people can take (file a complaint with the right agency, comment on permits, follow a facility). Machine learning estimates contamination risk where official testing does not exist.
 
 **User flow:**
 1. Home page: map of Wisconsin, zoomed to the lakeshore, facilities shown as circles sized by **toxicity-weighted** releases.
@@ -93,7 +93,7 @@ web/                   static site (Next.js + three.js), reads web/public/data/
 - **Hosting:** static (GitHub Pages, Netlify, or just open locally).
 - All heavy processing happens offline; the browser only loads precomputed files.
 
-**Geographic scope:** facilities within each of the three cities plus a buffer (e.g., 10 km), or within the counties: Brown (Green Bay), Manitowoc, Sheboygan. Show the full state outline for context.
+**Geographic scope:** facilities within each of the study cities plus a buffer (e.g., 10 km), or within the counties: Brown (Green Bay), Manitowoc, Sheboygan, Milwaukee. Show the full state outline for context.
 
 ---
 
@@ -137,7 +137,7 @@ If a phase runs more than ~2 hours over, cut its remaining scope rather than del
 - **Features per waterbody:** upstream facility releases (toxicity-weighted, by chemical class), number of upstream facilities, upstream land use (cropland, urban), watershed size, waterbody type (river, inland lake, Great Lakes bay), distance to legacy contaminated sites if available.
 - **Model:** start with logistic regression as a baseline, then gradient boosting (scikit-learn `HistGradientBoostingClassifier`). Keep it interpretable; show top feature contributions in the panel.
 - **Validation:** spatial cross-validation (hold out whole watersheds or regions, not random rows) so the model can't memorize neighbors. Report the metric honestly, even if modest.
-- **Scope:** train on all Wisconsin waterbodies with data (more labels), then display estimates around the three cities.
+- **Scope:** train on all Wisconsin waterbodies with data (more labels), then display estimates around the study cities.
 - **Display:** untested waterbodies get an "Estimated risk — not tested" style. Never show estimates as official advice.
 - **Known limitation to state in the pitch:** labels are sparse and advisories reflect legacy contamination and atmospheric mercury that facility features can't capture. The model is a screening tool for "where should someone test next."
 
@@ -169,6 +169,6 @@ Wording rule: complaints are for suspected **violations**; permit comments and c
 
 ## 8. Open items for Sam
 - Art style: TBD, Sam will provide.
-- Project name: "Lakeshore Watch" is a placeholder.
+- Project name: Gunk Radar (decided).
 - Team size and time limit: solo, ~24 hours (decided). Scope follows the time budget in Section 6.
 - Hackathon has started; all code is written during the event.

@@ -1,0 +1,258 @@
+GUNK RADAR: DATA BEHIND RUBY, THE AI GUIDE
+==========================================
+Every source Ruby uses to answer visitors, and the results of cross-checking that data against
+the original publishers.
+
+Last checked: 2026-10-18
+Map data (terrain, rivers, crops, etc.) is documented separately in DATA_SOURCES.md.
+
+
+1. HOW RUBY GETS HER ANSWERS
+----------------------------
+Ruby answers in two ways:
+
+  a) Scripted lines (no AI). When you pick a city, a factory, or an "affected area" button, her
+     words are built directly from each factory's facility.json and impacts.json.
+
+  b) Typed questions (AI). These go to Google Gemini (model: gemini-3.5-flash-lite by default,
+     set by GEMINI_MODEL) through web/src/app/api/chat/route.ts. Before every answer, the server
+     gives Gemini the study notes listed in section 2 (about 48,000 characters). Gemini is
+     told to answer only from those notes and to say "I don't know" otherwise. As a language
+     model it can still draw on general knowledge, so typed answers are not guaranteed to come
+     only from the notes.
+
+
+2. FILES RUBY READS
+-------------------
+All under cities/. The chat server loads them once and sends them with every typed question.
+
+  cities/README.md                         Overview: cross-cutting findings, summary table, sources
+  cities/green_bay/README.md               Local setting: rivers, cleanups, beaches, drinking water
+  cities/manitowoc/README.md               Local setting for Manitowoc
+  cities/sheboygan/README.md               Local setting for Sheboygan
+  cities/milwaukee/README.md               Local setting for Milwaukee
+
+  For each of the 12 factories, in cities/<city>/<company>/:
+    facility.json    Name, address, location, 2024 on-site releases (total / air / water / land),
+                     top chemicals
+    impacts.json     Plain-language "affected areas": what is affected, how, and how to avoid it
+                     (each tip has its text, plus a picture and short title for the
+                     "How to protect yourself" box beside Ruby; the pictures and titles
+                     are hand-picked, not data. Most tips also link to the official page
+                     or DNR phone line for acting on them. The "Report …" tips open the
+                     community forum on that factory, where the company can reply)
+    research.md      Full write-up: chemicals, where they go, people and schools nearby,
+                     compliance record
+
+  The 12 factories:
+    Green Bay   Georgia-Pacific Broadway (georgia_pacific_broadway)        TRI ID 54307FRTHW1919S
+                CNG Green Bay (cng_green_bay)
+                Green Bay Packaging Coated Products (green_bay_packaging)
+    Manitowoc   Manitowoc Public Utilities (manitowoc_public_utilities)
+                Jagemann Plating (jagemann_plating)
+                Eck Industries (eck_industries)
+    Sheboygan   Edgewater Generating Station (edgewater_generating_station)
+                Hexion Sheboygan (hexion_sheboygan)
+                SACO AEI (saco_aei)
+    Milwaukee   Seidel Tanning (seidel_tanning)
+                Highline Warren (highline_warren)
+                Advanced Plating Technologies (advanced_plating_technologies)
+
+  Ruby does not read these supporting files directly. They are the raw evidence the notes
+  were written from:
+    echo_facility_report.json         EPA ECHO report (permits, compliance, demographics)
+    echo_effluent_<permit>.json       EPA ECHO water-discharge data (Georgia-Pacific, Edgewater)
+    schools_nearby.json               Schools within 1 and 3 miles
+    model.json                        3D building shape (map only, no facts)
+
+
+3. ORIGINAL DATA SOURCES
+------------------------
+  EPA Toxics Release Inventory (TRI), Basic Data File, Wisconsin, reporting year 2024
+    https://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-present
+    Download: https://data.epa.gov/efservice/downloads/tri/mv_tri_basic_download/2024_WI/csv
+    Used for: which 12 factories (top 3 per city by on-site releases), every pound figure, chemicals,
+    air / water / land split, transfers to sewer plants and off-site
+    Local copy: background/raw/tri_2024_wi.csv (trimmed to the columns used)
+
+  EPA ECHO Detailed Facility Reports (one per factory)
+    https://echo.epa.gov/
+    API: https://echodata.epa.gov/echo/dfr_rest_services.get_dfr?output=JSON&p_id=<FRS registry ID>
+    Used for: residents within 1 mile and their make-up (ECHO's ACS 2024 demographics),
+    permits, inspections, quarters out of compliance, notices, enforcement cases, impaired
+    waters, ozone non-attainment status, reported water-discharge loads
+    Pulled 2026-10-17; compliance data through 09/2026
+
+  EPA ECHO effluent charts (water-permit measurements)
+    API: https://echodata.epa.gov/echo/eff_rest_services.get_effluent_chart?p_id=<permit>
+    Used for: real limit exceedances vs. late or missing reports (permits WI0001848, WI0001589)
+    Period 07/2023 to 10/2026
+
+  NCES EDGE public and private school locations, 2023-24 school year
+    https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
+    Used for: schools within 1 and 3 miles of each factory
+
+  USGS National Hydrography Dataset (river and stream lines)
+    https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer
+    Used for: distance from each Milwaukee factory to the nearest river
+
+  Google Gemini (typed answers only; see section 1b)
+    https://ai.google.dev/
+
+
+4. WEB RESEARCH CITED IN THE NOTES
+----------------------------------
+  Green Bay / Fox River
+    Lower Green Bay/Fox River AOC (EPA)            https://epa.gov/great-lakes-aocs/lower-green-bayfox-river-aoc
+    Five years after the PCB cleanup (news)         https://www.yahoo.com/news/five-years-world-largest-pcb-112126783.html
+    WI DHS Fox River public health assessment       https://www.dhs.wisconsin.gov/environmental/foxriverpha.pdf
+    DNR impaired water: Lower Fox River             https://apps.dnr.wi.gov/water/impairedDetail.aspx?key=357301
+    Georgia-Pacific damage agreement (USFWS)        https://www.fws.gov/story/2002-06/trustees-announce-natural-resources-damage-agreement-georgia-pacific-corp
+    DOJ 2002 settlement release                     https://www.justice.gov/archive/opa/pr/2002/June/02_enrd_362.htm
+    Fox River cleanup cost settlement               https://rtspecialty.com/ecp/companies-agree-to-cover-all-costs-for-fox-river-cleanup/
+    Fox River PRP list (Georgia-Pacific SEC filing) https://www.sec.gov/Archives/edgar/data/41719/000119312514292893/R22.htm
+    Green Bay phosphorus / dead zone (Circle of Blue) https://circleofblue.org/cpx/great-lakes-algae/green-bay-moves-to-reduce-phosphorus-and-revive-dead-zone
+    NEW Water adaptive management (NACWA)           https://nacwa.org/news-publications/news-detail/2023/04/24/new-water-uses-innovative-approach-to-reach-dnr-limits
+    USGS Fox River phosphorus loading 1989-2021     https://pubs.usgs.gov/publication/sir20235112/full
+    Bay Beach history                               https://wpr.org/green-bay-looking-reviving-historic-beach
+                                                    https://news.uwgb.edu/?p=133132
+    Green Bay Water Utility source                  https://www.ashwaubenon.gov/government/departments/water-sewer-utility/water-quality-testing/
+    DNR PFAS fish advice, Green Bay                 https://dnr.wisconsin.gov/topic/PFAS/FishAdvisoryGreenBay.html
+    2026-2028 Choose Wisely fish booklet            https://www.wispolitics.com/2026/dept-of-natural-resources-dept-of-health-services-issue-2026-2028-fish-consumption-booklet/
+
+  Manitowoc
+    DNR impaired water: Manitowoc River             https://apps.dnr.wi.gov/water/impairedDetail.aspx?key=482064
+    DNR impaired water: South Branch Manitowoc R.   https://apps.dnr.wi.gov/water/impairedDetail.aspx?key=9924
+    DNR Kewaunee listing (Lake Michigan advisory)   https://apps.dnr.wi.gov/water/impairedDetail.aspx?key=482755
+    MPU power plant brochure                        https://www.mpu.org/wp-content/uploads/2023/11/powerplantopenhousebrochure.pdf
+    MPU fuel mix (gridinfo, from EIA data)          https://www.gridinfo.com/plant/manitowoc/4125
+    MPU renewable pellet conversion (APPA)          https://www.publicpower.org/node/25270
+    Eck Industries 2023 DNR permit hearing          https://dnr.wisconsin.gov/calendar/hearing/67571
+    DNR 2025 ozone memo                             https://dnr.wisconsin.gov/sites/default/files/topic/AirQuality/DoorManitKenoshaSheboyganResponse05012025.pdf
+    EPA narrows ozone nonattainment counties (WPR)  https://wpr.org/epa-narrows-ozone-nonattainment-wisconsin-counties
+    EPA Wisconsin ozone remand TSD                  https://www.epa.gov/sites/production/files/2021-05/documents/wi_tsd_remand_final.pdf
+
+  Sheboygan
+    DNR Sheboygan River AOC                         https://dnr.wisconsin.gov/topic/greatlakes/sheboygan.html
+    Cleanup work remains, Sheboygan River (WPR)     https://wpr.org/environment/after-decades-cleanup-work-remains-sheboygan-river
+    EPA Rochester Park removal site                 https://response.epa.gov/RochesterPark
+    Edgewater conversion to gas in 2028 (WPR)       https://wpr.org/energy/alliant-energy-plans-to-convert-sheboygan-coal-plant-to-natural-gas-in-2028
+    Alliant Edgewater fuel-switch release           https://s201.q4cdn.com/991130938/files/doc_news/2024/May/23/2024-5-23-nr-edgewater-fuel-switch.pdf
+    Opposition to gas conversion (Spectrum News)    https://spectrumnews1.com/wi/milwaukee/news/2024/09/24/sheboygan-power-plant-natural-gas-opposition
+    Sheboygan water system (Lake Michigan)          https://www.sheboygancountyedc.com/market-info/utilities/water-and-sewer
+    Sheboygan County public beaches                 https://www.sheboygancounty.com/departments/departments-f-q/health-and-human-services/public-health/environmental-health/water-quality-drinking-water
+    DNR Beach Health                                https://apps.dnr.wi.gov/beachhealth/
+
+  Milwaukee
+    Seidel Tanning history (Stitchdown)             https://www.stitchdown.com/brand-profiles/seidel-tanning-interview
+    Seidel Tanning address and history              https://www.patinaproject.com/seidel
+    Highline Warren merger (Aftermarket News)       https://www.aftermarketnews.com/highline-aftermarket-to-become-highline-warren-after-acquisition/
+    About Advanced Plating Technologies             https://advancedplatingtech.com/about-advanced-plating-technologies-milwaukee/
+    1-BP added to hazardous air pollutants (AIHA)   https://www.aiha.org/news/220113-epa-adds-1-bromopropane-to-list-of-hazardous-air-pollutants
+    EPA 1-BP listing fact sheet                     https://www.epa.gov/system/files/documents/2021-12/fact-sheet-1-bp-listing-action-12-22-21.pdf
+    EPA proposed 1-BP TSCA rule (Aug 2024)          https://www.govinfo.gov/content/pkg/FR-2024-08-08/html/2024-17204.htm
+    Milwaukee Estuary $450M cleanup (EPA)           https://urbanmilwaukee.com/pressrelease/biden-harris-administration-announces-largest-ever-clean-up-under-epas-great-lakes-restoration-initiative-to-address-milwaukee-area-of-concern/
+    Milwaukee Estuary AOC agreement                 https://urbanmilwaukee.com/pressrelease/dnr-epa-sign-agreement-to-proceed-on-milwaukee-estuary-cleanup-to-eliminate-32-year-old-area-of-concern-designation/
+    PCB fish advisories, Milwaukee rivers (USGS)    https://pubs.usgs.gov/sir/2007/5084/page16.html
+    DNR impaired water: Kinnickinnic River          https://apps.dnr.wi.gov/water/impairedDetail.aspx?key=9973
+    Ozone reclassified "serious" (BizTimes)         https://biztimes.com/epa-slaps-serious-nonattainment-air-pollution-zone-classification-on-southeast-wisconsin
+    Court pauses the reclassification (BizTimes)    https://biztimes.com/court-ruling-pauses-epas-stricter-air-rules-for-southeastern-wisconsin/
+    DNR nonattainment permitting                    https://dnr.wisconsin.gov/topic/AirPermits/Nonattainment.html
+    Milwaukee Water Works treatment                 https://city.milwaukee.gov/water/about/WaterTreatment
+    MMSD facilities                                 https://mmsd.com/about-us/facilities
+    MMSD discharge permit notice (DNR)              https://dnr.wisconsin.gov/sites/default/files/topic/Wastewater/pn/MilwaukeeMetroSewDistrictCombined-PN.pdf
+    Milwaukee beach advisories                      https://city.milwaukee.gov/Recreational-Water/Beach-Advisories.htm
+    Bradford Beach E. coli effort (Urban Milwaukee) https://urbanmilwaukee.com/2025/02/27/mke-county-effort-aims-to-reduce-e-coli-closures-at-bradford-beach/
+    Aug 2025 Bradford / McKinley closure (MHD)      https://city.milwaukee.gov/health/news/2025-news-releases1/august/2025/public-notice-bradford-beach--mckinley-beach-closure-extended
+
+
+5. CROSS-VALIDATION, 2026-10-18
+-------------------------------
+Method: fresh copies were downloaded from the EPA, every figure in the notes was recomputed
+from them, and the key web-research claims were checked against current sources.
+
+  5.1 Is our raw data the same as the publisher's?
+    EPA TRI 2024 Wisconsin file            Byte-for-byte identical to EPA's current download
+    EPA ECHO reports (all 9 factories)     Identical to ECHO's live data for every figure checked
+
+  5.2 EPA release figures (TRI 2024)
+    All 9 factories: total, air, water and land pounds match EPA (within 1 lb of rounding)
+    All 9 factories: location matches EPA; top chemicals match EPA
+    Per-chemical tables (Georgia-Pacific, Edgewater, Hexion, Jagemann, Manitowoc Public
+      Utilities, SACO AEI, Eck): every number matches, including sewer and off-site transfers
+      and the "half fugitive" / "83% fugitive" figures for Hexion
+    Ruby's affected-area descriptions: every pound figure matches EPA, except item 1 below
+    Georgia-Pacific "held steady at about 249,000-258,000 lb/yr since 2020": confirmed from EPA
+      files for 2020-2024 (249,103 to 257,473 lb)
+
+  5.3 People, schools and compliance (ECHO, NCES)
+    Residents within 1 mile, % people of color, % low-income, children under 5, seniors:
+      all match ECHO for all 9 factories
+    Schools within 1 and 3 miles: all counts match the NCES data
+    Georgia-Pacific water permit: 7 quarters flagged, 2 significant; 2022 to 2026 load drop
+      (87,077 to about 400-500 lb): confirmed
+    Edgewater: 10 of 12 quarters flagged; 4 real exceedances (pH 9.10 / 9.04 / 9.44 vs 9.0;
+      suspended solids 85.9 vs 82 mg/L): confirmed to the decimal
+    Hexion 2022 EPA reporting case: settled 07/22/2022, $0 penalty, $204,225 compliance costs:
+      confirmed
+    SACO AEI TSCA case HQ-2019-5005, $22,479 penalty: confirmed (EPA Environmental Appeals
+      Board, paid in full, October 2019)
+    Notices of noncompliance (Georgia-Pacific 2024, Eck 2026, Jagemann 2026, Hexion 2025) and
+      the Green Bay Packaging 2022 air warning letter: confirmed
+    Ozone: Manitowoc and Sheboygan factories sit in the 2015 ozone non-attainment area, and
+      Green Bay does not: confirmed
+
+  5.4 Web-research claims
+    Fox River PCB cleanup (39 miles, 6+ million cubic yards, about $1 billion, done 2020)
+                                                      Confirmed (DNR says 6.5 million cubic yards)
+    Georgia-Pacific 2002 settlement (1,000+ acres plus $8.5 million)   Confirmed
+    Sheboygan River "do not eat resident fish", lower 14 miles         Confirmed (DNR, EPA)
+    Edgewater switching from coal to natural gas in 2028               Confirmed as Alliant's plan;
+                                                                       final approval not checked
+    2026-2028 Choose Wisely fish booklet                               Confirmed (released 08/2026)
+    Green Bay drinking water from a Lake Michigan intake near Kewaunee  Supported (historical sources)
+
+  5.5 Problems found
+    1. SACO AEI, impacts.json ("Sheboygan River"): says "about 15 lb of antimony and zinc reached
+       water". EPA: 5 lb antimony + 5 lb zinc = 10 lb. The 15 lb total includes 5 lb of
+       maleic anhydride. Small wording error.
+    2. Eck Industries, research.md: says releases were "all stack air". EPA: 250 lb of the
+       formaldehyde was fugitive (leaks and vents), so 3,478 lb stack and 250 lb fugitive.
+       Small error; totals are right.
+    3. Manitowoc Public Utilities, impacts.json: says the plant "mostly burns wood now". Sources
+       disagree: gridinfo (EIA data) shows about 81% wood and wood waste, but the utility's
+       April 2025 announcement (APPA) says its main boilers burn "primarily coal and petroleum
+       coke". EIA likely counts MPU's paper-and-plastic waste pellets as wood waste. Disputed;
+       should be reworded.
+    4. Green Bay README: "NEW Water says it contributes under 3%" of the Fox River's phosphorus.
+       This figure is not in the cited NACWA article and was not found elsewhere. Unverified.
+    5. Green Bay README: "about 1.2 million lb of phosphorus a year". This comes from a 2014
+       source. A newer UW-Extension estimate says about 1.1 million lb. Dated, not wrong.
+    Not a problem: Eck's top-3 chemical list shows copper, while EPA ranks chlorine third. Both
+      released exactly 250 lb, so either is correct.
+
+  Verdict: the EPA-based data (releases, people, schools, compliance) is accurate and matches the
+  EPA's current records. The web-research layer is mostly accurate, with two small number slips
+  (items 1-2), one disputed claim (3) and two weakly sourced figures (4-5).
+
+  Fixed 2026-10-18: all five items were corrected in the notes:
+    1. SACO AEI now says 5 lb each of antimony, zinc and maleic anhydride.
+    2. Eck now says 3,478 lb stack plus 250 lb fugitive.
+    3. Manitowoc Public Utilities now presents both fuel accounts as disputed.
+    4. The unverified "under 3%" figure was removed.
+    5. Phosphorus is now given as 1.1-1.2 million lb with both sources.
+  The map data (web/public/data/scene.json) was rebuilt, so Ruby's scripted lines use the
+  corrected text too.
+
+  5.6 Milwaukee (added 2026-10-18)
+    Picked with the same method as the other cities: top 3 by 2024 on-site releases among the
+      63 TRI facilities listed in Milwaukee (suburbs such as Oak Creek are separate TRI cities).
+    EPA TRI: totals, air/water/land, location and chemicals for all 3 match EPA's current file;
+      0 mismatches across all 12 factories. Trends checked against EPA's 2020-2023 files.
+    ECHO: reports downloaded fresh on 2026-10-18 (population, demographics, compliance, ozone).
+    Schools: the NCES query was first re-run for Georgia-Pacific and reproduced its saved list
+      exactly (2 within 1 mile, 48 within 3), then run for the Milwaukee factories.
+    River distances: USGS National Hydrography Dataset.
+    Still to confirm (see cities/README.md, open items 8-10): which MMSD plant receives the
+      sewer flows, whether Highline Warren's site blends washer fluid, and whether EPA's
+      1-bromopropane restrictions are final.

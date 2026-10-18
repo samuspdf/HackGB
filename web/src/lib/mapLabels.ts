@@ -4,7 +4,7 @@
 
 import * as THREE from "three";
 
-export type LabelKind = "water" | "bay" | "state" | "neighbor" | "county" | "sign" | "facility";
+export type LabelKind = "water" | "state" | "neighbor" | "county" | "sign" | "facility";
 
 interface Style {
   family: "display" | "body";
@@ -20,7 +20,6 @@ interface Style {
 
 const STYLES: Record<LabelKind, Style> = {
   water: { family: "display", weight: 600, italic: true, size: 24, color: "#f7fbff", shadow: "rgba(40,60,120,.5)" },
-  bay: { family: "display", weight: 600, italic: true, size: 15, color: "#f7fbff", shadow: "rgba(40,60,120,.55)" },
   state: { family: "display", weight: 800, size: 26, color: "#2e5e4a", glow: "#e6efb0", upper: true, spacing: 0.3 },
   neighbor: { family: "display", weight: 600, size: 14, color: "#8a6238", glow: "#f3e6c4", spacing: 0.08 },
   county: { family: "body", weight: 800, size: 11, color: "rgba(46,94,74,.85)", glow: "#eef4c4", upper: true, spacing: 0.08 },
@@ -32,7 +31,7 @@ const BOARDS: Partial<Record<LabelKind, { lip: string; top: string; face: string
   sign: { lip: "#7b4a33", top: "#b8723f", face: "#a8653b" },
   facility: { lip: "#a8461f", top: "#f08a48", face: "#e0703a" },
 };
-const PRIORITY: Record<LabelKind, number> = { facility: 6, sign: 5, water: 4, state: 3, bay: 2, neighbor: 2, county: 1 };
+const PRIORITY: Record<LabelKind, number> = { facility: 6, sign: 5, water: 4, state: 3, neighbor: 2, county: 1 };
 const TEXTURE_SCALE = 3; // draw text at 3x for crisp edges on Retina screens
 
 export interface MapLabel<T = unknown> {

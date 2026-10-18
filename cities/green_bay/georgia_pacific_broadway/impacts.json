@@ -7,9 +7,29 @@
       "where": "Lower Fox River",
       "how": "About 230,000 lb of nitrates and 150 lb of ammonia reached the river in 2024. Extra nutrients feed algae that use up the oxygen fish need to breathe, and ammonia is directly toxic to fish at high levels. The mill also released 57 lb of lead, which settles into river mud and builds up in fish over time.",
       "avoid": [
-        "Follow the Wisconsin DNR fish advisory for the Fox River before eating your catch",
-        "Keep smaller, younger fish, and trim skin and fat, where pollutants collect",
-        "Use less lawn fertilizer: runoff adds even more nutrients to the same river"
+        {
+          "icon": "🐟",
+          "label": "Check fish advice",
+          "text": "Follow the Wisconsin DNR fish advisory for the Fox River before eating your catch",
+          "link": {
+            "text": "DNR fish advice",
+            "url": "https://dnr.wisconsin.gov/topic/Fishing/consumption"
+          }
+        },
+        {
+          "icon": "🐠",
+          "label": "Keep smaller fish",
+          "text": "Keep smaller, younger fish, and trim skin and fat, where pollutants collect",
+          "link": {
+            "text": "DNR fish advice",
+            "url": "https://dnr.wisconsin.gov/topic/Fishing/consumption"
+          }
+        },
+        {
+          "icon": "🌱",
+          "label": "Less lawn fertilizer",
+          "text": "Use less lawn fertilizer: runoff adds even more nutrients to the same river"
+        }
       ]
     },
     {
@@ -18,9 +38,29 @@
       "where": "Bay of Green Bay",
       "how": "The Fox River carries these nutrients into the bay, where they can help fuel algae blooms that close beaches and turn the water green. The Fox is already listed as impaired for nutrients; this mill is one possible contributor.",
       "avoid": [
-        "Check beach advisories before swimming",
-        "Stay out of water that looks green, scummy or smells bad, and keep pets out too",
-        "Rinse off after swimming in the bay"
+        {
+          "icon": "🏖️",
+          "label": "Check the beach",
+          "text": "Check beach advisories before swimming",
+          "link": {
+            "text": "DNR Beach Health",
+            "url": "https://apps.dnr.wi.gov/beachhealth/"
+          }
+        },
+        {
+          "icon": "🚫",
+          "label": "Skip scummy water",
+          "text": "Stay out of water that looks green, scummy or smells bad, and keep pets out too"
+        },
+        {
+          "icon": "🚿",
+          "label": "Rinse off",
+          "text": "Rinse off after swimming in the bay",
+          "link": {
+            "text": "DNR Beach Health",
+            "url": "https://apps.dnr.wi.gov/beachhealth/"
+          }
+        }
       ]
     },
     {
@@ -29,9 +69,30 @@
       "where": "Within 1 mile: 6,548 residents, 2 schools",
       "how": "About 14,700 lb of methanol and 3,900 lb of ammonia went into the air in 2024. Methanol can cause headaches and dizziness at high levels, and ammonia irritates the eyes, nose and throat.",
       "avoid": [
-        "Check the daily air quality index (AirNow) on hot, still days",
-        "Report strong or unusual odors to the Wisconsin DNR",
-        "Keep windows closed when odors are noticeable"
+        {
+          "icon": "🌤️",
+          "label": "Check air quality",
+          "text": "Check the daily air quality index (AirNow) on hot, still days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "👃",
+          "label": "Report odors",
+          "text": "Report strong or unusual odors in the forum, where the company can reply. You can also call the DNR tip line, 1-800-847-9367",
+          "forum": true,
+          "link": {
+            "text": "DNR tip line: 1-800-847-9367",
+            "url": "tel:+18008479367"
+          }
+        },
+        {
+          "icon": "🪟",
+          "label": "Close the windows",
+          "text": "Keep windows closed when odors are noticeable"
+        }
       ]
     },
     {
@@ -40,9 +101,22 @@
       "where": "Fox River and Green Bay shoreline",
       "how": "Lead and mercury don't break down. They build up in fish, then in the eagles, cormorants and gulls that eat them, and can harm their nerves and breeding.",
       "avoid": [
-        "Use lead-free fishing tackle so less lead ends up in the river",
-        "Support shoreline habitat restoration along the lower Fox",
-        "Report sick or dead birds to the Wisconsin DNR"
+        {
+          "icon": "🎣",
+          "label": "Lead-free tackle",
+          "text": "Use lead-free fishing tackle so less lead ends up in the river"
+        },
+        {
+          "icon": "🌿",
+          "label": "Support restoration",
+          "text": "Support shoreline habitat restoration along the lower Fox"
+        },
+        {
+          "icon": "🐦",
+          "label": "Report sick birds",
+          "text": "Report sick or dead birds near the mill in the forum, and let the Wisconsin DNR know too",
+          "forum": true
+        }
       ]
     }
   ]

@@ -1,0 +1,17 @@
+{
+  "name": "Seidel Tanning",
+  "tri_id": "53212SDLTN1306E",
+  "industry": "Leather tannery",
+  "address": "1306 E Meinecke Ave, Milwaukee",
+  "lon": -87.89529,
+  "lat": 43.06206,
+  "released": 32573,
+  "air": 32573,
+  "water": 0,
+  "land": 0,
+  "chemicals": [
+    "Certain glycol ethers",
+    "Formic acid",
+    "Chromium compounds"
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "scale": 1.3,
+  "footprint": [
+    1.6,
+    1.1
+  ],
+  "halo": [
+    2.8,
+    2.09
+  ],
+  "label": [
+    0.55,
+    1.3,
+    -0.25
+  ],
+  "smoke": [
+    [
+      0.55,
+      1.0,
+      -0.25
+    ]
+  ],
+  "parts": [
+    {
+      "name": "concrete yard",
+      "shape": "box",
+      "color": "#b9b0a6",
+      "at": [
+        0,
+        -0.4,
+        0
+      ],
+      "size": [
+        1.7,
+        0.46,
+        1.2
+      ],
+      "glow": false
+    },
+    {
+      "name": "tannery (old brick mill)",
+      "shape": "box",
+      "color": "#a8553f",
+      "at": [
+        -0.25,
+        0,
+        0.12
+      ],
+      "size": [
+        0.85,
+        0.62,
+        0.55
+      ]
+    },
+    {
+      "name": "tannery (old brick mill) roof",
+      "shape": "box",
+      "color": "#5e4a44",
+      "at": [
+        -0.25,
+        0.62,
+        0.12
+      ],
+      "size": [
+        0.867,
+        0.03,
+        0.561
+      ],
+      "glow": false
+    },
+    {
+      "name": "rooftop water tank",
+      "shape": "cylinder",
+      "color": "#7a5a3c",
+      "at": [
+        -0.45,
+        0.65,
+        0.12
+      ],
+      "size": [
+        0.16,
+        0.2,
+        0.16
+      ]
+    },
+    {
+      "name": "rooftop water tank cap",
+      "shape": "cone",
+      "color": "#5e4a44",
+      "at": [
+        -0.45,
+        0.85,
+        0.12
+      ],
+      "size": [
+        0.17,
+        0.08,
+        0.17
+      ]
+    },
+    {
+      "name": "finishing building",
+      "shape": "box",
+      "color": "#d6c6ae",
+      "at": [
+        0.45,
+        0,
+        0.2
+      ],
+      "size": [
+        0.5,
+        0.32,
+        0.45
+      ]
+    },
+    {
+      "name": "finishing building roof",
+      "shape": "roof",
+      "color": "#6f6a85",
+      "at": [
+        0.45,
+        0.32,
+        0.2
+      ],
+      "size": [
+        0.52,
+        0.14,
+        0.486
+      ]
+    },
+    {
+      "name": "tanning drum 1",
+      "shape": "cylinder",
+      "color": "#8a5a36",
+      "at": [
+        -0.55,
+        0,
+        -0.33
+      ],
+      "size": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "name": "tanning drum 2",
+      "shape": "cylinder",
+      "color": "#8a5a36",
+      "at": [
+        -0.30000000000000004,
+        0,
+        -0.33
+      ],
+      "size": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "name": "tanning drum 3",
+      "shape": "cylinder",
+      "color": "#8a5a36",
+      "at": [
+        -0.050000000000000044,
+        0,
+        -0.33
+      ],
+      "size": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "name": "chemical tank",
+      "shape": "cylinder",
+      "color": "#c9d6e3",
+      "at": [
+        0.2,
+        0,
+        -0.32
+      ],
+      "size": [
+        0.15,
+        0.32,
+        0.15
+      ]
+    },
+    {
+      "name": "chemical tank cap",
+      "shape": "cone",
+      "color": "#c9d6e3",
+      "at": [
+        0.2,
+        0.32,
+        -0.32
+      ],
+      "size": [
+        0.156,
+        0.068,
+        0.156
+      ]
+    },
+    {
+      "name": "exhaust stack",
+      "shape": "stack",
+      "color": "#ece5d9",
+      "at": [
+        0.55,
+        0,
+        -0.25
+      ],
+      "size": [
+        0.09,
+        1.0,
+        0.09
+      ],
+      "glow": false
+    }
+  ]
+}

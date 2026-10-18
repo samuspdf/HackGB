@@ -7,9 +7,30 @@
       "where": "Within 1 mile: 10,458 residents (45% low-income), 5 schools",
       "how": "About 5,500 lb of zinc compounds went into the air as fine dust and fumes, which settle nearby. Breathing zinc fumes can cause flu-like symptoms. Small amounts of nickel, a carcinogen, and chromium were also released.",
       "avoid": [
-        "Check the daily air quality index (AirNow), especially on hot, still days",
-        "Wipe dusty windowsills with a damp cloth instead of sweeping",
-        "Report strong or unusual odors to the Wisconsin DNR"
+        {
+          "icon": "🌤️",
+          "label": "Check air quality",
+          "text": "Check the daily air quality index (AirNow), especially on hot, still days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🧽",
+          "label": "Wipe dust damp",
+          "text": "Wipe dusty windowsills with a damp cloth instead of sweeping"
+        },
+        {
+          "icon": "👃",
+          "label": "Report odors",
+          "text": "Report strong or unusual odors in the forum, where the company can reply. You can also call the DNR tip line, 1-800-847-9367",
+          "forum": true,
+          "link": {
+            "text": "DNR tip line: 1-800-847-9367",
+            "url": "tel:+18008479367"
+          }
+        }
       ]
     },
     {
@@ -18,9 +39,29 @@
       "where": "Manitowoc's wastewater plant, then Lake Michigan",
       "how": "The shop sent about 1,600 lb of nitrates plus some zinc and chromium down the sewer. The city's treatment plant removes much of this before its water reaches Lake Michigan. The exact route still needs to be confirmed.",
       "avoid": [
-        "Never pour chemicals, paint or oil down drains",
-        "Check DNR Beach Health before swimming at Manitowoc beaches",
-        "Follow the Lake Michigan fish advisory before eating your catch"
+        {
+          "icon": "🚱",
+          "label": "Nothing down drains",
+          "text": "Never pour chemicals, paint or oil down drains"
+        },
+        {
+          "icon": "🏖️",
+          "label": "Check the beach",
+          "text": "Check DNR Beach Health before swimming at Manitowoc beaches",
+          "link": {
+            "text": "DNR Beach Health",
+            "url": "https://apps.dnr.wi.gov/beachhealth/"
+          }
+        },
+        {
+          "icon": "🐟",
+          "label": "Check fish advice",
+          "text": "Follow the Lake Michigan fish advisory before eating your catch",
+          "link": {
+            "text": "DNR fish advice",
+            "url": "https://dnr.wisconsin.gov/topic/Fishing/consumption"
+          }
+        }
       ]
     },
     {
@@ -29,9 +70,21 @@
       "where": "Homes and schoolyards near the shop",
       "how": "Metal dust that settles builds up in soil over time, where kids can swallow it while playing.",
       "avoid": [
-        "Wash kids' hands after outdoor play",
-        "Test garden soil before growing food",
-        "Take shoes off at the door"
+        {
+          "icon": "🧼",
+          "label": "Wash hands",
+          "text": "Wash kids' hands after outdoor play"
+        },
+        {
+          "icon": "🧪",
+          "label": "Test garden soil",
+          "text": "Test garden soil before growing food"
+        },
+        {
+          "icon": "👟",
+          "label": "Shoes off inside",
+          "text": "Take shoes off at the door"
+        }
       ]
     }
   ]

@@ -7,9 +7,34 @@
       "where": "North side of Manitowoc, within 1 mile: 3,747 residents",
       "how": "About 2,600 lb of tetrachloroethylene, which EPA lists as likely to cause cancer, went into the air, plus 500 lb of formaldehyde and small amounts of nickel. Both solvents irritate the eyes and lungs.",
       "avoid": [
-        "Check the daily air quality index (AirNow), especially on hot, still days",
-        "Report strong or unusual odors to the Wisconsin DNR",
-        "Comment on the plant's air permit when the DNR opens it for public input"
+        {
+          "icon": "🌤️",
+          "label": "Check air quality",
+          "text": "Check the daily air quality index (AirNow), especially on hot, still days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "👃",
+          "label": "Report odors",
+          "text": "Report strong or unusual odors in the forum, where the company can reply. You can also call the DNR tip line, 1-800-847-9367",
+          "forum": true,
+          "link": {
+            "text": "DNR tip line: 1-800-847-9367",
+            "url": "tel:+18008479367"
+          }
+        },
+        {
+          "icon": "📝",
+          "label": "Comment on permits",
+          "text": "Comment on the plant's air permit when the DNR opens it for public input",
+          "link": {
+            "text": "DNR air permit notices",
+            "url": "https://apps.dnr.wi.gov/warp_ext/public_notice.aspx"
+          }
+        }
       ]
     },
     {
@@ -18,9 +43,29 @@
       "where": "23% of nearby residents are seniors; 4 schools within 1 mile",
       "how": "This neighborhood has Manitowoc's highest share of older residents, who are more sensitive to air pollution, along with four schools.",
       "avoid": [
-        "Older adults with heart or lung disease should limit time outdoors on poor-air days",
-        "Ask schools whether they track the air quality index",
-        "Join DNR public hearings, like the one held in 2023 on the foundry's new furnaces"
+        {
+          "icon": "🧓",
+          "label": "Limit time outside",
+          "text": "Older adults with heart or lung disease should limit time outdoors on poor-air days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🏫",
+          "label": "Ask your school",
+          "text": "Ask schools whether they track the air quality index"
+        },
+        {
+          "icon": "🗣️",
+          "label": "Join hearings",
+          "text": "Join DNR public hearings, like the one held in 2023 on the foundry's new furnaces",
+          "link": {
+            "text": "DNR air permit notices",
+            "url": "https://apps.dnr.wi.gov/warp_ext/public_notice.aspx"
+          }
+        }
       ]
     },
     {
@@ -29,9 +74,26 @@
       "where": "Soil and private wells nearby",
       "how": "Tetrachloroethylene lasts a long time in groundwater wherever it reaches the soil. It's released here to the air, so this is a possible pathway rather than a confirmed one.",
       "avoid": [
-        "If you use a private well, test it for volatile organic compounds (VOCs)",
-        "City water users are on Lake Michigan water",
-        "Report spills or strong solvent smells to the DNR"
+        {
+          "icon": "💧",
+          "label": "Test your well",
+          "text": "If you use a private well, test it for volatile organic compounds (VOCs)"
+        },
+        {
+          "icon": "🚰",
+          "label": "City water is lake water",
+          "text": "City water users are on Lake Michigan water"
+        },
+        {
+          "icon": "📞",
+          "label": "Report spills",
+          "text": "Report spills or strong solvent smells in the forum. If one is happening now, call the DNR 24-hour spill line, 1-800-943-0003, first",
+          "forum": true,
+          "link": {
+            "text": "DNR 24-hour spill line: 1-800-943-0003",
+            "url": "tel:+18009430003"
+          }
+        }
       ]
     }
   ]

@@ -799,7 +799,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     if (disposed) return;
     const at3 = (x: number, y: number, h: number) => new THREE.Vector3(x, h, -y);
     for (const l of data.labels) {
-      const h = l.kind === "water" || l.kind === "bay" ? 0.5 : Math.max(ground(l.x, l.y), 0) + 1.5;
+      const h = l.kind === "water" ? 0.5 : Math.max(ground(l.x, l.y), 0) + 1.5;
       labelLayer.add(l.text, l.kind, at3(l.x, l.y, h));
     }
     for (const c of data.counties)

@@ -3,7 +3,7 @@ TRI ID 54221MNTWC1303S · 1303 S 8th St (on the river near the lakefront) · cit
 
 **What it releases (on-site 9,179 lb, all air):** hydrochloric acid 7,214 (from burning fuel) · ammonia 1,962 (from pollution-control equipment) · lead compounds 3 (PBT). Also 238 lb of lead sent off-site.
 
-**Plant status:** still running. The boilers can burn coal, petroleum coke, biomass and gas. A recent fuel mix was about 77% wood, 20% petroleum coke and 3% coal (period ending 02/2024). MPU is converting Boilers 8 and 9 to 100% renewable fuel pellets.
+**Plant status:** still running. The boilers can burn coal, petroleum coke, biomass and gas. Sources disagree on the fuel mix. Federal EIA data (via gridinfo) lists about 81% wood and wood waste, 10% petroleum coke and 9% coal, but MPU said in April 2025 that Boilers 8 and 9 burn "primarily coal and petroleum coke". EIA likely counts MPU's paper-and-plastic waste pellets as wood waste. MPU is converting Boilers 8 and 9 to 100% renewable fuel pellets.
 
 **What it touches**
 - **Air:** hydrochloric acid is a respiratory irritant. Lead settles onto nearby soil and water.

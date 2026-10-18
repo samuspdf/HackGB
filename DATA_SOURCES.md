@@ -1,6 +1,6 @@
-# Data Sources: Lakeshore Watch
+# Data Sources: Gunk Radar
 
-This file lists where every piece of data in Lakeshore Watch comes from, how it was processed, and what is generated instead of measured.
+This file lists where every piece of data in Gunk Radar comes from, how it was processed, and what is generated instead of measured.
 
 All data was downloaded once during HackGB (October 2026). Statewide data lives in `background/raw/`, and everything about one city or company lives in `cities/<city>/<company>/`. The scripts in `background/` process it offline. The web app never calls a live service: it only reads the files the pipeline writes to `web/public/data/`.
 
@@ -19,7 +19,7 @@ All data was downloaded once during HackGB (October 2026). Statewide data lives 
 | **Output** | `cities/all_facilities.txt` and `cities/<city>/facilities.txt` |
 
 **How it is used**
-1. Keep the rows whose TRI `CITY` field is Green Bay, Manitowoc or Sheboygan.
+1. Keep the rows whose TRI `CITY` field is Green Bay, Manitowoc, Sheboygan or Milwaukee.
 2. Convert any releases reported in grams to pounds (÷ 453.592).
 3. Add up each facility's releases across all chemicals:
    - on-site total
@@ -38,15 +38,16 @@ All data was downloaded once during HackGB (October 2026). Statewide data lives 
 
 ## Step 2: Researching each facility
 
-**Output:** a write-up for each of the 9 study facilities in `cities/<city>/<company>/research.md`, the city settings in `cities/<city>/README.md`, and the cross-city findings in `cities/README.md`. That overview's **Sources** section lists every web page cited (EPA, Wisconsin DNR, Wisconsin DHS, USGS, USFWS, DOJ, utility documents and news reports).
+**Output:** a write-up for each of the 12 study facilities in `cities/<city>/<company>/research.md`, the city settings in `cities/<city>/README.md`, and the cross-city findings in `cities/README.md`. That overview's **Sources** section lists every web page cited (EPA, Wisconsin DNR, Wisconsin DHS, USGS, USFWS, DOJ, utility documents and news reports).
 
 ### Structured data used in the research
 
 | What | Dataset / service | Local file(s) |
 |---|---|---|
-| Permits, inspections, violations, enforcement, nearby population and demographics | EPA ECHO Detailed Facility Report (one per facility): `https://echodata.epa.gov/echo/dfr_rest_services.get_dfr?output=JSON&p_id=<FRS ID>` | `cities/<city>/<company>/echo_facility_report.json` (9 files) |
+| Permits, inspections, violations, enforcement, nearby population and demographics | EPA ECHO Detailed Facility Report (one per facility): `https://echodata.epa.gov/echo/dfr_rest_services.get_dfr?output=JSON&p_id=<FRS ID>` | `cities/<city>/<company>/echo_facility_report.json` (12 files) |
 | Water-discharge monitoring for Georgia-Pacific (permit WI0001848) and Edgewater (WI0001589) | EPA ECHO effluent charts: `https://echodata.epa.gov/echo/eff_rest_services.get_effluent_chart?p_id=<permit>` | `cities/green_bay/georgia_pacific_broadway/echo_effluent_WI0001848.json`, `cities/sheboygan/edgewater_generating_station/echo_effluent_WI0001589.json` |
 | Schools within 1 and 3 miles of each facility | NCES EDGE geocoded school locations, 2023–24 (public: `EDGE_GEOCODE_PUBLICSCH_2324`; private: `EDGE_GEOCODE_PRIVATESCH_2324`) via `https://nces.ed.gov/opengis/rest/services/K12_School_Locations/` | `cities/<city>/<company>/schools_nearby.json` |
+| Distance from each Milwaukee facility to the nearest river | USGS National Hydrography Dataset (flowlines): `https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6/query` | Quoted in `cities/milwaukee/<company>/research.md` |
 
 ### Where specific research claims come from
 
@@ -102,8 +103,8 @@ Re-downloading the full files from the links above works just as well. The ECHO 
 - **Elevation:** decoded with the terrarium formula `(R × 256 + G + B / 256) − 32768` metres, measured relative to Lake Michigan's surface (176 m). Heights are exaggerated 12× so the relief is visible.
 - **Shoreline:** the coast follows the real Census and Natural Earth land outline. Near the water, the ground is reshaped so it meets the water surface exactly at the shoreline.
 - **Detail is limited to Wisconsin:** lakes, rivers and terrain are drawn only inside Wisconsin. Neighbouring states are plain flat land that fades into fog 200 miles (322 km) from Wisconsin's border.
-- **Which towns appear:** places with 60,000 or more people, plus the three study cities.
-- **City names:** only Green Bay, Manitowoc and Sheboygan are labelled.
+- **Which towns appear:** places with 60,000 or more people, plus the study cities.
+- **City names:** only the study cities (Green Bay, Manitowoc, Sheboygan and Milwaukee) are labelled. Water labels name Lake Michigan and Lake Superior; the bay of Green Bay is not labelled, so it isn't mistaken for the city.
 - **Crop fields:** the map is divided into 2.4 km tiles. A tile becomes a field where the Cropland Data Layer shows corn or wheat on at least 30% of it. Only tiles south of 44.75°N (the middle of Wisconsin) or in Door County qualify, and never in towns, water or steep ground. Of those, the quarter with the least corn and wheat is left out. A tile is drawn as wheat where wheat outweighs corn. In 2024 this gives about 7% of Wisconsin. Neighbouring tiles join into larger fields; the rows, the fences around each block of fields and the exact field edges are illustrative.
 
 ### Hand-entered locations
@@ -129,7 +130,7 @@ Re-downloading the full files from the links above works just as well. The ECHO 
 |---|---|
 | **Data** | From TRI 2024 (Step 1): name, TRI ID, latitude/longitude, industry, on-site / air / water / land release totals and top chemicals. |
 | **Where it lives** | `cities/<city>/<company>/facility.json`, copied from `cities/<city>/facilities.txt`. Every company folder that has a `model.json` is drawn on the map; `background/build_basemap.py` copies them into `scene.json` → `facilities`. |
-| **Facilities shown so far** | The top 3 in each city. Green Bay: Georgia-Pacific Broadway, CNG Green Bay, Green Bay Packaging Coated Products. Manitowoc: Manitowoc Public Utilities, Jagemann Plating, Eck Industries. Sheboygan: Edgewater Generating Station, Hexion Sheboygan, SACO AEI. |
+| **Facilities shown so far** | The top 3 in each city. Green Bay: Georgia-Pacific Broadway, CNG Green Bay, Green Bay Packaging Coated Products. Manitowoc: Manitowoc Public Utilities, Jagemann Plating, Eck Industries. Sheboygan: Edgewater Generating Station, Hexion Sheboygan, SACO AEI. Milwaukee: Seidel Tanning, Highline Warren, Advanced Plating Technologies. |
 
 **What is real and what is stylised**
 - The **location** is TRI's reported latitude/longitude. The building is then moved so its edge stays at least 0.5 km from the nearest river or lakeshore, and turned so its long side runs along the water. Factories that would overlap are spread apart (some real sites are under 1 km apart).
@@ -154,7 +155,7 @@ Re-downloading the full files from the links above works just as well. The ECHO 
 | Residents and schools within 1 mile | EPA ECHO Detailed Facility Report demographics; NCES EDGE school locations |
 | Local context: where releases go (e.g. Fox River, Lake Michigan, sewer plant), impaired waters, ozone nonattainment, fish advisories, permit records | Each company's `research.md` and its city's `README.md`, from Wisconsin DNR impaired-water listings, the EPA Lower Green Bay/Fox River AOC page and the ECHO permit record |
 | General health and ecology explanations (e.g. nutrients feed algae that use up oxygen, ammonia irritates the eyes and throat) | Written for this app as plain-language summaries of well-established effects. Not quoted from a single source. |
-| "How to avoid it" tips | Written for this app as general public-health and stewardship advice, e.g. follow the DNR fish advisory, check AirNow and DNR Beach Health, use lead-free tackle. They point people to official sources but are **not official guidance**. Confirm them against Wisconsin DNR / DHS wording before a public launch (see open item 1 in `cities/README.md`). |
+| "How to avoid it" tips | Written for this app as general public-health and stewardship advice, e.g. follow the DNR fish advisory, check AirNow and DNR Beach Health, use lead-free tackle. They point people to official sources but are **not official guidance**. Confirm them against Wisconsin DNR / DHS wording before a public launch (see open item 1 in `cities/README.md`).. Each tip also has a picture (an emoji) and a 2–3 word title for the "How to protect yourself" box beside Ruby, both chosen by hand. 76 of the 111 tips also link to the official place to act: AirNow, the DNR's air quality, fish advice and Beach Health pages, the DNR air permit public notices, EPA ECHO, or the DNR's tip line (1-800-847-9367) and 24-hour spill line (1-800-943-0003). The 14 "Report …" tips (odors, spills, sick birds) send people to the app's community forum first, where the company can reply; the DNR lines stay as the backup, and the first call for emergencies. |
 
 ---
 

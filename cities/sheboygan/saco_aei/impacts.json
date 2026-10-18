@@ -7,9 +7,34 @@
       "where": "Within 1 mile: 3,952 residents; Horace Mann Middle School",
       "how": "About 13,600 lb of methanol went out the stack. At high levels methanol can cause headaches and dizziness. Small amounts of maleic anhydride, which can sensitize the lungs, were also released.",
       "avoid": [
-        "Report strong or unusual odors to the Wisconsin DNR",
-        "Check the daily air quality index (AirNow), especially on hot, still days",
-        "Ask the DNR whether the plant's methanol is covered by an air permit"
+        {
+          "icon": "👃",
+          "label": "Report odors",
+          "text": "Report strong or unusual odors in the forum, where the company can reply. You can also call the DNR tip line, 1-800-847-9367",
+          "forum": true,
+          "link": {
+            "text": "DNR tip line: 1-800-847-9367",
+            "url": "tel:+18008479367"
+          }
+        },
+        {
+          "icon": "🌤️",
+          "label": "Check air quality",
+          "text": "Check the daily air quality index (AirNow), especially on hot, still days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "❓",
+          "label": "Ask about permits",
+          "text": "Ask the DNR whether the plant's methanol is covered by an air permit",
+          "link": {
+            "text": "DNR air permit notices",
+            "url": "https://apps.dnr.wi.gov/warp_ext/public_notice.aspx"
+          }
+        }
       ]
     },
     {
@@ -18,20 +43,64 @@
       "where": "Lakeshore Sheboygan County",
       "how": "Methanol helps form ground-level ozone, and Sheboygan's lakeshore doesn't meet the federal ozone standard.",
       "avoid": [
-        "Plan outdoor exercise for mornings on hot, sunny days",
-        "Drive less on ozone action days",
-        "Keep rescue inhalers handy on high-ozone days"
+        {
+          "icon": "🌅",
+          "label": "Exercise in the morning",
+          "text": "Plan outdoor exercise for mornings on hot, sunny days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🚲",
+          "label": "Drive less",
+          "text": "Drive less on ozone action days",
+          "link": {
+            "text": "DNR air quality",
+            "url": "https://dnr.wisconsin.gov/topic/AirQuality"
+          }
+        },
+        {
+          "icon": "🫁",
+          "label": "Keep an inhaler handy",
+          "text": "Keep rescue inhalers handy on high-ozone days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        }
       ]
     },
     {
       "icon": "🐟",
       "title": "Sheboygan River",
       "where": "Sheboygan River watershed",
-      "how": "About 15 lb of antimony and zinc reached water. That's small, and these aren't the river's main problem: older PCB pollution is why the DNR still says not to eat resident fish from the lower 14 miles of the river.",
+      "how": "About 15 lb reached water: 5 lb each of antimony, zinc and maleic anhydride. That's small, and these aren't the river's main problem: older PCB pollution is why the DNR still says not to eat resident fish from the lower 14 miles of the river.",
       "avoid": [
-        "Don't eat resident fish from the lower 14 miles of the Sheboygan River",
-        "Follow the DNR fish advisory for other catches",
-        "Keep stormwater drains clear of trash and chemicals"
+        {
+          "icon": "🚫",
+          "label": "Skip river fish",
+          "text": "Don't eat resident fish from the lower 14 miles of the Sheboygan River",
+          "link": {
+            "text": "DNR fish advice",
+            "url": "https://dnr.wisconsin.gov/topic/Fishing/consumption"
+          }
+        },
+        {
+          "icon": "🐟",
+          "label": "Check fish advice",
+          "text": "Follow the DNR fish advisory for other catches",
+          "link": {
+            "text": "DNR fish advice",
+            "url": "https://dnr.wisconsin.gov/topic/Fishing/consumption"
+          }
+        },
+        {
+          "icon": "🧹",
+          "label": "Keep drains clear",
+          "text": "Keep stormwater drains clear of trash and chemicals"
+        }
       ]
     }
   ]

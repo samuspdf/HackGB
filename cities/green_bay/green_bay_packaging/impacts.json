@@ -7,9 +7,30 @@
       "where": "Within 1 mile: 2,979 residents",
       "how": "Vinyl acetate is a vapor from the adhesives and coatings used here. It irritates the eyes, nose and throat.",
       "avoid": [
-        "Report strong or unusual odors to the Wisconsin DNR",
-        "Keep windows closed when the smell is noticeable",
-        "Check the daily air quality index (AirNow), especially on hot, still days"
+        {
+          "icon": "👃",
+          "label": "Report odors",
+          "text": "Report strong or unusual odors in the forum, where the company can reply. You can also call the DNR tip line, 1-800-847-9367",
+          "forum": true,
+          "link": {
+            "text": "DNR tip line: 1-800-847-9367",
+            "url": "tel:+18008479367"
+          }
+        },
+        {
+          "icon": "🪟",
+          "label": "Close the windows",
+          "text": "Keep windows closed when the smell is noticeable"
+        },
+        {
+          "icon": "🌤️",
+          "label": "Check air quality",
+          "text": "Check the daily air quality index (AirNow), especially on hot, still days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        }
       ]
     },
     {
@@ -18,9 +39,29 @@
       "where": "Neighborhoods downwind of the plant",
       "how": "The International Agency for Research on Cancer lists vinyl acetate as possibly carcinogenic to humans. The risk depends on how much people breathe in over many years.",
       "avoid": [
-        "Look up the plant's yearly releases in EPA's Toxics Release Inventory",
-        "Comment on the plant's air permit when the DNR opens it for public input",
-        "Ask the plant about plans to cut vapor emissions"
+        {
+          "icon": "🔎",
+          "label": "Look up the records",
+          "text": "Look up the plant's yearly releases in EPA's Toxics Release Inventory",
+          "link": {
+            "text": "EPA ECHO",
+            "url": "https://echo.epa.gov/"
+          }
+        },
+        {
+          "icon": "📝",
+          "label": "Comment on permits",
+          "text": "Comment on the plant's air permit when the DNR opens it for public input",
+          "link": {
+            "text": "DNR air permit notices",
+            "url": "https://apps.dnr.wi.gov/warp_ext/public_notice.aspx"
+          }
+        },
+        {
+          "icon": "🏭",
+          "label": "Ask the plant",
+          "text": "Ask the plant about plans to cut vapor emissions"
+        }
       ]
     }
   ]

@@ -1,0 +1,122 @@
+{
+  "summary": "This downtown metal-plating shop near the Milwaukee River released about 10,200 lb to the air in 2024, mostly the solvent 1-bromopropane, and sent about 29,100 lb of nitrates to the city sewer plant.",
+  "impacts": [
+    {
+      "icon": "🫁",
+      "title": "Air & breathing",
+      "where": "Downtown and the Haymarket area, within 1 mile: 32,562 residents, 20 schools",
+      "how": "About 8,700 lb of 1-bromopropane, a degreasing solvent, escaped into the air in 2024, plus about 1,200 lb of nitric acid and small amounts of cyanide, nickel and lead. Nitric acid irritates the eyes, nose and lungs.",
+      "avoid": [
+        {
+          "icon": "🌤️",
+          "label": "Check air quality",
+          "text": "Check the daily air quality index (AirNow) for Milwaukee",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "👃",
+          "label": "Report odors",
+          "text": "Report strong or unusual odors in the forum, where the company can reply. You can also call the DNR tip line, 1-800-847-9367",
+          "forum": true,
+          "link": {
+            "text": "DNR tip line: 1-800-847-9367",
+            "url": "tel:+18008479367"
+          }
+        },
+        {
+          "icon": "🪟",
+          "label": "Close the windows",
+          "text": "Keep windows closed when odors are noticeable"
+        }
+      ]
+    },
+    {
+      "icon": "🩺",
+      "title": "Long-term health",
+      "where": "Neighborhoods near the shop",
+      "how": "EPA added 1-bromopropane to its list of hazardous air pollutants in 2022, and TRI flags it as a carcinogen. Long-term exposure can also harm the nervous system. The shop has cut its releases from about 19,100 lb in 2022 to about 8,700 lb in 2024. Nickel compounds, also released here, are carcinogens too.",
+      "avoid": [
+        {
+          "icon": "👀",
+          "label": "Follow the changes",
+          "text": "Follow EPA's rules on 1-bromopropane as they are finalized"
+        },
+        {
+          "icon": "📝",
+          "label": "Comment on permits",
+          "text": "Comment when the shop's air permit comes up for renewal",
+          "link": {
+            "text": "DNR air permit notices",
+            "url": "https://apps.dnr.wi.gov/warp_ext/public_notice.aspx"
+          }
+        },
+        {
+          "icon": "📡",
+          "label": "Ask for air monitoring",
+          "text": "Ask local officials about air monitoring near schools"
+        }
+      ]
+    },
+    {
+      "icon": "🚰",
+      "title": "Sewer & Lake Michigan",
+      "where": "Milwaukee's wastewater plant, then Lake Michigan",
+      "how": "The shop sent about 29,100 lb of nitrates down the sewer in 2024, plus small amounts of nickel, copper, lead and cyanide. The Milwaukee Metropolitan Sewerage District treats this before its water reaches Lake Michigan. Which of its two plants receives it still needs to be confirmed.",
+      "avoid": [
+        {
+          "icon": "🏖️",
+          "label": "Check the beach",
+          "text": "Check beach advisories before swimming at Bradford or McKinley Beach",
+          "link": {
+            "text": "DNR Beach Health",
+            "url": "https://apps.dnr.wi.gov/beachhealth/"
+          }
+        },
+        {
+          "icon": "🌧️",
+          "label": "No swims after rain",
+          "text": "Stay out of the lake after heavy rain, when sewers can overflow",
+          "link": {
+            "text": "DNR Beach Health",
+            "url": "https://apps.dnr.wi.gov/beachhealth/"
+          }
+        },
+        {
+          "icon": "🚰",
+          "label": "Ask about the sewer",
+          "text": "Ask MMSD about its industrial pretreatment program"
+        }
+      ]
+    },
+    {
+      "icon": "🏫",
+      "title": "Schools nearby",
+      "where": "20 schools within 1 mile",
+      "how": "More schools sit within a mile of this shop than any other factory on this map, including Golda Meir School, Roosevelt Middle and Lincoln Middle. Children breathe more air for their size, so nearby air pollution matters more for them.",
+      "avoid": [
+        {
+          "icon": "🏠",
+          "label": "Kids play indoors",
+          "text": "Keep kids indoors during air quality alerts",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🏫",
+          "label": "Ask your school",
+          "text": "Ask your school whether it tracks local air quality"
+        },
+        {
+          "icon": "🤝",
+          "label": "Join neighbors",
+          "text": "Join neighborhood groups that follow local permits"
+        }
+      ]
+    }
+  ]
+}

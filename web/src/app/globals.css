@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Lakeshore Watch — "painted diorama" art style.
+/* Gunk Radar — "painted diorama" art style.
    Palette sampled from the project's style reference images: warm sand backdrops, pastel lavender→pink skies,
    cel-shaded leaf greens with cool blue-violet shadows, and seasonal accents. */
 @theme {
@@ -74,6 +74,11 @@ body {
   from {
     opacity: 0;
     translate: 0 6px;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
 }
 @keyframes area-glow {

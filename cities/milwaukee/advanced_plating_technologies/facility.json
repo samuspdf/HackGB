@@ -1,0 +1,17 @@
+{
+  "name": "Advanced Plating Technologies",
+  "tri_id": "53212RTSTC428WV",
+  "industry": "Metal plating shop",
+  "address": "405 W Cherry St, Milwaukee",
+  "lon": -87.91591,
+  "lat": 43.04978,
+  "released": 10213,
+  "air": 10213,
+  "water": 0,
+  "land": 0,
+  "chemicals": [
+    "1-Bromopropane",
+    "Nitric acid",
+    "Cyanide compounds"
+  ]
+}

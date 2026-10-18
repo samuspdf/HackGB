@@ -1,0 +1,1221 @@
+{
+"Results":{
+"Message":"Success",
+"MultipleFRSFacilities":{
+}
+,
+"RegistryID":"110000494313",
+"Reports":{
+"HasPollRpt":"Y",
+"HasAimRpt":"N",
+"HasBiosolidAnnualRpt":"N",
+"HasBflmRpt":"N"
+}
+,
+"Permits":[
+{
+"Statute":"",
+"EPASystem":"FRS",
+"EPARegion":"05",
+"SourceID":"110000494313",
+"FacilityName":"SEIDEL TANNING CORP",
+"FacilityStreet":"1306 E MEINECKE ST",
+"FacilityCity":"MILWAUKEE",
+"FacilityState":"WI",
+"FacilityZip":"53212",
+"FacilityFipsCode":"55079",
+"FacilityCountyName":"Milwaukee County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.06198",
+"Longitude":"-87.89519",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"ADDRESS MATCHING-HOUSE NUMBER",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":"30",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"",
+"EPASystem":"ICIS",
+"EPARegion":"05",
+"SourceID":"600016642",
+"FacilityName":"SEIDEL TANNING CORP - E MEINECKE AVE",
+"FacilityStreet":"1306 E MEINECKE AVE",
+"FacilityCity":"MILWAUKEE",
+"FacilityState":"WI",
+"FacilityZip":"53212",
+"FacilityFipsCode":"55079",
+"FacilityCountyName":"Milwaukee County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.06229",
+"Longitude":"-87.89529",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"EPARegion":"05",
+"SourceID":"WI0000005507926674",
+"FacilityName":"SEIDEL TANNING COMPANY",
+"FacilityStreet":"1306 E MEINECKE AVE",
+"FacilityCity":"MILWAUKEE",
+"FacilityState":"WI",
+"FacilityZip":"532123592",
+"FacilityFipsCode":"55079",
+"FacilityCountyName":"Milwaukee County",
+"Universe":"Major Emissions",
+"Areas":"CAAMACT, CAASIP, CAATVP",
+"ExpDate":null,
+"Latitude":"43.06198",
+"Longitude":"-87.89519",
+"IndianCountry":"N",
+"SIC":"3111",
+"NAICS":"316110",
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Operating"
+}
+,{
+"Statute":"CAA",
+"EPASystem":"EIS",
+"EPARegion":"05",
+"SourceID":"6287111",
+"FacilityName":"SEIDEL TANNING CO",
+"FacilityStreet":"1306 E MEINECKE AVE",
+"FacilityCity":"MILWAUKEE",
+"FacilityState":"WI",
+"FacilityZip":"53212",
+"FacilityFipsCode":"55079",
+"FacilityCountyName":"Milwaukee County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.062136",
+"Longitude":"-87.895526",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":"316110",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"UNKNOWN",
+"RefPointDesc":"ACRES POINTS NOT REPRESENTED BY 101-107",
+"Scale":null,
+"AccuracyValue":"1",
+"AccuracyScore":"17400",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"EP313",
+"EPASystem":"TRI",
+"EPARegion":"5",
+"SourceID":"53212SDLTN1306E",
+"FacilityName":"SEIDEL TANNING CORP",
+"FacilityStreet":"1306 E MEINECKE AVE",
+"FacilityCity":"MILWAUKEE",
+"FacilityState":"WI",
+"FacilityZip":"53212",
+"FacilityFipsCode":"55079",
+"FacilityCountyName":"Milwaukee County",
+"Universe":"Toxics Release Inventory",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.06198",
+"Longitude":"-87.89519",
+"IndianCountry":"N",
+"SIC":"3111",
+"NAICS":"316110",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"ADDRESS MATCHING-HOUSE NUMBER",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":"30",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Last Reported for 2024"
+}
+,{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"EPARegion":"05",
+"SourceID":"WIT560011058",
+"FacilityName":"SEIDEL TANNING CORP",
+"FacilityStreet":"1306 E MEINECKE ST",
+"FacilityCity":"MILWAUKEE",
+"FacilityState":"WI",
+"FacilityZip":"53212",
+"FacilityFipsCode":"55079",
+"FacilityCountyName":"Milwaukee County",
+"Universe":"Other",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.062029",
+"Longitude":"-87.895245",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"WGS84",
+"CollectDesc":"Address Geocode",
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":null,
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Inactive (     )"
+}
+]
+,
+"SystemExtractDates":{
+"Dates":[
+{
+"EPASystem":"ICIS-Air",
+"SystemExtractDate":"10/16/2026"
+}
+,{
+"EPASystem":"RCRAInfo",
+"SystemExtractDate":"10/16/2026"
+}
+,{
+"EPASystem":"SDWIS",
+"SystemExtractDate":"10/07/2026"
+}
+]
+}
+,
+"EnforcementComplianceSummaries":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/17/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/17/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Summaries":[
+{
+"Statute":"CAA",
+"Inspections":"2",
+"LastInspection":"12/18/2024",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"0",
+"QtrsInSNC":"0",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+,{
+"Statute":"RCRA",
+"Inspections":null,
+"LastInspection":null,
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"0",
+"QtrsInSNC":"0",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+]
+}
+,
+"NAICS":{
+"Sources":[
+{
+"NAICSCodes":[
+{
+"SourceID":"53212SDLTN1306E",
+"EPASystem":"TRI",
+"NAICSCode":"316110",
+"NAICSDesc":"Leather and Hide Tanning and Finishing"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"6287111",
+"EPASystem":"EIS",
+"NAICSCode":"316110",
+"NAICSDesc":"Leather and Hide Tanning and Finishing"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"WI0000005507926674",
+"EPASystem":"ICIS-Air",
+"NAICSCode":"316110",
+"NAICSDesc":"Leather and Hide Tanning and Finishing"
+}
+]
+}
+]
+}
+,
+"SBEEventTotals":{
+}
+,
+"SIC":{
+"Sources":[
+{
+"SICCodes":[
+{
+"SourceID":"53212SDLTN1306E",
+"EPASystem":"TRI",
+"SICCode":"3111",
+"SICDesc":"Leather Tanning And Finishing"
+}
+]
+}
+,{
+"SICCodes":[
+{
+"SourceID":"WI0000005507926674",
+"EPASystem":"ICIS-Air",
+"SICCode":"3111",
+"SICDesc":"Leather Tanning And Finishing"
+}
+]
+}
+]
+}
+,
+"EffluentGuidelines":{
+}
+,
+"InspectionEnforcementSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/17/2021",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/17/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"SourceID":"WI0000005507926674",
+"InspectionCount":"2",
+"DateLastInspection":"12/18/2024",
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+,{
+"Statute":"RCRA",
+"EPASystem":"RCRAInfo",
+"SourceID":"WIT560011058",
+"InspectionCount":"0",
+"DateLastInspection":null,
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+]
+}
+,
+"ComplianceHistory":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/17/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Inspection":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005507926674",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/17/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/17/2026 Facility Reported No Deviations",
+"CompMonitorID":"WI000A0000550792667400517"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005507926674",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE On-Site",
+"LeadAgency":"EPA",
+"Date":"05/23/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"05000F1735776"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005507926674",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"01/21/2025",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 01/21/2025 Facility Reported No Deviations",
+"CompMonitorID":"WI000A0000550792667400516"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005507926674",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"FCE On-Site",
+"LeadAgency":"State",
+"Date":"12/18/2024",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550792667400515"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005507926674",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"03/01/2024",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 03/04/2024 Facility Reported No Deviations",
+"CompMonitorID":"WI000A0000550792667400514"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005507926674",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"03/01/2023",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 05/10/2023 Facility Reported No Deviations",
+"CompMonitorID":"WI000A0000550792667400512"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005507926674",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"FCE On-Site",
+"LeadAgency":"State",
+"Date":"01/23/2023",
+"CMSFlag":"Y",
+"OfficialFlag":"Y",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"WI000A0000550792667400513"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005507926674",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE Title V CCR",
+"LeadAgency":"State",
+"Date":"02/03/2022",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":"Reviewed: 02/08/2022 Facility Reported No Deviations",
+"CompMonitorID":"WI000A0000550792667400511"
+}
+]
+}
+,
+"ComplianceSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+,{
+"Program":"RCRA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005507926674",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/17/2026",
+"QtrsInNC":"0"
+}
+,{
+"Statute":"RCRA",
+"SourceID":"WIT560011058",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/17/2026",
+"QtrsInNC":"0"
+}
+]
+}
+,
+"CWA3YrCompliance":{
+}
+,
+"CWARNCCompliance":{
+}
+,
+"CWA3YrD80D90Counts":{
+}
+,
+"CWAEffluentComplianceEXP":{
+}
+,
+"CWAPSCompliance":{
+}
+,
+"CWAPSComplianceNew":{
+}
+,
+"CWASECompliance":{
+}
+,
+"CWACSCompliance":{
+}
+,
+"CWACSComplianceNew":{
+}
+,
+"CWAEffluentALRExceedencesEXP":{
+}
+,
+"AirCompliance":{
+"Header":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+}
+,
+"Sources":[
+{
+"PermitHistory":{
+"SourceID":"WI0000005507926674",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"HPVHistory":{
+"SourceID":"WI0000005507926674",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null
+}
+,
+"HPVProgramsPollutants":[
+]
+,
+"FRVProgramsPollutants":[
+]
+,
+"AFSPrograms":[
+]
+}
+]
+}
+,
+"BflmCompliance":{
+}
+,
+"RCRACompliance":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+,
+"Sources":[
+{
+"Status":{
+"SourceID":"WIT560011058",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"Evaluations":[
+]
+,
+"Violations":[
+]
+}
+]
+}
+,
+"SDWISCompliance":{
+}
+,
+"Watersheds":{
+}
+,
+"AssessedWaters":{
+}
+,
+"Notices":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/17/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Notice":[
+{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"SourceID":"WI0000005507926674",
+"ActionType":"Other Response - No Further Action",
+"LeadAgency":"EPA",
+"NoticeDate":"10/08/2025",
+"EnfIdentifier":"05-200281967",
+"OfficialFlag":"N"
+}
+]
+}
+,
+"FormalActions":{
+}
+,
+"ICISFormalActions":{
+}
+,
+"CaseFormalActions":{
+}
+,
+"TRIHistory":{
+"Sources":[
+{
+"ReleaseYear":[
+{
+"SourceID":"53212SDLTN1306E",
+"Year":"2024",
+"TotalAirEmissions":"32,573",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"334",
+"TotalOnSiteReleases":"32,573",
+"TotalOffSiteReleases":"56,495",
+"TotalReleasesTransfers":"89,068"
+}
+,{
+"SourceID":"53212SDLTN1306E",
+"Year":"2023",
+"TotalAirEmissions":"24,581",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"205",
+"TotalOnSiteReleases":"24,581",
+"TotalOffSiteReleases":"35,894",
+"TotalReleasesTransfers":"60,475"
+}
+,{
+"SourceID":"53212SDLTN1306E",
+"Year":"2022",
+"TotalAirEmissions":"25,226",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"833",
+"TotalOnSiteReleases":"25,226",
+"TotalOffSiteReleases":"29,977",
+"TotalReleasesTransfers":"55,203"
+}
+,{
+"SourceID":"53212SDLTN1306E",
+"Year":"2021",
+"TotalAirEmissions":"26,250",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"995",
+"TotalOnSiteReleases":"26,250",
+"TotalOffSiteReleases":"27,869",
+"TotalReleasesTransfers":"54,119"
+}
+,{
+"SourceID":"53212SDLTN1306E",
+"Year":"2020",
+"TotalAirEmissions":"19,507",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"414",
+"TotalOnSiteReleases":"19,507",
+"TotalOffSiteReleases":"21,176",
+"TotalReleasesTransfers":"40,683"
+}
+,{
+"SourceID":"53212SDLTN1306E",
+"Year":"2019",
+"TotalAirEmissions":"25,361",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"1,046",
+"TotalOnSiteReleases":"25,361",
+"TotalOffSiteReleases":"19,389",
+"TotalReleasesTransfers":"44,750"
+}
+,{
+"SourceID":"53212SDLTN1306E",
+"Year":"2018",
+"TotalAirEmissions":"29,148",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"1,326",
+"TotalOnSiteReleases":"29,148",
+"TotalOffSiteReleases":"28,122",
+"TotalReleasesTransfers":"57,270"
+}
+,{
+"SourceID":"53212SDLTN1306E",
+"Year":"2017",
+"TotalAirEmissions":"28,705",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"2,497",
+"TotalOnSiteReleases":"28,705",
+"TotalOffSiteReleases":"23,316",
+"TotalReleasesTransfers":"52,021"
+}
+,{
+"SourceID":"53212SDLTN1306E",
+"Year":"2016",
+"TotalAirEmissions":"31,650",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"1,895",
+"TotalOnSiteReleases":"31,650",
+"TotalOffSiteReleases":"24,193",
+"TotalReleasesTransfers":"55,843"
+}
+,{
+"SourceID":"53212SDLTN1306E",
+"Year":"2015",
+"TotalAirEmissions":"32,964",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"0",
+"TotalOnSiteReleases":"32,964",
+"TotalOffSiteReleases":"0",
+"TotalReleasesTransfers":"32,964"
+}
+]
+}
+]
+}
+,
+"TRIReleases":{
+"TRIFacilities":null,
+"Header":[
+{
+"Year10":"2024",
+"Year9":"2023",
+"Year8":"2022",
+"Year7":"2021",
+"Year6":"2020",
+"Year5":"2019",
+"Year4":"2018",
+"Year3":"2017",
+"Year2":"2016",
+"Year1":"2015"
+}
+]
+,
+"Chemicals":[
+{
+"ChemicalName":"Certain glycol ethers",
+"Year10Pounds":"29,662",
+"Year9Pounds":"23,941",
+"Year8Pounds":"22,633",
+"Year7Pounds":"23,058",
+"Year6Pounds":"18,189",
+"Year5Pounds":"23,555",
+"Year4Pounds":"26,284",
+"Year3Pounds":"25,677",
+"Year2Pounds":"28,406",
+"Year1Pounds":"29,317"
+}
+,
+{
+"ChemicalName":"Chromium compounds (except for chromite ore mined in the Transvaal Region)",
+"Year10Pounds":"56,498",
+"Year9Pounds":"35,896",
+"Year8Pounds":"29,979",
+"Year7Pounds":"27,871",
+"Year6Pounds":"21,177",
+"Year5Pounds":"19,390",
+"Year4Pounds":"28,124",
+"Year3Pounds":"23,317",
+"Year2Pounds":"24,194",
+"Year1Pounds":null
+}
+,
+{
+"ChemicalName":"Formic acid",
+"Year10Pounds":"2,908",
+"Year9Pounds":"638",
+"Year8Pounds":"2,591",
+"Year7Pounds":"3,190",
+"Year6Pounds":"1,317",
+"Year5Pounds":"1,805",
+"Year4Pounds":"2,862",
+"Year3Pounds":"3,027",
+"Year2Pounds":"3,243",
+"Year1Pounds":"3,647"
+}
+]
+}
+,
+"DmrPollLoads":{
+}
+,
+"RCRAWasteHistory":{
+}
+,
+"AirQuality":{
+"Ozone8hr1997Area":"Milwaukee-Racine Area WI",
+"Ozone8hr2008Area":null,
+"Ozone8hr2015Area":"Northern Milwaukee/Ozaukee Shoreline WI",
+"Lead1978Area":null,
+"Lead2008Area":null,
+"CarbonMonoxide1971Area":null,
+"NitrogenDioxide1971Area":null,
+"SulfurDioxide1971Area":null,
+"SulfurDioxide2010Area":null,
+"ParticulateMatter1987Area":null,
+"ParticulateMatter1997Area":null,
+"ParticulateMatter2006Area":"Milwaukee-Racine WI",
+"ParticulateMatter2012Area":null
+}
+,
+"AirQualityNAAs":{
+"AirQualityNAA":[
+{
+"Pollutant":"Ozone",
+"WithinNAStatusArea":"Yes",
+"NAStatusStandards":"1-Hour Ozone (1979); 8-Hour Ozone (2015)",
+"WithinMaintStatusArea":"Yes",
+"MaintStatusStandards":"8-Hour Ozone (1997)"
+}
+,{
+"Pollutant":"Lead",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Particulate Matter",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"Yes",
+"MaintStatusStandards":"PM-2.5 (2006)"
+}
+,{
+"Pollutant":"Carbon Monoxide",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Sulfur Dioxide",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+]
+}
+,
+"SiteVisits":{
+}
+,
+"SanitarySurveys":{
+}
+,
+"ViolationsEnforcementActions":{
+}
+,
+"LeadAndCopperRule5Yr":{
+}
+,
+"Tribes":[
+{
+"AreaName":"Forest County Potawatomi Community",
+"EPAId":"100000085",
+"TribeName":"Forest County Potawatomi Community, Wisconsin",
+"DistanceToArea":"3"
+}
+]
+,
+"WebFireDocuments":[
+]
+,
+"CAEDDocuments":[
+]
+,
+"SpatialMetadata":{
+"RegistryID":"110000494313",
+"Latitude83":"43.06198",
+"Longitude83":"-87.89519",
+"CollectionMethod":"ADDRESS MATCHING-HOUSE NUMBER",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"CalculatedAccuracy":"30 Meters",
+"CoordinateSourceSystem":"TRIS",
+"CoordinateSourceSystemId":"53212SDLTN1306E"
+}
+,
+"ACS2023Demographics":{
+"Radius":"1",
+"CenterLatitude":"43.06198",
+"CenterLongitude":"-87.89519",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"94%",
+"WaterArea":"6%",
+"PopulationDensity":"11,598/sq.mi.",
+"PercentMinority":"50%",
+"Households":"15,055",
+"HousingUnits":"18,073",
+"HouseholdsPublicAssistance":"411",
+"PersonsBelowPovertyLevel":"8,308",
+"PercentBelowPovertyLevel":"26%",
+"PersonsBelowLowIncomeLevel":"14,617",
+"PercentBelowLowIncomeLevel":"45%",
+"ACSPopulation":"34,058",
+"ACSPovertyBasis":"32,168",
+"PercentPeopleOfColor":"50%",
+"White":"17,612 (52%)",
+"AfricanAmerican":"10,506 (31%)",
+"HispanicOrigin":"2,374 (7%)",
+"Asian":"2,223 (7%)",
+"HawaiinPacificIslander":"1 (0%)",
+"AmericanIndian":"224 (1%)",
+"OtherMultiracial":"2,858 (8%)",
+"Child":"2,167 (6%)",
+"Minors":"7,241 (21%)",
+"Adults":"26,813 (79%)",
+"Seniors":"3,573 (10%)",
+"Less9thGrade":"801 (3.82%)",
+"Grades9to12":"1,549 (7.39%)",
+"HSDiploma":"5,810 (27.73%)",
+"SomeCollege":"4,202 (20.06%)",
+"BSBA":"7,041 (33.61%)",
+"IncomeLess15k":"2,936 (19.5%)",
+"Income15to25k":"1,292 (8.58%)",
+"Income25to50k":"3,106 (20.63%)",
+"Income50to75k":"2,384 (15.84%)",
+"Income75kPlus":"5,337 (35.45%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"ACS2024Demographics":{
+"Radius":"1",
+"CenterLatitude":"43.06198",
+"CenterLongitude":"-87.89519",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"94%",
+"WaterArea":"6%",
+"PopulationDensity":"13,000/sq.mi.",
+"PercentMinority":"33%",
+"Households":"21,903",
+"HousingUnits":"24,119",
+"HouseholdsPublicAssistance":"629",
+"PersonsBelowPovertyLevel":"7,240",
+"PercentBelowPovertyLevel":"20%",
+"PersonsBelowLowIncomeLevel":"14,375",
+"PercentBelowLowIncomeLevel":"39%",
+"ACSPopulation":"38,177",
+"ACSPovertyBasis":"37,000",
+"PercentPeopleOfColor":"33%",
+"White":"26,319 (69%)",
+"AfricanAmerican":"6,068 (16%)",
+"HispanicOrigin":"3,303 (9%)",
+"Asian":"1,056 (3%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"169 (0%)",
+"OtherMultiracial":"3,124 (8%)",
+"Child":"1,039 (3%)",
+"Minors":"3,360 (9%)",
+"Adults":"34,816 (91%)",
+"Seniors":"5,092 (13%)",
+"Less9thGrade":"338 (1.22%)",
+"Grades9to12":"868 (3.13%)",
+"HSDiploma":"3,562 (12.85%)",
+"SomeCollege":"5,099 (18.4%)",
+"BSBA":"16,218 (58.51%)",
+"IncomeLess15k":"2,610 (11.92%)",
+"Income15to25k":"2,121 (9.69%)",
+"Income25to50k":"4,801 (21.92%)",
+"Income50to75k":"3,953 (18.05%)",
+"Income75kPlus":"8,414 (38.42%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"MinorTTDemographics":{
+}
+,
+"AWSDocs":{
+}
+,
+"Industries":"Leather and Allied Product Manufacturing",
+"MapOutput":{
+"IconBaseURL":"https://echo.epa.gov/themes/custom/echo/images/map/",
+"PopUpBaseURL":"https://echodata.epa.gov/echo/echo_rest_services.pop_up?p_id=",
+"CenterLatitude":"43.06198",
+"CenterLongitude":"-87.89519",
+"LocationalDataSource":"TRIS",
+"EstimatedAccuracyMeters":"30",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"MapData":[
+{
+"LAT":"43.06138",
+"LON":"-87.89162",
+"ICON":"MULT-IC-MJ-2.png",
+"TYPE":"Facility",
+"NAME":"WISCONSIN PAPERBOARD",
+"PUV":"110001923278"
+}
+,{
+"LAT":"43.06018",
+"LON":"-87.89652",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"MILWAUKEE BUREAU OF SANITATION CEN3",
+"PUV":"110005459306"
+}
+,{
+"LAT":"43.06018",
+"LON":"-87.89722",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"ASCENSION COLUMBIA ST MARY S MILWAUKEE FAMILY HEALTH CENTER",
+"PUV":"110070622883"
+}
+,{
+"LAT":"43.062",
+"LON":"-87.89581",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"KOHL AND MADDEN PRINTING WK CO",
+"PUV":"110005422925"
+}
+,{
+"LAT":"43.06047",
+"LON":"-87.89171",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"WEPCO CAMBRIDGE WAREHOUSE",
+"PUV":"110005454864"
+}
+,{
+"LAT":"43.06018",
+"LON":"-87.89722",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"FAMILY HEALTH CENTER",
+"PUV":"110070636350"
+}
+,{
+"LAT":"43.06138",
+"LON":"-87.89162",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"THE NEWARK GROUP - CARAUSTAR",
+"PUV":"110070308878"
+}
+,{
+"LAT":"43.06019",
+"LON":"-87.89834",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"COFFAROS SVC STATION",
+"PUV":"110005481022"
+}
+,{
+"LAT":"43.06198",
+"LON":"-87.89519",
+"ICON":"MULT-IC-MJ-2.png",
+"TYPE":"Facility",
+"NAME":"SEIDEL TANNING CORP",
+"PUV":"110000494313"
+}
+,{
+"LAT":"43.06151",
+"LON":"-87.89613",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"SIGN EFFECTZ",
+"PUV":"110005489505"
+}
+]
+}
+}
+}

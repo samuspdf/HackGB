@@ -1,5 +1,5 @@
-Lakeshore Watch — All Shortlisted Facilities
-============================================
+Gunk Radar — All Shortlisted Facilities
+=======================================
 Top 10 per city by on-site releases, EPA TRI 2024 (raw pounds).
 The top 3 in each city are the study facilities (marked *).
 
@@ -26,6 +26,18 @@ Manitowoc
    8. Kdc/One - Northern Labs  (62 lb on-site, TRI ID 54220NRTHR5800W)
    9. Broadwind Towers & Heavy Fabrications  (37 lb on-site, TRI ID 54221TWRTC11S16)
   10. Rockwell Lime Co  (4 lb on-site, TRI ID 54220RCKWL4110R)
+
+Milwaukee
+ * 1. Seidel Tanning Corp  (32,573 lb on-site, TRI ID 53212SDLTN1306E)
+ * 2. Highline Warren - Milwaukee  (12,974 lb on-site, TRI ID 53209RXFRD3100W)
+ * 3. Advanced Plating Technologies  (10,213 lb on-site, TRI ID 53212RTSTC428WV)
+   4. Sonoco Metal Packaging Llc  (6,695 lb on-site, TRI ID 53224MLWKC8500W)
+   5. Thermo Fisher Scientific Milwaukee Llc  (1,682 lb on-site, TRI ID 53202PHRMC2202N)
+   6. Flint Hills Resources Pine Bend Llc Milwaukee Terminal  (1,582 lb on-site, TRI ID 53224MLWKF9343N)
+   7. Materion Advanced Chemicals  (1,527 lb on-site, TRI ID 53233CRCNC407NO)
+   8. Milport Enterprises Inc  (1,453 lb on-site, TRI ID 53207MLPRT2829S)
+   9. Maynard Steel Casting Co  (1,206 lb on-site, TRI ID 53215MYNRD2856S)
+  10. Badger Meter Inc  (1,009 lb on-site, TRI ID 53223BDGRM4545W)
 
 Sheboygan
  * 1. Edgewater Generating Station  (61,731 lb on-site, TRI ID 53082DGWTR3739L)

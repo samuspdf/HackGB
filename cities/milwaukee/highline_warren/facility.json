@@ -1,0 +1,15 @@
+{
+  "name": "Highline Warren",
+  "tri_id": "53209RXFRD3100W",
+  "industry": "Automotive chemical plant",
+  "address": "3100 W Mill Rd, Milwaukee",
+  "lon": -87.9509,
+  "lat": 43.13388,
+  "released": 12974,
+  "air": 12974,
+  "water": 0,
+  "land": 0,
+  "chemicals": [
+    "Methanol"
+  ]
+}

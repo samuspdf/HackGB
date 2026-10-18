@@ -12,7 +12,7 @@ export interface Place {
   county: string;
   x: number;
   y: number;
-  /** One of the three study cities (Green Bay, Manitowoc, Sheboygan) */
+  /** One of the study cities (cities/<city>/city.json) */
   study: boolean;
 }
 
@@ -35,7 +35,7 @@ export interface FacilityModel {
 /** What a facility's releases touch in daily life: cities/<city>/<company>/impacts.json */
 export interface Impacts {
   summary: string;
-  impacts: { icon: string; title: string; where: string; how: string; avoid: string[] }[];
+  impacts: { icon: string; title: string; where: string; how: string; avoid: { icon: string; label: string; text: string; link?: { text: string; url: string }; forum?: boolean }[] }[]; // forum: a "report it" tip, sent to the forum
 }
 
 /** A study facility drawn as a 3D building (EPA TRI 2024, on-site releases in lb) */
@@ -64,7 +64,7 @@ export interface County {
 
 export interface MapLabel {
   text: string;
-  kind: "water" | "bay" | "state" | "neighbor";
+  kind: "water" | "state" | "neighbor";
   x: number;
   y: number;
 }

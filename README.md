@@ -1,4 +1,4 @@
-# HackGB
+# Gunk Radar
 This is my project for HackGB.
 
 Where all the data comes from: [DATA_SOURCES.md](DATA_SOURCES.md)
@@ -22,5 +22,6 @@ GEMINI_MODEL=gemini-3.5-flash-lite    # optional: which Gemini model Ruby uses
 ```
 
 Without `GEMINI_API_KEY`, Ruby still guides visitors through the cities and factories but can't answer typed
-questions. Without `FORUM_COMPANY_CODE`, visitors can comment in the forum but companies can't reply.
-Forum comments are saved in `cities/<city>/<company>/forum.json` (also kept out of git).
+questions. Without `FORUM_COMPANY_CODE`, neighbors can message the factories in the forum but companies can't reply
+(with it, a company opens its chat, taps "Reply as the company" and enters the code).
+Forum messages are saved in `cities/<city>/<company>/forum.json` (also kept out of git).

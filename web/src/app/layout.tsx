@@ -6,7 +6,7 @@ const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin"], axe
 const nunito = Nunito({ variable: "--font-nunito", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lakeshore Watch",
+  title: "Gunk Radar",
   description: "What factories along Wisconsin's Lake Michigan shore release, and what it touches.",
 };
 

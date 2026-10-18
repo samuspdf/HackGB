@@ -1,0 +1,13 @@
+# Milwaukee (Milwaukee County)
+
+**Local setting:** The Milwaukee, Menomonee and Kinnickinnic rivers meet downtown and flow through the Inner Harbor into Lake Michigan. Together they form the **Milwaukee Estuary Area of Concern** (designated 1987, expanded in 2008 up the Milwaukee River toward Cedarburg, the Little Menomonee and the Kinnickinnic). River and harbor sediments hold legacy **PCBs, PAHs, petroleum compounds and heavy metals (mercury, lead, chromium)**. EPA and five local partners (MMSD, We Energies, the Wisconsin DNR, the City of Milwaukee and Milwaukee County Parks) agreed to a roughly **$450 million cleanup to remove about 2 million cubic yards of contaminated sediment**, the largest ever under the Great Lakes Restoration Initiative, with delisting targeted for 2031. **PCB fish advisories** have applied to the Milwaukee River since 1980 and the Menomonee since 1984. Carp and predator fish are of most concern, and part of the Kinnickinnic is listed as impaired for PCBs in fish tissue.
+
+**Air:** all of Milwaukee County is in **nonattainment for the 2015 ozone standard**, per ECHO. EPA moved the area from "moderate" to **"serious"** nonattainment effective January 16, 2025. Wisconsin challenged that in the Seventh Circuit and the reclassification is on hold. The DNR and local business groups note that much of the region's ozone blows in from outside Wisconsin. The county is also a maintenance area for the 2006 fine-particle (PM2.5) standard.
+
+**Drinking water:** Milwaukee Water Works draws from **Lake Michigan** through deep intakes more than a mile offshore, treated at the Linnwood (north side) and Howard Avenue (south side) plants. Ozone is the main disinfectant. The system serves about 867,000 people. It doesn't draw from the rivers.
+
+**Sewers:** factory sewer flows go to the **Milwaukee Metropolitan Sewerage District (MMSD)**. Its Jones Island plant discharges to the Milwaukee Outer Harbor and its South Shore plant (Oak Creek) to Lake Michigan, under one permit (WI-0036820). Heavy rain can still cause sewer overflows.
+
+**Beaches:** the Milwaukee Health Department tests Bradford, McKinley and South Shore beaches six mornings a week and posts green / yellow / red advisories. From 2018 to 2022 Bradford Beach was under an advisory or closed for water quality about 12% of the swim season. In August 2025, Bradford and McKinley were closed after heavy rain and sewer overflows.
+
+**Study facilities:** unlike the other three cities, Milwaukee's top 3 reporters are mid-sized shops rather than power plants or paper mills, and none releases directly to water. They sit in some of the most densely populated neighborhoods on the map: 10,985 to 38,177 residents and 5 to 20 schools within 1 mile of each.

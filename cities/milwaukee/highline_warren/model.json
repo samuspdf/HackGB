@@ -1,0 +1,284 @@
+{
+  "scale": 1.3,
+  "footprint": [
+    1.6,
+    1.1
+  ],
+  "halo": [
+    2.8,
+    2.09
+  ],
+  "label": [
+    0.45,
+    1.05,
+    0.1
+  ],
+  "smoke": [
+    [
+      0.62,
+      0.75,
+      -0.32
+    ]
+  ],
+  "parts": [
+    {
+      "name": "concrete yard",
+      "shape": "box",
+      "color": "#b9b0a6",
+      "at": [
+        0,
+        -0.4,
+        0
+      ],
+      "size": [
+        1.7,
+        0.46,
+        1.2
+      ],
+      "glow": false
+    },
+    {
+      "name": "blending warehouse",
+      "shape": "box",
+      "color": "#e2d9cc",
+      "at": [
+        -0.3,
+        0,
+        0.18
+      ],
+      "size": [
+        0.85,
+        0.36,
+        0.6
+      ]
+    },
+    {
+      "name": "blending warehouse roof",
+      "shape": "box",
+      "color": "#5b6b8c",
+      "at": [
+        -0.3,
+        0.36,
+        0.18
+      ],
+      "size": [
+        0.867,
+        0.03,
+        0.612
+      ],
+      "glow": false
+    },
+    {
+      "name": "loading dock",
+      "shape": "box",
+      "color": "#a39e96",
+      "at": [
+        -0.3,
+        0,
+        -0.18
+      ],
+      "size": [
+        0.7,
+        0.08,
+        0.12
+      ],
+      "glow": false
+    },
+    {
+      "name": "truck trailer",
+      "shape": "box",
+      "color": "#f4f1ea",
+      "at": [
+        -0.45,
+        0,
+        -0.38
+      ],
+      "size": [
+        0.4,
+        0.14,
+        0.12
+      ]
+    },
+    {
+      "name": "truck cab",
+      "shape": "box",
+      "color": "#3f7cc4",
+      "at": [
+        -0.17,
+        0,
+        -0.38
+      ],
+      "size": [
+        0.12,
+        0.13,
+        0.12
+      ]
+    },
+    {
+      "name": "methanol tank 1",
+      "shape": "cylinder",
+      "color": "#dfe6ee",
+      "at": [
+        0.32,
+        0,
+        0.25
+      ],
+      "size": [
+        0.19,
+        0.55,
+        0.19
+      ]
+    },
+    {
+      "name": "methanol tank 1 cap",
+      "shape": "cone",
+      "color": "#dfe6ee",
+      "at": [
+        0.32,
+        0.55,
+        0.25
+      ],
+      "size": [
+        0.198,
+        0.086,
+        0.198
+      ]
+    },
+    {
+      "name": "methanol tank 2",
+      "shape": "cylinder",
+      "color": "#dfe6ee",
+      "at": [
+        0.55,
+        0,
+        0.25
+      ],
+      "size": [
+        0.19,
+        0.55,
+        0.19
+      ]
+    },
+    {
+      "name": "methanol tank 2 cap",
+      "shape": "cone",
+      "color": "#dfe6ee",
+      "at": [
+        0.55,
+        0.55,
+        0.25
+      ],
+      "size": [
+        0.198,
+        0.086,
+        0.198
+      ]
+    },
+    {
+      "name": "methanol tank 3",
+      "shape": "cylinder",
+      "color": "#dfe6ee",
+      "at": [
+        0.32,
+        0,
+        -0.02
+      ],
+      "size": [
+        0.19,
+        0.55,
+        0.19
+      ]
+    },
+    {
+      "name": "methanol tank 3 cap",
+      "shape": "cone",
+      "color": "#dfe6ee",
+      "at": [
+        0.32,
+        0.55,
+        -0.02
+      ],
+      "size": [
+        0.198,
+        0.086,
+        0.198
+      ]
+    },
+    {
+      "name": "methanol tank 4",
+      "shape": "cylinder",
+      "color": "#dfe6ee",
+      "at": [
+        0.55,
+        0,
+        -0.02
+      ],
+      "size": [
+        0.19,
+        0.55,
+        0.19
+      ]
+    },
+    {
+      "name": "methanol tank 4 cap",
+      "shape": "cone",
+      "color": "#dfe6ee",
+      "at": [
+        0.55,
+        0.55,
+        -0.02
+      ],
+      "size": [
+        0.198,
+        0.086,
+        0.198
+      ]
+    },
+    {
+      "name": "washer fluid tank",
+      "shape": "cylinder",
+      "color": "#5aa0d8",
+      "at": [
+        0.2,
+        0,
+        -0.33
+      ],
+      "size": [
+        0.15,
+        0.4,
+        0.15
+      ]
+    },
+    {
+      "name": "washer fluid tank cap",
+      "shape": "cone",
+      "color": "#5aa0d8",
+      "at": [
+        0.2,
+        0.4,
+        -0.33
+      ],
+      "size": [
+        0.156,
+        0.068,
+        0.156
+      ]
+    },
+    {
+      "name": "vent stack",
+      "shape": "stack",
+      "color": "#ece5d9",
+      "at": [
+        0.62,
+        0,
+        -0.32
+      ],
+      "size": [
+        0.07,
+        0.75,
+        0.07
+      ],
+      "glow": false
+    }
+  ]
+}

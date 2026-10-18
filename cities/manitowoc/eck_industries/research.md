@@ -1,7 +1,7 @@
 # Eck Industries (aluminum foundry)
 TRI ID 54220CKNDS1602N · 1602 N 8th St · permits: CAA Title V, general stormwater (WIG004331), RCRA
 
-**What it releases (on-site 3,728 lb, all stack air):**
+**What it releases (on-site 3,728 lb, all to air: 3,478 lb from stacks plus 250 lb of formaldehyde as fugitive leaks):**
 - **Tetrachloroethylene (perc) 2,587 lb.** EPA classifies it as likely carcinogenic to humans. It's a solvent that persists in groundwater wherever it reaches soil.
 - Formaldehyde 500 (carcinogen) · chlorine 250 · copper 250 · nickel 120 (carcinogen) · naphthalene 16 · zinc 4 · lead 1.
 - **Off-site:** about 21,800 lb, mostly copper (15,817) and nickel (4,254).

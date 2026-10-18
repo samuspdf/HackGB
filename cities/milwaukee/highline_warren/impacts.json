@@ -1,0 +1,99 @@
+{
+  "summary": "This automotive chemical plant on Milwaukee's northwest side released about 13,000 lb of methanol to the air in 2024, most of it escaping from vents and leaks.",
+  "impacts": [
+    {
+      "icon": "🫁",
+      "title": "Air & breathing",
+      "where": "Within 1 mile: 10,985 residents (66% people of color), 5 schools",
+      "how": "About 13,000 lb of methanol went into the air in 2024: about 8,600 lb escaped from leaks and vents and about 4,400 lb went out a stack. Methanol is the main ingredient in windshield washer fluid, a key product of the parent company. At high levels it can cause headaches, dizziness and eye irritation.",
+      "avoid": [
+        {
+          "icon": "🌤️",
+          "label": "Check air quality",
+          "text": "Check the daily air quality index (AirNow) on hot, still days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "👃",
+          "label": "Report odors",
+          "text": "Report strong or unusual odors in the forum, where the company can reply. You can also call the DNR tip line, 1-800-847-9367",
+          "forum": true,
+          "link": {
+            "text": "DNR tip line: 1-800-847-9367",
+            "url": "tel:+18008479367"
+          }
+        },
+        {
+          "icon": "🪟",
+          "label": "Close the windows",
+          "text": "Keep windows closed when odors are noticeable"
+        }
+      ]
+    },
+    {
+      "icon": "🧒",
+      "title": "Kids & families",
+      "where": "11% of nearby residents are under 5",
+      "how": "About 1,200 young children live within 1 mile, a higher share than near any other factory on this map. Children breathe more air for their size, so they feel air pollution first. Five schools are within 1 mile, including Hawthorne and Thurston Woods elementary schools.",
+      "avoid": [
+        {
+          "icon": "🏠",
+          "label": "Kids play indoors",
+          "text": "Keep kids indoors during air quality alerts",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🏫",
+          "label": "Ask your school",
+          "text": "Ask your school whether it tracks local air quality"
+        },
+        {
+          "icon": "🩺",
+          "label": "See a doctor",
+          "text": "See a doctor if a child has frequent coughing or wheezing"
+        }
+      ]
+    },
+    {
+      "icon": "🌫️",
+      "title": "Smog",
+      "where": "Milwaukee County",
+      "how": "Methanol is a volatile organic compound that helps form ground-level ozone on hot, sunny days. Milwaukee County doesn't meet the federal ozone standard, so this plant is one possible contributor. The plant's yearly methanol release has grown from about 7,800 lb in 2020.",
+      "avoid": [
+        {
+          "icon": "🌅",
+          "label": "Exercise in the morning",
+          "text": "On ozone action days, exercise outdoors in the morning",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🔔",
+          "label": "Get ozone alerts",
+          "text": "Sign up for ozone alerts from the Wisconsin DNR",
+          "link": {
+            "text": "DNR air quality",
+            "url": "https://dnr.wisconsin.gov/topic/AirQuality"
+          }
+        },
+        {
+          "icon": "⛽",
+          "label": "Refuel in the evening",
+          "text": "Refuel your car in the evening, when vapors form less smog",
+          "link": {
+            "text": "DNR air quality",
+            "url": "https://dnr.wisconsin.gov/topic/AirQuality"
+          }
+        }
+      ]
+    }
+  ]
+}

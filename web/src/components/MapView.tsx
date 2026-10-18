@@ -42,8 +42,11 @@ export default function MapView() {
   const [failed, setFailed] = useState(false);
   const [showHint, setShowHint] = useState(true);
   const [focused, setFocused] = useState<Place | null>(null);
+  const [chatOpen, setChatOpen] = useState(true); // Ruby's chat and the city card share the left column: one at a time
   const [source, setSource] = useState("");
   const [facilities, setFacilities] = useState<Facility[]>([]);
+  // Study cities from south to north: the card's arrow walks up the shore and wraps (Green Bay → Milwaukee → Sheboygan → Manitowoc → …)
+  const [studyCities, setStudyCities] = useState<string[]>([]);
   const [facility, setFacility] = useState<Facility | null>(null);
   const audioRef = useRef<AudioContext | null>(null);
   const assistantRef = useRef<AssistantHandle>(null);
@@ -108,13 +111,14 @@ export default function MapView() {
           reducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
           // Written straight to a CSS variable: no React re-render on every frame while rotating
           onHeading: (deg) => compassRef.current?.style.setProperty("--heading", `${deg}deg`),
-          onFocus: (p) => (setFacility(null), viaRuby.current ? (setFocused(null), p.study && assistantRef.current?.city(p.name)) : (setFocused(p), assistantRef.current?.leave())),
+          onFocus: (p) => (setFacility(null), viaRuby.current ? (setFocused(null), p.study && assistantRef.current?.city(p.name)) : (setFocused(p), setChatOpen(false), assistantRef.current?.leave())),
           onFacility: (f) => (viaRuby.current ? (setFocused(null), setFacility(null), setShowHint(false), assistantRef.current?.facility(f)) : (setFacility(f), assistantRef.current?.leave())),
           onFirstInteraction: () => setShowHint(false),
           onLeaveCity: () => (setFocused(null), setFacility(null), assistantRef.current?.leave()),
         });
         setSource(map.data.source);
         setFacilities(map.data.facilities);
+        setStudyCities(map.data.places.filter((p) => p.study).sort((a, b) => a.y - b.y).map((p) => p.name));
         setLoaded(true);
         // Shareable links: ?focus=Green%20Bay flies to a place, ?heading=90 puts east at the top,
         // ?view=x,y,dist jumps to map coordinates in km, ?facility=<TRI ID> opens a facility
@@ -140,6 +144,7 @@ export default function MapView() {
   }, [webgl]);
 
   const cityFacilities = facilities.filter((f) => f.city === focused?.name);
+  const nextCity = studyCities[(studyCities.indexOf(focused?.name ?? "") + 1) % studyCities.length];
   const showStart = buttonDue && (loaded || failed || webgl === false);
   const effects = facility?.impacts;
   const status = webgl === false
@@ -224,7 +229,7 @@ export default function MapView() {
       {focused && (
         <section
           aria-live="polite"
-          className={`fixed z-[3] w-[min(300px,calc(100vw-120px))] rounded-2xl ${facility ? "hidden" : ""} bg-sand-50/92 px-4 pt-3 pb-3.5 shadow-[0_5px_0_var(--color-sand-300),0_14px_26px_rgb(75_79_147/.22)] backdrop-blur`}
+          className={`fixed z-[3] w-[min(300px,calc(100vw-120px))] rounded-2xl ${facility || chatOpen ? "hidden" : ""} bg-sand-50/92 px-4 pt-3 pb-3.5 shadow-[0_5px_0_var(--color-sand-300),0_14px_26px_rgb(75_79_147/.22)] backdrop-blur`}
           style={{ left: gutter, top: `calc(${gutter} + 52px)` }} // below the Forum button
         >
           <div className="flex items-start gap-2">
@@ -234,6 +239,17 @@ export default function MapView() {
               </p>
               <h2 className="font-display text-2xl leading-tight font-bold">{focused.name}</h2>
             </div>
+            {focused.study && (
+              <button
+                type="button"
+                aria-label={`Next city: ${nextCity}`}
+                title={`Next: ${nextCity}`}
+                onClick={() => controllerRef.current?.focusPlace(nextCity)}
+                className="grid size-7 cursor-pointer place-items-center rounded-full bg-[#e0703a] text-sand-50 shadow-[0_2px_0_#a8461f] hover:bg-[#cf6431]"
+              >
+                <svg viewBox="0 0 20 20" aria-hidden="true" className="size-3.5 fill-none stroke-current stroke-[2.4] [stroke-linecap:round] [stroke-linejoin:round]"><path d="M4 10h11M11 5l5 5-5 5" /></svg>
+              </button>
+            )}
             <button
               type="button"
               aria-label="Close"
@@ -316,9 +332,9 @@ export default function MapView() {
                       <p className="mt-2.5 text-[11px] font-extrabold tracking-[.08em] text-leaf-700 uppercase">How to avoid it</p>
                       <ul className="mt-1 space-y-1">
                         {i.avoid.map((a) => (
-                          <li key={a} className="flex gap-2 text-xs leading-snug">
+                          <li key={a.text} className="flex gap-2 text-xs leading-snug">
                             <span aria-hidden="true" className="mt-0.5 grid size-4 shrink-0 place-items-center rounded-full bg-leaf-700 text-[9px] text-sand-50">✓</span>
-                            {a}
+                            {a.text}
                           </li>
                         ))}
                       </ul>
@@ -330,7 +346,7 @@ export default function MapView() {
               <p className="px-1 text-sm text-ink-soft">Details on what this facility affects are coming soon.</p>
             )}
             <button type="button" onClick={() => forumRef.current?.open(facility.tri_id)} className="w-full cursor-pointer rounded-xl border-2 border-lake-500/40 bg-white px-3 py-2 text-sm font-bold text-lake-500 transition-colors hover:border-lake-500 hover:bg-lake-500 hover:text-white">
-              Discuss {facility.name} in the forum
+              💬 Report a concern in the forum
             </button>
             <p className="px-1 pt-1 text-[11px] text-ink-soft/80">Reported releases (EPA TRI 2024) are mostly legal under permit, not violations.</p>
           </div>
@@ -349,7 +365,7 @@ export default function MapView() {
           ))}
           <div className={`relative grid h-full place-items-center px-6 text-center transition duration-500 ${welcome === "leaving" ? "scale-95 opacity-0" : ""}`}>
             <div>
-              <p className="text-xs font-extrabold tracking-[.3em] text-autumn-700 uppercase">Lakeshore Watch</p>
+              <p className="text-xs font-extrabold tracking-[.3em] text-autumn-700 uppercase">Gunk Radar</p>
               <h2 className="mt-3 font-display text-5xl leading-none font-bold text-ink sm:text-7xl">
                 Welcome to <span className="text-leaf-700">Wisconsin</span>
               </h2>
@@ -376,7 +392,8 @@ export default function MapView() {
         Drag to move · Right-drag to rotate &amp; tilt · Scroll to zoom · Click a city to fly there
       </p>
 
-      <p className="pointer-events-none fixed z-[3] m-0 hidden max-w-[40vw] text-right text-[11px] text-ink-soft/80 sm:block" style={{ right: gutter, bottom: `calc(${gutter} + 56px)` }}>
+      {/* Data credits, above the map controls and no wider than them: Ruby's protect-yourself boxes use the space to their left */}
+      <p className="pointer-events-none fixed z-[3] m-0 hidden max-w-[200px] text-right text-[11px] text-ink-soft/80 sm:block" style={{ right: gutter, bottom: `calc(${gutter} + 56px)` }}>
         {source}
       </p>
 
@@ -385,9 +402,11 @@ export default function MapView() {
       <Assistant
         ref={assistantRef}
         facilities={facilities}
+        open={chatOpen}
+        setOpen={setChatOpen}
         onCity={(name) => fromRuby(() => controllerRef.current?.focusPlace(name))}
         onFacility={(id) => fromRuby(() => controllerRef.current?.focusFacility(id))}
-        onForum={(id) => forumRef.current?.open(id)}
+        onForum={(id, topic) => forumRef.current?.open(id, topic)}
         onExit={() => controllerRef.current?.reset()}
       />
     </>

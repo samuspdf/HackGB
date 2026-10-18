@@ -555,7 +555,7 @@ scene = {
                 "study": p["name"] in STUDY_CITIES} for p in places],
     "labels": [
         lbl("Lake Michigan", -86.9, 43.2, "water"), lbl("Lake Superior", -88.6, 47.55, "water"),
-        lbl("Green Bay", -87.86, 44.98, "bay"), lbl("Wisconsin", -89.9, 44.9, "state"),
+        lbl("Wisconsin", -89.9, 44.9, "state"),
         lbl("Michigan", -85.6, 43.6, "neighbor"), lbl("Minnesota", -93.6, 45.6, "neighbor"),
         lbl("Iowa", -92.8, 42.1, "neighbor"), lbl("Illinois", -89.4, 42.05, "neighbor"),
     ],

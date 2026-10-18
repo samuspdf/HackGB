@@ -1,5 +1,5 @@
-Lakeshore Watch — Manitowoc Study Facilities
-============================================
+Gunk Radar — Manitowoc Study Facilities
+=======================================
 Source: EPA Toxics Release Inventory (TRI) Basic Data File, Wisconsin, reporting year 2024
         https://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-present
 Method: top 3 facilities per city (TRI 'CITY' field) ranked by total ON-SITE releases

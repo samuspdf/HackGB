@@ -1,0 +1,1176 @@
+{
+"Results":{
+"Message":"Success",
+"MultipleFRSFacilities":{
+}
+,
+"RegistryID":"110056425694",
+"Reports":{
+"HasPollRpt":"Y",
+"HasAimRpt":"N",
+"HasBiosolidAnnualRpt":"N",
+"HasBflmRpt":"N"
+}
+,
+"Permits":[
+{
+"Statute":"",
+"EPASystem":"FRS",
+"EPARegion":"05",
+"SourceID":"110056425694",
+"FacilityName":"ADVANCED PLATING TECHNOLOGIES",
+"FacilityStreet":"405 W. CHERRY ST.",
+"FacilityCity":"MILWAUKEE",
+"FacilityState":"WI",
+"FacilityZip":"53212",
+"FacilityFipsCode":"55079",
+"FacilityCountyName":"Milwaukee County",
+"Universe":"",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.04985",
+"Longitude":"-87.91625",
+"IndianCountry":"N",
+"SIC":null,
+"NAICS":null,
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"ADDRESS MATCHING-HOUSE NUMBER",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":"30",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":null
+}
+,{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"EPARegion":"05",
+"SourceID":"WI0000005507945979",
+"FacilityName":"ADVANCED PLATING TECHNOLOGIES",
+"FacilityStreet":"405 W. CHERRY ST.",
+"FacilityCity":"MILWAUKEE",
+"FacilityState":"WI",
+"FacilityZip":"53212",
+"FacilityFipsCode":"55079",
+"FacilityCountyName":"Milwaukee County",
+"Universe":"Minor Emissions",
+"Areas":"CAAMACT, CAANFRP, CAASIP",
+"ExpDate":null,
+"Latitude":"43.04985",
+"Longitude":"-87.91625",
+"IndianCountry":"N",
+"SIC":"3471",
+"NAICS":"332813",
+"DQURL":null,
+"HdatumDesc":null,
+"CollectDesc":null,
+"RefPointDesc":null,
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":null,
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Operating"
+}
+,{
+"Statute":"EP313",
+"EPASystem":"TRI",
+"EPARegion":"5",
+"SourceID":"53212RTSTC428WV",
+"FacilityName":"ADVANCED PLATING TECHNOLOGIES",
+"FacilityStreet":"405 W CHERRY ST",
+"FacilityCity":"MILWAUKEE",
+"FacilityState":"WI",
+"FacilityZip":"53212",
+"FacilityFipsCode":"55079",
+"FacilityCountyName":"Milwaukee County",
+"Universe":"Toxics Release Inventory",
+"Areas":null,
+"ExpDate":null,
+"Latitude":"43.04985",
+"Longitude":"-87.91625",
+"IndianCountry":"N",
+"SIC":"3471",
+"NAICS":"332813",
+"DQURL":null,
+"HdatumDesc":"NAD83",
+"CollectDesc":"ADDRESS MATCHING-HOUSE NUMBER",
+"RefPointDesc":"CENTER OF A FACILITY OR STATION",
+"Scale":null,
+"AccuracyValue":"30",
+"AccuracyScore":"30",
+"HasIcisSsoRpt":"N",
+"HasBioRpt":"N",
+"HasSBERpt":"N",
+"HasBflmRpt":"N",
+"FacilityStatus":"Last Reported for 2024"
+}
+]
+,
+"SystemExtractDates":{
+"Dates":[
+{
+"EPASystem":"ICIS-Air",
+"SystemExtractDate":"10/16/2026"
+}
+,{
+"EPASystem":"SDWIS",
+"SystemExtractDate":"10/07/2026"
+}
+]
+}
+,
+"EnforcementComplianceSummaries":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate3Yr":"10/01/2023",
+"StartDate5Yr":"10/17/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Summaries":[
+{
+"Statute":"CAA",
+"Inspections":null,
+"LastInspection":"06/17/2009",
+"CurrentStatus":"No Violation Identified",
+"QtrsInNC":"0",
+"QtrsInSNC":"0",
+"InformalActions":null,
+"FormalActions":null,
+"Cases":null,
+"TotalPenalties":null,
+"TotalCasePenalties":null
+}
+]
+}
+,
+"NAICS":{
+"Sources":[
+{
+"NAICSCodes":[
+{
+"SourceID":"53212RTSTC428WV",
+"EPASystem":"TRI",
+"NAICSCode":"332813",
+"NAICSDesc":"Electroplating, Plating, Polishing, Anodizing, and Coloring"
+}
+]
+}
+,{
+"NAICSCodes":[
+{
+"SourceID":"WI0000005507945979",
+"EPASystem":"ICIS-Air",
+"NAICSCode":"332813",
+"NAICSDesc":"Electroplating, Plating, Polishing, Anodizing, and Coloring"
+}
+]
+}
+]
+}
+,
+"SBEEventTotals":{
+}
+,
+"SIC":{
+"Sources":[
+{
+"SICCodes":[
+{
+"SourceID":"53212RTSTC428WV",
+"EPASystem":"TRI",
+"SICCode":"3471",
+"SICDesc":"Plating And Polishing"
+}
+]
+}
+,{
+"SICCodes":[
+{
+"SourceID":"WI0000005507945979",
+"EPASystem":"ICIS-Air",
+"SICCode":"3471",
+"SICDesc":"Plating And Polishing"
+}
+]
+}
+]
+}
+,
+"EffluentGuidelines":{
+}
+,
+"InspectionEnforcementSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/17/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"SourceID":"WI0000005507945979",
+"InspectionCount":"0",
+"DateLastInspection":null,
+"FormalEnfActCount":"0",
+"TotalPenalties":"$0"
+}
+]
+}
+,
+"ComplianceHistory":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/17/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Inspection":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005507945979",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE On-Site",
+"LeadAgency":"EPA",
+"Date":"05/04/2026",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"05000F1770615"
+}
+,{
+"Statute":"CAA",
+"SourceID":"WI0000005507945979",
+"EPASystem":"ICIS-Air",
+"ActivityType":"Inspection/Evaluation",
+"InspectionType":"PCE On-Site",
+"LeadAgency":"EPA",
+"Date":"03/16/2022",
+"CMSFlag":"N",
+"OfficialFlag":"N",
+"SncFlag":"N",
+"Finding":null,
+"CompMonitorID":"05000F1580546"
+}
+]
+}
+,
+"ComplianceSummary":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/01/2023",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Source":[
+{
+"Statute":"CAA",
+"SourceID":"WI0000005507945979",
+"CurrentSNC":"No",
+"Description":null,
+"CurrentAsOf":"10/17/2026",
+"QtrsInNC":"0"
+}
+]
+}
+,
+"CWA3YrCompliance":{
+}
+,
+"CWARNCCompliance":{
+}
+,
+"CWA3YrD80D90Counts":{
+}
+,
+"CWAEffluentComplianceEXP":{
+}
+,
+"CWAPSCompliance":{
+}
+,
+"CWAPSComplianceNew":{
+}
+,
+"CWASECompliance":{
+}
+,
+"CWACSCompliance":{
+}
+,
+"CWACSComplianceNew":{
+}
+,
+"CWAEffluentALRExceedencesEXP":{
+}
+,
+"AirCompliance":{
+"Header":{
+"Qtr1Start":"10/01/2023",
+"Qtr1End":"12/31/2023",
+"Qtr2Start":"01/01/2024",
+"Qtr2End":"03/31/2024",
+"Qtr3Start":"04/01/2024",
+"Qtr3End":"06/30/2024",
+"Qtr4Start":"07/01/2024",
+"Qtr4End":"09/30/2024",
+"Qtr5Start":"10/01/2024",
+"Qtr5End":"12/31/2024",
+"Qtr6Start":"01/01/2025",
+"Qtr6End":"03/31/2025",
+"Qtr7Start":"04/01/2025",
+"Qtr7End":"06/30/2025",
+"Qtr8Start":"07/01/2025",
+"Qtr8End":"09/30/2025",
+"Qtr9Start":"10/01/2025",
+"Qtr9End":"12/31/2025",
+"Qtr10Start":"01/01/2026",
+"Qtr10End":"03/31/2026",
+"Qtr11Start":"04/01/2026",
+"Qtr11End":"06/30/2026",
+"Qtr12Start":"07/01/2026",
+"Qtr12End":"09/30/2026"
+}
+,
+"Sources":[
+{
+"PermitHistory":{
+"SourceID":"WI0000005507945979",
+"Qtr1Status":"No Violation Identified",
+"Qtr2Status":"No Violation Identified",
+"Qtr3Status":"No Violation Identified",
+"Qtr4Status":"No Violation Identified",
+"Qtr5Status":"No Violation Identified",
+"Qtr6Status":"No Violation Identified",
+"Qtr7Status":"No Violation Identified",
+"Qtr8Status":"No Violation Identified",
+"Qtr9Status":"No Violation Identified",
+"Qtr10Status":"No Violation Identified",
+"Qtr11Status":"No Violation Identified",
+"Qtr12Status":"No Violation Identified"
+}
+,
+"HPVHistory":{
+"SourceID":"WI0000005507945979",
+"Qtr1Status":null,
+"Qtr2Status":null,
+"Qtr3Status":null,
+"Qtr4Status":null,
+"Qtr5Status":null,
+"Qtr6Status":null,
+"Qtr7Status":null,
+"Qtr8Status":null,
+"Qtr9Status":null,
+"Qtr10Status":null,
+"Qtr11Status":null,
+"Qtr12Status":null
+}
+,
+"HPVProgramsPollutants":[
+]
+,
+"FRVProgramsPollutants":[
+]
+,
+"AFSPrograms":[
+]
+}
+]
+}
+,
+"BflmCompliance":{
+}
+,
+"RCRACompliance":{
+}
+,
+"SDWISCompliance":{
+}
+,
+"Watersheds":{
+}
+,
+"AssessedWaters":{
+}
+,
+"Notices":{
+"ProgramDates":[
+{
+"Program":"CAA",
+"StartDate":"10/17/2021",
+"EndDate":"09/30/2026"
+}
+]
+,
+"Notice":[
+{
+"Statute":"CAA",
+"EPASystem":"ICIS-Air",
+"SourceID":"WI0000005507945979",
+"ActionType":"Other Response - No Further Action",
+"LeadAgency":"EPA",
+"NoticeDate":"06/11/2026",
+"EnfIdentifier":"05-200291122",
+"OfficialFlag":"N"
+}
+]
+}
+,
+"FormalActions":{
+}
+,
+"ICISFormalActions":{
+}
+,
+"CaseFormalActions":{
+}
+,
+"TRIHistory":{
+"Sources":[
+{
+"ReleaseYear":[
+{
+"SourceID":"53212RTSTC428WV",
+"Year":"2024",
+"TotalAirEmissions":"10,213",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"29,128",
+"TotalOnSiteReleases":"10,213",
+"TotalOffSiteReleases":"42,342",
+"TotalReleasesTransfers":"52,555"
+}
+,{
+"SourceID":"53212RTSTC428WV",
+"Year":"2023",
+"TotalAirEmissions":"9,656",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"29,129",
+"TotalOnSiteReleases":"9,656",
+"TotalOffSiteReleases":"37,284",
+"TotalReleasesTransfers":"46,940"
+}
+,{
+"SourceID":"53212RTSTC428WV",
+"Year":"2022",
+"TotalAirEmissions":"20,584",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"33,939",
+"TotalOnSiteReleases":"20,584",
+"TotalOffSiteReleases":"41,856",
+"TotalReleasesTransfers":"62,440"
+}
+,{
+"SourceID":"53212RTSTC428WV",
+"Year":"2021",
+"TotalAirEmissions":"18,550",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":null,
+"OffSiteTransfersPOTWS":"27,737",
+"TotalOnSiteReleases":"18,550",
+"TotalOffSiteReleases":"35,677",
+"TotalReleasesTransfers":"54,227"
+}
+,{
+"SourceID":"53212RTSTC428WV",
+"Year":"2020",
+"TotalAirEmissions":"17,003",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":"0",
+"OffSiteTransfersPOTWS":"21,116",
+"TotalOnSiteReleases":"17,003",
+"TotalOffSiteReleases":"28,620",
+"TotalReleasesTransfers":"45,623"
+}
+,{
+"SourceID":"53212RTSTC428WV",
+"Year":"2019",
+"TotalAirEmissions":"16,609",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":"0",
+"OffSiteTransfersPOTWS":"32,919",
+"TotalOnSiteReleases":"16,609",
+"TotalOffSiteReleases":"37,888",
+"TotalReleasesTransfers":"54,497"
+}
+,{
+"SourceID":"53212RTSTC428WV",
+"Year":"2018",
+"TotalAirEmissions":"15,260",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":"0",
+"OffSiteTransfersPOTWS":"21,177",
+"TotalOnSiteReleases":"15,260",
+"TotalOffSiteReleases":"29,319",
+"TotalReleasesTransfers":"44,579"
+}
+,{
+"SourceID":"53212RTSTC428WV",
+"Year":"2017",
+"TotalAirEmissions":"16,332",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":"0",
+"OffSiteTransfersPOTWS":"28,459",
+"TotalOnSiteReleases":"16,332",
+"TotalOffSiteReleases":"36,727",
+"TotalReleasesTransfers":"53,059"
+}
+,{
+"SourceID":"53212RTSTC428WV",
+"Year":"2016",
+"TotalAirEmissions":"17,357",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":"0",
+"OffSiteTransfersPOTWS":"24,705",
+"TotalOnSiteReleases":"17,357",
+"TotalOffSiteReleases":"32,282",
+"TotalReleasesTransfers":"49,639"
+}
+,{
+"SourceID":"53212RTSTC428WV",
+"Year":"2015",
+"TotalAirEmissions":"1,315",
+"SurfaceWaterDischarges":null,
+"UndergroundInjections":null,
+"ReleasesToLand":"0",
+"OffSiteTransfersPOTWS":"32,191",
+"TotalOnSiteReleases":"1,315",
+"TotalOffSiteReleases":"42,029",
+"TotalReleasesTransfers":"43,344"
+}
+]
+}
+]
+}
+,
+"TRIReleases":{
+"TRIFacilities":null,
+"Header":[
+{
+"Year10":"2024",
+"Year9":"2023",
+"Year8":"2022",
+"Year7":"2021",
+"Year6":"2020",
+"Year5":"2019",
+"Year4":"2018",
+"Year3":"2017",
+"Year2":"2016",
+"Year1":"2015"
+}
+]
+,
+"Chemicals":[
+{
+"ChemicalName":"1-Bromopropane",
+"Year10Pounds":"9,745",
+"Year9Pounds":"9,045",
+"Year8Pounds":"20,145",
+"Year7Pounds":"18,755",
+"Year6Pounds":"16,940",
+"Year5Pounds":"15,125",
+"Year4Pounds":"15,977",
+"Year3Pounds":"15,591",
+"Year2Pounds":"16,335",
+"Year1Pounds":null
+}
+,
+{
+"ChemicalName":"Copper compounds",
+"Year10Pounds":"6,015",
+"Year9Pounds":"1,364",
+"Year8Pounds":"921",
+"Year7Pounds":"964",
+"Year6Pounds":"812",
+"Year5Pounds":"795",
+"Year4Pounds":"860",
+"Year3Pounds":"768",
+"Year2Pounds":"741",
+"Year1Pounds":"1,157"
+}
+,
+{
+"ChemicalName":"Cyanide compounds",
+"Year10Pounds":"403",
+"Year9Pounds":"523",
+"Year8Pounds":"477",
+"Year7Pounds":"342",
+"Year6Pounds":"799",
+"Year5Pounds":"381",
+"Year4Pounds":"201",
+"Year3Pounds":"361",
+"Year2Pounds":"1,699",
+"Year1Pounds":"2,342"
+}
+,
+{
+"ChemicalName":"Lead compounds",
+"Year10Pounds":"217",
+"Year9Pounds":"59",
+"Year8Pounds":"56",
+"Year7Pounds":"88",
+"Year6Pounds":"473",
+"Year5Pounds":"197",
+"Year4Pounds":"101",
+"Year3Pounds":"27",
+"Year2Pounds":"71",
+"Year1Pounds":"241"
+}
+,
+{
+"ChemicalName":"Nickel compounds",
+"Year10Pounds":"5,925",
+"Year9Pounds":"5,719",
+"Year8Pounds":"5,769",
+"Year7Pounds":"5,424",
+"Year6Pounds":"4,736",
+"Year5Pounds":"3,852",
+"Year4Pounds":"4,058",
+"Year3Pounds":"4,905",
+"Year2Pounds":"5,126",
+"Year1Pounds":"4,608"
+}
+,
+{
+"ChemicalName":"Nitrate compounds (water dissociable; reportable only when in aqueous solution)",
+"Year10Pounds":"29,084",
+"Year9Pounds":"29,086",
+"Year8Pounds":"33,905",
+"Year7Pounds":"27,670",
+"Year6Pounds":"21,085",
+"Year5Pounds":"32,906",
+"Year4Pounds":"21,161",
+"Year3Pounds":"28,443",
+"Year2Pounds":"24,687",
+"Year1Pounds":"32,161"
+}
+,
+{
+"ChemicalName":"Nitric acid",
+"Year10Pounds":"1,166",
+"Year9Pounds":"1,144",
+"Year8Pounds":"1,166",
+"Year7Pounds":"984",
+"Year6Pounds":"778",
+"Year5Pounds":"1,241",
+"Year4Pounds":"2,221",
+"Year3Pounds":"2,964",
+"Year2Pounds":"980",
+"Year1Pounds":"2,835"
+}
+]
+}
+,
+"DmrPollLoads":{
+}
+,
+"RCRAWasteHistory":{
+}
+,
+"AirQuality":{
+"Ozone8hr1997Area":null,
+"Ozone8hr2008Area":null,
+"Ozone8hr2015Area":"Northern Milwaukee/Ozaukee Shoreline WI",
+"Lead1978Area":null,
+"Lead2008Area":null,
+"CarbonMonoxide1971Area":null,
+"NitrogenDioxide1971Area":null,
+"SulfurDioxide1971Area":null,
+"SulfurDioxide2010Area":null,
+"ParticulateMatter1987Area":null,
+"ParticulateMatter1997Area":null,
+"ParticulateMatter2006Area":"Milwaukee-Racine WI",
+"ParticulateMatter2012Area":null
+}
+,
+"AirQualityNAAs":{
+"AirQualityNAA":[
+{
+"Pollutant":"Ozone",
+"WithinNAStatusArea":"Yes",
+"NAStatusStandards":"1-Hour Ozone (1979); 8-Hour Ozone (2015)",
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Lead",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Particulate Matter",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"Yes",
+"MaintStatusStandards":"PM-2.5 (2006)"
+}
+,{
+"Pollutant":"Carbon Monoxide",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+,{
+"Pollutant":"Sulfur Dioxide",
+"WithinNAStatusArea":"No",
+"NAStatusStandards":null,
+"WithinMaintStatusArea":"No",
+"MaintStatusStandards":null
+}
+]
+}
+,
+"SiteVisits":{
+}
+,
+"SanitarySurveys":{
+}
+,
+"ViolationsEnforcementActions":{
+}
+,
+"LeadAndCopperRule5Yr":{
+}
+,
+"Tribes":[
+{
+"AreaName":"Forest County Potawatomi Community",
+"EPAId":"100000085",
+"TribeName":"Forest County Potawatomi Community, Wisconsin",
+"DistanceToArea":"2"
+}
+]
+,
+"WebFireDocuments":[
+]
+,
+"CAEDDocuments":[
+]
+,
+"SpatialMetadata":{
+"RegistryID":"110056425694",
+"Latitude83":"43.04985",
+"Longitude83":"-87.91625",
+"CollectionMethod":"ADDRESS MATCHING-HOUSE NUMBER",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"CalculatedAccuracy":"30 Meters",
+"CoordinateSourceSystem":"TRIS",
+"CoordinateSourceSystemId":"53212RTSTC428WV"
+}
+,
+"ACS2023Demographics":{
+"Radius":"1",
+"CenterLatitude":"43.04985",
+"CenterLongitude":"-87.91625",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"98%",
+"WaterArea":"2%",
+"PopulationDensity":"9,948/sq.mi.",
+"PercentMinority":"42%",
+"Households":"12,568",
+"HousingUnits":"14,232",
+"HouseholdsPublicAssistance":"519",
+"PersonsBelowPovertyLevel":"7,568",
+"PercentBelowPovertyLevel":"28%",
+"PersonsBelowLowIncomeLevel":"13,634",
+"PercentBelowLowIncomeLevel":"50%",
+"ACSPopulation":"30,576",
+"ACSPovertyBasis":"27,386",
+"PercentPeopleOfColor":"42%",
+"White":"19,600 (64%)",
+"AfricanAmerican":"3,514 (11%)",
+"HispanicOrigin":"6,820 (22%)",
+"Asian":"1,256 (4%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"418 (1%)",
+"OtherMultiracial":"3,251 (11%)",
+"Child":"1,601 (5%)",
+"Minors":"5,533 (18%)",
+"Adults":"25,042 (82%)",
+"Seniors":"3,156 (10%)",
+"Less9thGrade":"1,026 (5.77%)",
+"Grades9to12":"1,451 (8.16%)",
+"HSDiploma":"5,372 (30.21%)",
+"SomeCollege":"3,478 (19.56%)",
+"BSBA":"5,292 (29.76%)",
+"IncomeLess15k":"2,289 (18.21%)",
+"Income15to25k":"1,033 (8.22%)",
+"Income25to50k":"3,159 (25.14%)",
+"Income50to75k":"1,906 (15.17%)",
+"Income75kPlus":"4,181 (33.27%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"ACS2024Demographics":{
+"Radius":"1",
+"CenterLatitude":"43.04985",
+"CenterLongitude":"-87.91625",
+"TotalAreaSQMiles":"3.14 sq.mi.",
+"LandArea":"98%",
+"WaterArea":"2%",
+"PopulationDensity":"10,594/sq.mi.",
+"PercentMinority":"49%",
+"Households":"16,609",
+"HousingUnits":"18,935",
+"HouseholdsPublicAssistance":"411",
+"PersonsBelowPovertyLevel":"8,120",
+"PercentBelowPovertyLevel":"28%",
+"PersonsBelowLowIncomeLevel":"12,812",
+"PercentBelowLowIncomeLevel":"44%",
+"ACSPopulation":"32,562",
+"ACSPovertyBasis":"28,820",
+"PercentPeopleOfColor":"49%",
+"White":"17,150 (53%)",
+"AfricanAmerican":"10,650 (33%)",
+"HispanicOrigin":"2,600 (8%)",
+"Asian":"1,582 (5%)",
+"HawaiinPacificIslander":"0 (0%)",
+"AmericanIndian":"319 (1%)",
+"OtherMultiracial":"2,007 (6%)",
+"Child":"1,482 (5%)",
+"Minors":"4,037 (12%)",
+"Adults":"28,526 (88%)",
+"Seniors":"2,948 (9%)",
+"Less9thGrade":"319 (1.51%)",
+"Grades9to12":"1,160 (5.5%)",
+"HSDiploma":"3,686 (17.48%)",
+"SomeCollege":"3,498 (16.59%)",
+"BSBA":"11,132 (52.78%)",
+"IncomeLess15k":"2,888 (17.39%)",
+"Income15to25k":"1,501 (9.04%)",
+"Income25to50k":"3,250 (19.57%)",
+"Income50to75k":"2,538 (15.28%)",
+"Income75kPlus":"6,429 (38.71%)"
+}
+,
+"SABACSDemographics":{
+}
+,
+"MinorTTDemographics":{
+}
+,
+"AWSDocs":{
+}
+,
+"Industries":"Fabricated Metal Product Manufacturing",
+"MapOutput":{
+"IconBaseURL":"https://echo.epa.gov/themes/custom/echo/images/map/",
+"PopUpBaseURL":"https://echodata.epa.gov/echo/echo_rest_services.pop_up?p_id=",
+"CenterLatitude":"43.04985",
+"CenterLongitude":"-87.91625",
+"LocationalDataSource":"TRIS",
+"EstimatedAccuracyMeters":"30",
+"ReferencePoint":"CENTER OF A FACILITY OR STATION",
+"MapData":[
+{
+"LAT":"43.04985",
+"LON":"-87.91625",
+"ICON":"CAA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"ADVANCED PLATING TECHNOLOGIES",
+"PUV":"110056425694"
+}
+,{
+"LAT":"43.04988",
+"LON":"-87.91761",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"502-504 W CHERRY ST",
+"PUV":"110022531928"
+}
+,{
+"LAT":"43.04943",
+"LON":"-87.91583",
+"ICON":"CAA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"MILWAUKEE PLATING CO",
+"PUV":"110071499226"
+}
+,{
+"LAT":"43.04998",
+"LON":"-87.919292",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"HILLSIDE TERRACE BLDG 12",
+"PUV":"110070637509"
+}
+,{
+"LAT":"43.05123",
+"LON":"-87.91703",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"BRINKS INC",
+"PUV":"110005505373"
+}
+,{
+"LAT":"43.050249",
+"LON":"-87.918757",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"HILLSIDE TERRACE HSNG DEV",
+"PUV":"110005522425"
+}
+,{
+"LAT":"43.050771",
+"LON":"-87.91402",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"BREWERY WORKS",
+"PUV":"110071984969"
+}
+,{
+"LAT":"43.050563",
+"LON":"-87.91967",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"HILLSIDE TERRACE HSNG DEV",
+"PUV":"110005522434"
+}
+,{
+"LAT":"43.04989",
+"LON":"-87.91781",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"SCIENTIFIC INSTRUMENTS INC",
+"PUV":"110005424772"
+}
+,{
+"LAT":"43.04848",
+"LON":"-87.91699",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"VLIET ST PROPERTIES",
+"PUV":"110005431381"
+}
+,{
+"LAT":"43.04848",
+"LON":"-87.91661",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"ARTISTIC PLATING CO",
+"PUV":"110070754578"
+}
+,{
+"LAT":"43.04848",
+"LON":"-87.918876",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"HILLSIDE TERRACE BLDG 6",
+"PUV":"110070637504"
+}
+,{
+"LAT":"43.04847",
+"LON":"-87.91584",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"MANDEL CO",
+"PUV":"110015332638"
+}
+,{
+"LAT":"43.04847",
+"LON":"-87.91626",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"RIESEN CHEMICAL CORP.",
+"PUV":"110011586426"
+}
+,{
+"LAT":"43.049184",
+"LON":"-87.91731",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"MICROSCREEN LTD",
+"PUV":"110005466414"
+}
+,{
+"LAT":"43.04984",
+"LON":"-87.91582",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"MOTORCAR BODY AND PAINT",
+"PUV":"110005454016"
+}
+,{
+"LAT":"43.04984",
+"LON":"-87.91542",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"DOEHLER ROBERT THOKEL HERB",
+"PUV":"110005488551"
+}
+,{
+"LAT":"43.04984",
+"LON":"-87.91582",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"ABRESCH AUTO BODY LTD",
+"PUV":"110009517932"
+}
+,{
+"LAT":"43.051269",
+"LON":"-87.918939",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"HILLSIDE TERRACE HSNG DEV",
+"PUV":"110005522452"
+}
+,{
+"LAT":"43.05007",
+"LON":"-87.914365",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"THOMAS A MASON PAINTING CO",
+"PUV":"110070638874"
+}
+,{
+"LAT":"43.050563",
+"LON":"-87.919604",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"HILLSIDE TERRACE HSNG DEV",
+"PUV":"110005522443"
+}
+,{
+"LAT":"43.05021",
+"LON":"-87.9172",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"502 - 04 WEST CHERRY STREET",
+"PUV":"110039062518"
+}
+,{
+"LAT":"43.04943",
+"LON":"-87.91731",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"HEIN ELECTRIC SUPPLY CO",
+"PUV":"110005507120"
+}
+,{
+"LAT":"43.04943",
+"LON":"-87.91583",
+"ICON":"RCRA-IC-MN-2.png",
+"TYPE":"Facility",
+"NAME":"MILWAUKEE PLATING CO",
+"PUV":"110000418682"
+}
+,{
+"LAT":"43.04985",
+"LON":"-87.91625",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"ARTISTIC PLATING CO",
+"PUV":"110068025461"
+}
+,{
+"LAT":"43.04848",
+"LON":"-87.91661",
+"ICON":"RCRA-IC-MN-2.png",
+"TYPE":"Facility",
+"NAME":"ADVANCED PLATING TECHNOLOGIES",
+"PUV":"110000742652"
+}
+,{
+"LAT":"43.048473",
+"LON":"-87.916293",
+"ICON":"NONE-UNK-MN-N.png",
+"TYPE":"Facility",
+"NAME":"CREAM CITY RIBBON HOLDING COMPANY, INC.",
+"PUV":"110070280710"
+}
+,{
+"LAT":"43.05084",
+"LON":"-87.91285",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"SCHLITZ PARK-POWERHOUSE (CHILLED WATER PLANT)",
+"PUV":"110070636339"
+}
+,{
+"LAT":"43.04887",
+"LON":"-87.91858",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"KOHLENBERG PROP",
+"PUV":"110005541930"
+}
+,{
+"LAT":"43.05121",
+"LON":"-87.91432",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"THE BREWERY WORKS INC",
+"PUV":"110005448943"
+}
+,{
+"LAT":"43.04848",
+"LON":"-87.918933",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"CONDEMNED BLDG",
+"PUV":"110070639870"
+}
+,{
+"LAT":"43.04984",
+"LON":"-87.91582",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"CITY OF MILWAUKEE BRIDGE P-40-0864",
+"PUV":"110071675062"
+}
+,{
+"LAT":"43.04985",
+"LON":"-87.91683",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"MOTOR TRUCK BODY CO",
+"PUV":"110005424825"
+}
+,{
+"LAT":"43.05121",
+"LON":"-87.91432",
+"ICON":"RCRA-IC-MN-N.png",
+"TYPE":"Facility",
+"NAME":"SCHLITZ JOS BREWING CO STROH BREWING CO",
+"PUV":"110005423595"
+}
+]
+}
+}
+}

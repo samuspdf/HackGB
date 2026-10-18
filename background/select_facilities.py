@@ -59,7 +59,7 @@ header = [
 ]
 for city in CITIES:
     sub = ranked[city]
-    title = f"Lakeshore Watch — {city.title()} Study Facilities"
+    title = f"Gunk Radar — {city.title()} Study Facilities"
     lines = [title, "=" * len(title), *header,
              f"{city.title()} ({CITIES[city].title()} County) — "
              f"{len(sub)} TRI facilities reported in {YEAR}",
@@ -81,7 +81,7 @@ for city in CITIES:
     (out := CITY_DIRS[city][1] / "facilities.txt").write_text("\n".join(lines))
     print(f"Wrote {out}")
 
-title = "Lakeshore Watch — All Shortlisted Facilities"
+title = "Gunk Radar — All Shortlisted Facilities"
 lines = [title, "=" * len(title),
          f"Top {SHORTLIST} per city by on-site releases, EPA TRI {YEAR} (raw pounds).",
          f"The top {PER_CITY} in each city are the study facilities (marked *).", ""]

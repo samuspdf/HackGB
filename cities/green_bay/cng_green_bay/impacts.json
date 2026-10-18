@@ -7,9 +7,34 @@
       "where": "Within 1 mile: 2,476 residents",
       "how": "Ground-level ozone irritates the airways, causing coughing, a sore throat and chest tightness. Packaging printers usually make it with equipment that treats plastic film before printing. Ozone breaks down within hours, so the effect stays close to the plant.",
       "avoid": [
-        "Check the daily air quality index (AirNow), especially on hot, still days",
-        "Plan outdoor exercise for mornings, when ozone is lower",
-        "Report strong or unusual odors to the Wisconsin DNR"
+        {
+          "icon": "🌤️",
+          "label": "Check air quality",
+          "text": "Check the daily air quality index (AirNow), especially on hot, still days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🌅",
+          "label": "Exercise in the morning",
+          "text": "Plan outdoor exercise for mornings, when ozone is lower",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "👃",
+          "label": "Report odors",
+          "text": "Report strong or unusual odors in the forum, where the company can reply. You can also call the DNR tip line, 1-800-847-9367",
+          "forum": true,
+          "link": {
+            "text": "DNR tip line: 1-800-847-9367",
+            "url": "tel:+18008479367"
+          }
+        }
       ]
     },
     {
@@ -18,9 +43,33 @@
       "where": "Family Services of Northeast Wisconsin is within 1 mile",
       "how": "Children, older adults and anyone with asthma feel ozone first, and it can trigger asthma attacks.",
       "avoid": [
-        "Keep rescue inhalers handy on high-ozone days",
-        "Move kids' outdoor play indoors when the air quality index is orange or worse",
-        "Ask the DNR whether the plant's ozone is covered by an air permit"
+        {
+          "icon": "🫁",
+          "label": "Keep an inhaler handy",
+          "text": "Keep rescue inhalers handy on high-ozone days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🏠",
+          "label": "Kids play indoors",
+          "text": "Move kids' outdoor play indoors when the air quality index is orange or worse",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "❓",
+          "label": "Ask about permits",
+          "text": "Ask the DNR whether the plant's ozone is covered by an air permit",
+          "link": {
+            "text": "DNR air permit notices",
+            "url": "https://apps.dnr.wi.gov/warp_ext/public_notice.aspx"
+          }
+        }
       ]
     }
   ]

@@ -7,9 +7,34 @@
       "where": "Within 1 mile: 8,731 residents, 660 children under 5, 6 schools",
       "how": "About 6,400 lb of formaldehyde, a known human carcinogen, went into the air, most of it escaping from leaks and vents rather than the smokestack. Another 19,600 lb of methanol was released. Both irritate the eyes, nose and throat.",
       "avoid": [
-        "Report strong or unusual odors to the Wisconsin DNR",
-        "Check the daily air quality index (AirNow), especially on hot, still days",
-        "Comment on the plant's air permit when the DNR opens it for public input"
+        {
+          "icon": "👃",
+          "label": "Report odors",
+          "text": "Report strong or unusual odors in the forum, where the company can reply. You can also call the DNR tip line, 1-800-847-9367",
+          "forum": true,
+          "link": {
+            "text": "DNR tip line: 1-800-847-9367",
+            "url": "tel:+18008479367"
+          }
+        },
+        {
+          "icon": "🌤️",
+          "label": "Check air quality",
+          "text": "Check the daily air quality index (AirNow), especially on hot, still days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "📝",
+          "label": "Comment on permits",
+          "text": "Comment on the plant's air permit when the DNR opens it for public input",
+          "link": {
+            "text": "DNR air permit notices",
+            "url": "https://apps.dnr.wi.gov/warp_ext/public_notice.aspx"
+          }
+        }
       ]
     },
     {
@@ -18,9 +43,33 @@
       "where": "Lakeshore Sheboygan County",
       "how": "Methanol and formaldehyde help form ground-level ozone. Sheboygan's lakeshore doesn't meet the federal ozone standard, so this plant is one possible contributor.",
       "avoid": [
-        "Plan outdoor exercise for mornings on hot, sunny days",
-        "Keep rescue inhalers handy on high-ozone days",
-        "Drive less on ozone action days"
+        {
+          "icon": "🌅",
+          "label": "Exercise in the morning",
+          "text": "Plan outdoor exercise for mornings on hot, sunny days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🫁",
+          "label": "Keep an inhaler handy",
+          "text": "Keep rescue inhalers handy on high-ozone days",
+          "link": {
+            "text": "AirNow.gov",
+            "url": "https://www.airnow.gov/"
+          }
+        },
+        {
+          "icon": "🚲",
+          "label": "Drive less",
+          "text": "Drive less on ozone action days",
+          "link": {
+            "text": "DNR air quality",
+            "url": "https://dnr.wisconsin.gov/topic/AirQuality"
+          }
+        }
       ]
     },
     {
@@ -29,9 +78,25 @@
       "where": "Sheboygan Regional Wastewater Treatment Facility, then Lake Michigan",
       "how": "The plant sent about 22,100 lb of formaldehyde, 10,700 lb of methanol and 2,200 lb of phenol to the sewer. These break down readily at the treatment plant before its water reaches Lake Michigan. The exact route still needs to be confirmed.",
       "avoid": [
-        "Never pour chemicals down drains",
-        "Check DNR Beach Health before swimming",
-        "Support upgrades at the regional wastewater plant"
+        {
+          "icon": "🚱",
+          "label": "Nothing down drains",
+          "text": "Never pour chemicals down drains"
+        },
+        {
+          "icon": "🏖️",
+          "label": "Check the beach",
+          "text": "Check DNR Beach Health before swimming",
+          "link": {
+            "text": "DNR Beach Health",
+            "url": "https://apps.dnr.wi.gov/beachhealth/"
+          }
+        },
+        {
+          "icon": "🛠️",
+          "label": "Back plant upgrades",
+          "text": "Support upgrades at the regional wastewater plant"
+        }
       ]
     }
   ]
