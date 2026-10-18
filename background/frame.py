@@ -5,7 +5,7 @@ Kilometres on a local equirectangular projection centred on the frame: x = east,
 import math
 
 # Map frame (lon/lat). Wider than Wisconsin so the map can fill the screen as a background.
-W_LON, E_LON, S_LAT, N_LAT = -96.0, -81.8, 40.2, 49.2
+W_LON, E_LON, S_LAT, N_LAT = -96.0, -84.5, 41.35, 49.2
 LON0, LAT0 = (W_LON + E_LON) / 2, (S_LAT + N_LAT) / 2
 KM_PER_DEG = 111.32
 COS0 = math.cos(math.radians(LAT0))

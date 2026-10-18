@@ -29,6 +29,70 @@ body {
   font-family: var(--font-body);
 }
 
+/* Ruby, the guide: entrance, blinking, breathing, talking, waving and hair sway; chat bubbles and typing dots */
+@keyframes ruby-enter {
+  from {
+    opacity: 0;
+    translate: -30px 40px;
+    scale: 0.8;
+  }
+}
+@keyframes ruby-blink {
+  0%, 93%, 100% {
+    scale: 1 1;
+  }
+  96% {
+    scale: 1 0.08;
+  }
+}
+@keyframes ruby-breathe {
+  to {
+    translate: 0 1.5px;
+  }
+}
+@keyframes ruby-talk {
+  from {
+    scale: 1 0.25;
+  }
+}
+@keyframes ruby-wave {
+  from {
+    rotate: -12deg;
+  }
+  to {
+    rotate: 26deg;
+  }
+}
+@keyframes ruby-sway {
+  from {
+    rotate: -1.2deg;
+  }
+  to {
+    rotate: 1.2deg;
+  }
+}
+@keyframes bubble-in {
+  from {
+    opacity: 0;
+    translate: 0 6px;
+  }
+}
+@keyframes area-glow {
+  50% {
+    box-shadow: 0 0 0 6px rgb(224 112 58 / 0.35), 0 0 16px 4px rgb(255 155 98 / 0.6);
+  }
+}
+@keyframes typing-dot {
+  0%, 60%, 100% {
+    translate: 0 0;
+    opacity: 0.4;
+  }
+  30% {
+    translate: 0 -4px;
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

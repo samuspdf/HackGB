@@ -102,6 +102,12 @@ export interface SceneData {
   bushes: number[]; // x, y, size
   flowers: number[]; // x, y, colour index
   barns: number[]; // x, y, rotation
+  corn: number[]; // x, y, length, width, rotation, kind (0 corn, 1 wheat): where USDA's 2024 cropland data shows them
+  parks: number[]; // x, y, radius, pond x, pond y, pond radius
+  /** Cloud banks ringing the edge of the map: x, y, size (km) */
+  edgeClouds: number[];
+  /** Fence lines around each block of fields: one post per point */
+  fences: Ring[];
   buildings: number[]; // x, y, width, depth, height, rotation, kind(0 house, 1 block, 2 tower)
   source: string;
 }

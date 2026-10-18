@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
-// Static export: `npm run build` writes plain HTML/CSS/JS to `out/` — no server needed (spec §5).
+// Runs as a Next.js server (`npm run dev`, or `npm run build && npm start`) so Ruby's /api/chat can keep the
+// Gemini API key on the server. Everything else is still plain static files.
 const nextConfig: NextConfig = {
-  output: "export",
   devIndicators: false,
   turbopack: {
     rules: {

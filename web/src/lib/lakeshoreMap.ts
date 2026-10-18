@@ -16,6 +16,8 @@ export interface MapController {
   /** Turn the map so `deg` (0 = north, 90 = east, …) points to the top of the screen */
   setHeading(deg: number): void;
   focusPlace(name: string): void;
+  /** Opening move after the welcome screen: from the zoomed-out home view, zoom in a little */
+  intro(): void;
   /** Fly a little closer to a facility (by TRI ID) and report it through onFacility */
   focusFacility(triId: string): void;
   /** Jump to map coordinates (km, x east / y north) at a camera distance */
@@ -31,11 +33,14 @@ interface MapOptions {
   onFocus?: (place: Place) => void;
   onFacility?: (facility: Facility) => void;
   onFirstInteraction?: () => void;
+  /** Zoomed back out of a city (by scrolling, the zoom buttons or reset; not when flying between cities) */
+  onLeaveCity?: () => void;
 }
 
 const FOV = 35;
 const MAX_TILT = 1.15; // radians from straight down
 const MIN_TILT = 0.0005; // a hair off vertical so the camera always knows which way it faces
+const PAN_MARGIN = 30; // km the view's centre may stray outside Wisconsin's border
 const SITE_MIN_DIST = 9; // closest zoom (km) around a study facility
 const TREE_SCALE = 0.5; // trees are stylised: big enough to read from afar, not towering over houses
 
@@ -50,6 +55,11 @@ const PALETTE = {
   rock: [0xa99c9a, 0x9a94a6, 0xb7aca3, 0x8f8a99],
   bush: [0x5f9a4a, 0x76a84f, 0x4f8a45, 0x8bb85a],
   flower: [0xe46a8c, 0xf2c94c, 0xf7f3ea, 0xa678d6],
+  corn: [0x7fa83f, 0x8db84a, 0x9cc255, 0x86ad44],
+  wheat: [0xd9b85a, 0xe2c46a, 0xcfae4f],
+  fence: [0x8a6a4a, 0x7b5d40, 0x9a7a58, 0x6e5440],
+  // one colour per flock: dark birds, gulls, cardinals, blue jays, orioles
+  birds: [0x4a4560, 0xf4f1ea, 0xc0392b, 0x3b6fb6, 0xe08a2e],
 };
 
 export function createLakeshoreMap(opts: MapOptions): MapController {
@@ -88,10 +98,12 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   data.wisconsin.forEach((poly) => forPoints(poly[0], (x, y) => wiBounds.expandByPoint(new THREE.Vector2(x, y))));
   const wiCenter = wiBounds.getCenter(new THREE.Vector2()).add(new THREE.Vector2(35, 0));
   const wiSize = wiBounds.getSize(new THREE.Vector2());
+  const wiOutline = data.wisconsin.map((poly) => poly[0]);
+  const nearestWisconsin = (x: number, y: number) => nearestOn(wiOutline, x, y);
 
   // Zoom limits: closest = about one typical county across the screen;
-  // farthest = Wisconsin spanning 80% of the screen
-  const WI_SCREEN_SHARE = 0.8;
+  // farthest = Wisconsin a little larger than the screen (no zooming out past the state)
+  const WI_SCREEN_SHARE = 1.1;
   const countyAreas = data.counties
     .map((c) => c.rings.reduce((sum, poly) => sum + Math.abs(ringArea(poly[0])), 0))
     .sort((a, b) => a - b);
@@ -427,6 +439,48 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     });
   }
 
+  // ---------------------------------------------------------------- crop fields: corn rows with golden tassels, golden wheat rows
+  const cornRows = records(data.corn, 6).flatMap(([x, y, w, d, r, kind]) => {
+    const n = Math.max(3, Math.floor(d / 0.28));
+    return Array.from({ length: n }, (_, i) => {
+      const off = ((i + 0.5) * d) / n - d / 2; // across the field, along the model's local z
+      return [x + off * Math.sin(r), y - off * Math.cos(r), w, r, kind];
+    });
+  });
+  const cornSet = (lift: number, h: number, t: number) => (i: number, o: THREE.Object3D) => {
+    const [x, y, w, r] = cornRows[i];
+    at(o, x, y, lift);
+    o.rotation.y = r;
+    o.scale.set(w * 0.96, h, t);
+  };
+  instanced(unitBox(), white, cornRows.length, (i, o) => (cornSet(-0.02, 0.17, 0.13)(i, o), pick(cornRows[i][4] ? PALETTE.wheat : PALETTE.corn)));
+  instanced(unitBox(), toon({ color: 0xe2c25a }), cornRows.length, (i, o) => (cornSet(0.15, 0.03, 0.045)(i, o), o.scale.multiplyScalar(cornRows[i][4] ? 0 : 1), undefined), { shadows: false });
+
+  // ---------------------------------------------------------------- fences around the fields: weathered posts with two rails
+  const posts = data.fences.flatMap((ring) => records(ring, 2));
+  const rails = data.fences.flatMap((ring) => records(ring, 2).slice(1).map(([x, y], i) => [ring[2 * i], ring[2 * i + 1], x, y]));
+  instanced(unitBox(), white, posts.length, (i, o) => {
+    at(o, posts[i][0], posts[i][1], -0.03);
+    o.rotation.set((rand() - 0.5) * 0.14, rand() * 3, (rand() - 0.5) * 0.14); // a little crooked, like real posts
+    o.scale.set(0.035, 0.13 + rand() * 0.04, 0.035);
+    return pick(PALETTE.fence);
+  });
+  for (const h of [0.06, 0.11]) {
+    instanced(unitBox(), white, rails.length, (i, o) => {
+      const [x0, y0, x1, y1] = rails[i];
+      at(o, (x0 + x1) / 2, (y0 + y1) / 2, h - 0.02 + (rand() - 0.5) * 0.015);
+      o.rotation.y = Math.atan2(y1 - y0, x1 - x0);
+      o.scale.set(Math.hypot(x1 - x0, y1 - y0), 0.016, 0.012);
+      return pick(PALETTE.fence);
+    }, { shadows: false });
+  }
+
+  // ---------------------------------------------------------------- city parks: a lawn and a pond (park trees come with the other trees)
+  const parks = records(data.parks, 6);
+  const disc = () => new THREE.CylinderGeometry(1, 1, 1, 28).translate(0, 0.5, 0);
+  instanced(disc(), toon({ color: 0x8fca6a }), parks.length, (i, o) => { at(o, parks[i][0], parks[i][1], -0.05); o.scale.set(parks[i][2], 0.09, parks[i][2]); }, { shadows: false });
+  instanced(disc(), toon({ color: 0x6fa8e6 }), parks.length, (i, o) => { at(o, parks[i][3], parks[i][4], -0.03); o.scale.set(parks[i][5], 0.085, parks[i][5]); }, { shadows: false });
+
   // Study cities: signpost with a pulsing pin
   const pulses: THREE.Mesh<THREE.BufferGeometry, THREE.MeshBasicMaterial>[] = [];
   const cityMarkers: THREE.Object3D[] = [];
@@ -649,6 +703,17 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   }
   updateBoats(0, 10);
 
+  // ---------------------------------------------------------------- cloud banks around the edge of the map
+  // Fixed in place (part of the map, not the screen): the land beyond Wisconsin disappears into clouds
+  const banks = records(data.edgeClouds, 3);
+  const bankGeo = blobs([[0, 0, 0, 1], [0.8, -0.1, 0.3, 0.75], [-0.75, -0.05, -0.25, 0.8], [0.25, 0.2, -0.6, 0.65]]);
+  instanced(bankGeo, toon({ color: 0xfdfaf6 }), banks.length, (i, o) => {
+    const [x, y, s] = banks[i];
+    o.position.set(x, 1.5 + s * 0.12, -y);
+    o.rotation.y = rand() * Math.PI * 2;
+    o.scale.set(s, s * 0.22, s);
+  }, { shadows: false });
+
   // ---------------------------------------------------------------- clouds + birds (over Wisconsin only)
   const sky = { minX: wiBounds.min.x, maxX: wiBounds.max.x, minZ: -wiBounds.max.y, maxZ: -wiBounds.min.y };
   const skyW = sky.maxX - sky.minX;
@@ -666,9 +731,9 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   }
 
   const wingGeo = tri([0, 0, -0.35, 0, 0, 0.35, 1.6, 0, 0.1]);
-  const birdMat = track(new THREE.MeshBasicMaterial({ color: 0x4a4560, side: THREE.DoubleSide }));
+  const birdMat = track(new THREE.MeshBasicMaterial({ color: 0xffffff, side: THREE.DoubleSide })); // tinted per flock
   const flocks: { origin: THREE.Vector3; dir: THREE.Vector3; offsets: THREE.Vector3[]; phase: number }[] = [];
-  for (let f = 0; f < 6; f++) {
+  for (let f = 0; f < 8; f++) {
     const angle = rand() * Math.PI * 2;
     const n = 5 + Math.floor(rand() * 4);
     flocks.push({
@@ -687,6 +752,8 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     const m = new THREE.InstancedMesh(wingGeo, birdMat, birdCount);
     m.userData.side = side;
     m.frustumCulled = false;
+    let n = 0;
+    flocks.forEach((f, k) => f.offsets.forEach(() => m.setColorAt(n++, color.setHex(PALETTE.birds[k % PALETTE.birds.length]))));
     scene.add(m);
     return m;
   });
@@ -800,14 +867,22 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
   }
 
   function focusPlace(place: Place) {
-    // Study cities with a mapped facility: land right over the facility, close enough to see the building
+    // Study cities: frame all of the city's factories. Centre on their sites and pull back until a circle around
+    // them (plus room for the buildings and their name labels) fits the shorter side of the screen, at any heading.
     const sites = data.facilities.filter((f) => f.city === place.name);
-    const fx = sites.length ? sites.reduce((a, f) => a + f.x, 0) / sites.length : place.x;
-    const fy = sites.length ? sites.reduce((a, f) => a + f.y, 0) / sites.length : place.y;
+    const xs = sites.map((f) => f.x), ys = sites.map((f) => f.y);
+    const fx = sites.length ? (Math.min(...xs) + Math.max(...xs)) / 2 : place.x;
+    const fy = sites.length ? (Math.min(...ys) + Math.max(...ys)) / 2 : place.y;
     const target = new THREE.Vector3(fx, ground(fx, fy), -fy);
+    const spread = Math.max(0, ...sites.map((f) => Math.hypot(f.x - fx, f.y - fy))) + 3.5;
     const dist = sites.length
-      ? SITE_MIN_DIST * 2
+      ? Math.max(SITE_MIN_DIST * 2, (spread / (tanHalf * Math.min(1, 0.75 * camera.aspect))) * 1.15)
       : controls.minDistance * (place.pop >= 100000 ? 1.25 : 1); // as close as the zoom-in limit allows
+    // Keep the factories right of centre, clear of Ruby's chat and the city card on the left of the screen
+    const az = currentView().azimuth;
+    const shift = sites.length ? dist * tanHalf * camera.aspect * 0.25 : 0;
+    target.x -= Math.cos(az) * shift;
+    target.z += Math.sin(az) * shift;
     const travel = target.distanceTo(controls.target);
     const now = currentView();
     flyTo({ target, dist, polar: sites.length ? 0.68 : 0.62 }, 1500 + Math.min(travel, 600) * 1.2, Math.max(0, travel * 0.55 - (now.dist - dist) * 0.3));
@@ -933,7 +1008,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     let nearSite = Infinity;
     for (const f of data.facilities) nearSite = Math.min(nearSite, Math.hypot(f.x - controls.target.x, f.y + controls.target.z));
     controls.minDistance = THREE.MathUtils.lerp(SITE_MIN_DIST, countyMin, THREE.MathUtils.smoothstep(nearSite, 8, 30));
-    // Farthest: Wisconsin (turned to the current heading) spans 80% of the screen…
+    // Farthest: Wisconsin (turned to the current heading) spans 110% of the screen…
     const az = Math.atan2(camera.position.x - controls.target.x, camera.position.z - controls.target.z);
     const c = Math.abs(Math.cos(az));
     const s = Math.abs(Math.sin(az));
@@ -972,8 +1047,13 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     const t = controls.target;
     const mx = W / 2 - half * 0.95;
     const mz = H / 2 - half * 0.95;
-    const cx = THREE.MathUtils.clamp(t.x, -Math.max(mx, 0), Math.max(mx, 0));
-    const cz = THREE.MathUtils.clamp(t.z, -Math.max(mz, 0), Math.max(mz, 0));
+    // The centre of the view stays over Wisconsin or within PAN_MARGIN of its border,
+    // and the view never passes the map's edge
+    const [nx, ny, inside] = nearestWisconsin(t.x, -t.z);
+    const out = Math.hypot(t.x - nx, -t.z - ny);
+    const k = inside || out <= PAN_MARGIN ? 0 : 1 - PAN_MARGIN / out;
+    const cx = THREE.MathUtils.clamp(t.x + (nx - t.x) * k, -Math.max(mx, 0), Math.max(mx, 0));
+    const cz = THREE.MathUtils.clamp(t.z + (-ny - t.z) * k, -Math.max(mz, 0), Math.max(mz, 0));
     if (cx !== t.x || cz !== t.z) {
       camera.position.x += cx - t.x;
       camera.position.z += cz - t.z;
@@ -1007,6 +1087,7 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
 
   // ---------------------------------------------------------------- resize + loop
   let heading = 0;
+  let inCity = false;
   const resize = () => {
     const w = container.clientWidth;
     const h = container.clientHeight;
@@ -1076,6 +1157,10 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     updateShadows(dist);
     if (labelsBuilt) labelLayer.update(dist, dt, labelVisible(dist));
     cityMarkers.forEach((m) => (m.visible = !isCityView(dist))); // city posts step aside with their names
+    // Leaving = crossing out of city view, except mid-flight into a city (e.g. flying from one city to another)
+    const cityBound = isCityView(dist) || (!!flight && isCityView(flight.to.dist));
+    if (inCity && !cityBound) opts.onLeaveCity?.();
+    inCity = cityBound;
     renderer.render(scene, camera);
     raf = requestAnimationFrame(frame);
   };
@@ -1083,8 +1168,9 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
 
   return {
     zoomBy(factor) {
-      const v = currentView();
-      flyTo({ dist: THREE.MathUtils.clamp(v.dist * factor, controls.minDistance, controls.maxDistance) }, 450);
+      // Quick repeated clicks build on the zoom already under way, not on wherever the animation has reached
+      const dist = flight?.to.dist ?? currentView().dist;
+      flyTo({ dist: THREE.MathUtils.clamp(dist * factor, controls.minDistance, controls.maxDistance) }, 450);
     },
     reset() {
       const h = home();
@@ -1096,6 +1182,10 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     focusPlace(name) {
       const p = data.places.find((q) => q.name === name);
       if (p) focusPlace(p);
+    },
+    intro() {
+      const h = home();
+      flyTo({ target: h.target, dist: h.position.distanceTo(h.target) * 0.8, polar: 0.001, azimuth: 0 }, 1800);
     },
     focusFacility(id) {
       const f = data.facilities.find((q) => q.tri_id === id);
@@ -1185,6 +1275,23 @@ export function createLakeshoreMap(opts: MapOptions): MapController {
     }
     return p;
   }
+}
+
+/** Closest point on Wisconsin's outline to (x, y), and whether (x, y) is inside the state */
+function nearestOn(rings: Ring[], x: number, y: number): [number, number, boolean] {
+  let best = [x, y, Infinity];
+  let inside = false;
+  for (const r of rings) {
+    for (let i = 0, j = r.length - 2; i < r.length; j = i, i += 2) {
+      const [ax, ay, bx, by] = [r[j], r[j + 1], r[i], r[i + 1]];
+      if (ay > y !== by > y && x < ((bx - ax) * (y - ay)) / (by - ay) + ax) inside = !inside;
+      const t = THREE.MathUtils.clamp(((x - ax) * (bx - ax) + (y - ay) * (by - ay)) / ((bx - ax) ** 2 + (by - ay) ** 2 || 1), 0, 1);
+      const [px, py] = [ax + t * (bx - ax), ay + t * (by - ay)];
+      const d = (px - x) ** 2 + (py - y) ** 2;
+      if (d < best[2]) best = [px, py, d];
+    }
+  }
+  return [best[0], best[1], inside];
 }
 
 /** Angle difference folded into -π..π */

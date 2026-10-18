@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import Assistant, { type AssistantHandle } from "@/components/Assistant";
+import Forum, { type ForumHandle } from "@/components/Forum";
 import { createLakeshoreMap, type MapController } from "@/lib/lakeshoreMap";
 import { loadMap, type Facility, type Place } from "@/lib/scene";
 
@@ -15,11 +17,15 @@ const hasWebGL = () =>
     }
   })());
 const noSubscribe = () => () => {};
+// Share links (?focus=, ?view=, ?facility=) skip the welcome screen and open the map directly
+const isDeepLink = () => /[?&](focus|view|facility)=/.test(window.location.search);
 
 const gutter = "clamp(12px,2vw,24px)";
 const chip =
   "grid cursor-pointer place-items-center rounded-[14px] bg-sand-50 text-ink shadow-[0_4px_0_var(--color-sand-300),0_10px_18px_rgb(75_79_147/.2)] transition-transform hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-[0_2px_0_var(--color-sand-300)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-lake-500";
 const icon = "size-5 fill-none stroke-current stroke-[2.2] [stroke-linecap:round] [stroke-linejoin:round]";
+const SOUNDTRACK = "/Soundtrack/Background_track.ogg";
+const SOUNDTRACK_LOOP_END = 50; // s: the soundtrack plays from the start to here, then loops back to the start
 const DIRECTIONS = [
   { label: "N", deg: 0, name: "north" },
   { label: "E", deg: 90, name: "east" },
@@ -39,6 +45,55 @@ export default function MapView() {
   const [source, setSource] = useState("");
   const [facilities, setFacilities] = useState<Facility[]>([]);
   const [facility, setFacility] = useState<Facility | null>(null);
+  const audioRef = useRef<AudioContext | null>(null);
+  const assistantRef = useRef<AssistantHandle>(null);
+  const forumRef = useRef<ForumHandle>(null);
+  // Picks made in Ruby's chat move the map and she answers in the chat (no city card or factory panel);
+  // picks made on the map itself open the card / panel and leave her chat alone
+  const viaRuby = useRef(false);
+  const fromRuby = (go: () => void) => ((viaRuby.current = true), go(), (viaRuby.current = false));
+  const [soundOn, setSoundOn] = useState(true);
+  const deepLink = useSyncExternalStore(noSubscribe, isDeepLink, () => false);
+  const [welcome, setWelcome] = useState<"shown" | "leaving" | "gone">("shown");
+  const [buttonDue, setButtonDue] = useState(false); // the start button waits 1.5 s so the map is ready behind it
+
+  useEffect(() => {
+    const t = setTimeout(() => setButtonDue(true), 1500);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Soundtrack for as long as the app is open: 0:00 → 0:50, then straight back to 0:00 (a seamless Web Audio loop)
+  useEffect(() => {
+    const ctx = (audioRef.current = new AudioContext());
+    fetch(SOUNDTRACK)
+      .then((r) => r.arrayBuffer())
+      .then((data) => ctx.decodeAudioData(data))
+      .then((buffer) => {
+        if (ctx.state === "closed") return;
+        const track = Object.assign(ctx.createBufferSource(), { buffer, loop: true, loopEnd: Math.min(SOUNDTRACK_LOOP_END, buffer.duration) });
+        track.connect(ctx.destination);
+        track.start();
+      })
+      .catch(console.error);
+    return () => void ctx.close();
+  }, []);
+
+  // Sound on/off (the speaker button). Browsers keep a page silent until the visitor first clicks, taps or presses
+  // a key, so while the sound is on, any interaction starts it, except pressing the speaker button itself, so that
+  // turning the sound off as your first click never lets it blip on. Off pauses the music; on resumes it.
+  useEffect(() => {
+    const ctx = audioRef.current;
+    if (!ctx) return;
+    if (!soundOn) return void ctx.suspend();
+    ctx.resume(); // right away if the browser allows it (it does just after pressing the speaker button)
+    const resume = (e: Event) => void ((e.target as Element).closest?.("[data-sound]") || ctx.resume());
+    window.addEventListener("pointerdown", resume);
+    window.addEventListener("keydown", resume);
+    return () => {
+      window.removeEventListener("pointerdown", resume);
+      window.removeEventListener("keydown", resume);
+    };
+  }, [soundOn]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -53,9 +108,10 @@ export default function MapView() {
           reducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
           // Written straight to a CSS variable: no React re-render on every frame while rotating
           onHeading: (deg) => compassRef.current?.style.setProperty("--heading", `${deg}deg`),
-          onFocus: (p) => (setFocused(p), setFacility(null)),
-          onFacility: setFacility,
+          onFocus: (p) => (setFacility(null), viaRuby.current ? (setFocused(null), p.study && assistantRef.current?.city(p.name)) : (setFocused(p), assistantRef.current?.leave())),
+          onFacility: (f) => (viaRuby.current ? (setFocused(null), setFacility(null), setShowHint(false), assistantRef.current?.facility(f)) : (setFacility(f), assistantRef.current?.leave())),
           onFirstInteraction: () => setShowHint(false),
+          onLeaveCity: () => (setFocused(null), setFacility(null), assistantRef.current?.leave()),
         });
         setSource(map.data.source);
         setFacilities(map.data.facilities);
@@ -66,6 +122,7 @@ export default function MapView() {
         const focus = params.get("focus");
         const heading = Number(params.get("heading"));
         const view = params.get("view")?.split(",").map(Number);
+        if (isDeepLink()) assistantRef.current?.start(); // no welcome screen on share links: Ruby greets right away
         if (view?.length === 3 && view.every(Number.isFinite)) controllerRef.current.viewAt(view[0], view[1], view[2]);
         if (heading) controllerRef.current.setHeading(heading);
         if (focus) controllerRef.current.focusPlace(focus);
@@ -83,6 +140,7 @@ export default function MapView() {
   }, [webgl]);
 
   const cityFacilities = facilities.filter((f) => f.city === focused?.name);
+  const showStart = buttonDue && (loaded || failed || webgl === false); // never show a loading state
   const effects = facility?.impacts;
   const status = webgl === false
     ? "This map needs WebGL, which isn't available in this browser."
@@ -103,7 +161,7 @@ export default function MapView() {
       {/* Soft fog around the screen edges, in the same warm tone as the 200-mile fog */}
       <div
         aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-[2] bg-[radial-gradient(ellipse_at_center,transparent_58%,rgb(239_227_213/.55)_85%,rgb(239_227_213/.85)_100%)]"
+        className="pointer-events-none fixed inset-0 z-[2] bg-[radial-gradient(ellipse_at_center,transparent_78%,rgb(239_227_213/.35)_92%,rgb(239_227_213/.6)_100%)]"
       />
 
       {status && (
@@ -146,6 +204,11 @@ export default function MapView() {
         className="fixed z-[3] flex gap-2"
         style={{ right: gutter, bottom: gutter }}
       >
+        <button type="button" data-sound aria-label={soundOn ? "Turn sound off" : "Turn sound on"} className={`${chip} size-11`} onClick={() => setSoundOn((on) => !on)}>
+          <svg viewBox="0 0 20 20" aria-hidden="true" className={icon}>
+            <path d={`M3 8v4h3l4 3V5L6 8H3z${soundOn ? "M13 7.5a3.5 3.5 0 0 1 0 5M15.5 5a7 7 0 0 1 0 10" : "M13 8l4 4M17 8l-4 4"}`} />
+          </svg>
+        </button>
         <button type="button" aria-label="Zoom in" className={`${chip} size-11`} onClick={() => controllerRef.current?.zoomBy(0.5)}>
           <svg viewBox="0 0 20 20" aria-hidden="true" className={icon}><path d="M10 4v12M4 10h12" /></svg>
         </button>
@@ -162,7 +225,7 @@ export default function MapView() {
         <section
           aria-live="polite"
           className={`fixed z-[3] w-[min(300px,calc(100vw-120px))] rounded-2xl ${facility ? "hidden" : ""} bg-sand-50/92 px-4 pt-3 pb-3.5 shadow-[0_5px_0_var(--color-sand-300),0_14px_26px_rgb(75_79_147/.22)] backdrop-blur`}
-          style={{ left: gutter, top: gutter }}
+          style={{ left: gutter, top: `calc(${gutter} + 52px)` }} // below the Forum button
         >
           <div className="flex items-start gap-2">
             <div className="min-w-0 flex-1">
@@ -266,21 +329,65 @@ export default function MapView() {
             ) : (
               <p className="px-1 text-sm text-ink-soft">Details on what this facility affects are coming soon.</p>
             )}
+            <button type="button" onClick={() => forumRef.current?.open(facility.tri_id)} className="w-full cursor-pointer rounded-xl border-2 border-lake-500/40 bg-white px-3 py-2 text-sm font-bold text-lake-500 transition-colors hover:border-lake-500 hover:bg-lake-500 hover:text-white">
+              Discuss {facility.name} in the forum
+            </button>
             <p className="px-1 pt-1 text-[11px] text-ink-soft/80">Reported releases (EPA TRI 2024) are mostly legal under permit, not violations.</p>
           </div>
         </aside>
       )}
 
+      {/* Welcome screen: two halves part like curtains while the map swings in behind them */}
+      {!deepLink && welcome !== "gone" && (
+        <div className={`fixed inset-0 z-10 ${welcome === "leaving" ? "pointer-events-none" : ""}`}>
+          {["left-0", "right-0"].map((side) => (
+            <div
+              key={side}
+              onTransitionEnd={() => setWelcome("gone")}
+              className={`absolute inset-y-0 ${side} w-1/2 bg-linear-to-b from-sky-top via-sky-mid via-45% to-sand-100 transition-transform duration-[1200ms] ease-[cubic-bezier(.75,0,.2,1)] ${welcome === "leaving" ? (side === "left-0" ? "-translate-x-full" : "translate-x-full") : ""}`}
+            />
+          ))}
+          <div className={`relative grid h-full place-items-center px-6 text-center transition duration-500 ${welcome === "leaving" ? "scale-95 opacity-0" : ""}`}>
+            <div>
+              <p className="text-xs font-extrabold tracking-[.3em] text-autumn-700 uppercase">Lakeshore Watch</p>
+              <h2 className="mt-3 font-display text-5xl leading-none font-bold text-ink sm:text-7xl">
+                Welcome to <span className="text-leaf-700">Wisconsin</span>
+              </h2>
+              <p className="mx-auto mt-5 max-w-md text-base text-ink-soft sm:text-lg">
+                See what factories along Lake Michigan release, and what it touches in daily life.
+              </p>
+              <button
+                type="button"
+                disabled={!showStart}
+                onClick={() => (setWelcome("leaving"), controllerRef.current?.intro(), assistantRef.current?.start())}
+                className={`mt-9 cursor-pointer rounded-2xl bg-[#e0703a] px-8 py-4 font-display text-lg font-bold text-sand-50 shadow-[0_5px_0_#a8461f,0_14px_26px_rgb(75_79_147/.25)] transition-transform hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-[0_2px_0_#a8461f] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-lake-500 ${showStart ? "opacity-100" : "invisible translate-y-3 opacity-0"} [transition:opacity_.5s,translate_.5s,visibility_.5s]`}
+              >
+                Let&apos;s get started →
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <p
         className={`pointer-events-none fixed left-1/2 z-[3] w-[calc(100vw-32px)] -translate-x-1/2 rounded-full bg-ink/70 px-3.5 py-[7px] text-center text-[13px] font-bold text-sand-50 transition-opacity duration-500 sm:w-auto sm:whitespace-nowrap ${showHint && loaded ? "opacity-100" : "opacity-0"}`}
-        style={{ bottom: `calc(${gutter} + 28px)` }}
+        style={{ top: gutter }}
       >
         Drag to move · Right-drag to rotate &amp; tilt · Scroll to zoom · Click a city to fly there
       </p>
 
-      <p className="pointer-events-none fixed z-[3] m-0 hidden text-[11px] text-ink-soft/80 sm:block" style={{ left: gutter, bottom: gutter }}>
+      <p className="pointer-events-none fixed z-[3] m-0 hidden max-w-[40vw] text-right text-[11px] text-ink-soft/80 sm:block" style={{ right: gutter, bottom: `calc(${gutter} + 56px)` }}>
         {source}
       </p>
+
+      <Forum ref={forumRef} facilities={facilities} />
+
+      <Assistant
+        ref={assistantRef}
+        facilities={facilities}
+        onCity={(name) => fromRuby(() => controllerRef.current?.focusPlace(name))}
+        onFacility={(id) => fromRuby(() => controllerRef.current?.focusFacility(id))}
+      />
     </>
   );
 }

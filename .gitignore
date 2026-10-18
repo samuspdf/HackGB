@@ -10,3 +10,6 @@ __pycache__/
 .DS_Store
 
 # Web app build output and dependencies are covered by web/.gitignore
+
+# Forum comments are visitors' data: keep them out of the public repo
+cities/*/*/forum.json

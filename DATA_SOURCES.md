@@ -80,6 +80,7 @@ The "Open items to verify" section of `cities/README.md` lists claims that still
 | City populations (which towns appear; city card) | Vintage 2024 population estimates for cities and towns (`POPESTIMATE2024`) | U.S. Census Bureau | `https://www2.census.gov/programs-surveys/popest/datasets/2020-2024/cities/totals/sub-est2024.csv` | `background/raw/places/sub-est2024.csv` |
 | Great Lakes and inland lakes (Lake Winnebago etc.) | Natural Earth 1:10m lakes | Natural Earth (public domain) | `https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_lakes.geojson` | `background/raw/geo/ne_10m_lakes.geojson` |
 | Rivers (Fox, Wisconsin, …) | Natural Earth 1:10m rivers and lake centerlines | Natural Earth | `https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_rivers_lake_centerlines.geojson` | `background/raw/geo/ne_10m_rivers.geojson` |
+| Corn and wheat fields | Cropland Data Layer 2024 (satellite crop classification), fetched as a 2480 × 1880 image of Wisconsin (about 250 m per pixel) | USDA National Agricultural Statistics Service, via CropScape | `https://nassgeodata.gmu.edu/CropScapeService/wms_cdlall.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=cdl_2024&SRS=EPSG:4326&BBOX=-92.9,42.4,-86.7,47.1&WIDTH=2480&HEIGHT=1880&FORMAT=image/png` | `background/raw/crops/cdl_2024_wi.png` |
 | Canada and other land outside the Census files | Natural Earth 1:50m land | Natural Earth | `https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_land.geojson` | `background/raw/geo/ne_50m_land.geojson` |
 
 ### How each element is processed
@@ -90,6 +91,7 @@ The "Open items to verify" section of `cities/README.md` lists claims that still
 - **Detail is limited to Wisconsin:** lakes, rivers and terrain are drawn only inside Wisconsin. Neighbouring states are plain flat land that fades into fog 200 miles (322 km) from Wisconsin's border.
 - **Which towns appear:** places with 60,000 or more people, plus the three study cities.
 - **City names:** only Green Bay, Manitowoc and Sheboygan are labelled.
+- **Crop fields:** the map is divided into 2.4 km tiles. A tile becomes a field where the Cropland Data Layer shows corn or wheat on at least 30% of it. Only tiles south of 44.75°N (the middle of Wisconsin) or in Door County qualify, and never in towns, water or steep ground. Of those, the quarter with the least corn and wheat is left out. A tile is drawn as wheat where wheat outweighs corn. In 2024 this gives about 7% of Wisconsin. Neighbouring tiles join into larger fields; the rows, the fences around each block of fields and the exact field edges are illustrative.
 
 ### Hand-entered locations
 
@@ -147,10 +149,11 @@ The "Open items to verify" section of `cities/README.md` lists claims that still
 
 These are procedural decoration. They are generated with fixed random seeds, so they look the same on every visit, but they **do not represent real-world features**:
 
-- Trees, rocks, logs, stumps, bushes, flowers and barns. Their density follows the terrain (forest in the north, farmland in the south), but every individual object is random.
+- Trees, rocks, logs, stumps, bushes, flowers and barns. Their density follows the terrain (forest in the north, farmland in the south), but every individual object is random. They stay out of the crop fields.
+- City parks (a lawn, a pond and trees), about one per 40,000 people in each city. Their locations are random, not real parks.
 - Houses and buildings inside city footprints. The real city boundaries decide where they go; the individual buildings are random.
 - Boats and their routes on Lake Michigan.
-- Clouds and birds.
+- Clouds and birds, and the ring of cloud banks around the edge of the map (starting about 70 km outside Wisconsin).
 - Field patches and colours on the ground texture.
 
 ---
